@@ -1,5 +1,9 @@
-import RP3.FourierAll
-import RP3.Model
+module
+
+public import RP3.FourierAll
+public import RP3.Model
+
+public section
 
 /-!
 # Edge allocation for nested square annuli
@@ -17,13 +21,13 @@ open scoped Classical
 
 namespace Fourier.LatticeGraph
 
-def strictLayer (G : LatticeGraph) (N : ℤ) (z : Site) : Finset G.vertices :=
+@[expose] def strictLayer (G : LatticeGraph) (N : ℤ) (z : Site) : Finset G.vertices :=
   univ.filter (fun v => N < siteRadius z v.val ∧ siteRadius z v.val < 2*N)
 
-def innerCut (G : LatticeGraph) (N : ℤ) (z : Site) : Finset G.vertices :=
+@[expose] def innerCut (G : LatticeGraph) (N : ℤ) (z : Site) : Finset G.vertices :=
   univ.filter (fun v => siteRadius z v.val ≤ N)
 
-def kernelEdges (G : LatticeGraph) (N : ℤ) (z : Site) : Finset G.edges :=
+@[expose] def kernelEdges (G : LatticeGraph) (N : ℤ) (z : Site) : Finset G.edges :=
   univ.filter (fun e => e.val.1 ∈ G.strictLayer N z ∨ e.val.2 ∈ G.strictLayer N z)
 
 @[simp] theorem mem_strictLayer (G : LatticeGraph) (N : ℤ) (z : Site) (v : G.vertices) :
@@ -148,10 +152,10 @@ end Fourier.LatticeGraph
 section MaskedInteractions
 variable {V E J : Type*} [Fintype V] [Fintype E] [Fintype J]
 
-def maskedCoupling (s : Finset E) (b : E → ℝ) : E → ℝ :=
+@[expose] def maskedCoupling (s : Finset E) (b : E → ℝ) : E → ℝ :=
   fun e => if e ∈ s then b e else 0
 
-def remainingCoupling (sets : J → Finset E) (b : E → ℝ) : E → ℝ :=
+@[expose] def remainingCoupling (sets : J → Finset E) (b : E → ℝ) : E → ℝ :=
   fun e => if ∃ j, e ∈ sets j then 0 else b e
 
 theorem coupling_partition (sets : J → Finset E)

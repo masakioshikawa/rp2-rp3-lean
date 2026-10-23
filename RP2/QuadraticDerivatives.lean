@@ -1,5 +1,9 @@
-import RP2.QuadraticGibbs
-import RP2.ProductJets
+module
+
+public import RP2.QuadraticGibbs
+public import RP2.ProductJets
+
+public section
 
 /-!
 # Actual derivatives of the pinned RP² partition function
@@ -20,11 +24,11 @@ open scoped BigOperators InnerProductSpace
 namespace SpinSystem
 variable {V E : Type*} [Fintype V] [Fintype E]
 
-def innerJet (S : SpinSystem V E) (U : E → ℕ → ℝ → SpinOperator 3)
+@[expose] def innerJet (S : SpinSystem V E) (U : E → ℕ → ℝ → SpinOperator 3)
     (e : E) (k : ℕ) (t : ℝ) (σ : V → RP2.Spin) : ℝ :=
   ⟪(σ (S.left e)).val, U e k t (σ (S.right e)).val⟫_ℝ
 
-def pathEnergy (S : SpinSystem V E) (U : E → ℕ → ℝ → SpinOperator 3)
+@[expose] def pathEnergy (S : SpinSystem V E) (U : E → ℕ → ℝ → SpinOperator 3)
     (k : ℕ) (t : ℝ) (σ : V → RP2.Spin) : ℝ :=
   ∑ e, S.strength e * productJet (S.innerJet U e) (S.innerJet U e) k 0 0 t σ
 
@@ -64,7 +68,7 @@ theorem hasDerivAt_pathEnergy (S : SpinSystem V E) (U : E → ℕ → ℝ → Sp
   exact (hasDerivAt_productJet _ _ (S.hasDerivAt_innerJet U hU e)
     (S.hasDerivAt_innerJet U hU e) k 0 0 t σ).const_mul (S.strength e)
 
-def twistEnergy (S : SpinSystem V E) (A : E → SpinOperator 3) :
+@[expose] def twistEnergy (S : SpinSystem V E) (A : E → SpinOperator 3) :
     ℕ → ℝ → (V → RP2.Spin) → ℝ :=
   S.pathEnergy (fun e => expPower (A e))
 
@@ -85,11 +89,11 @@ omit [Fintype V] in
     S.twistEnergy A 0 t σ = S.energy (fun e => NormedSpace.exp (t • A e)) σ := by
   simp [twistEnergy, pathEnergy, productJet, innerJet, expPower, energy, pow_two]
 
-def firstEnergy (S : SpinSystem V E) (A : E → SpinOperator 3) (σ : V → RP2.Spin) : ℝ :=
+@[expose] def firstEnergy (S : SpinSystem V E) (A : E → SpinOperator 3) (σ : V → RP2.Spin) : ℝ :=
   ∑ e, 2 * S.strength e * ⟪(σ (S.left e)).val, (σ (S.right e)).val⟫_ℝ *
     ⟪(σ (S.left e)).val, A e (σ (S.right e)).val⟫_ℝ
 
-def secondEnergy (S : SpinSystem V E) (A : E → SpinOperator 3) (σ : V → RP2.Spin) : ℝ :=
+@[expose] def secondEnergy (S : SpinSystem V E) (A : E → SpinOperator 3) (σ : V → RP2.Spin) : ℝ :=
   ∑ e, 2 * S.strength e *
     (⟪(σ (S.left e)).val, A e (σ (S.right e)).val⟫_ℝ ^ 2 +
       ⟪(σ (S.left e)).val, (σ (S.right e)).val⟫_ℝ *
@@ -113,11 +117,11 @@ theorem twistEnergy_two_at_zero (S : SpinSystem V E) (A : E → SpinOperator 3)
   simp only [squareJet_two, innerJet, expPower_zero, pow_zero, pow_one, one_apply_eq_self]
   ring
 
-def firstWeight (S : SpinSystem V E) (A : E → SpinOperator 3)
+@[expose] def firstWeight (S : SpinSystem V E) (A : E → SpinOperator 3)
     (t : ℝ) (σ : V → RP2.Spin) : ℝ :=
   Real.exp (S.twistEnergy A 0 t σ) * S.twistEnergy A 1 t σ
 
-def secondWeight (S : SpinSystem V E) (A : E → SpinOperator 3)
+@[expose] def secondWeight (S : SpinSystem V E) (A : E → SpinOperator 3)
     (t : ℝ) (σ : V → RP2.Spin) : ℝ :=
   Real.exp (S.twistEnergy A 0 t σ) *
     (S.twistEnergy A 2 t σ + (S.twistEnergy A 1 t σ)^2)
@@ -164,13 +168,13 @@ theorem hasDerivAt_firstVariation (S : SpinSystem V E)
     (S.continuous_firstWeight A) (S.continuous_secondWeight A)
     (S.hasDerivAt_firstWeight A) t
 
-def thirdWeight (S : SpinSystem V E) (A : E → SpinOperator 3)
+@[expose] def thirdWeight (S : SpinSystem V E) (A : E → SpinOperator 3)
     (t : ℝ) (σ : V → RP2.Spin) : ℝ :=
   Real.exp (S.twistEnergy A 0 t σ) *
     (S.twistEnergy A 3 t σ + 3 * S.twistEnergy A 1 t σ * S.twistEnergy A 2 t σ +
       (S.twistEnergy A 1 t σ)^3)
 
-def fourthWeight (S : SpinSystem V E) (A : E → SpinOperator 3)
+@[expose] def fourthWeight (S : SpinSystem V E) (A : E → SpinOperator 3)
     (t : ℝ) (σ : V → RP2.Spin) : ℝ :=
   Real.exp (S.twistEnergy A 0 t σ) *
     (S.twistEnergy A 4 t σ + 4 * S.twistEnergy A 1 t σ * S.twistEnergy A 3 t σ +
@@ -285,7 +289,7 @@ theorem W_gradient (S : SpinSystem V E) (g : SpinOperator 3)
   simp only [Pi.zero_apply, zero_add, zero_smul ℝ g] at h
   exact h.trans (S.W_zero)
 
-def average (S : SpinSystem V E) (f : (V → RP2.Spin) → ℝ) : ℝ :=
+@[expose] def average (S : SpinSystem V E) (f : (V → RP2.Spin) → ℝ) : ℝ :=
   (∫ σ, f σ * Real.exp (S.energy (fun _ => 1) σ) ∂S.reference) / S.Z (fun _ => 1)
 
 theorem integrable_average_integrand (S : SpinSystem V E)
@@ -323,7 +327,7 @@ theorem average_nonneg (S : SpinSystem V E)
 
 omit [Fintype V] [Fintype E] in
 
-def axisGradient (S : SpinSystem V E) (f : V → ℝ) (g : SpinOperator 3) : E → SpinOperator 3 :=
+@[expose] def axisGradient (S : SpinSystem V E) (f : V → ℝ) (g : SpinOperator 3) : E → SpinOperator 3 :=
   fun e => (f (S.right e) - f (S.left e)) • g
 
 theorem Z_gradient_line (S : SpinSystem V E) (g : SpinOperator 3)

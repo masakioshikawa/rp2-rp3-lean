@@ -1,5 +1,9 @@
-import RP2.ThinFourier
-import RP2.ThinProfileLattice
+module
+
+public import RP2.ThinFourier
+public import RP2.ThinProfileLattice
+
+public section
 
 /-! The thin-profile approximation on actual lattice edges and the corresponding
 model-specific real-response transfer. -/

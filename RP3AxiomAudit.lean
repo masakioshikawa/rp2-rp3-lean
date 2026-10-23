@@ -1,4 +1,8 @@
-import RP3
+module
+
+public import RP3
+
+public section
 
 #print axioms RP3.log_square_quadrupolar_decay_signed
 #print axioms RP3.log_square_quadrupolar_decay

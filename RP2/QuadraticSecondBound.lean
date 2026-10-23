@@ -1,4 +1,8 @@
-import RP2.QuadraticSecondGauge
+module
+
+public import RP2.QuadraticSecondGauge
+
+public section
 /-!
 # Quantitative bounds for the RP² second response
 Adapted from OpenAI ClassicalON/SecondBound.lean at commit
@@ -83,7 +87,7 @@ theorem complexSecondResponse_upper (S : SpinSystem V E) (β : ℝ)
 
 omit [Fintype V] [Fintype E] in
 
-def commutatorForm (S : SpinSystem V E) (f g : V → ℂ) : E → ℂ :=
+@[expose] def commutatorForm (S : SpinSystem V E) (f g : V → ℂ) : E → ℂ :=
   (1/2 : ℂ) • S.complexCross f g
 
 omit [Fintype V] [Fintype E] in

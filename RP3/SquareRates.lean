@@ -1,4 +1,8 @@
-import RP3.ConcreteAnnuli
+module
+
+public import RP3.ConcreteAnnuli
+
+public section
 
 /-! Quantitative assembly of the dyadic kernel estimate into a uniform bound
 for actual square-lattice correlations. -/
@@ -7,7 +11,7 @@ noncomputable section
 open Finset
 open RP3.Fourier
 
-def dyadicRadius (a j : ℕ) : ℕ := 2^(a+2*j)
+@[expose] def dyadicRadius (a j : ℕ) : ℕ := 2^(a+2*j)
 
 theorem dyadicRadius_eq (a j : ℕ) : RP3.dyadicRadius a j = 2^a * 4^j := by
   simp only [dyadicRadius, pow_add, pow_mul]
@@ -34,7 +38,7 @@ namespace Fourier.LatticeGraph
 
 /-- The exact comparison proposition required at all large dyadic scales.
 It refers to actual pinned RP³ integrals, never abstract kernel certificates. -/
-def DyadicKernelComparison (β D : ℝ) (a : ℕ) : Prop :=
+@[expose] def DyadicKernelComparison (β D : ℝ) (a : ℕ) : Prop :=
   ∀ n : ℕ, a ≤ n → ∀ (G : LatticeGraph) (b : G.edges → ℝ),
     (∀ e, 0 ≤ b e ∧ b e ≤ β) → ∀ (z : Site) (g : Quaternion) τ,
       (1-D/(n:ℝ)) * pinnedKernel (fun e : G.edges => e.val)
@@ -44,7 +48,7 @@ def DyadicKernelComparison (β D : ℝ) (a : ℕ) : Prop :=
         (maskedCoupling (G.kernelEdges (2^n:ℕ) z) b) (G.strictLayer (2^n:ℕ) z)ᶜ τ
 
 /-- The dyadic comparison for arbitrary real couplings bounded in absolute value. -/
-def SignedDyadicKernelComparison (β D : ℝ) (a : ℕ) : Prop :=
+@[expose] def SignedDyadicKernelComparison (β D : ℝ) (a : ℕ) : Prop :=
   ∀ n : ℕ, a ≤ n → ∀ (G : LatticeGraph) (b : G.edges → ℝ),
     (∀ e, |b e| ≤ β) → ∀ (z : Site) (g : Quaternion) τ,
       (1-D/(n:ℝ)) * pinnedKernel (fun e : G.edges => e.val)

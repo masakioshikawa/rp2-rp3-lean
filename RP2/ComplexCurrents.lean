@@ -1,4 +1,8 @@
-import RP2.QuadraticPlaneResponse
+module
+
+public import RP2.QuadraticPlaneResponse
+
+public section
 
 /-!
 # Complex currents for the quadratic interaction
@@ -19,11 +23,11 @@ variable {V E : Type*} [Fintype V] [Fintype E]
 
 omit [Fintype V] [Fintype E] in
 /-- The oriented discrete gradient, also for complex potentials. -/
-def edgeGradient (S : SpinSystem V E) {𝕜 : Type*} [Sub 𝕜] (f : V → 𝕜) : E → 𝕜 :=
+@[expose] def edgeGradient (S : SpinSystem V E) {𝕜 : Type*} [Sub 𝕜] (f : V → 𝕜) : E → 𝕜 :=
   fun e => f (S.right e) - f (S.left e)
 
 /-- The first derivative in a fixed real rotation axis, complexified linearly. -/
-def complexCurrent (S : SpinSystem V E) (g : SpinOperator 3)
+@[expose] def complexCurrent (S : SpinSystem V E) (g : SpinOperator 3)
     (h : E → ℂ) (σ : V → RP2.Spin) : ℂ :=
   ⟨S.firstEnergy (fun e => (h e).re • g) σ,
     S.firstEnergy (fun e => (h e).im • g) σ⟩
@@ -141,7 +145,7 @@ theorem abs_scalar_secondEnergy_le (S : SpinSystem V E) (β : ℝ)
 
 /-- The real value `R(h, conj h)` of the complex-bilinear second response.
 The negative current-square term is retained explicitly. -/
-def hermitianResponse (S : SpinSystem V E) (g : SpinOperator 3) (h : E → ℂ) : ℝ :=
+@[expose] def hermitianResponse (S : SpinSystem V E) (g : SpinOperator 3) (h : E → ℂ) : ℝ :=
   -S.average (fun σ =>
     S.secondEnergy (fun e => (h e).re • g) σ +
     S.secondEnergy (fun e => (h e).im • g) σ +

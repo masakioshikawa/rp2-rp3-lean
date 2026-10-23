@@ -1,6 +1,10 @@
-import RP2.LimitCorollary
-import Mathlib.Analysis.Calculus.SmoothSeries
-import Mathlib.Analysis.SpecialFunctions.Trigonometric.Deriv
+module
+
+public import RP2.LimitCorollary
+public import Mathlib.Analysis.Calculus.SmoothSeries
+public import Mathlib.Analysis.SpecialFunctions.Trigonometric.Deriv
+
+public section
 
 /-!
 # Smooth quadrupolar structure factors
@@ -27,7 +31,7 @@ namespace Fourier
 abbrev Momentum := ℝ × ℝ
 
 /-- The real pairing `k · (y - x)`, viewed as a continuous linear map in `k`. -/
-def momentumPhase (x y : Site) : Momentum →L[ℝ] ℝ :=
+@[expose] def momentumPhase (x y : Site) : Momentum →L[ℝ] ℝ :=
   ((y.1 - x.1 : ℤ) : ℝ) • ContinuousLinearMap.fst ℝ ℝ ℝ +
   ((y.2 - x.2 : ℤ) : ℝ) • ContinuousLinearMap.snd ℝ ℝ ℝ
 
@@ -93,15 +97,15 @@ private theorem norm_iteratedFDeriv_oscillator_le (n : ℕ) (t : ℝ) :
     _ ≤ 2 := by simpa only [norm_smul, Complex.norm_I, one_mul, one_add_one_eq_two] using add_le_add hcn hsn
 
 /-- One summand of the complex lattice Fourier series. -/
-def fourierTerm (x : Site) (C : Site → ℝ) (y : Site) (k : Momentum) : ℂ :=
+@[expose] def fourierTerm (x : Site) (C : Site → ℝ) (y : Site) (k : Momentum) : ℂ :=
   (C y : ℂ) * Complex.exp ((momentumPhase x y k : ℂ) * Complex.I)
 
 /-- The lattice Fourier series, with its base point made explicit. -/
-def latticeFourierSeries (x : Site) (C : Site → ℝ) (k : Momentum) : ℂ :=
+@[expose] def latticeFourierSeries (x : Site) (C : Site → ℝ) (k : Momentum) : ℂ :=
   ∑' y : Site, fourierTerm x C y k
 
 /-- The exact weighted absolute moment assumption needed for smoothness. -/
-def HasSummableMoments (x : Site) (C : Site → ℝ) : Prop :=
+@[expose] def HasSummableMoments (x : Site) (C : Site → ℝ) : Prop :=
   ∀ n : ℕ, Summable (fun y : Site =>
     (1 + (siteRadius x y : ℝ)) ^ n * |C y|)
 
@@ -181,7 +185,7 @@ end Fourier
 
 /-- The fixed-base-point quadrupolar structure factor of the actual infinite
 configuration measure.  Under translation invariance it is independent of `x`. -/
-def quadrupolarStructureFactor (μ : MeasureTheory.ProbabilityMeasure InfiniteConfiguration)
+@[expose] def quadrupolarStructureFactor (μ : MeasureTheory.ProbabilityMeasure InfiniteConfiguration)
     (x : Fourier.Site) : Fourier.Momentum → ℂ :=
   Fourier.latticeFourierSeries x (infiniteCorrelation μ x)
 

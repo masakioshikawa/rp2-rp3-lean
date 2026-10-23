@@ -1,7 +1,11 @@
-import RP3.ModelAssembly
-import RP3.QuaternionAction
-import RP3.LatticeAnnuli
-import RP3.Main
+module
+
+public import RP3.ModelAssembly
+public import RP3.QuaternionAction
+public import RP3.LatticeAnnuli
+public import RP3.Main
+
+public section
 
 /-!
 # The product estimate for the actual finite-volume RP³ Gibbs measure

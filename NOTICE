@@ -47,3 +47,13 @@ the Claude Opus review supplied by the user as RP3-Improvement-Suggestions.lean.
 The original review is retained under review/ and its scope is discussed in
 REVIEW-RESPONSE.md. The RP3 high-temperature development adapts the supplied
 RP2 version 0.4.0 active-edge and nonbacktracking path proofs.
+
+Palomar preparation (October 2026)
+--------------------------------
+The scripts check-lean-sources.py, verify-comparator.sh, and
+validate-formalization.rb are copied from the Apache-2.0-licensed
+PalomarRegistry/PalomarTemplate repository:
+https://github.com/PalomarRegistry/PalomarTemplate
+The new workflows refer to pinned official actions and Palomar verification.
+The port changes module visibility and the toolchain; the original release
+remains preserved at the zenodo-2026-10-21 tag.

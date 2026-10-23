@@ -1,4 +1,8 @@
-import RP3.QuadraticMixedWard
+module
+
+public import RP3.QuadraticMixedWard
+
+public section
 /-!
 # Complex polarization of the quadratic fourth Ward identity
 Adapted from OpenAI ClassicalON/ComplexWard, commit
@@ -11,7 +15,7 @@ open RP3.Rotation hiding Spin
 open scoped BigOperators InnerProductSpace
 namespace SpinSystem
 variable {V : Type uV} {E : Type uE} [Fintype V] [Fintype E]
-def complexCoefficients (S : SpinSystem V E) (σ : V → RP3.Spin) : MixedAlgebra.Coeffs E ℂ :=
+@[expose] def complexCoefficients (S : SpinSystem V E) (σ : V → RP3.Spin) : MixedAlgebra.Coeffs E ℂ :=
   (S.mixedCoefficients σ).map Complex.ofRealHom
 
 omit [Fintype V] in
@@ -23,10 +27,10 @@ omit [Fintype V] in
   unfold MixedAlgebra.weighted localInner
   fun_prop
 
-def complexMixedObservable (S : SpinSystem V E) (u v w z : E → ℂ) : C((V → RP3.Spin), ℂ) :=
+@[expose] def complexMixedObservable (S : SpinSystem V E) (u v w z : E → ℂ) : C((V → RP3.Spin), ℂ) :=
   ⟨_, S.continuous_complexMixedPolynomial u v w z⟩
 
-def complexMixedResponse (S : SpinSystem V E) (u v w z : E → ℂ) : ℂ :=
+@[expose] def complexMixedResponse (S : SpinSystem V E) (u v w z : E → ℂ) : ℂ :=
   S.averageComplexLinear (S.complexMixedObservable u v w z)
 
 theorem complexMixedResponse_ofReal (S : SpinSystem V E) (u v w z : E → ℝ) :
@@ -108,7 +112,7 @@ theorem complexMixedResponse_smul_fourth (S : SpinSystem V E) (u v w z : E → �
   unfold complexMixedResponse
   rw [hp, map_smul, smul_eq_mul]
 
-def complexWardDefect (S : SpinSystem V E) : ComplexFourForm (V → ℂ) where
+@[expose] def complexWardDefect (S : SpinSystem V E) : ComplexFourForm (V → ℂ) where
   toFun f g h k := 4 * S.complexMixedResponse (S.edgeGradient f) (S.edgeGradient g)
     (S.edgeGradient h) (S.edgeGradient k) -
     (S.complexSecondResponse (S.complexCross f g) (S.complexCross h k) +

@@ -1,4 +1,8 @@
-import RP3.Rates
+module
+
+public import RP3.Rates
+
+public section
 
 /-!
 # The explicit logarithmic decay envelope

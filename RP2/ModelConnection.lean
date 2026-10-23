@@ -1,5 +1,9 @@
-import RP2.QuadraticWard
-import RP2.PinnedKernel
+module
+
+public import RP2.QuadraticWard
+public import RP2.PinnedKernel
+
+public section
 
 /-!
 # Connecting the analytic Gibbs system to the existing RP² definitions
@@ -15,13 +19,13 @@ open scoped InnerProductSpace
 
 variable {V E : Type*} [Fintype V] [Fintype E] [DecidableEq V]
 
-def freeSystem (edge : E → V × V) (b : E → ℝ) : SpinSystem V E where
+@[expose] def freeSystem (edge : E → V × V) (b : E → ℝ) : SpinSystem V E where
   left e := (edge e).1
   right e := (edge e).2
   strength := b
   pin _ := none
 
-def pinnedSystem (edge : E → V × V) (b : E → ℝ) (pins : Finset V)
+@[expose] def pinnedSystem (edge : E → V × V) (b : E → ℝ) (pins : Finset V)
     (τ : RP2.Configuration V) : SpinSystem V E :=
   { freeSystem edge b with pin := fun v => if v ∈ pins then some (τ v) else none }
 

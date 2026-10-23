@@ -1,4 +1,8 @@
-import Mathlib
+module
+
+public import Mathlib
+
+public section
 /-!
 # Fourth-order polarization and finite-family algebra
 
@@ -14,7 +18,7 @@ open scoped BigOperators ComplexConjugate
 namespace MixedAlgebra
 variable {E : Type uE} {K : Type uK} [Fintype E] [CommRing K]
 
-def weighted (J u : E → K) : K := ∑ e, J e * u e
+@[expose] def weighted (J u : E → K) : K := ∑ e, J e * u e
 
 @[simp] theorem weighted_add (J u v : E → K) :
     weighted J (u+v) = weighted J u + weighted J v := by
@@ -36,7 +40,7 @@ structure Coeffs (E : Type uE) (K : Type uK) where
 inductive Slot where
   | a | b | aa | ab | bb | aab | abb | aabb
 
-def Coeffs.get (J : Coeffs E K) : Slot → E → K
+@[expose] def Coeffs.get (J : Coeffs E K) : Slot → E → K
   | .a => J.a
   | .b => J.b
   | .aa => J.aa
@@ -46,7 +50,7 @@ def Coeffs.get (J : Coeffs E K) : Slot → E → K
   | .abb => J.abb
   | .aabb => J.aabb
 
-def four (J : Coeffs E K) (u v w z : E → K) : K :=
+@[expose] def four (J : Coeffs E K) (u v w z : E → K) : K :=
   weighted J.a u * weighted J.b v * weighted J.a w * weighted J.b z +
   weighted J.ab (u*v) * weighted J.a w * weighted J.b z +
   weighted J.aa (u*w) * weighted J.b v * weighted J.b z +
@@ -131,7 +135,7 @@ theorem four_diagonal (J : Coeffs E K) (u v : E → K) :
 
 end MixedAlgebra
 
-def bell4 (x y z w : ℝ) : ℝ := w+4*x*z+3*y^2+6*x^2*y+x^4
+@[expose] def bell4 (x y z w : ℝ) : ℝ := w+4*x*z+3*y^2+6*x^2*y+x^4
 
 theorem bell4_even (a b aa ab bb aaa aab abb bbb p q aaaa aabb bbbb : ℝ)
     (h : p+q = 2*aaaa+12*aabb+2*bbbb) :
@@ -165,7 +169,7 @@ structure ComplexFourForm (A : Type uA) [AddCommMonoid A] [Module ℂ A] where
   smul_third : ∀ r u v w z, toFun u v (r • w) z = r * toFun u v w z
   smul_fourth : ∀ r u v w z, toFun u v w (r • z) = r * toFun u v w z
 
-instance {A : Type uA} [AddCommMonoid A] [Module ℂ A] :
+@[expose] instance {A : Type uA} [AddCommMonoid A] [Module ℂ A] :
     CoeFun (ComplexFourForm A) (fun _ => A → A → A → A → ℂ) := ⟨ComplexFourForm.toFun⟩
 
 theorem complex_linear_zero_of_real {V : Type uV} (P : V → Prop)
@@ -222,7 +226,7 @@ theorem ComplexFourForm.zero_of_real {V : Type uV} (F : ComplexFourForm (V → �
 namespace MixedAlgebra
 variable {E : Type uE} {K : Type uK} {L : Type uL} [Fintype E] [CommRing K] [CommRing L]
 
-def Coeffs.map (φ : K →+* L) (J : Coeffs E K) : Coeffs E L where
+@[expose] def Coeffs.map (φ : K →+* L) (J : Coeffs E K) : Coeffs E L where
   a := φ ∘ J.a
   b := φ ∘ J.b
   aa := φ ∘ J.aa
@@ -370,11 +374,11 @@ lemma contract_current_three (A B : E → K) (p q : I → E → K) (r s : J → 
   simpa only [mul_comm, mul_left_comm, mul_assoc] using contract_three_current A B r s p q
 
 omit [Fintype J] in
-def paired (C : Coeffs E K) (p q : I → E → K) : K :=
+@[expose] def paired (C : Coeffs E K) (p q : I → E → K) : K :=
   ∑ i, (weighted C.a (p i) * weighted C.b (q i) + weighted C.ab (p i*q i))
 
 omit [Fintype J] in
-def kernel (p q : I → E → K) (e l : E) : K := ∑ i, p i e*q i l
+@[expose] def kernel (p q : I → E → K) (e l : E) : K := ∑ i, p i e*q i l
 
 lemma four_family_contraction (C : Coeffs E K) (p q : I → E → K) (r s : J → E → K) :
     (∑ i, ∑ j, four C (p i) (q i) (r j) (s j)) =

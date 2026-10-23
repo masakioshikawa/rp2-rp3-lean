@@ -1,4 +1,8 @@
-import RP2.Calculus
+module
+
+public import RP2.Calculus
+
+public section
 
 /-!
 # Derivatives of a squared interaction
@@ -11,7 +15,7 @@ namespace RP2
 
 open scoped BigOperators
 
-noncomputable def productJet {Ω : Type*} (F G : ℕ → ℝ → Ω → ℝ) :
+@[expose] noncomputable def productJet {Ω : Type*} (F G : ℕ → ℝ → Ω → ℝ) :
     ℕ → ℕ → ℕ → ℝ → Ω → ℝ
   | 0, a, b, t, ω => F a t ω * G b t ω
   | k+1, a, b, t, ω =>

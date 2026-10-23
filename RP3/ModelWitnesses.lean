@@ -1,5 +1,9 @@
-import RP3.RotationGeometryBase
-import RP3.FourierAll
+module
+
+public import RP3.RotationGeometryBase
+public import RP3.FourierAll
+
+public section
 
 /-! Proofs contributed in the Claude Opus review supplied by the user on
 11 October 2026, integrated and checked against this pinned development.
@@ -13,10 +17,10 @@ namespace RP3.ModelWitnesses
 /-- Index set for `±1, ±i, ±j, ±k` and `(±1 ± i ± j ± k)/2`. -/
 abbrev Idx := (Fin 4 × Bool) ⊕ (Bool × Bool × Bool × Bool)
 
-def sg (b : Bool) : ℝ := if b then 1 else -1
+@[expose] def sg (b : Bool) : ℝ := if b then 1 else -1
 
 /-- Real coordinates of the 24 unit quaternions of `2T`. -/
-def gvec : Idx → Fin 4 → ℝ
+@[expose] def gvec : Idx → Fin 4 → ℝ
   | .inl (k, s) => fun i => if i = k then sg s else 0
   | .inr (a, b, c, d) => ![sg a / 2, sg b / 2, sg c / 2, sg d / 2]
 
@@ -38,14 +42,14 @@ theorem orbit_moment4 (w : Fin 4 → ℝ) :
   ring
 
 /-- Left multiplication by the quaternion `g` in real coordinates (`= qMatrix`). -/
-def lmulFun (g u : Fin 4 → ℝ) : Fin 4 → ℝ :=
+@[expose] def lmulFun (g u : Fin 4 → ℝ) : Fin 4 → ℝ :=
   ![g 0 * u 0 - g 1 * u 1 - g 2 * u 2 - g 3 * u 3,
     g 1 * u 0 + g 0 * u 1 - g 3 * u 2 + g 2 * u 3,
     g 2 * u 0 + g 3 * u 1 + g 0 * u 2 - g 1 * u 3,
     g 3 * u 0 - g 2 * u 1 + g 1 * u 2 + g 0 * u 3]
 
 /-- Coordinates of `v ū`; then `⟨g u, v⟩ = ⟨g, v ū⟩`. -/
-def W (u v : Fin 4 → ℝ) : Fin 4 → ℝ :=
+@[expose] def W (u v : Fin 4 → ℝ) : Fin 4 → ℝ :=
   ![v 0 * u 0 + v 1 * u 1 + v 2 * u 2 + v 3 * u 3,
     -v 0 * u 1 + v 1 * u 0 - v 2 * u 3 + v 3 * u 2,
     -v 0 * u 2 + v 1 * u 3 + v 2 * u 0 - v 3 * u 1,
@@ -66,7 +70,7 @@ theorem lmul_sq (g u : Fin 4 → ℝ) :
   simp [Fin.sum_univ_four, lmulFun]
   ring
 
-def lmulLin (g : Fin 4 → ℝ) : E4 →ₗ[ℝ] E4 where
+@[expose] def lmulLin (g : Fin 4 → ℝ) : E4 →ₗ[ℝ] E4 where
   toFun u := WithLp.toLp 2 (lmulFun g u)
   map_add' u v := by
     ext i
@@ -87,14 +91,14 @@ theorem lmulLin_norm (g : Fin 4 → ℝ) (hg : ∑ i, g i ^ 2 = 1) (u : E4) :
   nlinarith [norm_nonneg (lmulLin g u), norm_nonneg u]
 
 /-- Left multiplication by any unit quaternion, as a linear isometry of `ℝ⁴`. -/
-def lmulIsoOf (g : Fin 4 → ℝ) (hg : ∑ i, g i ^ 2 = 1) : E4 ≃ₗᵢ[ℝ] E4 :=
+@[expose] def lmulIsoOf (g : Fin 4 → ℝ) (hg : ∑ i, g i ^ 2 = 1) : E4 ≃ₗᵢ[ℝ] E4 :=
   LinearIsometry.toLinearIsometryEquiv
     { lmulLin g with norm_map' := lmulLin_norm g hg } rfl
 
 @[simp] theorem lmulIsoOf_apply (g : Fin 4 → ℝ) (hg : ∑ i, g i ^ 2 = 1) (u : E4) (i : Fin 4) :
     lmulIsoOf g hg u i = lmulFun g u i := rfl
 
-def lmulIso (x : Idx) : E4 ≃ₗᵢ[ℝ] E4 := lmulIsoOf (gvec x) (gvec_sq x)
+@[expose] def lmulIso (x : Idx) : E4 ≃ₗᵢ[ℝ] E4 := lmulIsoOf (gvec x) (gvec_sq x)
 
 @[simp] theorem lmulIso_apply (x : Idx) (u : E4) (i : Fin 4) :
     lmulIso x u i = lmulFun (gvec x) u i := rfl
@@ -127,7 +131,7 @@ section Averaging
 variable {V : Type*} [Fintype V] [DecidableEq V]
 
 /-- Rotate the spin at one site by `lmulIso x`, leaving all others fixed. -/
-def rotAt (v₀ : V) (x : Idx) (σ : Configuration V) : Configuration V :=
+@[expose] def rotAt (v₀ : V) (x : Idx) (σ : Configuration V) : Configuration V :=
   fun v => (if v = v₀ then (Rotation.spinRotation (lmulIso x) : Spin → Spin) else id) (σ v)
 
 theorem rotAt_mp (v₀ : V) (x : Idx) :
@@ -164,11 +168,11 @@ theorem integral_eq_of_orbit (v₀ : V) (F : Configuration V → ℝ) (hF : Cont
 end Averaging
 
 /-- The one-bond graph `(0,0) — (1,0)`. -/
-def V0 : Finset Fourier.Site := {(0, 0), (1, 0)}
-def L0' : V0 := ⟨(0, 0), by simp [V0]⟩
-def R0' : V0 := ⟨(1, 0), by simp [V0]⟩
+@[expose] def V0 : Finset Fourier.Site := {(0, 0), (1, 0)}
+@[expose] def L0' : V0 := ⟨(0, 0), by simp [V0]⟩
+@[expose] def R0' : V0 := ⟨(1, 0), by simp [V0]⟩
 
-def G1 : Fourier.LatticeGraph where
+@[expose] def G1 : Fourier.LatticeGraph where
   vertices := V0
   edges := {(L0', R0')}
   nearest := by
@@ -178,8 +182,8 @@ def G1 : Fourier.LatticeGraph where
     left
     norm_num [L0', R0']
 
-def L0 : G1.vertices := L0'
-def R0 : G1.vertices := R0'
+@[expose] def L0 : G1.vertices := L0'
+@[expose] def R0 : G1.vertices := R0'
 
 theorem L0_ne_R0 : L0 ≠ R0 := by
   intro h

@@ -1,6 +1,10 @@
-import RP2.ThinEdgeResponse
-import RP2.ThinCosts
-import RP2.ThinSupport
+module
+
+public import RP2.ThinEdgeResponse
+public import RP2.ThinCosts
+public import RP2.ThinSupport
+
+public section
 
 /-! Uniform response estimates for the actual pinned RP² Gibbs system on a
 thin square annulus.  No analytic estimate remains as an input hypothesis. -/

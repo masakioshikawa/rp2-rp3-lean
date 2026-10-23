@@ -1,4 +1,8 @@
-import RP2.ComplexCurrents
+module
+
+public import RP2.ComplexCurrents
+
+public section
 
 /-!
 # Transferring a small response between nearby real edge fields
@@ -15,7 +19,7 @@ namespace SpinSystem
 variable {V E : Type*} [Fintype V] [Fintype E]
 
 omit [Fintype V] in
-def axisSecondCoefficient (S : SpinSystem V E) (σ : V → RP2.Spin) (e : E) : ℝ :=
+@[expose] def axisSecondCoefficient (S : SpinSystem V E) (σ : V → RP2.Spin) (e : E) : ℝ :=
   2 * S.strength e *
     (⟪(σ (S.left e)).val, axisC (σ (S.right e)).val⟫_ℝ ^ 2 +
       ⟪(σ (S.left e)).val, (σ (S.right e)).val⟫_ℝ *

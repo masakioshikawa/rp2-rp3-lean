@@ -1,4 +1,8 @@
-import RP3.MathlibImports
+module
+
+public import RP3.MathlibImports
+
+public section
 
 /-!
 # From annular products to decay faster than every power
@@ -54,7 +58,7 @@ theorem log_factor_le {D L : ℝ} (hD : 0 ≤ D) (hL : Real.log 4 ≤ L) (j : �
 
 /-- Number of disjoint scales `N, 4N, ...` whose outer radius is strictly below `r`.
 Using a least integer avoids any convention concerning logarithmic rounding. -/
-noncomputable def annulusCount (N r : ℕ) (hN : 0 < N) : ℕ :=
+@[expose] noncomputable def annulusCount (N r : ℕ) (hN : 0 < N) : ℕ :=
   Nat.find (show ∃ k : ℕ, r ≤ 2 * N * 4 ^ k from
     ⟨r, (Nat.lt_pow_self (by norm_num : 1 < (4 : ℕ))).le.trans
       (Nat.le_mul_of_pos_left _ (by omega))⟩)
@@ -77,7 +81,7 @@ theorem annulusCount_distance (N r : ℕ) (hN : 0 < N) :
   nlinarith
 
 /-- A natural-exponent formulation; the next theorem includes arbitrary real exponents. -/
-def SuperpolynomialDecay (C : ℕ → ℝ) : Prop :=
+@[expose] def SuperpolynomialDecay (C : ℕ → ℝ) : Prop :=
   ∀ p : ℕ, ∃ A > 0, ∀ r : ℕ, |C r| * (1 + (r : ℝ)) ^ p ≤ A
 
 /-- A factorial bound at geometric scales implies superpolynomial decay. -/

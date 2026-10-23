@@ -1,0 +1,121 @@
+version: v0.4
+
+project:
+  name: Log-square quadrupolar correlation decay in two-dimensional RP2 and RP3 models
+  description: >-
+    For the two-dimensional nearest-neighbor RP2 and RP3 director models,
+    the absolute quadrupolar two-point correlation is bounded by
+    C exp(-c (log(2+r))^2) at every finite bound on the dimensionless coupling.
+    The positive constants are uniform over finite square-lattice subgraphs,
+    arbitrary signed edge couplings within that bound, and observation sites;
+    r is the integer lattice infinity distance. The compared statements use
+    explicit normalized spherical product measures and Gibbs-integral quotients,
+    with observable (n_x dot n_y)^2 - 1/3 or - 1/4, respectively.
+    No response estimate or decay certificate is assumed. This registry interface
+    selects the two finite-volume bounds. It does not assert exponential decay
+    at all temperatures or the absence of every thermodynamic or topological
+    transition. The larger development also contains local-limit and
+    high-temperature results, which are not selected by this Comparator entry.
+  authors:
+    - Masaki Oshikawa
+  responsible_maintainers:
+    - Masaki Oshikawa
+  license: Apache-2.0
+
+classification:
+  arxiv: [math-ph, cond-mat.stat-mech]
+  msc2020: [82B20, 82B26]
+
+sources:
+  - title: >-
+      Faster-than-power-law decay of order parameter correlations in the
+      two-dimensional RP2 model: a rigorous result by vibe-proving
+    authors: [Masaki Oshikawa]
+    type: paper
+    id: https://doi.org/10.5281/zenodo.23549037
+    relationship: formalizes
+    note: >-
+      The manuscript describes the RP2 result and its RP3 extension.
+      Its result and the original formalization were developed together with AI
+      assistance; the human author does not claim to have independently written
+      the mathematical proofs or the Lean development.
+  - title: Exponential decay in two-dimensional classical O(n) models
+    type: paper
+    id: https://github.com/openai/math/tree/adc7f1241b42e322a6451854ab7e4b4c146bf78a
+    relationship: adapts
+    note: >-
+      Fourth-order response, Ward-identity, Fourier, and annular techniques
+      are adapted to the squared interaction and quadrupolar observable.
+      See NOTICE and the module-level provenance comments for the reused code.
+
+related_formalizations:
+  - id: https://doi.org/10.5281/zenodo.23548847
+    relationship: builds-on
+    note: >-
+      Original combined RP2/RP3 release, using Lean 4.34.1. The archive is
+      preserved by tag zenodo-2026-10-21 and commit
+      e8ebad84b92e4fdfd99aff2fa7619c1deb36016d. This revision ports that
+      development to a newer toolchain and adds a separate Comparator interface.
+
+status:
+  scope: >-
+    Two finite-volume log-square correlation bounds, including arbitrary bounded
+    signed couplings and deleted lattice vertices and bonds. The graph and
+    Gibbs measures have no pinned external spins. The registered interface
+    does not select the additional infinite-volume, high-temperature, or
+    Fourier-regularity theorems in the full libraries.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: [propext, Classical.choice, Quot.sound]
+
+automation:
+  methods:
+    - method: agent
+      models: [GPT-6 Astra Ultra, Claude, Codex]
+      tool_setup: >-
+        AI-assisted mathematical development, Lean source generation, code
+        revision, and machine-checking. GPT-6 Astra Ultra supplied the original
+        complete development; Claude supplied additional review and suggestions.
+        Codex prepared the Palomar interface and toolchain/module-system port.
+  notes: >-
+    Masaki Oshikawa proposed the physical problem, requested the generalizations,
+    supplied scientific context, and prepared the manuscript and releases.
+    The mathematical proofs and formalization were substantially AI-generated.
+    Earlier agent audits are preserved as historical evidence. Neither AI
+    review nor machine verification is described as human peer review.
+
+fidelity:
+  divergences: >-
+    The compared finite-volume statements use the exact original normalization,
+    coupling bounds, graph geometry, distance, and ordering of quantifiers.
+    No assertion of all-temperature exponential decay, all Gibbs states,
+    arbitrary pinned boundaries, or absence of all phase transitions is made.
+    Additional results in the manuscript are outside this entry's selected
+    Comparator declarations.
+
+review:
+  status: self-assessed
+  notes: >-
+    The original Lean 4.34.1 release has the agent audit and replay records
+    documented in the archived package. Those historical checks do not certify
+    this toolchain port. Fresh port checks and any remaining limitations are
+    documented in PALOMAR.md and the current verification workflow. No Palomar
+    editorial review or human referee report is claimed before submission.
+
+alignment:
+  namespace: ProjectiveDecay
+  statements:
+    - source: RP2 finite-volume all-temperature log-square bound
+      lean: ProjectiveDecay.rp2_log_square
+      module: Solution
+      status: adapted
+      note: Connected to RP2.log_square_quadrupolar_decay_signed by definitional unfolding.
+    - source: RP3 finite-volume all-temperature log-square bound
+      lean: ProjectiveDecay.rp3_log_square
+      module: Solution
+      status: adapted
+      note: Connected to RP3.log_square_quadrupolar_decay_signed by definitional unfolding.
+
+acknowledgements: >-
+  Lean, Mathlib and their contributors; the OpenAI ClassicalON development;
+  the AI systems disclosed above; and the Palomar template and checking tools.

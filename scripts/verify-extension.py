@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Validate v0.3 after building the immutable v0.2 baseline.
+"""HISTORICAL LEAN 4.34.1 TOOL: use PALOMAR.md for this branch.
+
+Validate v0.3 after building the immutable v0.2 baseline.
 
 For a fresh checkout, scripts/verify.py is the full reproduction entry point.
 This release-specific command records the baseline source comparison, freshly

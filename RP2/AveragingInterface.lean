@@ -1,4 +1,8 @@
-import RP2.Averaging
+module
+
+public import RP2.Averaging
+
+public section
 
 /-!
 # Simultaneous positive-remainder normalization

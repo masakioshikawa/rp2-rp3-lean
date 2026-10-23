@@ -1,5 +1,9 @@
-import RP3.Model
-import RP3.FourierAll
+module
+
+public import RP3.Model
+public import RP3.FourierAll
+
+public section
 
 /-!
 # Free-boundary probability measures and their local weak limits
@@ -19,7 +23,7 @@ section GibbsMeasure
 variable {V E : Type*} [Fintype V] [Fintype E]
 
 /-- Normalized free-boundary Gibbs density with respect to the product surface law. -/
-def freeGibbsDensity (edge : E → V × V) (b : E → ℝ) (σ : Configuration V) : ℝ :=
+@[expose] def freeGibbsDensity (edge : E → V × V) (b : E → ℝ) (σ : Configuration V) : ℝ :=
   weight edge b σ / partition edge b
 
 theorem continuous_freeGibbsDensity (edge : E → V × V) (b : E → ℝ) :
@@ -39,10 +43,10 @@ theorem integral_freeGibbsDensity (edge : E → V × V) (b : E → ℝ) :
   exact div_self (partition_pos edge b).ne'
 
 /-- The actual free-boundary Gibbs measure. -/
-def freeGibbsMeasure (edge : E → V × V) (b : E → ℝ) : Measure (Configuration V) :=
+@[expose] def freeGibbsMeasure (edge : E → V × V) (b : E → ℝ) : Measure (Configuration V) :=
   referenceLaw.withDensity (fun σ => ENNReal.ofReal (freeGibbsDensity edge b σ))
 
-instance freeGibbsMeasure_isProbability (edge : E → V × V) (b : E → ℝ) :
+@[expose] instance freeGibbsMeasure_isProbability (edge : E → V × V) (b : E → ℝ) :
     IsProbabilityMeasure (freeGibbsMeasure edge b) := by
   constructor
   rw [freeGibbsMeasure, withDensity_apply _ MeasurableSet.univ,
@@ -72,16 +76,16 @@ theorem integral_freeGibbsMeasure (edge : E → V × V) (b : E → ℝ)
     ring
 
 /-- Bundle the free-boundary law as a probability measure with the weak topology. -/
-def freeGibbsProbability (edge : E → V × V) (b : E → ℝ) :
+@[expose] def freeGibbsProbability (edge : E → V × V) (b : E → ℝ) :
     ProbabilityMeasure (Configuration V) := ⟨freeGibbsMeasure edge b, inferInstance⟩
 
 /-- The two-spin marginal is a pushforward of the actual finite-volume Gibbs law. -/
-def twoSpinMarginal (edge : E → V × V) (b : E → ℝ) (x y : V) :
+@[expose] def twoSpinMarginal (edge : E → V × V) (b : E → ℝ) (x y : V) :
     ProbabilityMeasure (Spin × Spin) :=
   (freeGibbsProbability edge b).map (fun σ => (σ x, σ y))
 
 /-- Quadrupolar pair test function; compactness makes it bounded. -/
-def pairTest : (Spin × Spin) →ᵇ ℝ :=
+@[expose] def pairTest : (Spin × Spin) →ᵇ ℝ :=
   BoundedContinuousFunction.mkOfCompact
     ⟨fun st => qPair st.1 st.2, by unfold qPair; fun_prop⟩
 
@@ -99,10 +103,10 @@ end GibbsMeasure
 /-- A probability law on the full infinite square-lattice spin configuration space. -/
 abbrev InfiniteConfiguration := Fourier.Site → Spin
 
-def infinitePairMarginal (μ : ProbabilityMeasure InfiniteConfiguration) (x y : Fourier.Site) :
+@[expose] def infinitePairMarginal (μ : ProbabilityMeasure InfiniteConfiguration) (x y : Fourier.Site) :
     ProbabilityMeasure (Spin × Spin) := μ.map (fun σ => (σ x, σ y))
 
-def infiniteCorrelation (μ : ProbabilityMeasure InfiniteConfiguration) (x y : Fourier.Site) : ℝ :=
+@[expose] def infiniteCorrelation (μ : ProbabilityMeasure InfiniteConfiguration) (x y : Fourier.Site) : ℝ :=
   ∫ σ, qPair (σ x) (σ y) ∂(μ : Measure InfiniteConfiguration)
 
 theorem integral_infinitePairMarginal (μ : ProbabilityMeasure InfiniteConfiguration)
@@ -117,7 +121,7 @@ theorem integral_infinitePairMarginal (μ : ProbabilityMeasure InfiniteConfigura
 /-- Convergence of the actual two-spin marginals along one common finite-volume
 sequence. A pair-dependent initial segment may be discarded before both sites
 belong to the volume. This condition does not refer to an outside filling. -/
-def HasLocalPairLimit (G : ℕ → Fourier.LatticeGraph)
+@[expose] def HasLocalPairLimit (G : ℕ → Fourier.LatticeGraph)
     (b : ∀ n, (G n).edges → ℝ) (μ : ProbabilityMeasure InfiniteConfiguration) : Prop :=
   ∀ x y : Fourier.Site, ∃ N : ℕ,
     ∃ (xn yn : ∀ n, (G (n + N)).vertices),
@@ -128,13 +132,13 @@ def HasLocalPairLimit (G : ℕ → Fourier.LatticeGraph)
 /-- Local convergence along finite-volume ferromagnetic free-boundary laws.
 Any subsequential local weak limit along an exhaustion satisfies this condition,
 with the subsequence itself used as `G`. -/
-def IsFreeBoundaryLocalLimit (β : ℝ) (μ : ProbabilityMeasure InfiniteConfiguration) : Prop :=
+@[expose] def IsFreeBoundaryLocalLimit (β : ℝ) (μ : ProbabilityMeasure InfiniteConfiguration) : Prop :=
   ∃ (G : ℕ → Fourier.LatticeGraph) (b : ∀ n, (G n).edges → ℝ),
     (∀ n e, 0 ≤ b n e ∧ b n e ≤ β) ∧ HasLocalPairLimit G b μ
 
 /-- Local convergence along free-boundary laws with arbitrary signed couplings
 uniformly bounded in absolute value. -/
-def IsSignedFreeBoundaryLocalLimit (β : ℝ)
+@[expose] def IsSignedFreeBoundaryLocalLimit (β : ℝ)
     (μ : ProbabilityMeasure InfiniteConfiguration) : Prop :=
   ∃ (G : ℕ → Fourier.LatticeGraph) (b : ∀ n, (G n).edges → ℝ),
     (∀ n e, |b n e| ≤ β) ∧ HasLocalPairLimit G b μ
@@ -149,7 +153,7 @@ theorem IsFreeBoundaryLocalLimit.signed {β : ℝ}
 /-- Embed a finite-volume configuration in the infinite product by a fixed
 spin outside the volume. This convention is immaterial for local limits along
 an exhaustion. -/
-def extendConfiguration (G : Fourier.LatticeGraph) (s₀ : Spin)
+@[expose] def extendConfiguration (G : Fourier.LatticeGraph) (s₀ : Spin)
     (σ : Configuration G.vertices) : InfiniteConfiguration :=
   fun z => if hz : z ∈ G.vertices then σ ⟨z, hz⟩ else s₀
 
@@ -165,7 +169,7 @@ theorem continuous_extendConfiguration (G : Fourier.LatticeGraph) (s₀ : Spin) 
 
 /-- Actual finite-volume Gibbs law, embedded as a probability measure on the
 infinite spin space for the usual weak topology. -/
-def extendedFreeGibbs (G : Fourier.LatticeGraph) (b : G.edges → ℝ) (s₀ : Spin) :
+@[expose] def extendedFreeGibbs (G : Fourier.LatticeGraph) (b : G.edges → ℝ) (s₀ : Spin) :
     ProbabilityMeasure InfiniteConfiguration :=
   (freeGibbsProbability (fun e : G.edges => e.val) b).map (extendConfiguration G s₀)
 
@@ -238,7 +242,7 @@ theorem HasLocalPairLimit.correlation_bound
 
 /-- Extend a finite-volume configuration using an arbitrary, site-dependent
 configuration outside the volume. No regularity of the outside values is needed. -/
-def extendConfigurationWith (G : Fourier.LatticeGraph) (outside : InfiniteConfiguration)
+@[expose] def extendConfigurationWith (G : Fourier.LatticeGraph) (outside : InfiniteConfiguration)
     (σ : Configuration G.vertices) : InfiniteConfiguration :=
   fun z => if hz : z ∈ G.vertices then σ ⟨z, hz⟩ else outside z
 
@@ -253,7 +257,7 @@ theorem continuous_extendConfigurationWith (G : Fourier.LatticeGraph)
       (continuous_const : Continuous (fun _ : Configuration G.vertices => outside z))
 
 /-- The embedded free-boundary Gibbs measure with an arbitrary outside filling. -/
-def extendedFreeGibbsWith (G : Fourier.LatticeGraph) (b : G.edges → ℝ)
+@[expose] def extendedFreeGibbsWith (G : Fourier.LatticeGraph) (b : G.edges → ℝ)
     (outside : InfiniteConfiguration) : ProbabilityMeasure InfiniteConfiguration :=
   (freeGibbsProbability (fun e : G.edges => e.val) b).map (extendConfigurationWith G outside)
 

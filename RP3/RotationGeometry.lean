@@ -1,4 +1,8 @@
-import RP3.QuaternionAlgebra
+module
+
+public import RP3.QuaternionAlgebra
+
+public section
 
 namespace RP3.Rotation
 universe uR uS
@@ -34,7 +38,7 @@ theorem map_tripleMoment {R : Type uR} {S : Type uS} [Ring R] [Ring S]
   | zero => simp [tripleMoment]
   | succ k ih => simp [tripleMoment, ih]
 
-def planeOperator (f g : ℝ) : SpinOperator 4 := matrixOperator (plane f g)
+@[expose] def planeOperator (f g : ℝ) : SpinOperator 4 := matrixOperator (plane f g)
 
 theorem planeOperator_eq (f g : ℝ) : planeOperator f g = f • axisA + g • axisB := by
   rw [planeOperator, axisA, axisB, ← map_smul, ← map_smul, ← map_add]
@@ -72,10 +76,10 @@ theorem gaugeJet_plane_four_even (f g h k : ℝ) :
   rw [moment4_plane_even, map_smul, map_pow]
   rfl
 
-def mixedMatrixAB : Matrix (Fin 4) (Fin 4) ℝ := 0
-def mixedMatrixAAB : Matrix (Fin 4) (Fin 4) ℝ := (-1/12 : ℝ) • axisMatrixB
-def mixedMatrixABB : Matrix (Fin 4) (Fin 4) ℝ := (-1/12 : ℝ) • axisMatrixA
-def mixedMatrixAABB : Matrix (Fin 4) (Fin 4) ℝ := (-1/24 : ℝ) • (axisMatrixA^2+axisMatrixB^2)
+@[expose] def mixedMatrixAB : Matrix (Fin 4) (Fin 4) ℝ := 0
+@[expose] def mixedMatrixAAB : Matrix (Fin 4) (Fin 4) ℝ := (-1/12 : ℝ) • axisMatrixB
+@[expose] def mixedMatrixABB : Matrix (Fin 4) (Fin 4) ℝ := (-1/12 : ℝ) • axisMatrixA
+@[expose] def mixedMatrixAABB : Matrix (Fin 4) (Fin 4) ℝ := (-1/24 : ℝ) • (axisMatrixA^2+axisMatrixB^2)
 
 theorem plane_matrix_square (f g : ℝ) :
     plane f g ^ 2 = f^2 • axisMatrixA^2 + (2*f*g) • mixedMatrixAB + g^2 • axisMatrixB^2 := by
@@ -114,10 +118,10 @@ theorem mixedMatrixAB_sym : mixedMatrixAB = (1/2 : ℝ) • (axisMatrixA*axisMat
   fin_cases i <;> fin_cases j <;> norm_num [qMatrix]
 
 
-def mixedAB : SpinOperator 4 := matrixOperator mixedMatrixAB
-def mixedAAB : SpinOperator 4 := matrixOperator mixedMatrixAAB
-def mixedABB : SpinOperator 4 := matrixOperator mixedMatrixABB
-def mixedAABB : SpinOperator 4 := matrixOperator mixedMatrixAABB
+@[expose] def mixedAB : SpinOperator 4 := matrixOperator mixedMatrixAB
+@[expose] def mixedAAB : SpinOperator 4 := matrixOperator mixedMatrixAAB
+@[expose] def mixedABB : SpinOperator 4 := matrixOperator mixedMatrixABB
+@[expose] def mixedAABB : SpinOperator 4 := matrixOperator mixedMatrixAABB
 
 theorem planeOperator_square (f g : ℝ) :
     planeOperator f g ^ 2 = f^2 • axisA^2 + (2*f*g) • mixedAB + g^2 • axisB^2 := by

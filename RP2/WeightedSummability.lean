@@ -1,4 +1,8 @@
-import RP2.FourierAll
+module
+
+public import RP2.FourierAll
+
+public section
 
 /-! Polynomial moments of a superpolynomially decaying lattice function. -/
 namespace RP2.Fourier

@@ -1,11 +1,15 @@
-import RP3.RotationGeometryBase
+module
+
+public import RP3.RotationGeometryBase
+
+public section
 
 /-! Closed multiplication of left-quaternion matrices keeps the fourth-order
 calculation small. Every identity below is checked by scalar ring arithmetic. -/
 namespace RP3.Rotation
 noncomputable section
 
-def qMatrix (r a b c : ℝ) : Matrix (Fin 4) (Fin 4) ℝ :=
+@[expose] def qMatrix (r a b c : ℝ) : Matrix (Fin 4) (Fin 4) ℝ :=
   !![r,-a,-b,-c; a,r,-c,b; b,c,r,-a; c,-b,a,r]
 
 theorem qMatrix_mul (r a b c s d e f : ℝ) :

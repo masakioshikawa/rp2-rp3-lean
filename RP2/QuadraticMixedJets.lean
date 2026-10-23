@@ -1,5 +1,9 @@
-import RP2.QuadraticAverages
-import RP2.MixedAlgebra
+module
+
+public import RP2.QuadraticAverages
+public import RP2.MixedAlgebra
+
+public section
 
 /-!
 # Mixed fourth derivatives of the squared interaction
@@ -18,19 +22,19 @@ namespace SpinSystem
 variable {V E : Type*} [Fintype V] [Fintype E]
 
 omit [Fintype V] [Fintype E] in
-def localInner (S : SpinSystem V E) (M : SpinOperator 3)
+@[expose] def localInner (S : SpinSystem V E) (M : SpinOperator 3)
     (σ : V → RP2.Spin) (e : E) : ℝ :=
   ⟪(σ (S.left e)).val, M (σ (S.right e)).val⟫_ℝ
 
 omit [Fintype V] [Fintype E] in
-def axisCoefficient (S : SpinSystem V E) (M : SpinOperator 3)
+@[expose] def axisCoefficient (S : SpinSystem V E) (M : SpinOperator 3)
     (k : ℕ) (σ : V → RP2.Spin) (e : E) : ℝ :=
   S.strength e * productJet
     (fun n (_ : ℝ) (_ : Unit) => S.localInner (M^n) σ e)
     (fun n (_ : ℝ) (_ : Unit) => S.localInner (M^n) σ e) k 0 0 0 ()
 
 omit [Fintype V] [Fintype E] in
-def mixedCoefficients (S : SpinSystem V E) (σ : V → RP2.Spin) :
+@[expose] def mixedCoefficients (S : SpinSystem V E) (σ : V → RP2.Spin) :
     MixedAlgebra.Coeffs E ℝ where
   a e := 2 * S.strength e * S.localInner 1 σ e * S.localInner axisA σ e
   b e := 2 * S.strength e * S.localInner 1 σ e * S.localInner axisB σ e
@@ -192,13 +196,13 @@ omit [Fintype V] in
     (continuous_const.mul ((h 2).pow 2))).add
     ((continuous_const.mul ((h 1).pow 2)).mul (h 2))).add ((h 1).pow 4)
 
-def fourthObservable (S : SpinSystem V E) (A : E → SpinOperator 3) : C((V → RP2.Spin), ℝ) :=
+@[expose] def fourthObservable (S : SpinSystem V E) (A : E → SpinOperator 3) : C((V → RP2.Spin), ℝ) :=
   ⟨_, S.continuous_fourthPolynomial A⟩
 
-def mixedObservable (S : SpinSystem V E) (u v w z : E → ℝ) : C((V → RP2.Spin), ℝ) :=
+@[expose] def mixedObservable (S : SpinSystem V E) (u v w z : E → ℝ) : C((V → RP2.Spin), ℝ) :=
   ⟨_, S.continuous_mixedPolynomial u v w z⟩
 
-def mixedResponse (S : SpinSystem V E) (u v w z : E → ℝ) : ℝ :=
+@[expose] def mixedResponse (S : SpinSystem V E) (u v w z : E → ℝ) : ℝ :=
   S.averageLinear (S.mixedObservable u v w z)
 
 @[simp] theorem average_fourthObservable (S : SpinSystem V E) (A : E → SpinOperator 3) :

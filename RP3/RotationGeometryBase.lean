@@ -1,4 +1,8 @@
-import RP3.Model
+module
+
+public import RP3.Model
+
+public section
 
 /-!
 Adapted from OpenAI's ClassicalON/FiniteVolume.lean at commit
@@ -16,7 +20,7 @@ open scoped BigOperators InnerProductSpace
 
 abbrev Spin (n : ℕ) := Metric.sphere (0 : EuclideanSpace ℝ (Fin n)) 1
 
-def spinRotation {n : ℕ}
+@[expose] def spinRotation {n : ℕ}
     (R : EuclideanSpace ℝ (Fin n) ≃ₗᵢ[ℝ] EuclideanSpace ℝ (Fin n)) :
     Spin n ≃ₜ Spin n :=
   R.toHomeomorph.subtype fun x => by
@@ -66,13 +70,13 @@ theorem spinRotation_preserves_probability
 abbrev SpinOperator (n : ℕ) :=
   EuclideanSpace ℝ (Fin n) →L[ℝ] EuclideanSpace ℝ (Fin n)
 
-instance spinOperator_completeSpace (dimension : ℕ) : CompleteSpace (SpinOperator dimension) :=
+@[expose] instance spinOperator_completeSpace (dimension : ℕ) : CompleteSpace (SpinOperator dimension) :=
   ContinuousLinearMap.instCompleteSpace
 
-instance spinOperator_ratNormedAlgebra (n : ℕ) : NormedAlgebra ℚ (SpinOperator n) :=
+@[expose] instance spinOperator_ratNormedAlgebra (n : ℕ) : NormedAlgebra ℚ (SpinOperator n) :=
   NormedAlgebra.restrictScalars ℚ ℝ _
 
-def rotationExp {n : ℕ} (A : SpinOperator n) (hA : A ∈ skewAdjoint (SpinOperator n)) :
+@[expose] def rotationExp {n : ℕ} (A : SpinOperator n) (hA : A ∈ skewAdjoint (SpinOperator n)) :
     EuclideanSpace ℝ (Fin n) ≃ₗᵢ[ℝ] EuclideanSpace ℝ (Fin n) :=
   Unitary.linearIsometryEquiv
     ⟨NormedSpace.exp A, NormedSpace.exp_mem_unitary_of_mem_skewAdjoint hA⟩
@@ -87,7 +91,7 @@ def rotationExp {n : ℕ} (A : SpinOperator n) (hA : A ∈ skewAdjoint (SpinOper
   change (star (NormedSpace.exp A)) v = _
   rw [NormedSpace.star_exp, skewAdjoint.mem_iff.mp hA]
 
-def expPower {n : ℕ} (X : SpinOperator n) (a : ℕ) (t : ℝ) : SpinOperator n :=
+@[expose] def expPower {n : ℕ} (X : SpinOperator n) (a : ℕ) (t : ℝ) : SpinOperator n :=
   NormedSpace.exp (t • X) * X^a
 
 theorem hasDerivAt_expPower {n : ℕ} (X : SpinOperator n) (a : ℕ) (t : ℝ) :
@@ -100,7 +104,7 @@ theorem continuous_expPower {n : ℕ} (X : SpinOperator n) (a : ℕ) :
   unfold expPower
   fun_prop
 
-def tripleJet {n : ℕ} (X Y Z : SpinOperator n) : ℕ → ℕ → ℕ → ℕ → ℝ → SpinOperator n
+@[expose] def tripleJet {n : ℕ} (X Y Z : SpinOperator n) : ℕ → ℕ → ℕ → ℕ → ℝ → SpinOperator n
   | 0, a, b, c, t => expPower X a t * expPower Y b t * expPower Z c t
   | k+1, a, b, c, t => tripleJet X Y Z k (a+1) b c t +
       tripleJet X Y Z k a (b+1) c t + tripleJet X Y Z k a b (c+1) t
@@ -139,7 +143,7 @@ theorem gaugeJet_two {n : ℕ} (X Y : SpinOperator n) :
 
 open scoped Matrix
 
-def matrixOperator {n : ℕ} : Matrix (Fin n) (Fin n) ℝ ≃ₐ[ℝ] SpinOperator n :=
+@[expose] def matrixOperator {n : ℕ} : Matrix (Fin n) (Fin n) ℝ ≃ₐ[ℝ] SpinOperator n :=
   (Matrix.toLinAlgEquiv (PiLp.basisFun 2 ℝ (Fin n))).trans
     (Module.End.toContinuousLinearMap (EuclideanSpace ℝ (Fin n)))
 theorem matrixOperator_apply {n : ℕ} (M : Matrix (Fin n) (Fin n) ℝ)
@@ -148,12 +152,12 @@ theorem matrixOperator_apply {n : ℕ} (M : Matrix (Fin n) (Fin n) ℝ)
   change (Matrix.toLin (PiLp.basisFun 2 ℝ (Fin n)) (PiLp.basisFun 2 ℝ (Fin n)) M) v = _
   rw [← Matrix.toLpLin_eq_toLin, Matrix.toLpLin_apply]
 
-def axisMatrixA : Matrix (Fin 4) (Fin 4) ℝ := !![0,-1/2,0,0; 1/2,0,0,0; 0,0,0,-1/2; 0,0,1/2,0]
-def axisMatrixB : Matrix (Fin 4) (Fin 4) ℝ := !![0,0,-1/2,0; 0,0,0,1/2; 1/2,0,0,0; 0,-1/2,0,0]
-def axisMatrixC : Matrix (Fin 4) (Fin 4) ℝ := !![0,0,0,-1/2; 0,0,-1/2,0; 0,1/2,0,0; 1/2,0,0,0]
-def axisA : SpinOperator 4 := matrixOperator axisMatrixA
-def axisB : SpinOperator 4 := matrixOperator axisMatrixB
-def axisC : SpinOperator 4 := matrixOperator axisMatrixC
+@[expose] def axisMatrixA : Matrix (Fin 4) (Fin 4) ℝ := !![0,-1/2,0,0; 1/2,0,0,0; 0,0,0,-1/2; 0,0,1/2,0]
+@[expose] def axisMatrixB : Matrix (Fin 4) (Fin 4) ℝ := !![0,0,-1/2,0; 0,0,0,1/2; 1/2,0,0,0; 0,-1/2,0,0]
+@[expose] def axisMatrixC : Matrix (Fin 4) (Fin 4) ℝ := !![0,0,0,-1/2; 0,0,-1/2,0; 0,1/2,0,0; 1/2,0,0,0]
+@[expose] def axisA : SpinOperator 4 := matrixOperator axisMatrixA
+@[expose] def axisB : SpinOperator 4 := matrixOperator axisMatrixB
+@[expose] def axisC : SpinOperator 4 := matrixOperator axisMatrixC
 
 theorem axisA_apply (v : EuclideanSpace ℝ (Fin 4)) :
     axisA v = WithLp.toLp 2 ![-v 1/2, v 0/2, -v 3/2, v 2/2] := by
@@ -241,7 +245,7 @@ theorem axisC_norm_le : ‖axisC‖ ≤ 1 := by
   nlinarith [norm_nonneg (axisC v), norm_nonneg v, sq_nonneg ‖v‖]
 
 
-def tripleMoment {R : Type uR} [Ring R] (X Y Z : R) : ℕ → ℕ → ℕ → ℕ → R
+@[expose] def tripleMoment {R : Type uR} [Ring R] (X Y Z : R) : ℕ → ℕ → ℕ → ℕ → R
   | 0, a, b, c => X^a * Y^b * Z^c
   | k+1, a, b, c => tripleMoment X Y Z k (a+1) b c +
       tripleMoment X Y Z k a (b+1) c + tripleMoment X Y Z k a b (c+1)
@@ -254,8 +258,8 @@ theorem tripleMoment_four {R : Type uR} [Ring R] (X Y Z : R) :
   simp only [tripleMoment, Nat.reduceAdd, pow_zero, pow_one, one_mul, mul_one]
   noncomm_ring
 
-def plane (f g : ℝ) : Matrix (Fin 4) (Fin 4) ℝ := !![0,-f/2,-g/2,0; f/2,0,0,g/2; g/2,0,0,-f/2; 0,-g/2,f/2,0]
-def third : Matrix (Fin 4) (Fin 4) ℝ := axisMatrixC
+@[expose] def plane (f g : ℝ) : Matrix (Fin 4) (Fin 4) ℝ := !![0,-f/2,-g/2,0; f/2,0,0,g/2; g/2,0,0,-f/2; 0,-g/2,f/2,0]
+@[expose] def third : Matrix (Fin 4) (Fin 4) ℝ := axisMatrixC
 
 lemma plane_sub (f g h k : ℝ) : plane f g - plane h k = plane (f-h) (g-k) := by
   ext i j
@@ -264,7 +268,7 @@ lemma plane_neg (f g : ℝ) : -plane f g = plane (-f) (-g) := by
   ext i j
   fin_cases i <;> fin_cases j <;> simp [plane] <;> ring
 
-def moment4Plane (f g h k : ℝ) : Matrix (Fin 4) (Fin 4) ℝ :=
+@[expose] def moment4Plane (f g h k : ℝ) : Matrix (Fin 4) (Fin 4) ℝ :=
   tripleMoment (plane f g) (plane h k - plane f g) (-plane h k) 4 0 0 0
 
 

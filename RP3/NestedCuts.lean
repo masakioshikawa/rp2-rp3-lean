@@ -1,4 +1,8 @@
-import RP3.FiniteAveraging
+module
+
+public import RP3.FiniteAveraging
+
+public section
 
 /-! Rotations on nested sets of spins. The averages commute even though
 individual rotations about different axes need not commute. -/
@@ -11,7 +15,7 @@ variable {X V G : Type*} [TopologicalSpace X] [Group G]
   [DecidableEq V]
 
 /-- Apply one rotation to all sites of a cut, fixing every other spin. -/
-noncomputable def onCut (A : FiniteAction G X) (s : Finset V) : FiniteAction G (V → X) where
+@[expose] noncomputable def onCut (A : FiniteAction G X) (s : Finset V) : FiniteAction G (V → X) where
   move g := ⟨fun σ v => if v ∈ s then A.move g (σ v) else σ v, by
     apply continuous_pi
     intro v
@@ -48,7 +52,7 @@ theorem nested_averages_commute [Fintype G] (A : FiniteAction G X) {s t : Finset
   exact A.nested_conjugation hst g h σ
 
 /-- A finite action is a homeomorphism for each group element. -/
-noncomputable def toHomeomorph (A : FiniteAction G X) (g : G) : X ≃ₜ X where
+@[expose] noncomputable def toHomeomorph (A : FiniteAction G X) (g : G) : X ≃ₜ X where
   toFun := A.move g
   invFun := A.move g⁻¹
   left_inv x := by rw [← A.mul_apply, inv_mul_cancel, A.one_apply]
@@ -75,7 +79,7 @@ theorem onCut_measurePreserving [Fintype V] [MeasurableSpace X] [BorelSpace X]
   exact measurePreserving_pi _ _ hcoord
 
 /-- The complete averaging system on a chain of cuts with a product reference law. -/
-noncomputable def nestedSystem {ι : Type*} [Fintype G] [Fintype V] [CompactSpace X]
+@[expose] noncomputable def nestedSystem {ι : Type*} [Fintype G] [Fintype V] [CompactSpace X]
     [MeasurableSpace X] [BorelSpace X] [SecondCountableTopology X]
     (A : FiniteAction G X) (μ : Measure X) [IsFiniteMeasure μ]
     (hμ : ∀ g, MeasurePreserving (A.move g) μ μ)

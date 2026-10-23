@@ -1,6 +1,10 @@
-import RP2.Fourier.ModelModes
-import RP2.Fourier.ResponseTransfer
-import RP2.QuadraticFamily
+module
+
+public import RP2.Fourier.ModelModes
+public import RP2.Fourier.ResponseTransfer
+public import RP2.QuadraticFamily
+
+public section
 
 /-!
 # Uniform inverse-logarithmic annular response of the RP² model

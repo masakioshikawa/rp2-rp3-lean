@@ -1,6 +1,10 @@
-import RP2.PaperResponse
-import RP2.TetrahedralTensor
-import RP2.AveragingInterface
+module
+
+public import RP2.PaperResponse
+public import RP2.TetrahedralTensor
+public import RP2.AveragingInterface
+
+public section
 
 /-!
 # Public mathematical interfaces for the RP² note

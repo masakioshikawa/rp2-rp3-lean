@@ -1,24 +1,28 @@
-import Mathlib.Algebra.Order.Archimedean.Real.Hom
-import Mathlib.Algebra.Order.Ring.Star
-import Mathlib.Algebra.Order.Star.Real
-import Mathlib.Analysis.CStarAlgebra.Classes
-import Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension
-import Mathlib.Analysis.InnerProductSpace.Adjoint
-import Mathlib.Analysis.LocallyConvex.AbsConvexOpen
-import Mathlib.Analysis.Real.Pi.Bounds
-import Mathlib.Analysis.SpecialFunctions.Complex.CircleAddChar
-import Mathlib.Analysis.SpecialFunctions.Stirling
-import Mathlib.CategoryTheory.Countable
-import Mathlib.Combinatorics.SimpleGraph.Connectivity.Finite
-import Mathlib.Data.Int.Star
-import Mathlib.Data.Sigma.Order
-import Mathlib.MeasureTheory.Constructions.HaarToSphere
-import Mathlib.MeasureTheory.Measure.Prokhorov
-import Mathlib.NumberTheory.ModularForms.EisensteinSeries.Summable
-import Mathlib.Order.CompletePartialOrder
-import Mathlib.RingTheory.SimpleRing.Principal
-import Mathlib.Topology.UniformSpace.Uniformizable
-import Mathlib.Tactic
+module
+
+public import Mathlib.Algebra.Order.Archimedean.Real.Hom
+public import Mathlib.Algebra.Order.Ring.Star
+public import Mathlib.Algebra.Order.Star.Real
+public import Mathlib.Analysis.CStarAlgebra.Classes
+public import Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension
+public import Mathlib.Analysis.InnerProductSpace.Adjoint
+public import Mathlib.Analysis.LocallyConvex.AbsConvexOpen
+public import Mathlib.Analysis.Real.Pi.Bounds
+public import Mathlib.Analysis.SpecialFunctions.Complex.CircleAddChar
+public import Mathlib.Analysis.SpecialFunctions.Stirling
+public import Mathlib.CategoryTheory.Countable
+public import Mathlib.Combinatorics.SimpleGraph.Connectivity.Finite
+public import Mathlib.Data.Int.Star
+public import Mathlib.Data.Sigma.Order
+public import Mathlib.MeasureTheory.Constructions.HaarToSphere
+public import Mathlib.MeasureTheory.Measure.Prokhorov
+public import Mathlib.NumberTheory.ModularForms.EisensteinSeries.Summable
+public import Mathlib.Order.CompletePartialOrder
+public import Mathlib.RingTheory.SimpleRing.Principal
+public import Mathlib.Topology.UniformSpace.Uniformizable
+public import Mathlib.Tactic
+
+public section
 
 /-! Shared Mathlib prerequisites for the RP³ proof.
 Extracted from the elaborated development and supplemented with the tactic

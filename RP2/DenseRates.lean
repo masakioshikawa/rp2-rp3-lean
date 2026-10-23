@@ -1,4 +1,8 @@
-import RP2.KernelEstimate
+module
+
+public import RP2.KernelEstimate
+
+public section
 
 /-!
 # Sharper all-temperature decay from adjacent dyadic annuli
@@ -14,7 +18,7 @@ open Finset MeasureTheory
 open RP2.Fourier
 
 /-- Number of adjacent dyadic annuli whose outer radius is less than `r`. -/
-noncomputable def denseAnnulusCount (N r : ℕ) (hN : 0 < N) : ℕ :=
+@[expose] noncomputable def denseAnnulusCount (N r : ℕ) (hN : 0 < N) : ℕ :=
   Nat.find (show ∃ k : ℕ, r ≤ 2 * N * 2 ^ k from
     ⟨r, (Nat.lt_pow_self (by norm_num : 1 < (2 : ℕ))).le.trans
       (Nat.le_mul_of_pos_left _ (by omega))⟩)
@@ -36,7 +40,7 @@ theorem denseAnnulusCount_distance (N r : ℕ) (hN : 0 < N) :
   have hp : (1 : ℝ) ≤ 2 ^ denseAnnulusCount N r hN := one_le_pow₀ (by norm_num)
   nlinarith
 
-def adjacentDyadicRadius (a j : ℕ) : ℕ := 2^(a+j)
+@[expose] def adjacentDyadicRadius (a j : ℕ) : ℕ := 2^(a+j)
 
 theorem adjacentDyadicRadius_eq (a j : ℕ) :
     adjacentDyadicRadius a j = 2^a * 2^j := by

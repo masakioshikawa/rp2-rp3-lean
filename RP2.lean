@@ -1,15 +1,19 @@
-import RP2.Model
-import RP2.QuadraticPlaneResponse
-import RP2.ModelConnection
-import RP2.PinnedKernel
-import RP2.NestedCuts
-import RP2.Main
-import RP2.Criticality
-import RP2.Full
-import RP2.LimitCorollary
-import RP2.PaperInterface
-import RP2.StructureFactor
-import RP2.DenseLimits
-import RP2.HighTemperature
-import RP2.LogSquareLimits
-import RP2.HighTemperatureExponential
+module
+
+public import RP2.Model
+public import RP2.QuadraticPlaneResponse
+public import RP2.ModelConnection
+public import RP2.PinnedKernel
+public import RP2.NestedCuts
+public import RP2.Main
+public import RP2.Criticality
+public import RP2.Full
+public import RP2.LimitCorollary
+public import RP2.PaperInterface
+public import RP2.StructureFactor
+public import RP2.DenseLimits
+public import RP2.HighTemperature
+public import RP2.LogSquareLimits
+public import RP2.HighTemperatureExponential
+
+public section

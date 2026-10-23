@@ -1,4 +1,8 @@
-import RP3.HighTemperature
+module
+
+public import RP3.HighTemperature
+
+public section
 
 /-! Elementary upper bounds for prescribed open edges and finite witness families.
 No FKG property or stochastic-domination theorem is assumed. -/
@@ -56,7 +60,7 @@ theorem sum_supersets_prod_le (f : E → ℝ) (S : Finset E) (p : ℝ)
       rw [prod_ite]
       simp
 
-def prescribedMass (edge : E → V × V) (b : E → ℝ) (S : Finset E) : ℝ :=
+@[expose] def prescribedMass (edge : E → V × V) (b : E → ℝ) (S : Finset E) : ℝ :=
   ∑ A ∈ (univ : Finset E).powerset, if S ⊆ A then
     (integralOnCompact (referenceLaw (V := V))).linear (activeWeight edge b A) else 0
 

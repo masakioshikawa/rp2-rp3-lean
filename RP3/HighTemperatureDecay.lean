@@ -1,5 +1,9 @@
-import RP3.ActivePaths
-import RP3.LimitCorollary
+module
+
+public import RP3.ActivePaths
+public import RP3.LimitCorollary
+
+public section
 
 /-! Unconditional exponential decay by elementary active-edge path counting.
 This module does not use the sharper, external square-lattice FK theorem. -/
@@ -11,7 +15,7 @@ open scoped BigOperators Classical
 
 namespace Lattice
 
-def edge (G : LatticeGraph) : G.edges → G.vertices × G.vertices := fun e => e.val
+@[expose] def edge (G : LatticeGraph) : G.edges → G.vertices × G.vertices := fun e => e.val
 
 theorem edgeSym_injective (G : LatticeGraph) :
     Function.Injective (fun e : G.edges => s((edge G e).1, (edge G e).2)) := by
@@ -43,7 +47,7 @@ theorem adjacency_neighbor (G : LatticeGraph) {x y : G.vertices}
     change e.val.2 = _ at hr
     simpa only [hl, hr] using hn
 
-def fourNeighbors (x : Site) : Finset Site :=
+@[expose] def fourNeighbors (x : Site) : Finset Site :=
   {(x.1+1,x.2), (x.1-1,x.2), (x.1,x.2+1), (x.1,x.2-1)}
 
 theorem mem_fourNeighbors {x y : Site}
@@ -99,9 +103,9 @@ theorem abs_correlation_le_four_opening_pow (G : LatticeGraph) (b : G.edges → 
 end Lattice
 
 /-- A harmless floor keeps the displayed mass finite also at zero coupling. -/
-def elementaryDecayBase (β : ℝ) : ℝ := max (1 / 2) (3 * (1 - Real.exp (-β)))
+@[expose] def elementaryDecayBase (β : ℝ) : ℝ := max (1 / 2) (3 * (1 - Real.exp (-β)))
 
-def elementaryMass (β : ℝ) : ℝ := -Real.log (elementaryDecayBase β)
+@[expose] def elementaryMass (β : ℝ) : ℝ := -Real.log (elementaryDecayBase β)
 
 theorem elementaryDecayBase_pos (β : ℝ) : 0 < elementaryDecayBase β :=
   lt_of_lt_of_le (by norm_num) (le_max_left _ _)

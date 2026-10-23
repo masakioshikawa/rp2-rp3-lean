@@ -1,5 +1,9 @@
-import RP2.HighTemperatureDecay
-import RP2.NonbacktrackingPaths
+module
+
+public import RP2.HighTemperatureDecay
+public import RP2.NonbacktrackingPaths
+
+public section
 
 /-! Genuine, unconditional exponential decay for bounded signed couplings
 at `β < log (3/2)`, with the same finite-volume constants in free local limits.

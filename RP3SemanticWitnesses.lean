@@ -1,4 +1,8 @@
-import RP3
+module
+
+public import RP3
+
+public section
 
 /- Permanent semantic checks, compiled separately from the public library.
 They test the model's normalization, a concrete nonempty graph, admissible

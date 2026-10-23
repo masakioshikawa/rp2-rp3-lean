@@ -1,4 +1,8 @@
-import RP3.QuaternionAction
+module
+
+public import RP3.QuaternionAction
+
+public section
 
 /-! Quaternion half-generators satisfy [a,b]=c and have period 4π on S³. -/
 namespace RP3.Rotation
@@ -10,7 +14,7 @@ theorem axis_smul_mul (r : ℝ) (A B : SpinOperator 4) :
 theorem axis_mul_smul (r : ℝ) (A B : SpinOperator 4) :
     A * (r • B) = r • (A * B) := Algebra.mul_smul_comm r A B
 
-def axisPolynomialFor (X : SpinOperator 4) (t : ℝ) : SpinOperator 4 :=
+@[expose] def axisPolynomialFor (X : SpinOperator 4) (t : ℝ) : SpinOperator 4 :=
   (Real.cos (t/2)) • 1 + (2*Real.sin (t/2)) • X
 
 theorem axisPolynomialFor_derivative (X : SpinOperator 4)
@@ -84,7 +88,7 @@ theorem exp_axisC_periodic :
     Function.Periodic (fun t : ℝ => NormedSpace.exp (t • axisC)) (4 * Real.pi) :=
   exp_axis_periodic axisC axisC_square
 
-def coordinateAxis (a : Fin 3) : SpinOperator 4 := ![axisA, axisB, axisC] a
+@[expose] def coordinateAxis (a : Fin 3) : SpinOperator 4 := ![axisA, axisB, axisC] a
 theorem coordinateAxis_skew (a : Fin 3) : coordinateAxis a ∈ skewAdjoint (SpinOperator 4) := by
   fin_cases a
   · exact axisA_skew
@@ -101,7 +105,7 @@ theorem coordinateAxis_norm_le (a : Fin 3) : ‖coordinateAxis a‖ ≤ 1 := by
   · exact axisB_norm_le
   · exact axisC_norm_le
 
-def coordinateRotation (a : Fin 3) (t : ℝ) : E4 ≃ₗᵢ[ℝ] E4 :=
+@[expose] def coordinateRotation (a : Fin 3) (t : ℝ) : E4 ≃ₗᵢ[ℝ] E4 :=
   rotationExp (t • coordinateAxis a) (skewAdjoint.smul_mem t (coordinateAxis_skew a))
 @[simp] theorem coordinateRotation_apply (a : Fin 3) (t : ℝ) (u : E4) :
     coordinateRotation a t u = NormedSpace.exp (t • coordinateAxis a) u := rfl
@@ -110,14 +114,14 @@ def coordinateRotation (a : Fin 3) (t : ℝ) : E4 ≃ₗᵢ[ℝ] E4 :=
   rw [coordinateRotation_apply, zero_smul ℝ (coordinateAxis a), NormedSpace.exp_zero]
   rfl
 
-def conjugatorCoordinates (a : Fin 3) (u : Fin 4 → ℝ) : Fin 4 → ℝ :=
+@[expose] def conjugatorCoordinates (a : Fin 3) (u : Fin 4 → ℝ) : Fin 4 → ℝ :=
   ![![u 0,u 2,u 3,u 1], ![u 0,u 3,u 1,u 2], ![u 0,u 1,u 2,u 3]] a
-def conjugatorInverse (a : Fin 3) : Fin 3 := ![1,0,2] a
-def conjugatorLinear (a : Fin 3) : E4 →ₗ[ℝ] E4 where
+@[expose] def conjugatorInverse (a : Fin 3) : Fin 3 := ![1,0,2] a
+@[expose] def conjugatorLinear (a : Fin 3) : E4 →ₗ[ℝ] E4 where
   toFun u := WithLp.toLp 2 (conjugatorCoordinates a u)
   map_add' u v := by ext i; fin_cases a <;> fin_cases i <;> simp [conjugatorCoordinates]
   map_smul' r u := by ext i; fin_cases a <;> fin_cases i <;> simp [conjugatorCoordinates]
-def axisConjugator (a : Fin 3) : E4 ≃ₗᵢ[ℝ] E4 where
+@[expose] def axisConjugator (a : Fin 3) : E4 ≃ₗᵢ[ℝ] E4 where
   toLinearEquiv := {
     conjugatorLinear a with
     invFun := conjugatorLinear (conjugatorInverse a)
@@ -149,9 +153,9 @@ theorem spinRotation_intertwine_axisC (a : Fin 3) (t : ℝ) (s : RP3.Spin) :
       spinRotation (coordinateRotation 2 t) (spinRotation (axisConjugator a) s) :=
   Subtype.ext (coordinateRotation_intertwine_axisC a t s.val)
 
-def quaternionPathAxis (g : Quaternion) (_ : Fin 3) : Fin 3 :=
+@[expose] def quaternionPathAxis (g : Quaternion) (_ : Fin 3) : Fin 3 :=
   ![2,0,1,2,2,0,1,2] g.index
-def quaternionPathAngle (g : Quaternion) (k : Fin 3) : ℝ :=
+@[expose] def quaternionPathAngle (g : Quaternion) (k : Fin 3) : ℝ :=
   if k = 0 then ![0,Real.pi,Real.pi,Real.pi,2*Real.pi,-Real.pi,-Real.pi,-Real.pi] g.index else 0
 
 set_option maxHeartbeats 800000 in

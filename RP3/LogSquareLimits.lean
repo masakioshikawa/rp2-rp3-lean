@@ -1,5 +1,9 @@
-import RP3.ThinKernelEstimate
-import RP3.LimitCorollary
+module
+
+public import RP3.ThinKernelEstimate
+public import RP3.LimitCorollary
+
+public section
 
 /-!
 # Uniform log-square quadrupolar decay

@@ -1,4 +1,8 @@
-import RP2.DenseRates
+module
+
+public import RP2.DenseRates
+
+public section
 
 /-!
 # The explicit logarithmic decay envelope

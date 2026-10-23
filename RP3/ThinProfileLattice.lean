@@ -1,6 +1,10 @@
-import RP3.ThinProfiles
-import RP3.ThinKernel
-import RP3.Fourier.ResponseTransfer
+module
+
+public import RP3.ThinProfiles
+public import RP3.ThinKernel
+public import RP3.Fourier.ResponseTransfer
+
+public section
 
 /-! The thin smooth cutoffs on actual centered lattice shells. -/
 namespace RP3.Fourier
@@ -32,13 +36,13 @@ theorem scaledSite_thin_outer {k : ℕ} {x : Site} {a : ℝ}
 
 namespace LatticeGraph
 
-def thinThetaPotential (G : LatticeGraph) (k : ℕ) (a δ : ℝ) (v : G.vertices) : ℝ :=
+@[expose] def thinThetaPotential (G : LatticeGraph) (k : ℕ) (a δ : ℝ) (v : G.vertices) : ℝ :=
   thinTheta a δ (scaledSite k v.val)
 
-def thinThetaEdge (G : LatticeGraph) (k : ℕ) (a δ : ℝ) (e : G.edges) : ℝ :=
+@[expose] def thinThetaEdge (G : LatticeGraph) (k : ℕ) (a δ : ℝ) (e : G.edges) : ℝ :=
   G.thinThetaPotential k a δ e.val.2-G.thinThetaPotential k a δ e.val.1
 
-def ThinBoundaryPins (G : LatticeGraph) (k : ℕ) (a δ : ℝ)
+@[expose] def ThinBoundaryPins (G : LatticeGraph) (k : ℕ) (a δ : ℝ)
     (P : G.vertices → Option RP3.Spin) : Prop :=
   ∀ v s, P v = some s →
     (|(scaledSite k v.val).1| ≤ a ∧ |(scaledSite k v.val).2| ≤ a) ∨

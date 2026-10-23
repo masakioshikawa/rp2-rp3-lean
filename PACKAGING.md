@@ -1,3 +1,8 @@
+> Historical document for the Lean 4.34.1 archived release. For the current
+> Palomar port, toolchain, and verification commands, see [PALOMAR.md](PALOMAR.md).
+> Statements of source identity and audit success below refer to the original
+> release preserved at tag `zenodo-2026-10-21`.
+
 # Software-only packaging record — 21 October 2026
 
 This archive contains the complete combined RP²/RP³ Lean source release,

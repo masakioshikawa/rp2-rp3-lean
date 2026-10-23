@@ -1,4 +1,8 @@
-import RP3.FiniteAveraging
+module
+
+public import RP3.FiniteAveraging
+
+public section
 
 /-!
 # The finite-volume RP³ model and its quadrupolar observable
@@ -19,10 +23,10 @@ abbrev Spin := Metric.sphere (0 : E4) 1
 @[simp] theorem spin_norm (s : Spin) : ‖s.val‖ = 1 :=
   mem_sphere_zero_iff_norm.mp s.property
 
-noncomputable def antipode (s : Spin) : Spin :=
+@[expose] noncomputable def antipode (s : Spin) : Spin :=
   ⟨-s.val, mem_sphere_zero_iff_norm.mpr (by simp)⟩
 
-noncomputable def qPair (s t : Spin) : ℝ :=
+@[expose] noncomputable def qPair (s t : Spin) : ℝ :=
   ⟪s.val, t.val⟫_ℝ ^ 2 - 1/4
 
 /-- The quadrupolar observable is a function of directors. -/
@@ -40,7 +44,7 @@ theorem abs_qPair_le (s t : Spin) : |qPair s t| ≤ (3 : ℝ) / 4 := by
   rw [qPair, abs_le]
   constructor <;> nlinarith [sq_nonneg ⟪s.val, t.val⟫_ℝ]
 
-noncomputable def Q (s : Spin) : Matrix (Fin 4) (Fin 4) ℝ :=
+@[expose] noncomputable def Q (s : Spin) : Matrix (Fin 4) (Fin 4) ℝ :=
   fun i j => s.val i * s.val j - if i = j then 1/4 else 0
 
 theorem spin_squares (s : Spin) : ∑ i : Fin 4, s.val i ^ 2 = 1 := by
@@ -58,10 +62,10 @@ theorem trace_Q_mul (s t : Spin) : Matrix.trace (Q s * Q t) = qPair s t := by
   nlinarith [hs, ht]
 
 /-- Normalised surface area on the sphere. -/
-noncomputable def sphereProbability : Measure Spin :=
+@[expose] noncomputable def sphereProbability : Measure Spin :=
   ((volume : Measure E4).toSphere Set.univ)⁻¹ • (volume : Measure E4).toSphere
 
-instance sphereProbability_isProbability : IsProbabilityMeasure sphereProbability := by
+@[expose] instance sphereProbability_isProbability : IsProbabilityMeasure sphereProbability := by
   have hs : (volume : Measure E4).toSphere ≠ 0 := Measure.toSphere_ne_zero _
   constructor
   dsimp [sphereProbability]
@@ -74,29 +78,29 @@ variable {V E : Type*} [Fintype V] [Fintype E]
 
 abbrev Configuration (V : Type*) := V → Spin
 
-noncomputable def referenceLaw : Measure (Configuration V) :=
+@[expose] noncomputable def referenceLaw : Measure (Configuration V) :=
   Measure.pi (fun _ => sphereProbability)
 
-instance referenceLaw_isProbability : IsProbabilityMeasure (referenceLaw (V := V)) := by
+@[expose] instance referenceLaw_isProbability : IsProbabilityMeasure (referenceLaw (V := V)) := by
   unfold referenceLaw
   infer_instance
 
 /-- General finite graph with oriented representatives of its unoriented edges.
 The square-lattice geometry is needed later, when annuli are constructed. -/
-noncomputable def interaction (edge : E → V × V) (b : E → ℝ)
+@[expose] noncomputable def interaction (edge : E → V × V) (b : E → ℝ)
     (σ : Configuration V) : ℝ :=
   ∑ e, b e * ⟪(σ (edge e).1).val, (σ (edge e).2).val⟫_ℝ ^ 2
 
-noncomputable def weight (edge : E → V × V) (b : E → ℝ) : C(Configuration V, ℝ) :=
+@[expose] noncomputable def weight (edge : E → V × V) (b : E → ℝ) : C(Configuration V, ℝ) :=
   ⟨fun σ => Real.exp (interaction edge b σ), by unfold interaction; fun_prop⟩
 
-noncomputable def observable (x y : V) : C(Configuration V, ℝ) :=
+@[expose] noncomputable def observable (x y : V) : C(Configuration V, ℝ) :=
   ⟨fun σ => qPair (σ x) (σ y), by unfold qPair; fun_prop⟩
 
-noncomputable def partition (edge : E → V × V) (b : E → ℝ) : ℝ :=
+@[expose] noncomputable def partition (edge : E → V × V) (b : E → ℝ) : ℝ :=
   (integralOnCompact (referenceLaw (V := V))).linear (weight edge b)
 
-noncomputable def correlation (edge : E → V × V) (b : E → ℝ) (x y : V) : ℝ :=
+@[expose] noncomputable def correlation (edge : E → V × V) (b : E → ℝ) (x y : V) : ℝ :=
   (integralOnCompact (referenceLaw (V := V))).linear
     (observable x y * weight edge b) / partition edge b
 
@@ -119,7 +123,7 @@ theorem abs_correlation_le (edge : E → V × V) (b : E → ℝ) (x y : V) :
   rw [abs_div, abs_of_pos (partition_pos edge b)]
   exact (div_le_iff₀ (partition_pos edge b)).mpr hb
 
-noncomputable def signChange (η : V → Bool) (σ : Configuration V) : Configuration V :=
+@[expose] noncomputable def signChange (η : V → Bool) (σ : Configuration V) : Configuration V :=
   fun x => if η x then antipode (σ x) else σ x
 
 omit [Fintype V] in
@@ -144,7 +148,7 @@ end FiniteVolume
 
 
 /-- Left multiplication by 1,i,j,k,-1,-i,-j,-k on real quaternion coordinates. -/
-noncomputable def quaternionRotate (g : Fin 8) (u : Fin 4 → ℝ) : Fin 4 → ℝ :=
+@[expose] noncomputable def quaternionRotate (g : Fin 8) (u : Fin 4 → ℝ) : Fin 4 → ℝ :=
   ![![u 0, u 1, u 2, u 3],
     ![-u 1, u 0, -u 3, u 2],
     ![-u 2, u 3, u 0, -u 1],

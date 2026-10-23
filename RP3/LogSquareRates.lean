@@ -1,4 +1,8 @@
-import RP3.DenseRates
+module
+
+public import RP3.DenseRates
+
+public section
 
 /-!
 # From linearly many shells per scale to log-square decay
@@ -14,7 +18,7 @@ noncomputable section
 open Finset
 
 /-- Number of thin annuli retained in the first `k` bands starting at `a`. -/
-def packedAnnulusCount (m : ℕ → ℕ) (a k : ℕ) : ℕ :=
+@[expose] def packedAnnulusCount (m : ℕ → ℕ) (a k : ℕ) : ℕ :=
   ∑ j ∈ range k, m (a+j)
 
 private theorem sum_range_real_index (k : ℕ) :

@@ -1,6 +1,10 @@
-import RP2.KernelEstimate
-import RP2.UniformDecay
-import RP2.LogarithmicRate
+module
+
+public import RP2.KernelEstimate
+public import RP2.UniformDecay
+public import RP2.LogarithmicRate
+
+public section
 
 /-!
 # Superpolynomial quadrupolar decay in the planar RP² model

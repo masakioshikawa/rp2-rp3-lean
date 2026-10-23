@@ -1,4 +1,8 @@
-import RP2.Rates
+module
+
+public import RP2.Rates
+
+public section
 
 /-!
 # The explicit logarithmic decay envelope

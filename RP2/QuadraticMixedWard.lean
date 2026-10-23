@@ -1,5 +1,9 @@
-import RP2.QuadraticMixedJets
-import RP2.QuadraticSecondResponse
+module
+
+public import RP2.QuadraticMixedJets
+public import RP2.QuadraticSecondResponse
+
+public section
 /-!
 # Polarized fourth Ward identity for the squared RP² interaction
 Adapted from OpenAI ClassicalON/MixedWard, commit

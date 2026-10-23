@@ -1,0 +1,3232 @@
+⚠ [8930/9017] Built RP2.MixedAlgebra (10s)
+warning: RP2/MixedAlgebra.lean:172:2: `@[expose]` has no effect; this declaration would be exposed by default
+✔ [8931/9017] Built RP2.FourierAll (12s)
+✔ [8932/9017] Built RP2.Rates (3.8s)
+✔ [8933/9017] Built RP2.PeriodicODE (3.9s)
+✔ [8934/9017] Built RP2.Calculus (3.7s)
+✔ [8935/9017] Built RP2.Averaging (4.2s)
+⚠ [8936/9017] Built RP2.ThinDyadicParameters (4.1s)
+warning: RP2/ThinDyadicParameters.lean:68:28: Variable name `hV` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hV
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8937/9017] Built RP2.ThinProfiles (4.4s)
+warning: RP2/ThinProfiles.lean:51:38: Variable name `hc` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hc
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: RP2/ThinProfiles.lean:249:29: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [squareStep]
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: RP2/ThinProfiles.lean:250:29: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [squareStep]
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [8938/9017] Built RP2.WeightedSummability (3.3s)
+warning: RP2/WeightedSummability.lean:46:19: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+✔ [8939/9017] Built RP2.LogarithmicRate (9.4s)
+✔ [8940/9017] Built RP2.Criticality (3.5s)
+✔ [8941/9017] Built RP2.ProductJets (3.1s)
+✔ [8942/9017] Built RP2.AveragingInterface (3.1s)
+✔ [8943/9017] Built RP2.Main (2.0s)
+✔ [8944/9017] Built RP2.FiniteAveraging (3.1s)
+✔ [8945/9017] Built RP2.NestedCuts (3.1s)
+✔ [8946/9017] Built RP2.Model (5.1s)
+⚠ [8947/9017] Built RP2.LatticeAnnuli (3.8s)
+warning: RP2/LatticeAnnuli.lean:88:70: Variable name `hN` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hN
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: RP2/LatticeAnnuli.lean:161:0: automatically included section variable(s) unused in theorem `RP2.coupling_partition`:
+  [Fintype E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP2/LatticeAnnuli.lean:175:45: This simp argument is unused:
+  he
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [remainingCoupling, maskedCoupling, hn]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP2/LatticeAnnuli.lean:178:0: automatically included section variable(s) unused in theorem `RP2.interaction_partition`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [8948/9017] Built RP2.GibbsProbability (3.8s)
+✔ [8949/9017] Built RP2.PinnedKernel (2.9s)
+⚠ [8950/9017] Built RP2.RotationGeometry (30s)
+warning: RP2/RotationGeometry.lean:76:2: `@[expose]` has no effect; this declaration would be exposed by default
+✖ [8951/9017] Building RP2.TetrahedralAction (40s)
+trace: .> LEAN_PATH=/workspace/scratch/53fc9415f670/rp2-rp3-palomar/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/53fc9415f670/rp2-rp3-palomar/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/53fc9415f670/rp2-rp3-palomar/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/53fc9415f670/rp2-rp3-palomar/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/53fc9415f670/rp2-rp3-palomar/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/53fc9415f670/rp2-rp3-palomar/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/53fc9415f670/rp2-rp3-palomar/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/53fc9415f670/rp2-rp3-palomar/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/53fc9415f670/rp2-rp3-palomar/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/53fc9415f670/rp2-rp3-palomar/.lake/build/lib/lean /workspace/scratch/53fc9415f670/palomar-tools/lean-4.35.0-rc2-linux/bin/lean /workspace/scratch/53fc9415f670/rp2-rp3-palomar/RP2/TetrahedralAction.lean -o /workspace/scratch/53fc9415f670/rp2-rp3-palomar/.lake/build/lib/lean/RP2/TetrahedralAction.olean -i /workspace/scratch/53fc9415f670/rp2-rp3-palomar/.lake/build/lib/lean/RP2/TetrahedralAction.ilean -c /workspace/scratch/53fc9415f670/rp2-rp3-palomar/.lake/build/ir/RP2/TetrahedralAction.c --setup /workspace/scratch/53fc9415f670/rp2-rp3-palomar/.lake/build/ir/RP2/TetrahedralAction.setup.json --json
+warning: RP2/TetrahedralAction.lean:65:2: `@[expose]` has no effect; this declaration would be exposed by default
+error: RP2/TetrahedralAction.lean:66:9: Unknown identifier `tetraMul`
+
+Note: A private declaration `tetraMul` (from the current module) exists but would need to be public to access here.
+error: RP2/TetrahedralAction.lean:69:15: Unknown identifier `tetraMul_assoc`
+
+Note: A private declaration `tetraMul_assoc` (from the current module) exists but would need to be public to access here.
+error: RP2/TetrahedralAction.lean:68:9: Unknown identifier `tetraInv`
+
+Note: A private declaration `tetraInv` (from the current module) exists but would need to be public to access here.
+error: RP2/TetrahedralAction.lean:84:0: Not a definitional equality: the left-hand side
+  (g * h).cycle
+is not definitionally equal to the right-hand side
+  g.cycle + h.cycle
+error: RP2/TetrahedralAction.lean:85:41: Type mismatch
+  rfl
+has type
+  ?m.11 = ?m.11
+but is expected to have type
+  (g * h).cycle = g.cycle + h.cycle
+error: RP2/TetrahedralAction.lean:88:19: Unknown identifier `signProduct`
+
+Note: A private declaration `signProduct` (from the current module) exists but would need to be public to access here.
+error: RP2/TetrahedralAction.lean:112:67: unsolved goals
+case «0».«0».«0».«0».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «0».«0».«0».«0».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «0».«0».«0».«0».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    u 2
+
+case «0».«0».«0».«1».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «0».«0».«0».«1».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «0».«0».«0».«1».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    -u 2
+
+case «0».«0».«0».«2».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «0».«0».«0».«2».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «0».«0».«0».«2».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    -u 2
+
+case «0».«0».«0».«3».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «0».«0».«0».«3».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «0».«0».«0».«3».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    u 2
+
+case «0».«0».«1».«0».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «0».«0».«1».«0».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «0».«0».«1».«0».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    u 0
+
+case «0».«0».«1».«1».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «0».«0».«1».«1».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «0».«0».«1».«1».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    -u 0
+
+case «0».«0».«1».«2».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «0».«0».«1».«2».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «0».«0».«1».«2».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    -u 0
+
+case «0».«0».«1».«3».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «0».«0».«1».«3».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «0».«0».«1».«3».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    u 0
+
+case «0».«0».«2».«0».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «0».«0».«2».«0».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «0».«0».«2».«0».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    u 1
+
+case «0».«0».«2».«1».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «0».«0».«2».«1».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «0».«0».«2».«1».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    -u 1
+
+case «0».«0».«2».«2».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «0».«0».«2».«2».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «0».«0».«2».«2».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    -u 1
+
+case «0».«0».«2».«3».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «0».«0».«2».«3».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «0».«0».«2».«3».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    u 1
+
+case «0».«1».«0».«0».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «0».«1».«0».«0».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «0».«1».«0».«0».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    -u 2
+
+case «0».«1».«0».«1».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «0».«1».«0».«1».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «0».«1».«0».«1».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    u 2
+
+case «0».«1».«0».«2».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «0».«1».«0».«2».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «0».«1».«0».«2».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    u 2
+
+case «0».«1».«0».«3».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «0».«1».«0».«3».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «0».«1».«0».«3».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    -u 2
+
+case «0».«1».«1».«0».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «0».«1».«1».«0».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «0».«1».«1».«0».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    -u 0
+
+case «0».«1».«1».«1».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «0».«1».«1».«1».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «0».«1».«1».«1».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    u 0
+
+case «0».«1».«1».«2».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «0».«1».«1».«2».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «0».«1».«1».«2».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    u 0
+
+case «0».«1».«1».«3».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «0».«1».«1».«3».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «0».«1».«1».«3».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    -u 0
+
+case «0».«1».«2».«0».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «0».«1».«2».«0».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «0».«1».«2».«0».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    -u 1
+
+case «0».«1».«2».«1».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «0».«1».«2».«1».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «0».«1».«2».«1».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    u 1
+
+case «0».«1».«2».«2».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «0».«1».«2».«2».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «0».«1».«2».«2».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    u 1
+
+case «0».«1».«2».«3».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «0».«1».«2».«3».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «0».«1».«2».«3».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    -u 1
+
+case «0».«2».«0».«0».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «0».«2».«0».«0».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «0».«2».«0».«0».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    -u 2
+
+case «0».«2».«0».«1».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «0».«2».«0».«1».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «0».«2».«0».«1».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    u 2
+
+case «0».«2».«0».«2».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «0».«2».«0».«2».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «0».«2».«0».«2».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    u 2
+
+case «0».«2».«0».«3».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «0».«2».«0».«3».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «0».«2».«0».«3».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    -u 2
+
+case «0».«2».«1».«0».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «0».«2».«1».«0».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «0».«2».«1».«0».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    -u 0
+
+case «0».«2».«1».«1».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «0».«2».«1».«1».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «0».«2».«1».«1».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    u 0
+
+case «0».«2».«1».«2».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «0».«2».«1».«2».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «0».«2».«1».«2».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    u 0
+
+case «0».«2».«1».«3».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «0».«2».«1».«3».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «0».«2».«1».«3».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    -u 0
+
+case «0».«2».«2».«0».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «0».«2».«2».«0».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «0».«2».«2».«0».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    -u 1
+
+case «0».«2».«2».«1».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «0».«2».«2».«1».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «0».«2».«2».«1».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    u 1
+
+case «0».«2».«2».«2».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «0».«2».«2».«2».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «0».«2».«2».«2».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    u 1
+
+case «0».«2».«2».«3».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «0».«2».«2».«3».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «0».«2».«2».«3».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    -u 1
+
+case «0».«3».«0».«0».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «0».«3».«0».«0».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «0».«3».«0».«0».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    u 2
+
+case «0».«3».«0».«1».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «0».«3».«0».«1».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «0».«3».«0».«1».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    -u 2
+
+case «0».«3».«0».«2».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «0».«3».«0».«2».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «0».«3».«0».«2».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    -u 2
+
+case «0».«3».«0».«3».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «0».«3».«0».«3».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «0».«3».«0».«3».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    u 2
+
+case «0».«3».«1».«0».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «0».«3».«1».«0».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «0».«3».«1».«0».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    u 0
+
+case «0».«3».«1».«1».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «0».«3».«1».«1».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «0».«3».«1».«1».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    -u 0
+
+case «0».«3».«1».«2».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «0».«3».«1».«2».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «0».«3».«1».«2».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    -u 0
+
+case «0».«3».«1».«3».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «0».«3».«1».«3».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «0».«3».«1».«3».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    u 0
+
+case «0».«3».«2».«0».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «0».«3».«2».«0».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «0».«3».«2».«0».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    u 1
+
+case «0».«3».«2».«1».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «0».«3».«2».«1».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «0».«3».«2».«1».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    -u 1
+
+case «0».«3».«2».«2».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «0».«3».«2».«2».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «0».«3».«2».«2».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    -u 1
+
+case «0».«3».«2».«3».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «0».«3».«2».«3».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «0».«3».«2».«3».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    u 1
+
+case «1».«0».«0».«0».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «1».«0».«0».«0».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «1».«0».«0».«0».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    u 0
+
+case «1».«0».«0».«1».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «1».«0».«0».«1».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «1».«0».«0».«1».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    u 0
+
+case «1».«0».«0».«2».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «1».«0».«0».«2».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «1».«0».«0».«2».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    -u 0
+
+case «1».«0».«0».«3».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «1».«0».«0».«3».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «1».«0».«0».«3».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    -u 0
+
+case «1».«0».«1».«0».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «1».«0».«1».«0».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «1».«0».«1».«0».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    u 1
+
+case «1».«0».«1».«1».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «1».«0».«1».«1».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «1».«0».«1».«1».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    u 1
+
+case «1».«0».«1».«2».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «1».«0».«1».«2».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «1».«0».«1».«2».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    -u 1
+
+case «1».«0».«1».«3».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «1».«0».«1».«3».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «1».«0».«1».«3».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    -u 1
+
+case «1».«0».«2».«0».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «1».«0».«2».«0».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «1».«0».«2».«0».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    u 2
+
+case «1».«0».«2».«1».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «1».«0».«2».«1».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «1».«0».«2».«1».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    u 2
+
+case «1».«0».«2».«2».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «1».«0».«2».«2».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «1».«0».«2».«2».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    -u 2
+
+case «1».«0».«2».«3».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «1».«0».«2».«3».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «1».«0».«2».«3».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    -u 2
+
+case «1».«1».«0».«0».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «1».«1».«0».«0».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «1».«1».«0».«0».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    -u 0
+
+case «1».«1».«0».«1».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «1».«1».«0».«1».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «1».«1».«0».«1».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    -u 0
+
+case «1».«1».«0».«2».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «1».«1».«0».«2».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «1».«1».«0».«2».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    u 0
+
+case «1».«1».«0».«3».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «1».«1».«0».«3».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «1».«1».«0».«3».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    u 0
+
+case «1».«1».«1».«0».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «1».«1».«1».«0».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «1».«1».«1».«0».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    -u 1
+
+case «1».«1».«1».«1».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «1».«1».«1».«1».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «1».«1».«1».«1».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    -u 1
+
+case «1».«1».«1».«2».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «1».«1».«1».«2».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «1».«1».«1».«2».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    u 1
+
+case «1».«1».«1».«3».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «1».«1».«1».«3».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «1».«1».«1».«3».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    u 1
+
+case «1».«1».«2».«0».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «1».«1».«2».«0».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «1».«1».«2».«0».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    -u 2
+
+case «1».«1».«2».«1».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «1».«1».«2».«1».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «1».«1».«2».«1».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    -u 2
+
+case «1».«1».«2».«2».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «1».«1».«2».«2».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «1».«1».«2».«2».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    u 2
+
+case «1».«1».«2».«3».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «1».«1».«2».«3».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «1».«1».«2».«3».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    u 2
+
+case «1».«2».«0».«0».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «1».«2».«0».«0».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «1».«2».«0».«0».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    -u 0
+
+case «1».«2».«0».«1».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «1».«2».«0».«1».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «1».«2».«0».«1».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    -u 0
+
+case «1».«2».«0».«2».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «1».«2».«0».«2».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «1».«2».«0».«2».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    u 0
+
+case «1».«2».«0».«3».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «1».«2».«0».«3».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «1».«2».«0».«3».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    u 0
+
+case «1».«2».«1».«0».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «1».«2».«1».«0».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «1».«2».«1».«0».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    -u 1
+
+case «1».«2».«1».«1».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «1».«2».«1».«1».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «1».«2».«1».«1».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    -u 1
+
+case «1».«2».«1».«2».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «1».«2».«1».«2».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «1».«2».«1».«2».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    u 1
+
+case «1».«2».«1».«3».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «1».«2».«1».«3».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «1».«2».«1».«3».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    u 1
+
+case «1».«2».«2».«0».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «1».«2».«2».«0».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «1».«2».«2».«0».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    -u 2
+
+case «1».«2».«2».«1».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «1».«2».«2».«1».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «1».«2».«2».«1».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    -u 2
+
+case «1».«2».«2».«2».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «1».«2».«2».«2».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «1».«2».«2».«2».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    u 2
+
+case «1».«2».«2».«3».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «1».«2».«2».«3».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «1».«2».«2».«3».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    u 2
+
+case «1».«3».«0».«0».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «1».«3».«0».«0».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «1».«3».«0».«0».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    u 0
+
+case «1».«3».«0».«1».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «1».«3».«0».«1».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «1».«3».«0».«1».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    u 0
+
+case «1».«3».«0».«2».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «1».«3».«0».«2».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «1».«3».«0».«2».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    -u 0
+
+case «1».«3».«0».«3».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «1».«3».«0».«3».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «1».«3».«0».«3».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    -u 0
+
+case «1».«3».«1».«0».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «1».«3».«1».«0».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «1».«3».«1».«0».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    u 1
+
+case «1».«3».«1».«1».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «1».«3».«1».«1».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «1».«3».«1».«1».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    u 1
+
+case «1».«3».«1».«2».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «1».«3».«1».«2».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «1».«3».«1».«2».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    -u 1
+
+case «1».«3».«1».«3».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «1».«3».«1».«3».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «1».«3».«1».«3».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    -u 1
+
+case «1».«3».«2».«0».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «1».«3».«2».«0».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «1».«3».«2».«0».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    u 2
+
+case «1».«3».«2».«1».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «1».«3».«2».«1».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «1».«3».«2».«1».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    u 2
+
+case «1».«3».«2».«2».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «1».«3».«2».«2».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «1».«3».«2».«2».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    -u 2
+
+case «1».«3».«2».«3».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «1».«3».«2».«3».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «1».«3».«2».«3».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    -u 2
+
+case «2».«0».«0».«0».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «2».«0».«0».«0».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «2».«0».«0».«0».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    u 1
+
+case «2».«0».«0».«1».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «2».«0».«0».«1».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «2».«0».«0».«1».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    -u 1
+
+case «2».«0».«0».«2».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «2».«0».«0».«2».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «2».«0».«0».«2».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    u 1
+
+case «2».«0».«0».«3».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «2».«0».«0».«3».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «2».«0».«0».«3».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    -u 1
+
+case «2».«0».«1».«0».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «2».«0».«1».«0».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «2».«0».«1».«0».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    u 2
+
+case «2».«0».«1».«1».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «2».«0».«1».«1».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «2».«0».«1».«1».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    -u 2
+
+case «2».«0».«1».«2».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «2».«0».«1».«2».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «2».«0».«1».«2».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    u 2
+
+case «2».«0».«1».«3».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «2».«0».«1».«3».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «2».«0».«1».«3».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    -u 2
+
+case «2».«0».«2».«0».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «2».«0».«2».«0».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «2».«0».«2».«0».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    u 0
+
+case «2».«0».«2».«1».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «2».«0».«2».«1».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «2».«0».«2».«1».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    -u 0
+
+case «2».«0».«2».«2».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «2».«0».«2».«2».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «2».«0».«2».«2».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    u 0
+
+case «2».«0».«2».«3».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «2».«0».«2».«3».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «2».«0».«2».«3».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    -u 0
+
+case «2».«1».«0».«0».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «2».«1».«0».«0».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «2».«1».«0».«0».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    -u 1
+
+case «2».«1».«0».«1».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «2».«1».«0».«1».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «2».«1».«0».«1».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    u 1
+
+case «2».«1».«0».«2».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «2».«1».«0».«2».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «2».«1».«0».«2».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    -u 1
+
+case «2».«1».«0».«3».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «2».«1».«0».«3».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «2».«1».«0».«3».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    u 1
+
+case «2».«1».«1».«0».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «2».«1».«1».«0».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «2».«1».«1».«0».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    -u 2
+
+case «2».«1».«1».«1».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «2».«1».«1».«1».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «2».«1».«1».«1».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    u 2
+
+case «2».«1».«1».«2».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «2».«1».«1».«2».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «2».«1».«1».«2».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    -u 2
+
+case «2».«1».«1».«3».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «2».«1».«1».«3».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «2».«1».«1».«3».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    u 2
+
+case «2».«1».«2».«0».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «2».«1».«2».«0».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «2».«1».«2».«0».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    -u 0
+
+case «2».«1».«2».«1».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «2».«1».«2».«1».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «2».«1».«2».«1».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    u 0
+
+case «2».«1».«2».«2».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «2».«1».«2».«2».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «2».«1».«2».«2».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    -u 0
+
+case «2».«1».«2».«3».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «2».«1».«2».«3».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «2».«1».«2».«3».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    u 0
+
+case «2».«2».«0».«0».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «2».«2».«0».«0».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «2».«2».«0».«0».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    -u 1
+
+case «2».«2».«0».«1».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «2».«2».«0».«1».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «2».«2».«0».«1».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    u 1
+
+case «2».«2».«0».«2».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «2».«2».«0».«2».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «2».«2».«0».«2».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    -u 1
+
+case «2».«2».«0».«3».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «2».«2».«0».«3».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «2».«2».«0».«3».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    u 1
+
+case «2».«2».«1».«0».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «2».«2».«1».«0».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «2».«2».«1».«0».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    -u 2
+
+case «2».«2».«1».«1».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «2».«2».«1».«1».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «2».«2».«1».«1».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    u 2
+
+case «2».«2».«1».«2».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «2».«2».«1».«2».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «2».«2».«1».«2».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    -u 2
+
+case «2».«2».«1».«3».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «2».«2».«1».«3».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «2».«2».«1».«3».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    u 2
+
+case «2».«2».«2».«0».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «2».«2».«2».«0».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «2».«2».«2».«0».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    -u 0
+
+case «2».«2».«2».«1».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «2».«2».«2».«1».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «2».«2».«2».«1».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    u 0
+
+case «2».«2».«2».«2».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «2».«2».«2».«2».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «2».«2».«2».«2».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    -u 0
+
+case «2».«2».«2».«3».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «2».«2».«2».«3».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «2».«2».«2».«3».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    u 0
+
+case «2».«3».«0».«0».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «2».«3».«0».«0».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «2».«3».«0».«0».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    u 1
+
+case «2».«3».«0».«1».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «2».«3».«0».«1».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «2».«3».«0».«1».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    -u 1
+
+case «2».«3».«0».«2».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «2».«3».«0».«2».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «2».«3».«0».«2».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    u 1
+
+case «2».«3».«0».«3».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «2».«3».«0».«3».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «2».«3».«0».«3».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (-u 1) (fun i => u 1) i) i) (sorry ()) =
+    -u 1
+
+case «2».«3».«1».«0».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «2».«3».«1».«0».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «2».«3».«1».«0».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    u 2
+
+case «2».«3».«1».«1».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «2».«3».«1».«1».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «2».«3».«1».«1».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    -u 2
+
+case «2».«3».«1».«2».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    u 0
+
+case «2».«3».«1».«2».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «2».«3».«1».«2».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    u 2
+
+case «2».«3».«1».«3».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => -u 0) i) i) (sorry ()) =
+    -u 0
+
+case «2».«3».«1».«3».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => Matrix.vecCons (u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «2».«3».«1».«3».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (-u 2) (fun i => u 2) i) i) (sorry ()) =
+    -u 2
+
+case «2».«3».«2».«0».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «2».«3».«2».«0».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «2».«3».«2».«0».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    u 0
+
+case «2».«3».«2».«1».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «2».«3».«2».«1».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    -u 2
+
+case «2».«3».«2».«1».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    -u 0
+
+case «2».«3».«2».«2».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    u 1
+
+case «2».«3».«2».«2».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «2».«3».«2».«2».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    u 0
+
+case «2».«3».«2».«3».«0»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 1) (fun i => Matrix.vecCons (u 1) (fun i => Matrix.vecCons (-u 1) (fun i => -u 1) i) i) (sorry ()) =
+    -u 1
+
+case «2».«3».«2».«3».«1»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 2) (fun i => Matrix.vecCons (-u 2) (fun i => Matrix.vecCons (u 2) (fun i => -u 2) i) i) (sorry ()) =
+    u 2
+
+case «2».«3».«2».«3».«2»
+u : Fin 3 → ℝ
+⊢ Matrix.vecCons (u 0) (fun i => Matrix.vecCons (-u 0) (fun i => Matrix.vecCons (-u 0) (fun i => u 0) i) i) (sorry ()) =
+    -u 0
+⚠ [8952/9017] Built RP2.ModelAssembly (4.2s)
+warning: RP2/ModelAssembly.lean:63:0: automatically included section variable(s) unused in theorem `RP2.interaction_globalRotation`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP2/ModelAssembly.lean:148:52: This simp argument is unused:
+  ContinuousMap.comp_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pinnedKernel_apply, pinnedPartition, pinnedWeight, integralOnCompact, ContinuousMap.mul_apply,
+    hout]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP2/ModelAssembly.lean:158:0: automatically included section variable(s) unused in theorem `RP2.weight_dependsOnPins`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP2/ModelAssembly.lean:170:0: automatically included section variable(s) unused in theorem `RP2.observable_dependsOnPins`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP2/ModelAssembly.lean:213:0: automatically included section variable(s) unused in theorem `RP2.DependsOnPins.mul`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP2/ModelAssembly.lean:219:0: automatically included section variable(s) unused in theorem `RP2.dependsOnPins_one`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP2/ModelAssembly.lean:222:0: automatically included section variable(s) unused in theorem `RP2.dependsOnPins_prod`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP2/ModelAssembly.lean:336:0: automatically included section variable(s) unused in theorem `RP2.pinnedKernel_cut_invariant`:
+  [Fintype G]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype G] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP2/ModelAssembly.lean:363:0: automatically included section variable(s) unused in theorem `RP2.weight_cut_invariant`:
+  [Fintype V]
+  [Fintype G]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [Fintype G] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP2/ModelAssembly.lean:429:0: automatically included section variable(s) unused in theorem `RP2.observable_cut_average_zero`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [8953/9017] Built RP2.QuadraticGibbs (5.3s)
+⚠ [8962/9017] Built RP2.ModelRestriction (3.3s)
+warning: RP2/ModelRestriction.lean:25:0: automatically included section variable(s) unused in theorem `RP2.referenceLaw_restrict_measurePreserving`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP2/ModelRestriction.lean:44:0: automatically included section variable(s) unused in theorem `RP2.interaction_restrict`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP2/ModelRestriction.lean:87:0: automatically included section variable(s) unused in theorem `RP2.interaction_reindex`:
+  [Fintype V]
+  [Fintype W]
+  [DecidableEq V]
+  [DecidableEq W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [Fintype W] [DecidableEq V] [DecidableEq W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [8963/9017] Built RP2.QuadraticDerivatives (8.1s)
+⚠ [8968/9017] Built RP2.LatticeModelRestriction (2.0s)
+warning: RP2/LatticeModelRestriction.lean:61:4: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+✔ [8969/9017] Built RP2.QuadraticWard (4.4s)
+✔ [8970/9017] Built RP2.ModelConnection (3.2s)
+✔ [8971/9017] Built RP2.QuadraticBounds (3.8s)
+✔ [8972/9017] Built RP2.QuadraticPlane (10s)
+✔ [8973/9017] Built RP2.QuadraticPlaneResponse (4.2s)
+⚠ [8974/9017] Built RP2.ComplexCurrents (5.0s)
+warning: RP2/ComplexCurrents.lean:97:65: This simp argument is unused:
+  axisGradient
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Complex.normSq_apply, complexCurrent, edgeGradient, Complex.sub_re, Complex.sub_im, pow_two]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [8975/9017] Built RP2.QuadraticAverages (3.5s)
+⚠ [8976/9017] Built RP2.Fourier.ResponseTransfer (5.7s)
+warning: RP2/Fourier/ResponseTransfer.lean:52:10: `mul_le_one₀` has been deprecated: No replacement, use constituent lemmas from proof.
+warning: RP2/Fourier/ResponseTransfer.lean:37:0: automatically included section variable(s) unused in theorem `RP2.Quadratic.SpinSystem.abs_axisSecondCoefficient_le`:
+  [Fintype E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8977/9017] Built RP2.QuadraticMixedJets (6.3s)
+warning: RP2/QuadraticMixedJets.lean:266:21: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✔ [8978/9017] Built RP2.QuadraticSecondResponse (4.8s)
+✔ [8979/9017] Built RP2.QuadraticCoefficientBounds (4.3s)
+✔ [8980/9017] Built RP2.QuadraticMixedWard (3.3s)
+✔ [8981/9017] Built RP2.QuadraticSecondGauge (4.1s)
+✔ [8983/9017] Built RP2.QuadraticComplexWard (4.9s)
+✔ [8984/9017] Built RP2.QuadraticSecondBound (3.8s)
+⚠ [8985/9017] Built RP2.QuadraticFamilyKernel (12s)
+warning: RP2/QuadraticFamilyKernel.lean:28:63: Local variable 'a' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP2/QuadraticFamilyKernel.lean:33:60: Local variable 'a' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP2/QuadraticFamilyKernel.lean:59:8: automatically included section variable(s) unused in theorem `RP2.Quadratic.SpinSystem.mixedCoefficientObservable_conj`:
+  [Fintype E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP2/QuadraticFamilyKernel.lean:60:5: Local variable 'a' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP2/QuadraticFamilyKernel.lean:96:5: Local variable 'a' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP2/QuadraticFamilyKernel.lean:165:67: This simp argument is unused:
+  familyKernel
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [MixedAlgebra.weighted, MixedAlgebra.kernel, map_sum, map_mul, map_add, map_ofNat,
+    Complex.conj_ofReal, starRingEnd_self_apply, Pi.mul_apply, Complex.ofReal_mul, Complex.ofReal_add,
+    Complex.ofReal_pow, one_apply_eq_self, mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP2/QuadraticFamilyKernel.lean:166:4: This simp argument is unused:
+  map_sum
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [MixedAlgebra.weighted, MixedAlgebra.kernel, familyKernel, map_mul, map_add, map_ofNat,
+    Complex.conj_ofReal, starRingEnd_self_apply, Pi.mul_apply, Complex.ofReal_mul, Complex.ofReal_add,
+    Complex.ofReal_pow, one_apply_eq_self, mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP2/QuadraticFamilyKernel.lean:166:31: This simp argument is unused:
+  map_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [MixedAlgebra.weighted, MixedAlgebra.kernel, familyKernel, map_sum, map_mul, map_add,
+    Complex.conj_ofReal, starRingEnd_self_apply, Pi.mul_apply, Complex.ofReal_mul, Complex.ofReal_add,
+    Complex.ofReal_pow, one_apply_eq_self, mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP2/QuadraticFamilyKernel.lean:167:4: This simp argument is unused:
+  starRingEnd_self_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [MixedAlgebra.weighted, MixedAlgebra.kernel, familyKernel, map_sum, map_mul, map_add, map_ofNat,
+    Complex.conj_ofReal, Pi.mul_apply, Complex.ofReal_mul, Complex.ofReal_add, Complex.ofReal_pow, one_apply_eq_self,
+    mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP2/QuadraticFamilyKernel.lean:168:4: This simp argument is unused:
+  Complex.ofReal_pow
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [MixedAlgebra.weighted, MixedAlgebra.kernel, familyKernel, map_sum, map_mul, map_add, map_ofNat,
+    Complex.conj_ofReal, starRingEnd_self_apply, Pi.mul_apply, Complex.ofReal_mul, Complex.ofReal_add,
+    one_apply_eq_self, mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [8986/9017] Built RP2.Fourier.ModelModes (2.9s)
+⚠ [8987/9017] Built RP2.QuadraticFamilyEstimates (2.8s)
+warning: RP2/QuadraticFamilyEstimates.lean:21:16: Local variable 'a' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP2/QuadraticFamilyEstimates.lean:22:5: Local variable 'a' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP2/QuadraticFamilyEstimates.lean:29:16: Local variable 'a' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP2/QuadraticFamilyEstimates.lean:30:5: Local variable 'a' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP2/QuadraticFamilyEstimates.lean:30:7: Local variable 'b' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.b' - write '.b' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.b' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP2/QuadraticFamilyEstimates.lean:42:16: Local variable 'a' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP2/QuadraticFamilyEstimates.lean:43:5: Local variable 'a' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP2/QuadraticFamilyEstimates.lean:63:16: Local variable 'a' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP2/QuadraticFamilyEstimates.lean:64:5: Local variable 'a' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+⚠ [8988/9017] Built RP2.QuadraticFamilyLower (3.6s)
+warning: RP2/QuadraticFamilyLower.lean:42:18: Local variable 'a' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP2/QuadraticFamilyLower.lean:43:8: Local variable 'a' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP2/QuadraticFamilyLower.lean:63:12: Local variable 'a' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP2/QuadraticFamilyLower.lean:79:13: Local variable 'a' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP2/QuadraticFamilyLower.lean:79:15: Local variable 'b' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.b' - write '.b' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.b' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP2/QuadraticFamilyLower.lean:94:15: Local variable 'a' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+✔ [8989/9017] Built RP2.QuadraticFamily (3.6s)
+⚠ [8990/9017] Built RP2.Fourier.AnnulusResponse (3.7s)
+warning: RP2/Fourier/AnnulusResponse.lean:40:9: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [8991/9017] Built RP2.ThinFourier (7.5s)
+warning: RP2/ThinFourier.lean:164:5: Variable name `hC` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hC
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: RP2/ThinFourier.lean:260:18: Variable name `hL` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hL
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: RP2/ThinFourier.lean:436:50: Variable name `h` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [8994/9017] Built RP2.PaperResponse (3.0s)
+✔ [9006/9103] Built RP2.ThinCosts (3.5s)
+✔ [9018/9105] Built RP3.MathlibImports (1.5s)
+⚠ [9019/9105] Built Challenge (3.1s)
+warning: Challenge.lean:69:8: declaration uses `sorry`
+warning: Challenge.lean:78:8: declaration uses `sorry`
+⚠ [9021/9105] Built RP3.MixedAlgebra (3.5s)
+warning: RP3/MixedAlgebra.lean:172:2: `@[expose]` has no effect; this declaration would be exposed by default
+✔ [9022/9105] Built RP3.Calculus (2.0s)
+✔ [9023/9105] Built RP3.Rates (2.0s)
+✔ [9024/9105] Built RP3.PeriodicODE (1.9s)
+✔ [9025/9105] Built RP3.Averaging (2.3s)
+✔ [9026/9105] Built RP3.FourierAll (7.8s)
+✔ [9027/9105] Built RP3.ProductJets (1.9s)
+✔ [9028/9105] Built RP3.LogarithmicRate (7.2s)
+✔ [9029/9105] Built RP3.Main (1.9s)
+✔ [9030/9105] Built RP3.FiniteAveraging (1.0s)
+✔ [9031/9105] Built RP3.WeightedSummability (1.8s)
+⚠ [9032/9105] Built RP3.ThinDyadicParameters (2.5s)
+warning: RP3/ThinDyadicParameters.lean:68:28: Variable name `hV` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hV
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [9033/9105] Built RP3.ThinProfiles (2.5s)
+warning: RP3/ThinProfiles.lean:51:38: Variable name `hc` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hc
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: RP3/ThinProfiles.lean:249:29: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [squareStep]
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: RP3/ThinProfiles.lean:250:29: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [squareStep]
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+✔ [9034/9105] Built RP3.NestedCuts (1.8s)
+✔ [9035/9105] Built RP3.Model (5.0s)
+⚠ [9036/9105] Built RP3.LatticeAnnuli (2.4s)
+warning: RP3/LatticeAnnuli.lean:88:70: Variable name `hN` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hN
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: RP3/LatticeAnnuli.lean:161:0: automatically included section variable(s) unused in theorem `RP3.coupling_partition`:
+  [Fintype E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP3/LatticeAnnuli.lean:175:45: This simp argument is unused:
+  he
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [remainingCoupling, maskedCoupling, hn]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/LatticeAnnuli.lean:178:0: automatically included section variable(s) unused in theorem `RP3.interaction_partition`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [9037/9105] Built RP3.GibbsProbability (2.2s)
+✔ [9038/9105] Built RP3.PinnedKernel (1.8s)
+⚠ [9039/9105] Built RP3.RotationGeometryBase (6.3s)
+warning: RP3/RotationGeometryBase.lean:76:2: `@[expose]` has no effect; this declaration would be exposed by default
+✔ [9040/9105] Built RP3.ModelWitnesses (4.2s)
+⚠ [9041/9105] Built RP3.QuaternionAction (34s)
+warning: RP3/QuaternionAction.lean:30:2: `@[expose]` has no effect; this declaration would be exposed by default
+⚠ [9042/9105] Built RP3.QuaternionAlgebra (4.5s)
+warning: RP3/QuaternionAlgebra.lean:31:53: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RP3/QuaternionAlgebra.lean:31:53: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: RP3/QuaternionAlgebra.lean:36:67: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RP3/QuaternionAlgebra.lean:36:67: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [9043/9105] Built RP3.HighTemperature (2.3s)
+warning: RP3/HighTemperature.lean:54:0: automatically included section variable(s) unused in theorem `RP3.HighTemperature.edge_energy_nonneg`:
+  [Fintype V]
+  [Fintype E]
+  [DecidableEq V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [Fintype E] [DecidableEq V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP3/HighTemperature.lean:74:0: automatically included section variable(s) unused in theorem `RP3.HighTemperature.edge_energy_le_abs`:
+  [Fintype V]
+  [Fintype E]
+  [DecidableEq V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [Fintype E] [DecidableEq V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP3/HighTemperature.lean:109:0: automatically included section variable(s) unused in theorem `RP3.HighTemperature.expandedWeight_eq_sum`:
+  [Fintype V]
+  [DecidableEq V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP3/HighTemperature.lean:114:0: automatically included section variable(s) unused in theorem `RP3.HighTemperature.expandedWeight_eq_smul_weight`:
+  [Fintype V]
+  [DecidableEq V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP3/HighTemperature.lean:133:0: automatically included section variable(s) unused in theorem `RP3.HighTemperature.edgeActivity_onCut`:
+  [Fintype V]
+  [Fintype E]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [Fintype E] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [9044/9105] Built RP3.QuaternionPaths (15s)
+warning: RP3/QuaternionPaths.lean:150:68: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RP3/QuaternionPaths.lean:150:68: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [9045/9105] Built RP3.RotationGeometry (13s)
+warning: RP3/RotationGeometry.lean:20:33: This simp argument is unused:
+  mul_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, third, axisMatrixC_eq_qMatrix, pow_succ, pow_zero, one_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:86:46: This simp argument is unused:
+  mixedMatrixAAB
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixABB, mixedMatrixAABB, axisMatrixA_eq_qMatrix,
+    axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:86:62: This simp argument is unused:
+  mixedMatrixABB
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixAABB, axisMatrixA_eq_qMatrix,
+    axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:87:4: This simp argument is unused:
+  mixedMatrixAABB
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, axisMatrixA_eq_qMatrix,
+    axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:88:33: This simp argument is unused:
+  mul_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB,
+    axisMatrixA_eq_qMatrix, axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:95:31: This simp argument is unused:
+  mixedMatrixAB
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB, axisMatrixA_eq_qMatrix,
+    axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:96:4: This simp argument is unused:
+  mixedMatrixAABB
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, axisMatrixA_eq_qMatrix,
+    axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:97:33: This simp argument is unused:
+  mul_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB,
+    axisMatrixA_eq_qMatrix, axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:97:42: This simp argument is unused:
+  smul_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB,
+    axisMatrixA_eq_qMatrix, axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:97:53: This simp argument is unused:
+  add_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB,
+    axisMatrixA_eq_qMatrix, axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, smul_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:105:31: This simp argument is unused:
+  mixedMatrixAB
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB, axisMatrixA_eq_qMatrix,
+    axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:105:46: This simp argument is unused:
+  mixedMatrixAAB
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixABB, mixedMatrixAABB, axisMatrixA_eq_qMatrix,
+    axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:105:62: This simp argument is unused:
+  mixedMatrixABB
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixAABB, axisMatrixA_eq_qMatrix,
+    axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:107:33: This simp argument is unused:
+  mul_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB,
+    axisMatrixA_eq_qMatrix, axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:107:42: This simp argument is unused:
+  smul_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB,
+    axisMatrixA_eq_qMatrix, axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:107:53: This simp argument is unused:
+  add_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB,
+    axisMatrixA_eq_qMatrix, axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, smul_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:113:13: This simp argument is unused:
+  plane_eq_qMatrix
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB, axisMatrixA_eq_qMatrix,
+    axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:113:46: This simp argument is unused:
+  mixedMatrixAAB
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixABB, mixedMatrixAABB, axisMatrixA_eq_qMatrix,
+    axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:113:62: This simp argument is unused:
+  mixedMatrixABB
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixAABB, axisMatrixA_eq_qMatrix,
+    axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:114:4: This simp argument is unused:
+  mixedMatrixAABB
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, axisMatrixA_eq_qMatrix,
+    axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:115:4: This simp argument is unused:
+  pow_succ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB,
+    axisMatrixA_eq_qMatrix, axisMatrixB_eq_qMatrix, pow_zero, one_mul, mul_one, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:115:14: This simp argument is unused:
+  pow_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB,
+    axisMatrixA_eq_qMatrix, axisMatrixB_eq_qMatrix, pow_succ, one_mul, mul_one, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:115:24: This simp argument is unused:
+  one_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB,
+    axisMatrixA_eq_qMatrix, axisMatrixB_eq_qMatrix, pow_succ, pow_zero, mul_one, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:115:33: This simp argument is unused:
+  mul_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB,
+    axisMatrixA_eq_qMatrix, axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:115:42: This simp argument is unused:
+  smul_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB,
+    axisMatrixA_eq_qMatrix, axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:115:53: This simp argument is unused:
+  add_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB,
+    axisMatrixA_eq_qMatrix, axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, smul_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [9046/9105] Built RP3.ActiveEdgeBounds (2.0s)
+warning: RP3/ActiveEdgeBounds.lean:42:25: Variable name `hp` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hp
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [9047/9105] Built RP3.QuaternionComparison (2.0s)
+warning: RP3/QuaternionComparison.lean:74:30: Variable name `hη0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hη0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [9048/9105] Built RP3.QuadraticGibbs (3.4s)
+⚠ [9049/9105] Built RP3.ModelAssembly (2.8s)
+warning: RP3/ModelAssembly.lean:63:0: automatically included section variable(s) unused in theorem `RP3.interaction_globalRotation`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP3/ModelAssembly.lean:148:52: This simp argument is unused:
+  ContinuousMap.comp_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pinnedKernel_apply, pinnedPartition, pinnedWeight, integralOnCompact, ContinuousMap.mul_apply,
+    hout]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/ModelAssembly.lean:158:0: automatically included section variable(s) unused in theorem `RP3.weight_dependsOnPins`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP3/ModelAssembly.lean:170:0: automatically included section variable(s) unused in theorem `RP3.observable_dependsOnPins`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP3/ModelAssembly.lean:213:0: automatically included section variable(s) unused in theorem `RP3.DependsOnPins.mul`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP3/ModelAssembly.lean:219:0: automatically included section variable(s) unused in theorem `RP3.dependsOnPins_one`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP3/ModelAssembly.lean:222:0: automatically included section variable(s) unused in theorem `RP3.dependsOnPins_prod`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP3/ModelAssembly.lean:336:0: automatically included section variable(s) unused in theorem `RP3.pinnedKernel_cut_invariant`:
+  [Fintype G]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype G] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP3/ModelAssembly.lean:363:0: automatically included section variable(s) unused in theorem `RP3.weight_cut_invariant`:
+  [Fintype V]
+  [Fintype G]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [Fintype G] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP3/ModelAssembly.lean:429:0: automatically included section variable(s) unused in theorem `RP3.observable_cut_average_zero`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [9050/9105] Built RP3.ActivePaths (2.1s)
+warning: RP3/ActivePaths.lean:26:0: automatically included section variable(s) unused in theorem `RP3.HighTemperature.activeGraph_le_full`:
+  [Fintype V]
+  [DecidableEq V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP3/ActivePaths.lean:31:0: automatically included section variable(s) unused in theorem `RP3.HighTemperature.activeConnected_reachable`:
+  [Fintype E]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP3/ActivePaths.lean:49:0: automatically included section variable(s) unused in theorem `RP3.HighTemperature.adjacencyEdge_spec`:
+  [Fintype V]
+  [DecidableEq V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [9051/9105] Built RP3.QuadraticDerivatives (4.4s)
+⚠ [9052/9105] Built RP3.ModelRestriction (2.0s)
+warning: RP3/ModelRestriction.lean:25:0: automatically included section variable(s) unused in theorem `RP3.referenceLaw_restrict_measurePreserving`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP3/ModelRestriction.lean:44:0: automatically included section variable(s) unused in theorem `RP3.interaction_restrict`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP3/ModelRestriction.lean:87:0: automatically included section variable(s) unused in theorem `RP3.interaction_reindex`:
+  [Fintype V]
+  [Fintype W]
+  [DecidableEq V]
+  [DecidableEq W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [Fintype W] [DecidableEq V] [DecidableEq W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [9053/9105] Built RP3.ConcreteAnnuli (2.4s)
+✔ [9054/9105] Built RP3.NonbacktrackingPaths (2.0s)
+✔ [9055/9105] Built RP3.QuadraticWard (2.8s)
+✔ [9056/9105] Built RP3.LatticeModelRestriction (1.9s)
+✔ [9057/9105] Built RP3.SquareRates (2.6s)
+✔ [9058/9105] Built RP3.ThinAnnuli (2.9s)
+✔ [9059/9105] Built RP3.QuadraticBounds (2.6s)
+✔ [9060/9105] Built RP3.QuadraticPlane (9.2s)
+✔ [9061/9105] Built RP3.ModelConnection (1.0s)
+✔ [9062/9105] Built RP3.UniformDecay (2.4s)
+⚠ [9063/9105] Built RP3.ThinSupport (2.5s)
+warning: RP3/ThinSupport.lean:18:35: This simp argument is unused:
+  max_le_iff
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [integerSquare, siteRadius, abs_le, and_assoc, and_left_comm, and_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [9064/9105] Built RP3.QuadraticPlaneResponse (3.2s)
+⚠ [9065/9105] Built RP3.ComplexCurrents (4.5s)
+warning: RP3/ComplexCurrents.lean:97:65: This simp argument is unused:
+  axisGradient
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Complex.normSq_apply, complexCurrent, edgeGradient, Complex.sub_re, Complex.sub_im, pow_two]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [9066/9105] Built RP3.QuadraticAverages (2.7s)
+⚠ [9067/9105] Built RP3.Fourier.ResponseTransfer (4.4s)
+warning: RP3/Fourier/ResponseTransfer.lean:52:10: `mul_le_one₀` has been deprecated: No replacement, use constituent lemmas from proof.
+warning: RP3/Fourier/ResponseTransfer.lean:37:0: automatically included section variable(s) unused in theorem `RP3.Quadratic.SpinSystem.abs_axisSecondCoefficient_le`:
+  [Fintype E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [9068/9105] Built RP3.QuadraticMixedJets (4.7s)
+warning: RP3/QuadraticMixedJets.lean:266:21: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✔ [9069/9105] Built RP3.QuadraticSecondResponse (3.4s)
+✔ [9070/9105] Built RP3.QuadraticCoefficientBounds (5.1s)
+✔ [9071/9105] Built RP3.QuadraticMixedWard (2.3s)
+✔ [9072/9105] Built RP3.QuadraticSecondGauge (2.5s)
+✔ [9073/9105] Built RP3.QuadraticComplexWard (3.7s)
+✔ [9074/9105] Built RP3.QuadraticSecondBound (2.4s)
+✔ [9075/9105] Built RP3.QuadraticPotential (3.5s)
+⚠ [9076/9105] Built RP3.QuadraticFamilyKernel (8.4s)
+warning: RP3/QuadraticFamilyKernel.lean:28:63: Local variable 'a' resembles constructor 'RP3.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP3.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP3/QuadraticFamilyKernel.lean:33:60: Local variable 'a' resembles constructor 'RP3.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP3.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP3/QuadraticFamilyKernel.lean:59:8: automatically included section variable(s) unused in theorem `RP3.Quadratic.SpinSystem.mixedCoefficientObservable_conj`:
+  [Fintype E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP3/QuadraticFamilyKernel.lean:60:5: Local variable 'a' resembles constructor 'RP3.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP3.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP3/QuadraticFamilyKernel.lean:96:5: Local variable 'a' resembles constructor 'RP3.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP3.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP3/QuadraticFamilyKernel.lean:165:67: This simp argument is unused:
+  familyKernel
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [MixedAlgebra.weighted, MixedAlgebra.kernel, map_sum, map_mul, map_add, map_ofNat,
+    Complex.conj_ofReal, starRingEnd_self_apply, Pi.mul_apply, Complex.ofReal_mul, Complex.ofReal_add,
+    Complex.ofReal_pow, one_apply_eq_self, mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/QuadraticFamilyKernel.lean:166:4: This simp argument is unused:
+  map_sum
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [MixedAlgebra.weighted, MixedAlgebra.kernel, familyKernel, map_mul, map_add, map_ofNat,
+    Complex.conj_ofReal, starRingEnd_self_apply, Pi.mul_apply, Complex.ofReal_mul, Complex.ofReal_add,
+    Complex.ofReal_pow, one_apply_eq_self, mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/QuadraticFamilyKernel.lean:166:31: This simp argument is unused:
+  map_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [MixedAlgebra.weighted, MixedAlgebra.kernel, familyKernel, map_sum, map_mul, map_add,
+    Complex.conj_ofReal, starRingEnd_self_apply, Pi.mul_apply, Complex.ofReal_mul, Complex.ofReal_add,
+    Complex.ofReal_pow, one_apply_eq_self, mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/QuadraticFamilyKernel.lean:167:4: This simp argument is unused:
+  starRingEnd_self_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [MixedAlgebra.weighted, MixedAlgebra.kernel, familyKernel, map_sum, map_mul, map_add, map_ofNat,
+    Complex.conj_ofReal, Pi.mul_apply, Complex.ofReal_mul, Complex.ofReal_add, Complex.ofReal_pow, one_apply_eq_self,
+    mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/QuadraticFamilyKernel.lean:168:4: This simp argument is unused:
+  Complex.ofReal_pow
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [MixedAlgebra.weighted, MixedAlgebra.kernel, familyKernel, map_sum, map_mul, map_add, map_ofNat,
+    Complex.conj_ofReal, starRingEnd_self_apply, Pi.mul_apply, Complex.ofReal_mul, Complex.ofReal_add,
+    one_apply_eq_self, mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [9077/9105] Built RP3.Fourier.ModelModes (1.7s)
+⚠ [9078/9105] Built RP3.QuadraticFamilyEstimates (1.8s)
+warning: RP3/QuadraticFamilyEstimates.lean:21:16: Local variable 'a' resembles constructor 'RP3.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP3.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP3/QuadraticFamilyEstimates.lean:22:5: Local variable 'a' resembles constructor 'RP3.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP3.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP3/QuadraticFamilyEstimates.lean:29:16: Local variable 'a' resembles constructor 'RP3.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP3.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP3/QuadraticFamilyEstimates.lean:30:5: Local variable 'a' resembles constructor 'RP3.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP3.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP3/QuadraticFamilyEstimates.lean:30:7: Local variable 'b' resembles constructor 'RP3.Quadratic.MixedAlgebra.Slot.b' - write '.b' (with a dot) or 'RP3.Quadratic.MixedAlgebra.Slot.b' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP3/QuadraticFamilyEstimates.lean:42:16: Local variable 'a' resembles constructor 'RP3.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP3.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP3/QuadraticFamilyEstimates.lean:43:5: Local variable 'a' resembles constructor 'RP3.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP3.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP3/QuadraticFamilyEstimates.lean:63:16: Local variable 'a' resembles constructor 'RP3.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP3.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP3/QuadraticFamilyEstimates.lean:64:5: Local variable 'a' resembles constructor 'RP3.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP3.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+⚠ [9079/9105] Built RP3.QuadraticFamilyLower (2.4s)
+warning: RP3/QuadraticFamilyLower.lean:42:18: Local variable 'a' resembles constructor 'RP3.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP3.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP3/QuadraticFamilyLower.lean:43:8: Local variable 'a' resembles constructor 'RP3.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP3.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP3/QuadraticFamilyLower.lean:63:12: Local variable 'a' resembles constructor 'RP3.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP3.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP3/QuadraticFamilyLower.lean:79:13: Local variable 'a' resembles constructor 'RP3.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP3.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP3/QuadraticFamilyLower.lean:79:15: Local variable 'b' resembles constructor 'RP3.Quadratic.MixedAlgebra.Slot.b' - write '.b' (with a dot) or 'RP3.Quadratic.MixedAlgebra.Slot.b' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP3/QuadraticFamilyLower.lean:94:15: Local variable 'a' resembles constructor 'RP3.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP3.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+✔ [9080/9105] Built RP3.QuadraticFamily (2.3s)
+⚠ [9081/9105] Built RP3.Fourier.AnnulusResponse (2.3s)
+warning: RP3/Fourier/AnnulusResponse.lean:40:9: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [9082/9105] Built RP3.ThinFourier (5.4s)
+warning: RP3/ThinFourier.lean:164:5: Variable name `hC` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hC
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: RP3/ThinFourier.lean:260:18: Variable name `hL` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hL
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: RP3/ThinFourier.lean:436:50: Variable name `h` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [9083/9105] Built RP3.AnnularEstimate (1.8s)
+warning: RP3/AnnularEstimate.lean:68:20: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✔ [9084/9105] Built RP3.ThinCosts (2.3s)
+⚠ [9085/9105] Built RP3.KernelEstimate (2.2s)
+warning: RP3/KernelEstimate.lean:185:20: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [9086/9105] Built RP3.ThinKernel (2.1s)
+warning: RP3/ThinKernel.lean:185:0: automatically included section variable(s) unused in theorem `RP3.pinnedSystem_rotatePotential_eq_cut`:
+  [Fintype V]
+  [Fintype E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [Fintype E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+✔ [9087/9105] Built RP3.Full (1.8s)
+✔ [9088/9105] Built RP3.DenseRates (2.1s)
+✔ [9089/9105] Built RP3.ThinProfileLattice (2.5s)
+✔ [9090/9105] Built RP3.LimitCorollary (1.7s)
+✔ [9091/9105] Built RP3.ThinScaleChoice (3.0s)
+✔ [9092/9105] Built RP3.LogSquareRates (2.8s)
+✔ [9093/9105] Built RP3.ThinEdgeResponse (2.4s)
+✔ [9094/9105] Built RP3.HighTemperatureDecay (1.0s)
+✔ [9095/9105] Built RP3.LogSquarePacking (2.2s)
+✔ [9096/9105] Built RP3.ThinResponse (2.2s)
+✔ [9097/9105] Built RP3.HighTemperatureExponential (1.8s)
+✔ [9098/9105] Built RP3.ThinKernelEstimate (2.1s)
+✔ [9099/9105] Built RP3.LogSquareLimits (1.6s)
+✔ [9100/9105] Built RP3.SO3 (3.5s)
+✖ [9101/9105] Building RP3.LocalLimitExistence (1.9s)
+trace: .> LEAN_PATH=/workspace/scratch/53fc9415f670/rp2-rp3-palomar/.lake/packages/Cli/.lake/build/lib/lean:/workspace/scratch/53fc9415f670/rp2-rp3-palomar/.lake/packages/batteries/.lake/build/lib/lean:/workspace/scratch/53fc9415f670/rp2-rp3-palomar/.lake/packages/Qq/.lake/build/lib/lean:/workspace/scratch/53fc9415f670/rp2-rp3-palomar/.lake/packages/aesop/.lake/build/lib/lean:/workspace/scratch/53fc9415f670/rp2-rp3-palomar/.lake/packages/proofwidgets/.lake/build/lib/lean:/workspace/scratch/53fc9415f670/rp2-rp3-palomar/.lake/packages/importGraph/.lake/build/lib/lean:/workspace/scratch/53fc9415f670/rp2-rp3-palomar/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/workspace/scratch/53fc9415f670/rp2-rp3-palomar/.lake/packages/plausible/.lake/build/lib/lean:/workspace/scratch/53fc9415f670/rp2-rp3-palomar/.lake/packages/mathlib/.lake/build/lib/lean:/workspace/scratch/53fc9415f670/rp2-rp3-palomar/.lake/build/lib/lean /workspace/scratch/53fc9415f670/palomar-tools/lean-4.35.0-rc2-linux/bin/lean /workspace/scratch/53fc9415f670/rp2-rp3-palomar/RP3/LocalLimitExistence.lean -o /workspace/scratch/53fc9415f670/rp2-rp3-palomar/.lake/build/lib/lean/RP3/LocalLimitExistence.olean -i /workspace/scratch/53fc9415f670/rp2-rp3-palomar/.lake/build/lib/lean/RP3/LocalLimitExistence.ilean -c /workspace/scratch/53fc9415f670/rp2-rp3-palomar/.lake/build/ir/RP3/LocalLimitExistence.c --setup /workspace/scratch/53fc9415f670/rp2-rp3-palomar/.lake/build/ir/RP3/LocalLimitExistence.setup.json --json
+error: RP3/LocalLimitExistence.lean:46:4: failed to synthesize instance of type class
+  FirstCountableTopology (ProbabilityMeasure InfiniteConfiguration)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: RP3/LocalLimitExistence.lean:45:9: Tactic `rcases` failed: `x✝ : ?m.33` is not an inductive datatype
+error: RP3/LocalLimitExistence.lean:84:4: failed to synthesize instance of type class
+  FirstCountableTopology (ProbabilityMeasure InfiniteConfiguration)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+error: RP3/LocalLimitExistence.lean:83:9: Tactic `rcases` failed: `x✝ : ?m.21` is not an inductive datatype
+Some required targets logged failures:
+- RP2.TetrahedralAction
+- RP3.LocalLimitExistence
+error: build failed

@@ -1,0 +1,1079 @@
+⚠ [8934/9105] Replayed RP2.RotationGeometry
+warning: RP2/RotationGeometry.lean:76:2: `@[expose]` has no effect; this declaration would be exposed by default
+⚠ [8950/9105] Replayed RP2.ModelAssembly
+warning: RP2/ModelAssembly.lean:63:0: automatically included section variable(s) unused in theorem `RP2.interaction_globalRotation`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP2/ModelAssembly.lean:148:52: This simp argument is unused:
+  ContinuousMap.comp_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pinnedKernel_apply, pinnedPartition, pinnedWeight, integralOnCompact, ContinuousMap.mul_apply,
+    hout]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP2/ModelAssembly.lean:158:0: automatically included section variable(s) unused in theorem `RP2.weight_dependsOnPins`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP2/ModelAssembly.lean:170:0: automatically included section variable(s) unused in theorem `RP2.observable_dependsOnPins`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP2/ModelAssembly.lean:213:0: automatically included section variable(s) unused in theorem `RP2.DependsOnPins.mul`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP2/ModelAssembly.lean:219:0: automatically included section variable(s) unused in theorem `RP2.dependsOnPins_one`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP2/ModelAssembly.lean:222:0: automatically included section variable(s) unused in theorem `RP2.dependsOnPins_prod`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP2/ModelAssembly.lean:336:0: automatically included section variable(s) unused in theorem `RP2.pinnedKernel_cut_invariant`:
+  [Fintype G]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype G] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP2/ModelAssembly.lean:363:0: automatically included section variable(s) unused in theorem `RP2.weight_cut_invariant`:
+  [Fintype V]
+  [Fintype G]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [Fintype G] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP2/ModelAssembly.lean:429:0: automatically included section variable(s) unused in theorem `RP2.observable_cut_average_zero`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8951/9105] Replayed RP2.ModelRestriction
+warning: RP2/ModelRestriction.lean:25:0: automatically included section variable(s) unused in theorem `RP2.referenceLaw_restrict_measurePreserving`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP2/ModelRestriction.lean:44:0: automatically included section variable(s) unused in theorem `RP2.interaction_restrict`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP2/ModelRestriction.lean:87:0: automatically included section variable(s) unused in theorem `RP2.interaction_reindex`:
+  [Fintype V]
+  [Fintype W]
+  [DecidableEq V]
+  [DecidableEq W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [Fintype W] [DecidableEq V] [DecidableEq W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8953/9105] Replayed RP2.LatticeAnnuli
+warning: RP2/LatticeAnnuli.lean:88:70: Variable name `hN` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hN
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: RP2/LatticeAnnuli.lean:161:0: automatically included section variable(s) unused in theorem `RP2.coupling_partition`:
+  [Fintype E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP2/LatticeAnnuli.lean:175:45: This simp argument is unused:
+  he
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [remainingCoupling, maskedCoupling, hn]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP2/LatticeAnnuli.lean:178:0: automatically included section variable(s) unused in theorem `RP2.interaction_partition`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8954/9105] Replayed RP2.LatticeModelRestriction
+warning: RP2/LatticeModelRestriction.lean:61:4: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+⚠ [8956/9105] Replayed RP2.ComplexCurrents
+warning: RP2/ComplexCurrents.lean:97:65: This simp argument is unused:
+  axisGradient
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Complex.normSq_apply, complexCurrent, edgeGradient, Complex.sub_re, Complex.sub_im, pow_two]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [8957/9105] Replayed RP2.MixedAlgebra
+warning: RP2/MixedAlgebra.lean:172:2: `@[expose]` has no effect; this declaration would be exposed by default
+⚠ [8960/9105] Replayed RP2.TetrahedralAction
+warning: RP2/TetrahedralAction.lean:65:2: `@[expose]` has no effect; this declaration would be exposed by default
+⚠ [8961/9105] Replayed RP2.TetrahedralPaths
+warning: RP2/TetrahedralPaths.lean:167:58: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: RP2/TetrahedralPaths.lean:167:58: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [8965/9105] Replayed RP2.Fourier.ResponseTransfer
+warning: RP2/Fourier/ResponseTransfer.lean:52:10: `mul_le_one₀` has been deprecated: No replacement, use constituent lemmas from proof.
+warning: RP2/Fourier/ResponseTransfer.lean:37:0: automatically included section variable(s) unused in theorem `RP2.Quadratic.SpinSystem.abs_axisSecondCoefficient_le`:
+  [Fintype E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8966/9105] Replayed RP2.QuadraticMixedJets
+warning: RP2/QuadraticMixedJets.lean:266:21: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [8970/9105] Replayed RP2.QuadraticFamilyKernel
+warning: RP2/QuadraticFamilyKernel.lean:28:63: Local variable 'a' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP2/QuadraticFamilyKernel.lean:33:60: Local variable 'a' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP2/QuadraticFamilyKernel.lean:59:8: automatically included section variable(s) unused in theorem `RP2.Quadratic.SpinSystem.mixedCoefficientObservable_conj`:
+  [Fintype E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP2/QuadraticFamilyKernel.lean:60:5: Local variable 'a' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP2/QuadraticFamilyKernel.lean:96:5: Local variable 'a' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP2/QuadraticFamilyKernel.lean:165:67: This simp argument is unused:
+  familyKernel
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [MixedAlgebra.weighted, MixedAlgebra.kernel, map_sum, map_mul, map_add, map_ofNat,
+    Complex.conj_ofReal, starRingEnd_self_apply, Pi.mul_apply, Complex.ofReal_mul, Complex.ofReal_add,
+    Complex.ofReal_pow, one_apply_eq_self, mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP2/QuadraticFamilyKernel.lean:166:4: This simp argument is unused:
+  map_sum
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [MixedAlgebra.weighted, MixedAlgebra.kernel, familyKernel, map_mul, map_add, map_ofNat,
+    Complex.conj_ofReal, starRingEnd_self_apply, Pi.mul_apply, Complex.ofReal_mul, Complex.ofReal_add,
+    Complex.ofReal_pow, one_apply_eq_self, mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP2/QuadraticFamilyKernel.lean:166:31: This simp argument is unused:
+  map_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [MixedAlgebra.weighted, MixedAlgebra.kernel, familyKernel, map_sum, map_mul, map_add,
+    Complex.conj_ofReal, starRingEnd_self_apply, Pi.mul_apply, Complex.ofReal_mul, Complex.ofReal_add,
+    Complex.ofReal_pow, one_apply_eq_self, mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP2/QuadraticFamilyKernel.lean:167:4: This simp argument is unused:
+  starRingEnd_self_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [MixedAlgebra.weighted, MixedAlgebra.kernel, familyKernel, map_sum, map_mul, map_add, map_ofNat,
+    Complex.conj_ofReal, Pi.mul_apply, Complex.ofReal_mul, Complex.ofReal_add, Complex.ofReal_pow, one_apply_eq_self,
+    mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP2/QuadraticFamilyKernel.lean:168:4: This simp argument is unused:
+  Complex.ofReal_pow
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [MixedAlgebra.weighted, MixedAlgebra.kernel, familyKernel, map_sum, map_mul, map_add, map_ofNat,
+    Complex.conj_ofReal, starRingEnd_self_apply, Pi.mul_apply, Complex.ofReal_mul, Complex.ofReal_add,
+    one_apply_eq_self, mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [8971/9105] Replayed RP2.QuadraticFamilyEstimates
+warning: RP2/QuadraticFamilyEstimates.lean:21:16: Local variable 'a' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP2/QuadraticFamilyEstimates.lean:22:5: Local variable 'a' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP2/QuadraticFamilyEstimates.lean:29:16: Local variable 'a' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP2/QuadraticFamilyEstimates.lean:30:5: Local variable 'a' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP2/QuadraticFamilyEstimates.lean:30:7: Local variable 'b' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.b' - write '.b' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.b' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP2/QuadraticFamilyEstimates.lean:42:16: Local variable 'a' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP2/QuadraticFamilyEstimates.lean:43:5: Local variable 'a' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP2/QuadraticFamilyEstimates.lean:63:16: Local variable 'a' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP2/QuadraticFamilyEstimates.lean:64:5: Local variable 'a' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+⚠ [8972/9105] Replayed RP2.QuadraticFamilyLower
+warning: RP2/QuadraticFamilyLower.lean:42:18: Local variable 'a' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP2/QuadraticFamilyLower.lean:43:8: Local variable 'a' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP2/QuadraticFamilyLower.lean:63:12: Local variable 'a' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP2/QuadraticFamilyLower.lean:79:13: Local variable 'a' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP2/QuadraticFamilyLower.lean:79:15: Local variable 'b' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.b' - write '.b' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.b' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP2/QuadraticFamilyLower.lean:94:15: Local variable 'a' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+⚠ [8974/9105] Replayed RP2.Fourier.AnnulusResponse
+warning: RP2/Fourier/AnnulusResponse.lean:40:9: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [8975/9105] Replayed RP2.AnnularEstimate
+warning: RP2/AnnularEstimate.lean:68:20: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [8976/9105] Replayed RP2.TetrahedralComparison
+warning: RP2/TetrahedralComparison.lean:74:30: Variable name `hη0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hη0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [8979/9105] Replayed RP2.KernelEstimate
+warning: RP2/KernelEstimate.lean:22:5: Ambiguous namespace `Fourier`: it is interpreted as `_root_.RP2.Fourier` because this `open` occurs inside `namespace RP2`, while `_root_.Fourier` is silently not opened. Specify the namespace unambiguously, e.g. `_root_.RP2.Fourier`. The warning can sometimes also be addressed by moving the `open` outside of the surrounding `namespace`.
+
+Note: This linter can be disabled with `set_option linter.ambiguousOpen false`
+warning: RP2/KernelEstimate.lean:185:20: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [8984/9105] Replayed RP2.WeightedSummability
+warning: RP2/WeightedSummability.lean:46:19: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+⚠ [8993/9105] Replayed RP2.TwoEndpointRates
+warning: RP2/TwoEndpointRates.lean:371:31: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: RP2/TwoEndpointRates.lean:371:51: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: RP2/TwoEndpointRates.lean:375:42: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [8995/9105] Replayed RP2.HighTemperature
+warning: RP2/HighTemperature.lean:54:0: automatically included section variable(s) unused in theorem `RP2.HighTemperature.edge_energy_nonneg`:
+  [Fintype V]
+  [Fintype E]
+  [DecidableEq V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [Fintype E] [DecidableEq V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP2/HighTemperature.lean:74:0: automatically included section variable(s) unused in theorem `RP2.HighTemperature.edge_energy_le_abs`:
+  [Fintype V]
+  [Fintype E]
+  [DecidableEq V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [Fintype E] [DecidableEq V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP2/HighTemperature.lean:109:0: automatically included section variable(s) unused in theorem `RP2.HighTemperature.expandedWeight_eq_sum`:
+  [Fintype V]
+  [DecidableEq V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP2/HighTemperature.lean:114:0: automatically included section variable(s) unused in theorem `RP2.HighTemperature.expandedWeight_eq_smul_weight`:
+  [Fintype V]
+  [DecidableEq V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP2/HighTemperature.lean:133:0: automatically included section variable(s) unused in theorem `RP2.HighTemperature.edgeActivity_onCut`:
+  [Fintype V]
+  [Fintype E]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [Fintype E] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [8996/9105] Replayed RP2.ThinProfiles
+warning: RP2/ThinProfiles.lean:51:38: Variable name `hc` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hc
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: RP2/ThinProfiles.lean:249:29: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [squareStep]
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: RP2/ThinProfiles.lean:250:29: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [squareStep]
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [8998/9105] Replayed RP2.ThinKernel
+warning: RP2/ThinKernel.lean:44:4: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+warning: RP2/ThinKernel.lean:185:0: automatically included section variable(s) unused in theorem `RP2.pinnedSystem_rotatePotential_eq_cut`:
+  [Fintype V]
+  [Fintype E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [Fintype E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [9000/9105] Replayed RP2.ThinFourier
+warning: RP2/ThinFourier.lean:164:5: Variable name `hC` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hC
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: RP2/ThinFourier.lean:260:18: Variable name `hL` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hL
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: RP2/ThinFourier.lean:436:50: Variable name `h` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [9003/9105] Replayed RP2.ThinSupport
+warning: RP2/ThinSupport.lean:18:35: This simp argument is unused:
+  max_le_iff
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [integerSquare, siteRadius, abs_le, and_assoc, and_left_comm, and_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [9005/9105] Replayed RP2.ThinDyadicParameters
+warning: RP2/ThinDyadicParameters.lean:68:28: Variable name `hV` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hV
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [9011/9105] Replayed RP2.ActiveEdgeBounds
+warning: RP2/ActiveEdgeBounds.lean:42:25: Variable name `hp` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hp
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [9012/9105] Replayed RP2.ActivePaths
+warning: RP2/ActivePaths.lean:26:0: automatically included section variable(s) unused in theorem `RP2.HighTemperature.activeGraph_le_full`:
+  [Fintype V]
+  [DecidableEq V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP2/ActivePaths.lean:31:0: automatically included section variable(s) unused in theorem `RP2.HighTemperature.activeConnected_reachable`:
+  [Fintype E]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP2/ActivePaths.lean:49:0: automatically included section variable(s) unused in theorem `RP2.HighTemperature.adjacencyEdge_spec`:
+  [Fintype V]
+  [DecidableEq V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [9019/9105] Replayed Challenge
+warning: Challenge.lean:69:8: declaration uses `sorry`
+warning: Challenge.lean:78:8: declaration uses `sorry`
+⚠ [9022/9105] Replayed RP3.ThinProfiles
+warning: RP3/ThinProfiles.lean:51:38: Variable name `hc` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hc
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: RP3/ThinProfiles.lean:249:29: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [squareStep]
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: RP3/ThinProfiles.lean:250:29: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [squareStep]
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+⚠ [9026/9105] Replayed RP3.RotationGeometryBase
+warning: RP3/RotationGeometryBase.lean:76:2: `@[expose]` has no effect; this declaration would be exposed by default
+⚠ [9030/9105] Replayed RP3.LatticeAnnuli
+warning: RP3/LatticeAnnuli.lean:88:70: Variable name `hN` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hN
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: RP3/LatticeAnnuli.lean:161:0: automatically included section variable(s) unused in theorem `RP3.coupling_partition`:
+  [Fintype E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP3/LatticeAnnuli.lean:175:45: This simp argument is unused:
+  he
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [remainingCoupling, maskedCoupling, hn]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/LatticeAnnuli.lean:178:0: automatically included section variable(s) unused in theorem `RP3.interaction_partition`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [9035/9105] Replayed RP3.MixedAlgebra
+warning: RP3/MixedAlgebra.lean:172:2: `@[expose]` has no effect; this declaration would be exposed by default
+⚠ [9036/9105] Replayed RP3.ThinDyadicParameters
+warning: RP3/ThinDyadicParameters.lean:68:28: Variable name `hV` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hV
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [9041/9105] Replayed RP3.QuaternionAlgebra
+warning: RP3/QuaternionAlgebra.lean:31:53: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RP3/QuaternionAlgebra.lean:31:53: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: RP3/QuaternionAlgebra.lean:36:67: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RP3/QuaternionAlgebra.lean:36:67: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [9042/9105] Replayed RP3.RotationGeometry
+warning: RP3/RotationGeometry.lean:20:33: This simp argument is unused:
+  mul_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, third, axisMatrixC_eq_qMatrix, pow_succ, pow_zero, one_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:86:46: This simp argument is unused:
+  mixedMatrixAAB
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixABB, mixedMatrixAABB, axisMatrixA_eq_qMatrix,
+    axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:86:62: This simp argument is unused:
+  mixedMatrixABB
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixAABB, axisMatrixA_eq_qMatrix,
+    axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:87:4: This simp argument is unused:
+  mixedMatrixAABB
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, axisMatrixA_eq_qMatrix,
+    axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:88:33: This simp argument is unused:
+  mul_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB,
+    axisMatrixA_eq_qMatrix, axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:95:31: This simp argument is unused:
+  mixedMatrixAB
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB, axisMatrixA_eq_qMatrix,
+    axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:96:4: This simp argument is unused:
+  mixedMatrixAABB
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, axisMatrixA_eq_qMatrix,
+    axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:97:33: This simp argument is unused:
+  mul_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB,
+    axisMatrixA_eq_qMatrix, axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:97:42: This simp argument is unused:
+  smul_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB,
+    axisMatrixA_eq_qMatrix, axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:97:53: This simp argument is unused:
+  add_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB,
+    axisMatrixA_eq_qMatrix, axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, smul_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:105:31: This simp argument is unused:
+  mixedMatrixAB
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB, axisMatrixA_eq_qMatrix,
+    axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:105:46: This simp argument is unused:
+  mixedMatrixAAB
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixABB, mixedMatrixAABB, axisMatrixA_eq_qMatrix,
+    axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:105:62: This simp argument is unused:
+  mixedMatrixABB
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixAABB, axisMatrixA_eq_qMatrix,
+    axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:107:33: This simp argument is unused:
+  mul_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB,
+    axisMatrixA_eq_qMatrix, axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:107:42: This simp argument is unused:
+  smul_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB,
+    axisMatrixA_eq_qMatrix, axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:107:53: This simp argument is unused:
+  add_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB,
+    axisMatrixA_eq_qMatrix, axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, smul_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:113:13: This simp argument is unused:
+  plane_eq_qMatrix
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB, axisMatrixA_eq_qMatrix,
+    axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:113:46: This simp argument is unused:
+  mixedMatrixAAB
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixABB, mixedMatrixAABB, axisMatrixA_eq_qMatrix,
+    axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:113:62: This simp argument is unused:
+  mixedMatrixABB
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixAABB, axisMatrixA_eq_qMatrix,
+    axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:114:4: This simp argument is unused:
+  mixedMatrixAABB
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, axisMatrixA_eq_qMatrix,
+    axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:115:4: This simp argument is unused:
+  pow_succ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB,
+    axisMatrixA_eq_qMatrix, axisMatrixB_eq_qMatrix, pow_zero, one_mul, mul_one, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:115:14: This simp argument is unused:
+  pow_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB,
+    axisMatrixA_eq_qMatrix, axisMatrixB_eq_qMatrix, pow_succ, one_mul, mul_one, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:115:24: This simp argument is unused:
+  one_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB,
+    axisMatrixA_eq_qMatrix, axisMatrixB_eq_qMatrix, pow_succ, pow_zero, mul_one, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:115:33: This simp argument is unused:
+  mul_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB,
+    axisMatrixA_eq_qMatrix, axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:115:42: This simp argument is unused:
+  smul_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB,
+    axisMatrixA_eq_qMatrix, axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/RotationGeometry.lean:115:53: This simp argument is unused:
+  add_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB,
+    axisMatrixA_eq_qMatrix, axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, smul_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [9043/9105] Replayed RP3.ModelAssembly
+warning: RP3/ModelAssembly.lean:63:0: automatically included section variable(s) unused in theorem `RP3.interaction_globalRotation`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP3/ModelAssembly.lean:148:52: This simp argument is unused:
+  ContinuousMap.comp_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pinnedKernel_apply, pinnedPartition, pinnedWeight, integralOnCompact, ContinuousMap.mul_apply,
+    hout]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/ModelAssembly.lean:158:0: automatically included section variable(s) unused in theorem `RP3.weight_dependsOnPins`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP3/ModelAssembly.lean:170:0: automatically included section variable(s) unused in theorem `RP3.observable_dependsOnPins`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP3/ModelAssembly.lean:213:0: automatically included section variable(s) unused in theorem `RP3.DependsOnPins.mul`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP3/ModelAssembly.lean:219:0: automatically included section variable(s) unused in theorem `RP3.dependsOnPins_one`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP3/ModelAssembly.lean:222:0: automatically included section variable(s) unused in theorem `RP3.dependsOnPins_prod`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP3/ModelAssembly.lean:336:0: automatically included section variable(s) unused in theorem `RP3.pinnedKernel_cut_invariant`:
+  [Fintype G]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype G] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP3/ModelAssembly.lean:363:0: automatically included section variable(s) unused in theorem `RP3.weight_cut_invariant`:
+  [Fintype V]
+  [Fintype G]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [Fintype G] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP3/ModelAssembly.lean:429:0: automatically included section variable(s) unused in theorem `RP3.observable_cut_average_zero`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [9044/9105] Built RP3.QuaternionAction (32s)
+warning: RP3/QuaternionAction.lean:30:2: `@[expose]` has no effect; this declaration would be exposed by default
+⚠ [9046/9105] Replayed RP3.QuaternionPaths
+warning: RP3/QuaternionPaths.lean:150:68: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: RP3/QuaternionPaths.lean:150:68: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [9047/9105] Replayed RP3.QuaternionComparison
+warning: RP3/QuaternionComparison.lean:74:30: Variable name `hη0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hη0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [9048/9105] Replayed RP3.HighTemperature
+warning: RP3/HighTemperature.lean:54:0: automatically included section variable(s) unused in theorem `RP3.HighTemperature.edge_energy_nonneg`:
+  [Fintype V]
+  [Fintype E]
+  [DecidableEq V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [Fintype E] [DecidableEq V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP3/HighTemperature.lean:74:0: automatically included section variable(s) unused in theorem `RP3.HighTemperature.edge_energy_le_abs`:
+  [Fintype V]
+  [Fintype E]
+  [DecidableEq V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [Fintype E] [DecidableEq V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP3/HighTemperature.lean:109:0: automatically included section variable(s) unused in theorem `RP3.HighTemperature.expandedWeight_eq_sum`:
+  [Fintype V]
+  [DecidableEq V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP3/HighTemperature.lean:114:0: automatically included section variable(s) unused in theorem `RP3.HighTemperature.expandedWeight_eq_smul_weight`:
+  [Fintype V]
+  [DecidableEq V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP3/HighTemperature.lean:133:0: automatically included section variable(s) unused in theorem `RP3.HighTemperature.edgeActivity_onCut`:
+  [Fintype V]
+  [Fintype E]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [Fintype E] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [9049/9105] Replayed RP3.ActiveEdgeBounds
+warning: RP3/ActiveEdgeBounds.lean:42:25: Variable name `hp` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hp
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [9050/9105] Replayed RP3.ActivePaths
+warning: RP3/ActivePaths.lean:26:0: automatically included section variable(s) unused in theorem `RP3.HighTemperature.activeGraph_le_full`:
+  [Fintype V]
+  [DecidableEq V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP3/ActivePaths.lean:31:0: automatically included section variable(s) unused in theorem `RP3.HighTemperature.activeConnected_reachable`:
+  [Fintype E]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP3/ActivePaths.lean:49:0: automatically included section variable(s) unused in theorem `RP3.HighTemperature.adjacencyEdge_spec`:
+  [Fintype V]
+  [DecidableEq V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [9053/9105] Replayed RP3.ModelRestriction
+warning: RP3/ModelRestriction.lean:25:0: automatically included section variable(s) unused in theorem `RP3.referenceLaw_restrict_measurePreserving`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP3/ModelRestriction.lean:44:0: automatically included section variable(s) unused in theorem `RP3.interaction_restrict`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP3/ModelRestriction.lean:87:0: automatically included section variable(s) unused in theorem `RP3.interaction_reindex`:
+  [Fintype V]
+  [Fintype W]
+  [DecidableEq V]
+  [DecidableEq W]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [Fintype W] [DecidableEq V] [DecidableEq W] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [9062/9105] Replayed RP3.ComplexCurrents
+warning: RP3/ComplexCurrents.lean:97:65: This simp argument is unused:
+  axisGradient
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Complex.normSq_apply, complexCurrent, edgeGradient, Complex.sub_re, Complex.sub_im, pow_two]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [9068/9105] Replayed RP3.Fourier.ResponseTransfer
+warning: RP3/Fourier/ResponseTransfer.lean:52:10: `mul_le_one₀` has been deprecated: No replacement, use constituent lemmas from proof.
+warning: RP3/Fourier/ResponseTransfer.lean:37:0: automatically included section variable(s) unused in theorem `RP3.Quadratic.SpinSystem.abs_axisSecondCoefficient_le`:
+  [Fintype E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [9069/9105] Replayed RP3.QuadraticMixedJets
+warning: RP3/QuadraticMixedJets.lean:266:21: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [9073/9105] Replayed RP3.QuadraticFamilyKernel
+warning: RP3/QuadraticFamilyKernel.lean:28:63: Local variable 'a' resembles constructor 'RP3.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP3.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP3/QuadraticFamilyKernel.lean:33:60: Local variable 'a' resembles constructor 'RP3.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP3.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP3/QuadraticFamilyKernel.lean:59:8: automatically included section variable(s) unused in theorem `RP3.Quadratic.SpinSystem.mixedCoefficientObservable_conj`:
+  [Fintype E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: RP3/QuadraticFamilyKernel.lean:60:5: Local variable 'a' resembles constructor 'RP3.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP3.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP3/QuadraticFamilyKernel.lean:96:5: Local variable 'a' resembles constructor 'RP3.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP3.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP3/QuadraticFamilyKernel.lean:165:67: This simp argument is unused:
+  familyKernel
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [MixedAlgebra.weighted, MixedAlgebra.kernel, map_sum, map_mul, map_add, map_ofNat,
+    Complex.conj_ofReal, starRingEnd_self_apply, Pi.mul_apply, Complex.ofReal_mul, Complex.ofReal_add,
+    Complex.ofReal_pow, one_apply_eq_self, mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/QuadraticFamilyKernel.lean:166:4: This simp argument is unused:
+  map_sum
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [MixedAlgebra.weighted, MixedAlgebra.kernel, familyKernel, map_mul, map_add, map_ofNat,
+    Complex.conj_ofReal, starRingEnd_self_apply, Pi.mul_apply, Complex.ofReal_mul, Complex.ofReal_add,
+    Complex.ofReal_pow, one_apply_eq_self, mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/QuadraticFamilyKernel.lean:166:31: This simp argument is unused:
+  map_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [MixedAlgebra.weighted, MixedAlgebra.kernel, familyKernel, map_sum, map_mul, map_add,
+    Complex.conj_ofReal, starRingEnd_self_apply, Pi.mul_apply, Complex.ofReal_mul, Complex.ofReal_add,
+    Complex.ofReal_pow, one_apply_eq_self, mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/QuadraticFamilyKernel.lean:167:4: This simp argument is unused:
+  starRingEnd_self_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [MixedAlgebra.weighted, MixedAlgebra.kernel, familyKernel, map_sum, map_mul, map_add, map_ofNat,
+    Complex.conj_ofReal, Pi.mul_apply, Complex.ofReal_mul, Complex.ofReal_add, Complex.ofReal_pow, one_apply_eq_self,
+    mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: RP3/QuadraticFamilyKernel.lean:168:4: This simp argument is unused:
+  Complex.ofReal_pow
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [MixedAlgebra.weighted, MixedAlgebra.kernel, familyKernel, map_sum, map_mul, map_add, map_ofNat,
+    Complex.conj_ofReal, starRingEnd_self_apply, Pi.mul_apply, Complex.ofReal_mul, Complex.ofReal_add,
+    one_apply_eq_self, mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [9074/9105] Replayed RP3.QuadraticFamilyEstimates
+warning: RP3/QuadraticFamilyEstimates.lean:21:16: Local variable 'a' resembles constructor 'RP3.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP3.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP3/QuadraticFamilyEstimates.lean:22:5: Local variable 'a' resembles constructor 'RP3.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP3.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP3/QuadraticFamilyEstimates.lean:29:16: Local variable 'a' resembles constructor 'RP3.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP3.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP3/QuadraticFamilyEstimates.lean:30:5: Local variable 'a' resembles constructor 'RP3.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP3.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP3/QuadraticFamilyEstimates.lean:30:7: Local variable 'b' resembles constructor 'RP3.Quadratic.MixedAlgebra.Slot.b' - write '.b' (with a dot) or 'RP3.Quadratic.MixedAlgebra.Slot.b' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP3/QuadraticFamilyEstimates.lean:42:16: Local variable 'a' resembles constructor 'RP3.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP3.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP3/QuadraticFamilyEstimates.lean:43:5: Local variable 'a' resembles constructor 'RP3.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP3.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP3/QuadraticFamilyEstimates.lean:63:16: Local variable 'a' resembles constructor 'RP3.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP3.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP3/QuadraticFamilyEstimates.lean:64:5: Local variable 'a' resembles constructor 'RP3.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP3.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+⚠ [9075/9105] Replayed RP3.QuadraticFamilyLower
+warning: RP3/QuadraticFamilyLower.lean:42:18: Local variable 'a' resembles constructor 'RP3.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP3.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP3/QuadraticFamilyLower.lean:43:8: Local variable 'a' resembles constructor 'RP3.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP3.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP3/QuadraticFamilyLower.lean:63:12: Local variable 'a' resembles constructor 'RP3.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP3.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP3/QuadraticFamilyLower.lean:79:13: Local variable 'a' resembles constructor 'RP3.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP3.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP3/QuadraticFamilyLower.lean:79:15: Local variable 'b' resembles constructor 'RP3.Quadratic.MixedAlgebra.Slot.b' - write '.b' (with a dot) or 'RP3.Quadratic.MixedAlgebra.Slot.b' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+warning: RP3/QuadraticFamilyLower.lean:94:15: Local variable 'a' resembles constructor 'RP3.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP3.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+⚠ [9077/9105] Replayed RP3.Fourier.AnnulusResponse
+warning: RP3/Fourier/AnnulusResponse.lean:40:9: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [9078/9105] Replayed RP3.AnnularEstimate
+warning: RP3/AnnularEstimate.lean:68:20: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [9080/9105] Replayed RP3.KernelEstimate
+warning: RP3/KernelEstimate.lean:185:20: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [9081/9105] Replayed RP3.ThinKernel
+warning: RP3/ThinKernel.lean:185:0: automatically included section variable(s) unused in theorem `RP3.pinnedSystem_rotatePotential_eq_cut`:
+  [Fintype V]
+  [Fintype E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [Fintype E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [9083/9105] Replayed RP3.ThinFourier
+warning: RP3/ThinFourier.lean:164:5: Variable name `hC` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hC
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: RP3/ThinFourier.lean:260:18: Variable name `hL` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hL
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: RP3/ThinFourier.lean:436:50: Variable name `h` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _h
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [9086/9105] Replayed RP3.ThinSupport
+warning: RP3/ThinSupport.lean:18:35: This simp argument is unused:
+  max_le_iff
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [integerSquare, siteRadius, abs_le, and_assoc, and_left_comm, and_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [9101/9105] Built RP3.LocalLimitExistence (2.0s)
+✔ [9102/9105] Built RP3 (1.5s)
+✔ [9104/9105] Built Solution (3.5s)
+Build completed successfully (9105 jobs).

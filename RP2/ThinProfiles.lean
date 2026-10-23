@@ -1,4 +1,8 @@
-import RP2.FourierAll
+module
+
+public import RP2.FourierAll
+
+public section
 
 /-! Balanced smooth profiles in arbitrarily thin square annuli.
 
@@ -14,7 +18,7 @@ open Set
 open scoped ContDiff
 
 /-- Signed soft threshold, with threshold `c ≥ 0`. -/
-def plateauMap (c x : ℝ) : ℝ :=
+@[expose] def plateauMap (c x : ℝ) : ℝ :=
   if x ≤ -c then x+c else if c ≤ x then x-c else 0
 
 theorem plateauMap_left (c x : ℝ) (h : x ≤ -c) : plateauMap c x = x+c := by
@@ -73,15 +77,15 @@ theorem plateauMap_step_alternative (c d x y : ℝ) (hc : 0 ≤ c) (hd : 0 ≤ d
     | right; constructor <;> rw [abs_le] <;> constructor <;> linarith
 
 /-- Rescaled plateau map. -/
-def thinCoord (a δ x : ℝ) : ℝ := plateauMap (a-δ) x / δ
+@[expose] def thinCoord (a δ x : ℝ) : ℝ := plateauMap (a-δ) x / δ
 
-def thinMap (a δ : ℝ) (z : ℝ × ℝ) : ℝ × ℝ :=
+@[expose] def thinMap (a δ : ℝ) (z : ℝ × ℝ) : ℝ × ℝ :=
   (thinCoord a δ z.1, thinCoord a δ z.2)
 
-def thinProfile (a δ : ℝ) (m s : Bool) (z : ℝ × ℝ) : ℝ :=
+@[expose] def thinProfile (a δ : ℝ) (m s : Bool) (z : ℝ × ℝ) : ℝ :=
   squareProfile m s (thinMap a δ z) / Real.sqrt δ
 
-def thinTheta (a δ : ℝ) (z : ℝ × ℝ) : ℝ :=
+@[expose] def thinTheta (a δ : ℝ) (z : ℝ × ℝ) : ℝ :=
   squareTheta (thinMap a δ z)
 
 theorem thinCoord_lipschitz (a δ : ℝ) (hδ : 0 < δ) (ha : δ ≤ a) (x y : ℝ) :
@@ -175,9 +179,9 @@ theorem thinTheta_lipschitz_bound : ∃ L : ℝ, 0 ≤ L ∧
     _ = _ := by ring
 
 /-- The coordinate changed by a square-lattice step. -/
-def stepCoordinate (m : Bool) (z : ℝ × ℝ) : ℝ := if m then z.2 else z.1
+@[expose] def stepCoordinate (m : Bool) (z : ℝ × ℝ) : ℝ := if m then z.2 else z.1
 
-def thinIncrement (a δ : ℝ) (m : Bool) (ε : ℝ) (z : ℝ × ℝ) : ℝ :=
+@[expose] def thinIncrement (a δ : ℝ) (m : Bool) (ε : ℝ) (z : ℝ × ℝ) : ℝ :=
   thinCoord a δ (stepCoordinate m z+ε)-thinCoord a δ (stepCoordinate m z)
 
 theorem thinMap_squareStep (a δ : ℝ) (m : Bool) (ε : ℝ) (z : ℝ × ℝ) :

@@ -1,4 +1,8 @@
-import RP2.QuadraticSecondResponse
+module
+
+public import RP2.QuadraticSecondResponse
+
+public section
 
 /-!
 # Gauge invariance of the RP² second response

@@ -1,4 +1,8 @@
-import RP3.QuadraticSecondResponse
+module
+
+public import RP3.QuadraticSecondResponse
+
+public section
 
 /-!
 # Gauge invariance of the RP³ second response

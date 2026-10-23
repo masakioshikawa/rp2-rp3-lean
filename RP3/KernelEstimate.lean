@@ -1,8 +1,12 @@
-import RP3.LatticeModelRestriction
-import RP3.ModelConnection
-import RP3.AnnularEstimate
-import RP3.QuaternionComparison
-import RP3.SquareRates
+module
+
+public import RP3.LatticeModelRestriction
+public import RP3.ModelConnection
+public import RP3.AnnularEstimate
+public import RP3.QuaternionComparison
+public import RP3.SquareRates
+
+public section
 
 /-!
 # Uniform quaternion comparison for actual annular RP³ kernels

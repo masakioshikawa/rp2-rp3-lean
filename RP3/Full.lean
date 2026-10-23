@@ -1,6 +1,10 @@
-import RP3.KernelEstimate
-import RP3.UniformDecay
-import RP3.LogarithmicRate
+module
+
+public import RP3.KernelEstimate
+public import RP3.UniformDecay
+public import RP3.LogarithmicRate
+
+public section
 
 /-!
 # Superpolynomial quadrupolar decay in the planar RP³ model

@@ -1,6 +1,10 @@
-import RP2.QuadraticComplexWard
-import RP2.QuadraticCoefficientBounds
-import RP2.FourierAll
+module
+
+public import RP2.QuadraticComplexWard
+public import RP2.QuadraticCoefficientBounds
+public import RP2.FourierAll
+
+public section
 /-!
 # Actual finite-family observables for RP²
 Adapted from OpenAI ClassicalON FamilyKernel/FamilyBound, commit
@@ -17,20 +21,20 @@ namespace SpinSystem
 variable {V : Type uV} {E : Type uE} {I : Type uI} [Fintype V] [Fintype E] [Fintype I]
 
 omit [Fintype V] [Fintype I] in
-def currentObservable (S : SpinSystem V E) (M : SpinOperator 3) (u : E → ℂ) :
+@[expose] def currentObservable (S : SpinSystem V E) (M : SpinOperator 3) (u : E → ℂ) :
     C((V → RP2.Spin), ℂ) := ⟨_, S.continuous_complexCurrent M u⟩
 
 omit [Fintype V] [Fintype I] in
-def mixedCoefficientObservable (S : SpinSystem V E) (a : MixedAlgebra.Slot) (e : E) :
+@[expose] def mixedCoefficientObservable (S : SpinSystem V E) (a : MixedAlgebra.Slot) (e : E) :
     C((V → RP2.Spin), ℂ) := ⟨fun σ => ((S.mixedCoefficients σ).get a e : ℂ), by
   cases a <;> unfold MixedAlgebra.Coeffs.get mixedCoefficients localInner <;> fun_prop⟩
 
 omit [Fintype V] [Fintype I] in
-def mixedWeightedObservable (S : SpinSystem V E) (a : MixedAlgebra.Slot) (u : E → ℂ) :
+@[expose] def mixedWeightedObservable (S : SpinSystem V E) (a : MixedAlgebra.Slot) (u : E → ℂ) :
     C((V → RP2.Spin), ℂ) := ∑ e, S.mixedCoefficientObservable a e * ContinuousMap.const _ (u e)
 
 omit [Fintype V] [Fintype I] [Fintype E] in
-def conjugateObservable {Ω : Type uΩ} [TopologicalSpace Ω] (f : C(Ω, ℂ)) : C(Ω, ℂ) :=
+@[expose] def conjugateObservable {Ω : Type uΩ} [TopologicalSpace Ω] (f : C(Ω, ℂ)) : C(Ω, ℂ) :=
   ⟨fun σ => conj (f σ), Complex.continuous_conj.comp f.continuous⟩
 
 omit [Fintype V] [Fintype I] [Fintype E] in
@@ -113,12 +117,12 @@ theorem norm_averageComplex_sum_le {J : Type uJ} [Fintype J]
   rw [map_sum]
   exact (norm_sum_le _ _).trans (Finset.sum_le_sum fun j _ => hF j)
 
-def familyPaired (S : SpinSystem V E) (u : I → E → ℂ) : C((V → RP2.Spin), ℂ) :=
+@[expose] def familyPaired (S : SpinSystem V E) (u : I → E → ℂ) : C((V → RP2.Spin), ℂ) :=
   ∑ i, (S.currentObservable axisA (u i) *
     S.currentObservable axisB (fun e => conj (u i e)) +
     S.mixedWeightedObservable .ab (fun e => u i e * conj (u i e)))
 
-def familyRemainder (S : SpinSystem V E) (u : I → E → ℂ) : C((V → RP2.Spin), ℂ) :=
+@[expose] def familyRemainder (S : SpinSystem V E) (u : I → E → ℂ) : C((V → RP2.Spin), ℂ) :=
   let T := familyKernel u
   let X := fun M e => S.currentObservable M (T e)
   let C := S.mixedCoefficientObservable

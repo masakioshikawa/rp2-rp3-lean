@@ -1,5 +1,9 @@
-import RP2.ActiveEdgeBounds
-import RP2.FourierAll
+module
+
+public import RP2.ActiveEdgeBounds
+public import RP2.FourierAll
+
+public section
 
 /-! Finite simple-path witnesses for the positive active-edge expansion. -/
 namespace RP2.HighTemperature
@@ -8,7 +12,7 @@ open Finset
 open scoped BigOperators Classical
 variable {V E : Type*} [Fintype V] [Fintype E] [DecidableEq V] [DecidableEq E]
 
-def activeGraph (edge : E → V × V) (A : Finset E) : SimpleGraph V where
+@[expose] def activeGraph (edge : E → V × V) (A : Finset E) : SimpleGraph V where
   Adj x y := x ≠ y ∧ ∃ e ∈ A, s((edge e).1, (edge e).2) = s(x,y)
   symm := ⟨by
     intro x y h
@@ -17,7 +21,7 @@ def activeGraph (edge : E → V × V) (A : Finset E) : SimpleGraph V where
     exact ⟨e, he, hp.trans Sym2.eq_swap⟩⟩
   loopless := ⟨by intro x; simp⟩
 
-def fullGraph (edge : E → V × V) : SimpleGraph V := activeGraph edge univ
+@[expose] def fullGraph (edge : E → V × V) : SimpleGraph V := activeGraph edge univ
 
 theorem activeGraph_le_full (edge : E → V × V) (A : Finset E) :
     activeGraph edge A ≤ fullGraph edge := by
@@ -39,7 +43,7 @@ theorem activeConnected_reachable (edge : E → V × V) (A : Finset E) (x y : V)
     simp only [mem_filter, mem_univ, true_and]
     exact ⟨fun h => h.trans hr, fun h => h.trans hr.symm⟩
 
-def adjacencyEdge (edge : E → V × V) {x y : V} (h : (fullGraph edge).Adj x y) : E :=
+@[expose] def adjacencyEdge (edge : E → V × V) {x y : V} (h : (fullGraph edge).Adj x y) : E :=
   Classical.choose h.2
 
 theorem adjacencyEdge_spec (edge : E → V × V) {x y : V}
@@ -47,7 +51,7 @@ theorem adjacencyEdge_spec (edge : E → V × V) {x y : V}
     s((edge (adjacencyEdge edge h)).1, (edge (adjacencyEdge edge h)).2) = s(x,y) :=
   (Classical.choose_spec h.2).2
 
-def walkEdgeSet (edge : E → V × V) {x y : V} : (fullGraph edge).Walk x y → Finset E
+@[expose] def walkEdgeSet (edge : E → V × V) {x y : V} : (fullGraph edge).Walk x y → Finset E
   | .nil => ∅
   | .cons h p => insert (adjacencyEdge edge h) (walkEdgeSet edge p)
 
@@ -112,7 +116,7 @@ theorem total_walk_count_le (H : SimpleGraph V) [DecidableRel H.Adj]
         simp only [sum_const, card_univ, smul_eq_mul, pow_succ]
         exact Nat.mul_le_mul_right _ (hd x) |>.trans_eq (Nat.mul_comm _ _)
 
-def pathWitnesses (edge : E → V × V) (n : ℕ) (x : V) : Finset (Finset E) :=
+@[expose] def pathWitnesses (edge : E → V × V) (n : ℕ) (x : V) : Finset (Finset E) :=
   univ.biUnion (fun y => ((fullGraph edge).finsetWalkLength n x y).filter
     SimpleGraph.Walk.IsPath |>.image (walkEdgeSet edge))
 

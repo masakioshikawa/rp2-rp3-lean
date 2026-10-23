@@ -1,5 +1,9 @@
-import RP2.ModelRestriction
-import RP2.LatticeAnnuli
+module
+
+public import RP2.ModelRestriction
+public import RP2.LatticeAnnuli
+
+public section
 
 /-! Exact restriction of annular kernels and translation of lattice Gibbs systems. -/
 namespace RP2.Fourier.LatticeGraph
@@ -8,7 +12,7 @@ open scoped Classical
 open RP2
 
 /-- Pins inherited by a restricted retained graph. -/
-def restrictionPins (G : LatticeGraph) (P : Site → Prop) (pins : Finset G.vertices) :
+@[expose] def restrictionPins (G : LatticeGraph) (P : Site → Prop) (pins : Finset G.vertices) :
     Finset (G.restrict P).vertices :=
   Finset.univ.filter (fun v => G.restrictVertex P v ∈ pins)
 
@@ -38,7 +42,7 @@ theorem pinnedPartition_restrict_graph (G : LatticeGraph) (P : Site → Prop)
   exact h1.trans h2
 
 /-- The finite pin set on the two boundary layers of the restricted annulus. -/
-def annulusPinFinset (G : LatticeGraph) (N : ℤ) (z : Site) :
+@[expose] def annulusPinFinset (G : LatticeGraph) (N : ℤ) (z : Site) :
     Finset (G.annulusGraph N z).vertices :=
   Finset.univ.filter (fun v => v ∈ G.annulusPins N z)
 
@@ -83,7 +87,7 @@ theorem pinnedKernel_annulus_restrict (G : LatticeGraph) (N : ℤ) (z : Site)
   exact h
 
 /-- Pins transported along a lattice translation. -/
-def translatePins (G : LatticeGraph) (z : Site) (pins : Finset G.vertices) :
+@[expose] def translatePins (G : LatticeGraph) (z : Site) (pins : Finset G.vertices) :
     Finset (G.translate z).vertices :=
   Finset.univ.filter (fun v => (G.translateVertexEquiv z).symm v ∈ pins)
 
@@ -112,7 +116,7 @@ theorem pinnedPartition_translate (G : LatticeGraph) (z : Site) (b : G.edges →
     (by rw [Equiv.symm_apply_apply])
 
 /-- The original vertex corresponding to a site of the centered annulus. -/
-def annulusOriginalVertex (G : LatticeGraph) (N : ℤ) (z : Site)
+@[expose] def annulusOriginalVertex (G : LatticeGraph) (N : ℤ) (z : Site)
     (v : ((G.annulusGraph N z).translate z).vertices) : G.vertices :=
   G.restrictVertex (· ∈ annulusSites N z)
     (((G.annulusGraph N z).translateVertexEquiv z).symm v)

@@ -1,4 +1,8 @@
-import RP3.ThinAnnuli
+module
+
+public import RP3.ThinAnnuli
+
+public section
 
 /-! Cardinality of the support of thin-annulus mode gradients. -/
 namespace RP3.Fourier
@@ -6,7 +10,7 @@ noncomputable section
 open Finset
 open scoped BigOperators
 
-def integerSquare (S : ℤ) : Finset Site :=
+@[expose] def integerSquare (S : ℤ) : Finset Site :=
   Icc (-S) S ×ˢ Icc (-S) S
 
 @[simp] theorem mem_integerSquare (S : ℤ) (v : Site) :
@@ -28,7 +32,7 @@ theorem integerSquare_card (S : ℤ) (hS : 0 ≤ S) :
   simp only [integerSquare, card_product, Nat.cast_mul, hi]
   ring
 
-def integerSquareShell (R S : ℤ) : Finset Site :=
+@[expose] def integerSquareShell (R S : ℤ) : Finset Site :=
   integerSquare S \ integerSquare (R-1)
 
 @[simp] theorem mem_integerSquareShell (R S : ℤ) (v : Site) :

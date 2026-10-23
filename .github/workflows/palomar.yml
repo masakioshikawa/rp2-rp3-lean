@@ -1,0 +1,18 @@
+name: Palomar preflight
+on:
+  push:
+    branches: [palomar]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  full:
+    uses: PalomarRegistry/PalomarSubmission/.github/workflows/submission.yml@07a02bae1e85c75ae349d0e75195162d16d41e21
+    with:
+      repository: ${{ github.repository }}
+      commit: ${{ github.sha }}
+      pipeline_commit: 07a02bae1e85c75ae349d0e75195162d16d41e21
+      request_id: rp2rp3port01
+      mode: full
+      execution_profile: palomar-standard-v1
+      options: '{"comparator_config_path":"comparator.json","authorization_relationship":"maintainer"}'

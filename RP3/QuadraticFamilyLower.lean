@@ -1,4 +1,8 @@
-import RP3.QuadraticFamilyEstimates
+module
+
+public import RP3.QuadraticFamilyEstimates
+
+public section
 
 namespace RP3.Quadratic
 

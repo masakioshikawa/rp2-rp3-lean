@@ -1,5 +1,9 @@
-import RP3.RotationGeometry
-import RP3.Calculus
+module
+
+public import RP3.RotationGeometry
+public import RP3.Calculus
+
+public section
 
 /-!
 # Pinned quadratic-spin Gibbs systems
@@ -19,12 +23,12 @@ open MeasureTheory
 open RP3.Rotation hiding Spin
 open scoped BigOperators InnerProductSpace
 
-def siteReference (p : Option (RP3.Spin)) : Measure (RP3.Spin) :=
+@[expose] def siteReference (p : Option (RP3.Spin)) : Measure (RP3.Spin) :=
   match p with
   | none => sphereProbability
   | some s => Measure.dirac s
 
-instance siteReference_isProbability (p : Option (RP3.Spin)) :
+@[expose] instance siteReference_isProbability (p : Option (RP3.Spin)) :
     IsProbabilityMeasure (siteReference p) := by
   cases p <;> dsimp [siteReference] <;> infer_instance
 
@@ -37,18 +41,18 @@ structure SpinSystem (V : Type uV) (E : Type uE) where
 namespace SpinSystem
 variable {V : Type uV} {E : Type uE} [Fintype V] [Fintype E]
 
-def reference (S : SpinSystem V E) : Measure (V → RP3.Spin) :=
+@[expose] def reference (S : SpinSystem V E) : Measure (V → RP3.Spin) :=
   Measure.pi (fun x => siteReference (S.pin x))
 
-instance reference_isProbability (S : SpinSystem V E) :
+@[expose] instance reference_isProbability (S : SpinSystem V E) :
     IsProbabilityMeasure S.reference := by
   unfold reference
   infer_instance
 
-def energy (S : SpinSystem V E) (K : E → SpinOperator 4) (σ : V → RP3.Spin) : ℝ :=
+@[expose] def energy (S : SpinSystem V E) (K : E → SpinOperator 4) (σ : V → RP3.Spin) : ℝ :=
   ∑ e, S.strength e * ⟪(σ (S.left e)).val, K e (σ (S.right e)).val⟫_ℝ ^ 2
 
-def Z (S : SpinSystem V E) (K : E → SpinOperator 4) : ℝ :=
+@[expose] def Z (S : SpinSystem V E) (K : E → SpinOperator 4) : ℝ :=
   ∫ σ, Real.exp (S.energy K σ) ∂S.reference
 
 omit [Fintype V] in
@@ -73,17 +77,17 @@ theorem Z_pos (S : SpinSystem V E) (K : E → SpinOperator 4) :
   rw [hs, measure_univ]
   exact zero_lt_one
 
-def rotateConfiguration
+@[expose] def rotateConfiguration
     (U : V → E4 ≃ₗᵢ[ℝ] E4) :
     (V → RP3.Spin) ≃ₜ (V → RP3.Spin) :=
   Homeomorph.piCongrRight (fun x => spinRotation (U x))
 
-def rotatePins (S : SpinSystem V E)
+@[expose] def rotatePins (S : SpinSystem V E)
     (U : V → E4 ≃ₗᵢ[ℝ] E4) :
     SpinSystem V E :=
   { S with pin := fun x => (S.pin x).map (spinRotation (U x)) }
 
-def gauge (S : SpinSystem V E) (K : E → SpinOperator 4)
+@[expose] def gauge (S : SpinSystem V E) (K : E → SpinOperator 4)
     (U : V → E4 ≃ₗᵢ[ℝ] E4) :
     E → SpinOperator 4 :=
   fun e => (U (S.left e)).symm.toContinuousLinearEquiv.toContinuousLinearMap * K e *
@@ -149,14 +153,14 @@ theorem Z_gauge_of_fixes_pins (S : SpinSystem V E)
     S.Z (S.gauge K U) = S.Z K := by
   rw [S.Z_gauge K U, S.rotatePins_eq_self U hU]
 
-def W (S : SpinSystem V E) (A : E → SpinOperator 4) : ℝ :=
+@[expose] def W (S : SpinSystem V E) (A : E → SpinOperator 4) : ℝ :=
   S.Z (fun e => NormedSpace.exp (A e)) / S.Z (fun _ => 1)
 
 @[simp] theorem W_zero (S : SpinSystem V E) : S.W 0 = 1 := by
   simp only [W, Pi.zero_apply, NormedSpace.exp_zero]
   exact div_self (S.Z_pos _).ne'
 
-def gaugeProduct (S : SpinSystem V E) (F : V → SpinOperator 4) : E → SpinOperator 4 :=
+@[expose] def gaugeProduct (S : SpinSystem V E) (F : V → SpinOperator 4) : E → SpinOperator 4 :=
   fun e => NormedSpace.exp (F (S.left e)) *
     NormedSpace.exp (F (S.right e) - F (S.left e)) *
     NormedSpace.exp (-F (S.right e))

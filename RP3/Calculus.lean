@@ -1,4 +1,8 @@
-import RP3.MathlibImports
+module
+
+public import RP3.MathlibImports
+
+public section
 
 /-!
 Adapted from OpenAI's ClassicalON/FiniteVolume.lean at commit
@@ -36,7 +40,7 @@ theorem hasDerivAt_integral_compact
     (integrable_const C)
     (Filter.Eventually.of_forall fun ω u _ => hd u ω)).2
 
-def fourthBell {Ω : Type uΩ} (F : ℕ → ℝ → Ω → ℝ) (t : ℝ) (ω : Ω) : ℝ :=
+@[expose] def fourthBell {Ω : Type uΩ} (F : ℕ → ℝ → Ω → ℝ) (t : ℝ) (ω : Ω) : ℝ :=
   Real.exp (F 0 t ω) * (F 4 t ω + 4 * F 1 t ω * F 3 t ω + 3 * (F 2 t ω)^2 +
     6 * (F 1 t ω)^2 * F 2 t ω + (F 1 t ω)^4)
 

@@ -1,6 +1,10 @@
-import RP3.QuadraticSecondGauge
-import RP3.QuaternionPaths
-import RP3.PeriodicODE
+module
+
+public import RP3.QuadraticSecondGauge
+public import RP3.QuaternionPaths
+public import RP3.PeriodicODE
+
+public section
 
 /-! Gauge shifts and boundary rotation paths for the actual squared RP³ interaction.
 Adapted from OpenAI ClassicalON/PotentialRotation.lean and PeriodicPartition.lean
@@ -17,14 +21,14 @@ namespace Quadratic
 namespace SpinSystem
 variable {V : Type uV} {E : Type uE} [Fintype V] [Fintype E]
 
-def potentialRotation (f : V → ℝ) (t : ℝ) (x : V) :
+@[expose] def potentialRotation (f : V → ℝ) (t : ℝ) (x : V) :
     EuclideanSpace ℝ (Fin 4) ≃ₗᵢ[ℝ] EuclideanSpace ℝ (Fin 4) :=
   rotationExp ((t*f x) • axisC) (skewAdjoint.smul_mem _ axisC_skew)
 
-def rotatePotential (S : SpinSystem V E) (f : V → ℝ) (t : ℝ) : SpinSystem V E :=
+@[expose] def rotatePotential (S : SpinSystem V E) (f : V → ℝ) (t : ℝ) : SpinSystem V E :=
   S.rotatePins (potentialRotation f t)
 
-def potentialOperators (S : SpinSystem V E) (f : V → ℝ) : E → SpinOperator 4 :=
+@[expose] def potentialOperators (S : SpinSystem V E) (f : V → ℝ) : E → SpinOperator 4 :=
   fun e => S.edgeGradient f e • axisC
 
 omit [Fintype V] [Fintype E] in

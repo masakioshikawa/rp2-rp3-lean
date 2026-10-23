@@ -1,5 +1,9 @@
-import RP3.QuadraticFamilyKernel
-import RP3.QuadraticCoefficientBounds
+module
+
+public import RP3.QuadraticFamilyKernel
+public import RP3.QuadraticCoefficientBounds
+
+public section
 
 /-! # Quantitative contraction estimates for quadratic RP³
 Adapted from OpenAI ClassicalON/FamilyEstimate, commit

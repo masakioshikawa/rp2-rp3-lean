@@ -1,4 +1,9 @@
-import RP3.LogSquareLimits
+module
+
+public import RP3.LogSquareLimits
+public import Mathlib.MeasureTheory.Measure.LevyProkhorovMetric
+
+public section
 
 /-! Proofs contributed in the Claude Opus review supplied by the user on
 11 October 2026, integrated and checked against this pinned development.
@@ -11,7 +16,7 @@ namespace RP3
 
 open Classical in
 /-- The full box `[-n,n]²` with every positively oriented nearest-neighbour bond. -/
-def exhaustionBox (n : ℕ) : Fourier.LatticeGraph where
+@[expose] def exhaustionBox (n : ℕ) : Fourier.LatticeGraph where
   vertices := Finset.Icc (-(n : ℤ)) n ×ˢ Finset.Icc (-(n : ℤ)) n
   edges := (Finset.univ : Finset (_ × _)).filter
     (fun e => Fourier.PositiveNeighbor e.1.val e.2.val)
@@ -59,7 +64,7 @@ theorem local_limit_endpoint_nonvacuous_with_spin (β : ℝ) (hβ : 0 ≤ β) (s
 
 /-- A concrete unit director supplies the outside filling without an extra
 inhabitedness hypothesis in the public existence theorems. -/
-def identitySpin : Spin := by
+@[expose] def identitySpin : Spin := by
   let v : E4 := WithLp.toLp 2 ![1, 0, 0, 0]
   have h : ‖v‖ ^ 2 = 1 := by
     norm_num [EuclideanSpace.real_norm_sq_eq, v, Fin.sum_univ_four]

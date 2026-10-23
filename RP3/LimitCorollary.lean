@@ -1,6 +1,10 @@
-import RP3.Full
-import RP3.GibbsProbability
-import RP3.WeightedSummability
+module
+
+public import RP3.Full
+public import RP3.GibbsProbability
+public import RP3.WeightedSummability
+
+public section
 
 /-!
 # Local weak limits and weighted summability

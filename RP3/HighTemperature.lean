@@ -1,4 +1,8 @@
-import RP3.QuaternionAction
+module
+
+public import RP3.QuaternionAction
+
+public section
 
 /-!
 # The positive active-edge expansion of the actual RP³ model
@@ -20,27 +24,27 @@ open scoped BigOperators InnerProductSpace
 
 variable {V E : Type*} [Fintype V] [Fintype E] [DecidableEq V] [DecidableEq E]
 
-def edgeActivity (edge : E → V × V) (b : E → ℝ) (e : E) :
+@[expose] def edgeActivity (edge : E → V × V) (b : E → ℝ) (e : E) :
     C(Configuration V, ℝ) :=
   ⟨fun σ => Real.exp (b e * ⟪(σ (edge e).1).val, (σ (edge e).2).val⟫_ℝ ^ 2
     - min (b e) 0) - 1, by fun_prop⟩
 
-def activeWeight (edge : E → V × V) (b : E → ℝ) (A : Finset E) :
+@[expose] def activeWeight (edge : E → V × V) (b : E → ℝ) (A : Finset E) :
     C(Configuration V, ℝ) := ∏ e ∈ A, edgeActivity edge b e
 
-def expandedWeight (edge : E → V × V) (b : E → ℝ) :
+@[expose] def expandedWeight (edge : E → V × V) (b : E → ℝ) :
     C(Configuration V, ℝ) := ∏ e : E, (1 + edgeActivity edge b e)
 
 /-- A cut separates the endpoints and no selected edge crosses it. -/
-def ActiveSeparated (edge : E → V × V) (A : Finset E) (x y : V) : Prop :=
+@[expose] def ActiveSeparated (edge : E → V × V) (A : Finset E) (x y : V) : Prop :=
   ∃ cut : Finset V, x ∈ cut ∧ y ∉ cut ∧
     ∀ e ∈ A, ((edge e).1 ∈ cut ↔ (edge e).2 ∈ cut)
 
 /-- The cut characterization of connectivity avoids choosing a path. -/
-def ActiveConnected (edge : E → V × V) (A : Finset E) (x y : V) : Prop :=
+@[expose] def ActiveConnected (edge : E → V × V) (A : Finset E) (x y : V) : Prop :=
   ¬ ActiveSeparated edge A x y
 
-def connectedMass (edge : E → V × V) (b : E → ℝ) (x y : V) : ℝ := by
+@[expose] def connectedMass (edge : E → V × V) (b : E → ℝ) (x y : V) : ℝ := by
   classical
   exact ∑ A ∈ (univ : Finset E).powerset,
     if ActiveConnected edge A x y then

@@ -1,4 +1,8 @@
-import RP2.TetrahedralAction
+module
+
+public import RP2.TetrahedralAction
+
+public section
 
 /-!
 # Tetrahedral cancellation of the quadrupole tensor

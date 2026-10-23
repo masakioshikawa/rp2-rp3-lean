@@ -1,4 +1,8 @@
-import RP2.QuadraticMixedJets
+module
+
+public import RP2.QuadraticMixedJets
+
+public section
 
 /-! # Uniform bounds on the actual mixed RP² coefficients -/
 namespace RP2.Quadratic

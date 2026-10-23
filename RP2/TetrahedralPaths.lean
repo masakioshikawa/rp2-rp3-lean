@@ -1,4 +1,8 @@
-import RP2.TetrahedralAction
+module
+
+public import RP2.TetrahedralAction
+
+public section
 
 /-!
 # Periodic coordinate rotations and finite paths to tetrahedral elements
@@ -18,7 +22,7 @@ theorem axis_smul_mul (r : ℝ) (A B : SpinOperator 3) :
 theorem axis_mul_smul (r : ℝ) (A B : SpinOperator 3) :
     A * (r • B) = r • (A * B) := Algebra.mul_smul_comm r A B
 
-def axisPolynomialFor (X : SpinOperator 3) (t : ℝ) : SpinOperator 3 :=
+@[expose] def axisPolynomialFor (X : SpinOperator 3) (t : ℝ) : SpinOperator 3 :=
   1 + (Real.sin t) • X + (1 - Real.cos t) • X^2
 
 theorem axisPolynomialFor_derivative (X : SpinOperator 3) (hX : X^3 = -X) (t : ℝ) :
@@ -108,7 +112,7 @@ theorem exp_axisC_periodic :
   exp_axis_periodic axisC axisC_cube
 
 /-- Coordinate generator 0, 1, or 2. -/
-def coordinateAxis (a : Fin 3) : SpinOperator 3 := ![axisA, axisB, axisC] a
+@[expose] def coordinateAxis (a : Fin 3) : SpinOperator 3 := ![axisA, axisB, axisC] a
 
 theorem coordinateAxis_skew (a : Fin 3) : coordinateAxis a ∈ skewAdjoint (SpinOperator 3) := by
   fin_cases a
@@ -128,7 +132,7 @@ theorem coordinateAxis_norm_le (a : Fin 3) : ‖coordinateAxis a‖ ≤ 1 := by
   · exact axisB_norm_le
   · exact axisC_norm_le
 
-def coordinateRotation (a : Fin 3) (t : ℝ) : E3 ≃ₗᵢ[ℝ] E3 :=
+@[expose] def coordinateRotation (a : Fin 3) (t : ℝ) : E3 ≃ₗᵢ[ℝ] E3 :=
   rotationExp (t • coordinateAxis a)
     (skewAdjoint.smul_mem t (coordinateAxis_skew a))
 
@@ -149,7 +153,7 @@ theorem coordinateRotation_periodic (a : Fin 3) :
   rfl
 
 /-- A cyclic relabelling carrying the chosen coordinate axis to the third axis. -/
-def axisConjugator (a : Fin 3) : Tetrahedral := ⟨![1, 2, 0] a, 0⟩
+@[expose] def axisConjugator (a : Fin 3) : Tetrahedral := ⟨![1, 2, 0] a, 0⟩
 
 /-- Conjugation by a global cyclic rotation reduces any coordinate-axis
 rotation to the axis-C rotation used in the analytic estimates. -/
@@ -167,12 +171,12 @@ theorem spinRotation_intertwine_axisC (a : Fin 3) (t : ℝ) (s : RP2.Spin) :
       spinRotation (coordinateRotation 2 t) (tetraAction.move (axisConjugator a) s) :=
   Subtype.ext (coordinateRotation_intertwine_axisC a t s.val)
 
-def tetraPathAxis (g : Tetrahedral) (k : Fin 3) : Fin 3 :=
+@[expose] def tetraPathAxis (g : Tetrahedral) (k : Fin 3) : Fin 3 :=
   ![![0, 0, 1, 2] g.sign,
     ![0, 1, 0] g.cycle,
     ![0, 0, 1] g.cycle] k
 
-def tetraPathAngle (g : Tetrahedral) (k : Fin 3) : ℝ :=
+@[expose] def tetraPathAngle (g : Tetrahedral) (k : Fin 3) : ℝ :=
   ![if g.sign = 0 then 0 else Real.pi,
     ![0, -(Real.pi / 2), Real.pi / 2] g.cycle,
     ![0, -(Real.pi / 2), Real.pi / 2] g.cycle] k

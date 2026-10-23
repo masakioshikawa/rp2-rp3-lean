@@ -1,5 +1,9 @@
-import RP3.FourierAll
-import RP3.QuadraticSecondBound
+module
+
+public import RP3.FourierAll
+public import RP3.QuadraticSecondBound
+
+public section
 
 /-! Fourier modes on the actual pinned squared-interaction spin system. -/
 namespace RP3
@@ -22,10 +26,10 @@ end Quadratic.SpinSystem
 
 namespace Fourier.LatticeGraph
 
-def spinSystem (G : LatticeGraph) (b : G.edges → ℝ) (P : G.vertices → Option RP3.Spin) :
+@[expose] def spinSystem (G : LatticeGraph) (b : G.edges → ℝ) (P : G.vertices → Option RP3.Spin) :
     Quadratic.SpinSystem G.vertices G.edges := ⟨fun e => e.val.1, fun e => e.val.2, b, P⟩
 
-def BoundaryPins (G : LatticeGraph) (k : ℕ) (P : G.vertices → Option RP3.Spin) : Prop :=
+@[expose] def BoundaryPins (G : LatticeGraph) (k : ℕ) (P : G.vertices → Option RP3.Spin) : Prop :=
   ∀ x s, P x=some s →
     (|(scaledSite k x.val).1| ≤ 1 ∧ |(scaledSite k x.val).2| ≤ 1) ∨
     (2 ≤ |(scaledSite k x.val).1| ∨ 2 ≤ |(scaledSite k x.val).2|)

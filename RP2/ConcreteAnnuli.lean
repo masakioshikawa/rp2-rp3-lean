@@ -1,7 +1,11 @@
-import RP2.ModelAssembly
-import RP2.TetrahedralAction
-import RP2.LatticeAnnuli
-import RP2.Main
+module
+
+public import RP2.ModelAssembly
+public import RP2.TetrahedralAction
+public import RP2.LatticeAnnuli
+public import RP2.Main
+
+public section
 
 /-!
 # The product estimate for the actual finite-volume RP² Gibbs measure

@@ -1,4 +1,8 @@
-import RP3.FourierAll
+module
+
+public import RP3.FourierAll
+
+public section
 
 /-! Numerical conversion between integer dyadic shell widths and normalized
 thin-annulus parameters. -/

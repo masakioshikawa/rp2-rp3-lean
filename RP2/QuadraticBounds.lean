@@ -1,4 +1,8 @@
-import RP2.QuadraticWard
+module
+
+public import RP2.QuadraticWard
+
+public section
 
 /-! # Bounds on the actual RP² derivative jets -/
 namespace RP2.Quadratic

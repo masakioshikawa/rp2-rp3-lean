@@ -1,4 +1,8 @@
-import RP3.QuadraticPlaneResponse
+module
+
+public import RP3.QuadraticPlaneResponse
+
+public section
 /-!
 # Real and complex Gibbs expectation as linear maps
 Adapted from OpenAI's ClassicalON MixedWard and ComplexWard, commit
@@ -13,7 +17,7 @@ open scoped BigOperators InnerProductSpace ComplexConjugate
 namespace SpinSystem
 variable {V : Type uV} {E : Type uE} [Fintype V] [Fintype E]
 
-def averageLinear (S : SpinSystem V E) : C((V → RP3.Spin), ℝ) →ₗ[ℝ] ℝ where
+@[expose] def averageLinear (S : SpinSystem V E) : C((V → RP3.Spin), ℝ) →ₗ[ℝ] ℝ where
   toFun f := S.average f
   map_add' f g := S.average_add f.continuous g.continuous
   map_smul' r f := S.average_mul_const r f
@@ -27,7 +31,7 @@ theorem integrable_complex_integrand (S : SpinSystem V E)
   (hf.mul (Complex.continuous_ofReal.comp (S.continuous_energy _).rexp)).integrable_of_hasCompactSupport
     (HasCompactSupport.of_compactSpace _)
 
-def averageComplexLinear (S : SpinSystem V E) : C((V → RP3.Spin), ℂ) →ₗ[ℂ] ℂ where
+@[expose] def averageComplexLinear (S : SpinSystem V E) : C((V → RP3.Spin), ℂ) →ₗ[ℂ] ℂ where
   toFun f := (∫ σ, f σ * (Real.exp (S.energy (fun _ => 1) σ) : ℂ) ∂S.reference) /
     (S.Z (fun _ => 1) : ℂ)
   map_add' f g := by
@@ -38,7 +42,7 @@ def averageComplexLinear (S : SpinSystem V E) : C((V → RP3.Spin), ℂ) →ₗ[
     simp only [ContinuousMap.smul_apply, smul_eq_mul, mul_assoc,
       integral_const_mul, RingHom.id_apply, mul_div_assoc]
 
-def ofRealObservable {Ω : Type uΩ} [TopologicalSpace Ω] (f : C(Ω, ℝ)) : C(Ω, ℂ) :=
+@[expose] def ofRealObservable {Ω : Type uΩ} [TopologicalSpace Ω] (f : C(Ω, ℝ)) : C(Ω, ℂ) :=
   ⟨fun σ => (f σ : ℂ), Complex.continuous_ofReal.comp f.continuous⟩
 
 @[simp] theorem averageComplex_ofReal (S : SpinSystem V E)
@@ -50,13 +54,13 @@ def ofRealObservable {Ω : Type uΩ} [TopologicalSpace Ω] (f : C(Ω, ℝ)) : C(
   rfl
 
 
-def normObservable {Ω : Type uΩ} [TopologicalSpace Ω] (f : C(Ω, ℂ)) : C(Ω, ℝ) :=
+@[expose] def normObservable {Ω : Type uΩ} [TopologicalSpace Ω] (f : C(Ω, ℂ)) : C(Ω, ℝ) :=
   ⟨fun σ => ‖f σ‖, f.continuous.norm⟩
 
-def reObservable {Ω : Type uΩ} [TopologicalSpace Ω] (f : C(Ω, ℂ)) : C(Ω, ℝ) :=
+@[expose] def reObservable {Ω : Type uΩ} [TopologicalSpace Ω] (f : C(Ω, ℂ)) : C(Ω, ℝ) :=
   ⟨fun σ => (f σ).re, Complex.continuous_re.comp f.continuous⟩
 
-def imObservable {Ω : Type uΩ} [TopologicalSpace Ω] (f : C(Ω, ℂ)) : C(Ω, ℝ) :=
+@[expose] def imObservable {Ω : Type uΩ} [TopologicalSpace Ω] (f : C(Ω, ℂ)) : C(Ω, ℝ) :=
   ⟨fun σ => (f σ).im, Complex.continuous_im.comp f.continuous⟩
 
 theorem averageLinear_nonneg (S : SpinSystem V E)

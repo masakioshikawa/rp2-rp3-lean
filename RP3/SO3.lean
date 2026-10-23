@@ -1,5 +1,9 @@
-import RP3.ModelWitnesses
-import RP3.LogSquareLimits
+module
+
+public import RP3.ModelWitnesses
+public import RP3.LogSquareLimits
+
+public section
 
 /-! Proofs contributed in the Claude Opus review supplied by the user on
 11 October 2026, integrated and checked against this pinned development.
@@ -12,7 +16,7 @@ namespace RP3.SO3
 open RP3.ModelWitnesses
 
 /-- Rotation matrix of `q = q₀ + q₁ i + q₂ j + q₃ k` (unnormalized). -/
-def rotMat (q : Fin 4 → ℝ) : Matrix (Fin 3) (Fin 3) ℝ :=
+@[expose] def rotMat (q : Fin 4 → ℝ) : Matrix (Fin 3) (Fin 3) ℝ :=
   !![q 0 ^ 2 + q 1 ^ 2 - q 2 ^ 2 - q 3 ^ 2, 2 * (q 1 * q 2 - q 0 * q 3), 2 * (q 1 * q 3 + q 0 * q 2);
      2 * (q 1 * q 2 + q 0 * q 3), q 0 ^ 2 - q 1 ^ 2 + q 2 ^ 2 - q 3 ^ 2, 2 * (q 2 * q 3 - q 0 * q 1);
      2 * (q 1 * q 3 - q 0 * q 2), 2 * (q 2 * q 3 + q 0 * q 1), q 0 ^ 2 - q 1 ^ 2 - q 2 ^ 2 + q 3 ^ 2]
@@ -48,7 +52,7 @@ theorem rotMat_mul (p q : Fin 4 → ℝ) :
     simp [Matrix.mul_apply, Fin.sum_univ_three, rotMat, lmulFun] <;> ring
 
 /-- The SO(3) rotation of an `S³` spin. -/
-def rotOf (s : Spin) : Matrix (Fin 3) (Fin 3) ℝ := rotMat s.val
+@[expose] def rotOf (s : Spin) : Matrix (Fin 3) (Fin 3) ℝ := rotMat s.val
 
 theorem rotOf_mem_SO3 (s : Spin) : rotOf s ∈ Matrix.specialOrthogonalGroup (Fin 3) ℝ := by
   rw [Matrix.mem_specialUnitaryGroup_iff, Matrix.mem_unitaryGroup_iff']
@@ -100,14 +104,14 @@ theorem so3_log_square_decay_signed (β : ℝ) (hβ : 0 ≤ β) :
   rwa [correlation_eq_so3] at h1
 
 /-- The pushforward of the uniform law under `rotOf` is left-invariant, hence Haar. -/
-def HaarInvariance : Prop :=
+@[expose] def HaarInvariance : Prop :=
   ∀ R ∈ Matrix.specialOrthogonalGroup (Fin 3) ℝ, ∀ f : C(Matrix (Fin 3) (Fin 3) ℝ, ℝ),
     ∫ s, f (R * rotOf s) ∂sphereProbability = ∫ s, f (rotOf s) ∂sphereProbability
 
 /-- **Remaining target.** Every rotation comes from a unit quaternion. This is
 classical: take `q₀ = √(1 + Tr R)/2` when `Tr R > -1`, and use the analogous
 formulas from a dominant diagonal entry otherwise. -/
-def RotOfSurjective : Prop :=
+@[expose] def RotOfSurjective : Prop :=
   ∀ R ∈ Matrix.specialOrthogonalGroup (Fin 3) ℝ, ∃ p : Spin, rotOf p = R
 
 theorem continuous_rotOf : Continuous rotOf := by

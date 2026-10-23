@@ -1,6 +1,10 @@
-import RP3.FourierAll
-import RP3.Fourier.ModelModes
-import RP3.QuadraticFamily
+module
+
+public import RP3.FourierAll
+public import RP3.Fourier.ModelModes
+public import RP3.QuadraticFamily
+
+public section
 
 /-! Truncated Fourier families for thin annuli. The low shells are represented
 by zero modes, retaining the existing finite index and its exact symmetries. -/
@@ -10,10 +14,10 @@ open scoped BigOperators ComplexConjugate
 
 variable {k : ℕ}
 
-def tailWeight (h : ℕ) (p : DyadicFreq k) : ℝ :=
+@[expose] def tailWeight (h : ℕ) (p : DyadicFreq k) : ℝ :=
   if h ≤ p.1.val then dyadicWeight p else 0
 
-def tailReciprocal (h : ℕ) (p : DyadicFreq k) : ℝ :=
+@[expose] def tailReciprocal (h : ℕ) (p : DyadicFreq k) : ℝ :=
   if h ≤ p.1.val then 1 / (dyadicRadius p : ℝ) else 0
 
 theorem tailWeight_nonneg (h : ℕ) (p : DyadicFreq k) : 0 ≤ tailWeight h p := by
@@ -49,7 +53,7 @@ theorem tailReciprocal_le (h : ℕ) (δ : ℝ) (hδ : 0 ≤ δ)
     exact one_div_le_one_div_of_le (by positivity) hr
   · exact hδ
 
-def tailLambda (k h : ℕ) : ℝ :=
+@[expose] def tailLambda (k h : ℕ) : ℝ :=
   (2:ℝ)^k * ∑ p : DyadicFreq k,
     tailWeight h p ^ 2 * Real.sin (dyadicAngle k (dyadicPoint p).1)
 
@@ -150,7 +154,7 @@ theorem SquareBound.gram_weighted_column_bound
        _ = _ := by rw [← Finset.sum_mul]; ring
 
 
-def thinLatticeMode (h : ℕ) (f : Bool → Bool → ℝ × ℝ → ℝ)
+@[expose] def thinLatticeMode (h : ℕ) (f : Bool → Bool → ℝ × ℝ → ℝ)
     (m s : Bool) (p : DyadicFreq k) (x : Site) : ℂ :=
   (tailWeight h p:ℂ) * (f m s (scaledSite k x):ℂ) *
     torusWave (groupedTorusPoint m s p) (latticeTorus (16*2^k) x)
@@ -174,11 +178,11 @@ theorem tailWave_multiplier_bound (h : ℕ) (m s j : Bool) (p : DyadicFreq k) :
 
 namespace LatticeGraph
 
-def thinModeGradient (G : LatticeGraph) (h : ℕ) (f : Bool → Bool → ℝ × ℝ → ℝ)
+@[expose] def thinModeGradient (G : LatticeGraph) (h : ℕ) (f : Bool → Bool → ℝ × ℝ → ℝ)
     (m s : Bool) (p : DyadicFreq k) (e : G.edges) : ℂ :=
   thinLatticeMode h f m s p e.val.2.val-thinLatticeMode h f m s p e.val.1.val
 
-def thinScaledModeGradient (G : LatticeGraph) (h : ℕ) (f : Bool → Bool → ℝ × ℝ → ℝ)
+@[expose] def thinScaledModeGradient (G : LatticeGraph) (h : ℕ) (f : Bool → Bool → ℝ × ℝ → ℝ)
     (m s : Bool) (p : DyadicFreq k) (e : G.edges) : ℂ :=
   (Real.sqrt (dyadicRadius p:ℝ):ℂ)*G.thinModeGradient h f m s p e
 
@@ -198,7 +202,7 @@ theorem thinScaledModeGradient_formula (G : LatticeGraph) (h : ℕ)
     torusWave (groupedTorusPoint m s p) (latticeTorus (16*2^k) e.val.1.val+latticeTorus (16*2^k) (latticeAxis (G.edgeDirection e)))) -
     ((f m s (scaledSite k e.val.1.val):ℂ)*torusWave (groupedTorusPoint m s p) (latticeTorus (16*2^k) e.val.1.val)) ) * hw
 
-def thinModeBlockConstant (C L δ : ℝ) : ℝ :=
+@[expose] def thinModeBlockConstant (C L δ : ℝ) : ℝ :=
   Real.sqrt (512*((L*δ)^2+C^2*(Real.pi/4)^2))
 
 theorem thinScaledModes_direction_bound (G : LatticeGraph) (hG : G.WithinDyadicBox k)
@@ -367,10 +371,10 @@ theorem thinMode_group_gram_bound (G : LatticeGraph) (h : ℕ)
     (by positivity : 0≤a^2*J)
   exact hh.trans (by nlinarith)
 
-def thinModes (G : LatticeGraph) (h : ℕ) (f : Bool → Bool → ℝ × ℝ → ℝ)
+@[expose] def thinModes (G : LatticeGraph) (h : ℕ) (f : Bool → Bool → ℝ × ℝ → ℝ)
     (i : ModeIndex k) (x : G.vertices) : ℂ := thinLatticeMode h f i.1.1 i.1.2 i.2 x.val
 
-def thinModeDifferences (G : LatticeGraph) (h : ℕ) (f : Bool → Bool → ℝ × ℝ → ℝ)
+@[expose] def thinModeDifferences (G : LatticeGraph) (h : ℕ) (f : Bool → Bool → ℝ × ℝ → ℝ)
     (i : ModeIndex k) (e : G.edges) : ℂ := G.thinModeGradient h f i.1.1 i.1.2 i.2 e
 
 theorem thinModes_HS_bound (G : LatticeGraph) (h : ℕ)
@@ -425,11 +429,11 @@ theorem thinModes_min_bound (G : LatticeGraph) (h : ℕ)
             (by positivity : 0 ≤ 16*C^2*J)
           nlinarith
 
-def thinModeCommutator (G : LatticeGraph) (h : ℕ) (f : Bool → Bool → ℝ × ℝ → ℝ) (m s : Bool) (p : DyadicFreq k) (e : G.edges) : ℂ :=
+@[expose] def thinModeCommutator (G : LatticeGraph) (h : ℕ) (f : Bool → Bool → ℝ × ℝ → ℝ) (m s : Bool) (p : DyadicFreq k) (e : G.edges) : ℂ :=
   (thinLatticeMode h f m s p e.val.1.val*conj (thinLatticeMode h f m s p e.val.2.val)-
     conj (thinLatticeMode h f m s p e.val.1.val)*thinLatticeMode h f m s p e.val.2.val)/2
 
-def thinProfileEdge (G : LatticeGraph) (h : ℕ) (f : Bool → Bool → ℝ × ℝ → ℝ) (k : ℕ) (e : G.edges) : ℝ :=
+@[expose] def thinProfileEdge (G : LatticeGraph) (h : ℕ) (f : Bool → Bool → ℝ × ℝ → ℝ) (k : ℕ) (e : G.edges) : ℝ :=
   (1/(2:ℝ)^k)*(f (G.edgeDirection e) false (scaledSite k e.val.1.val)*
     f (G.edgeDirection e) false (scaledSite k e.val.2.val)-
     f (G.edgeDirection e) true (scaledSite k e.val.1.val)*
@@ -500,7 +504,7 @@ theorem system_thinModes_commutator (G : LatticeGraph) (k h : ℕ)
     Pi.smul_apply, smul_eq_mul, spinSystem, thinModes, thinModeCommutator]
   ring
 
-def thinRotationCost (M C a J : ℝ) : ℝ :=
+@[expose] def thinRotationCost (M C a J : ℝ) : ℝ :=
   16*((6*M^2+4*M*Real.sqrt M+M)*(48*a^2*J)+M*(576*C^2*J))
 
 theorem thinRotationCost_nonneg (M C a J : ℝ) (hM : 0 ≤ M) (hJ : 0 ≤ J) :

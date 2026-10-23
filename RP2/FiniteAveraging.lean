@@ -1,4 +1,8 @@
-import RP2.Averaging
+module
+
+public import RP2.Averaging
+
+public section
 
 /-! Concrete finite-group averages and integration against finite measures. -/
 
@@ -19,12 +23,12 @@ namespace FiniteAction
 
 variable [Group G] [Fintype G] (A : FiniteAction G Ω)
 
-noncomputable def pullback (g : G) : C(Ω, ℝ) →ₗ[ℝ] C(Ω, ℝ) where
+@[expose] noncomputable def pullback (g : G) : C(Ω, ℝ) →ₗ[ℝ] C(Ω, ℝ) where
   toFun f := f.comp (A.move g)
   map_add' f h := by ext x; rfl
   map_smul' c f := by ext x; rfl
 
-noncomputable def average : C(Ω, ℝ) →ₗ[ℝ] C(Ω, ℝ) :=
+@[expose] noncomputable def average : C(Ω, ℝ) →ₗ[ℝ] C(Ω, ℝ) :=
   (Fintype.card G : ℝ)⁻¹ • ∑ g : G, A.pullback g
 
 @[simp] theorem average_apply (f : C(Ω, ℝ)) (x : Ω) :
@@ -107,7 +111,7 @@ end FiniteAction
 
 /-- The positive integral interface is realised by ordinary integration;
 compactness ensures every continuous function here is integrable. -/
-noncomputable def integralOnCompact [CompactSpace Ω] [MeasurableSpace Ω]
+@[expose] noncomputable def integralOnCompact [CompactSpace Ω] [MeasurableSpace Ω]
     [OpensMeasurableSpace Ω] (μ : Measure Ω) [IsFiniteMeasure μ] : PositiveIntegral Ω where
   linear := {
     toFun := fun f => ∫ x, f x ∂μ
@@ -118,7 +122,7 @@ noncomputable def integralOnCompact [CompactSpace Ω] [MeasurableSpace Ω]
   nonneg := fun _ hf => integral_nonneg hf
 
 /-- Assemble the structural interface from actual finite actions and invariant integration. -/
-noncomputable def systemOfFiniteActions {ι : Type*} [Group G] [Fintype G]
+@[expose] noncomputable def systemOfFiniteActions {ι : Type*} [Group G] [Fintype G]
     (I : PositiveIntegral Ω) (A : ι → FiniteAction G Ω)
     (hI : ∀ i g f, I.linear ((A i).pullback g f) = I.linear f)
     (hc : ∀ i j f, (A i).average ((A j).average f) =

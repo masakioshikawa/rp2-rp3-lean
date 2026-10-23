@@ -1,4 +1,8 @@
-import RP2.DenseLogarithmicRate
+module
+
+public import RP2.DenseLogarithmicRate
+
+public section
 
 /-! Sharper annular products obtained by screening both observation sites.
 The second chain uses complementary cuts; global rotation invariance converts

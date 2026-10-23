@@ -1,4 +1,8 @@
-import RP3.SquareRates
+module
+
+public import RP3.SquareRates
+
+public section
 
 /-! Uniform real-exponent decay from the concrete dyadic kernel estimate. -/
 namespace RP3.Fourier.LatticeGraph

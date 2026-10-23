@@ -1,4 +1,8 @@
-import Mathlib
+module
+
+public import Mathlib
+
+public section
 
 /-!
 # Exact annular averaging
@@ -65,7 +69,7 @@ namespace AveragingSystem
 variable {I : PositiveIntegral Ω} (S : AveragingSystem I ι)
 
 /-- The positive remainder of one annular kernel. -/
-noncomputable def remainder (i : ι) (ε : ℝ) (K : C(Ω, ℝ)) : C(Ω, ℝ) :=
+@[expose] noncomputable def remainder (i : ι) (ε : ℝ) (K : C(Ω, ℝ)) : C(Ω, ℝ) :=
   ε⁻¹ • (K - (1 - ε) • S.avg i K)
 
 theorem split (i : ι) {ε : ℝ} (hε : ε ≠ 0) (K : C(Ω, ℝ)) :

@@ -1,4 +1,8 @@
-import RP2.QuadraticDerivatives
+module
+
+public import RP2.QuadraticDerivatives
+
+public section
 
 /-!
 # Second and fourth Ward identities for the quadratic interaction
@@ -46,7 +50,7 @@ theorem second_gradient_identity (S : SpinSystem V E) (g : SpinOperator 3)
     Real.exp (S.energy (fun _ => 1) σ) ∂S.reference) / S.Z (fun _ => 1) = 0
   rw [hfun, hsecond, zero_div]
 
-def gaugeEnergy (S : SpinSystem V E) (F : V → SpinOperator 3) :
+@[expose] def gaugeEnergy (S : SpinSystem V E) (F : V → SpinOperator 3) :
     ℕ → ℝ → (V → RP2.Spin) → ℝ :=
   S.pathEnergy (fun e k => tripleJet (F (S.left e))
     (F (S.right e) - F (S.left e)) (-F (S.right e)) k 0 0 0)

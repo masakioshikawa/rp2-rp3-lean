@@ -1,5 +1,9 @@
-import RP2.ThinKernelEstimate
-import RP2.LimitCorollary
+module
+
+public import RP2.ThinKernelEstimate
+public import RP2.LimitCorollary
+
+public section
 
 /-!
 # Uniform log-square quadrupolar decay

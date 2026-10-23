@@ -1,5 +1,9 @@
-import RP3.QuadraticPlane
-import RP3.QuadraticBounds
+module
+
+public import RP3.QuadraticPlane
+public import RP3.QuadraticBounds
+
+public section
 
 /-!
 # The normalized two-axis Ward identity for RP³

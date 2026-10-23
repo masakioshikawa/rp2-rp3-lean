@@ -1,6 +1,10 @@
-import RP3.QuadraticAverages
-import RP3.ComplexCurrents
-import RP3.MixedAlgebra
+module
+
+public import RP3.QuadraticAverages
+public import RP3.ComplexCurrents
+public import RP3.MixedAlgebra
+
+public section
 
 /-!
 # The real and complex bilinear second response for RP³
@@ -44,7 +48,7 @@ omit [Fintype V] in
   unfold secondAxisEnergy firstEnergy
   fun_prop
 
-def secondObservable (S : SpinSystem V E) (h k : E → ℝ) : C((V → RP3.Spin), ℝ) :=
+@[expose] def secondObservable (S : SpinSystem V E) (h k : E → ℝ) : C((V → RP3.Spin), ℝ) :=
   ⟨_, S.continuous_secondPolynomial h k⟩
 
 @[simp] theorem secondObservable_average (S : SpinSystem V E) (h k : E → ℝ) :
@@ -84,7 +88,7 @@ theorem secondAxisResponse_add_right (S : SpinSystem V E) (u v w : E → ℝ) :
     S.secondAxisResponse_symm v, S.secondAxisResponse_symm w]
 
 omit [Fintype V] [Fintype E] in
-def scalarHessianCoefficient (S : SpinSystem V E) (g : SpinOperator 4)
+@[expose] def scalarHessianCoefficient (S : SpinSystem V E) (g : SpinOperator 4)
     (σ : V → RP3.Spin) (e : E) : ℝ :=
   2 * S.strength e *
     (⟪(σ (S.left e)).val, g (σ (S.right e)).val⟫_ℝ ^ 2 +
@@ -92,7 +96,7 @@ def scalarHessianCoefficient (S : SpinSystem V E) (g : SpinOperator 4)
         ⟪(σ (S.left e)).val, (g ^ 2) (σ (S.right e)).val⟫_ℝ)
 
 /-- Complex-linear combination of the second-derivative coefficients. -/
-def complexHessian (S : SpinSystem V E) (g : SpinOperator 4)
+@[expose] def complexHessian (S : SpinSystem V E) (g : SpinOperator 4)
     (h : E → ℂ) (σ : V → RP3.Spin) : ℂ :=
   MixedAlgebra.weighted (fun e => (S.scalarHessianCoefficient g σ e : ℂ)) h
 
@@ -142,10 +146,10 @@ omit [Fintype V] in
   (S.continuous_complexHessian _ _).add
     ((S.continuous_complexCurrent _ _).mul (S.continuous_complexCurrent _ _))
 
-def complexSecondObservable (S : SpinSystem V E) (u v : E → ℂ) : C((V → RP3.Spin), ℂ) :=
+@[expose] def complexSecondObservable (S : SpinSystem V E) (u v : E → ℂ) : C((V → RP3.Spin), ℂ) :=
   ⟨_, S.continuous_complexSecondPolynomial u v⟩
 
-def complexSecondResponse (S : SpinSystem V E) (u v : E → ℂ) : ℂ :=
+@[expose] def complexSecondResponse (S : SpinSystem V E) (u v : E → ℂ) : ℂ :=
   S.averageComplexLinear (S.complexSecondObservable u v)
 
 theorem complexSecondResponse_ofReal (S : SpinSystem V E) (u v : E → ℝ) :
@@ -216,7 +220,7 @@ theorem complexSecondResponse_smul_right (S : SpinSystem V E) (u v : E → ℂ) 
     S.complexSecondResponse_symm v]
 
 omit [Fintype V] [Fintype E] in
-def complexCross (S : SpinSystem V E) (f g : V → ℂ) : E → ℂ :=
+@[expose] def complexCross (S : SpinSystem V E) (f g : V → ℂ) : E → ℂ :=
   fun e => f (S.left e)*g (S.right e) - g (S.left e)*f (S.right e)
 
 omit [Fintype V] [Fintype E] in

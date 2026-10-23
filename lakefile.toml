@@ -1,14 +1,22 @@
 name = "rp2_decay"
 version = "0.4.0"
-defaultTargets = ["RP2", "RP3"]
+defaultTargets = ["RP2", "RP3", "Challenge", "Solution"]
 
 [[require]]
 name = "mathlib"
 git = "https://github.com/leanprover-community/mathlib4.git"
-rev = "d13f23b723b8a846827a245b89c10fc7d3f11612"
+rev = "065356127b1dc0016f66b7283ce0ce2c4055aa55"
 
 [[lean_lib]]
 name = "RP2"
 
 [[lean_lib]]
 name = "RP3"
+
+[[lean_lib]]
+name = "Challenge"
+roots = ["Challenge"]
+
+[[lean_lib]]
+name = "Solution"
+roots = ["Solution"]

@@ -1,8 +1,12 @@
-import RP2.LatticeModelRestriction
-import RP2.ModelConnection
-import RP2.AnnularEstimate
-import RP2.TetrahedralComparison
-import RP2.SquareRates
+module
+
+public import RP2.LatticeModelRestriction
+public import RP2.ModelConnection
+public import RP2.AnnularEstimate
+public import RP2.TetrahedralComparison
+public import RP2.SquareRates
+
+public section
 
 /-!
 # Uniform tetrahedral comparison for actual annular RP² kernels

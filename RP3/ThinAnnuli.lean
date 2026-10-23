@@ -1,4 +1,8 @@
-import RP3.ConcreteAnnuli
+module
+
+public import RP3.ConcreteAnnuli
+
+public section
 
 /-! Integer square annuli with independently chosen inner and outer radii.
 Every kernel edge has an endpoint in the strict interior. Boundary-only
@@ -11,15 +15,15 @@ open scoped Classical
 
 namespace Fourier
 
-def thinAnnulusSites (R S : ℤ) (z : Site) : Set Site :=
+@[expose] def thinAnnulusSites (R S : ℤ) (z : Site) : Set Site :=
   {v | R ≤ siteRadius z v ∧ siteRadius z v ≤ S}
 
 namespace LatticeGraph
 
-def thinLayer (G : LatticeGraph) (R S : ℤ) (z : Site) : Finset G.vertices :=
+@[expose] def thinLayer (G : LatticeGraph) (R S : ℤ) (z : Site) : Finset G.vertices :=
   univ.filter (fun v => R < siteRadius z v.val ∧ siteRadius z v.val < S)
 
-def thinKernelEdges (G : LatticeGraph) (R S : ℤ) (z : Site) : Finset G.edges :=
+@[expose] def thinKernelEdges (G : LatticeGraph) (R S : ℤ) (z : Site) : Finset G.edges :=
   univ.filter (fun e => e.val.1 ∈ G.thinLayer R S z ∨ e.val.2 ∈ G.thinLayer R S z)
 
 @[simp] theorem mem_thinLayer (G : LatticeGraph) (R S : ℤ) (z : Site) (v : G.vertices) :

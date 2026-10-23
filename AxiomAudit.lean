@@ -1,4 +1,8 @@
-import RP2
+module
+
+public import RP2
+
+public section
 
 /- Human-readable statements and axiom reports for the principal API.
 The automatic gate is verification/AuditEnvironment.lean: it traverses raw

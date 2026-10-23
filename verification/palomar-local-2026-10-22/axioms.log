@@ -1,0 +1,2 @@
+'ProjectiveDecay.rp2_log_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ProjectiveDecay.rp3_log_square' depends on axioms: [propext, Classical.choice, Quot.sound]

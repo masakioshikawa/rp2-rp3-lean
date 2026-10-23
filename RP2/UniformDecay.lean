@@ -1,4 +1,8 @@
-import RP2.SquareRates
+module
+
+public import RP2.SquareRates
+
+public section
 
 /-! Uniform real-exponent decay from the concrete dyadic kernel estimate. -/
 namespace RP2.Fourier.LatticeGraph

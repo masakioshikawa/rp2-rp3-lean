@@ -1,5 +1,9 @@
-import RP2.QuadraticPlane
-import RP2.QuadraticBounds
+module
+
+public import RP2.QuadraticPlane
+public import RP2.QuadraticBounds
+
+public section
 
 /-!
 # The normalized two-axis Ward identity for RP²

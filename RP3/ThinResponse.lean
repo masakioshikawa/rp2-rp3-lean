@@ -1,6 +1,10 @@
-import RP3.ThinEdgeResponse
-import RP3.ThinCosts
-import RP3.ThinSupport
+module
+
+public import RP3.ThinEdgeResponse
+public import RP3.ThinCosts
+public import RP3.ThinSupport
+
+public section
 
 /-! Uniform response estimates for the actual pinned RP³ Gibbs system on a
 thin square annulus.  No analytic estimate remains as an input hypothesis. -/

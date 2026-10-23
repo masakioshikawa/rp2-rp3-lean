@@ -1,4 +1,8 @@
-import RP3.QuadraticWard
+module
+
+public import RP3.QuadraticWard
+
+public section
 
 /-!
 # The noncommuting two-axis identity for RP³
@@ -22,10 +26,10 @@ theorem average_mul_const (S : SpinSystem V E) (r : ℝ) (f : (V → RP3.Spin) �
     S.average (fun σ => r * f σ) = r * S.average f := by
   simp only [average, mul_assoc, integral_const_mul, mul_div_assoc]
 
-def fourthPolynomial (F : ℕ → ℝ) : ℝ :=
+@[expose] def fourthPolynomial (F : ℕ → ℝ) : ℝ :=
   F 4 + 4 * F 1 * F 3 + 3 * (F 2)^2 + 6 * (F 1)^2 * F 2 + (F 1)^4
 
-def fourthResponse (S : SpinSystem V E) (A : E → SpinOperator 4) : ℝ :=
+@[expose] def fourthResponse (S : SpinSystem V E) (A : E → SpinOperator 4) : ℝ :=
   S.average (fun σ => fourthPolynomial (fun k => S.twistEnergy A k 0 σ))
 
 theorem fourthResponse_integral (S : SpinSystem V E) (A : E → SpinOperator 4) :
@@ -56,21 +60,21 @@ theorem fourthResponse_gauge (S : SpinSystem V E)
   exact mul_comm _ _
 
 omit [Fintype V] [Fintype E] in
-def crossForm (S : SpinSystem V E) (f g : V → ℝ) : E → ℝ :=
+@[expose] def crossForm (S : SpinSystem V E) (f g : V → ℝ) : E → ℝ :=
   fun e => f (S.left e)*g (S.right e)-g (S.left e)*f (S.right e)
 
 omit [Fintype V] [Fintype E] in
-def planarGradient (S : SpinSystem V E) (f g : V → ℝ) : E → SpinOperator 4 :=
+@[expose] def planarGradient (S : SpinSystem V E) (f g : V → ℝ) : E → SpinOperator 4 :=
   fun e => planeOperator (f (S.right e)) (g (S.right e)) -
     planeOperator (f (S.left e)) (g (S.left e))
 
-def secondAxisEnergy (S : SpinSystem V E) (h k : E → ℝ) (σ : V → RP3.Spin) : ℝ :=
+@[expose] def secondAxisEnergy (S : SpinSystem V E) (h k : E → ℝ) (σ : V → RP3.Spin) : ℝ :=
   ∑ e, 2 * S.strength e * (h e * k e) *
     (⟪(σ (S.left e)).val, axisC (σ (S.right e)).val⟫_ℝ ^ 2 +
       ⟪(σ (S.left e)).val, (σ (S.right e)).val⟫_ℝ *
         ⟪(σ (S.left e)).val, (axisC ^ 2) (σ (S.right e)).val⟫_ℝ)
 
-def secondAxisResponse (S : SpinSystem V E) (h k : E → ℝ) : ℝ :=
+@[expose] def secondAxisResponse (S : SpinSystem V E) (h k : E → ℝ) : ℝ :=
   S.average (fun σ => S.secondAxisEnergy h k σ +
     S.firstEnergy (fun e => h e • axisC) σ * S.firstEnergy (fun e => k e • axisC) σ)
 

@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Compile the pinned project and check its public proof dependencies.
+"""HISTORICAL LEAN 4.34.1 TOOL: use PALOMAR.md for this branch.
+
+Compile the pinned project and check its public proof dependencies.
 
 Run from any directory. No `lake update` is run. Each Lean process is serial
 and single threaded. Fresh-source compilation is the default; --resume only

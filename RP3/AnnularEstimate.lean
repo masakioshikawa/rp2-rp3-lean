@@ -1,5 +1,9 @@
-import RP3.QuadraticPotential
-import RP3.Fourier.AnnulusResponse
+module
+
+public import RP3.QuadraticPotential
+public import RP3.Fourier.AnnulusResponse
+
+public section
 
 /-! Uniform periodic boundary-rotation estimates for the squared RP³ model.
 Adapted from OpenAI ClassicalON/AnnulusPartition.lean, Apache-2.0. -/
@@ -11,10 +15,10 @@ open RP3.Rotation hiding Spin
 open RP3.Quadratic
 namespace Fourier.LatticeGraph
 
-def thetaPotential (G : LatticeGraph) (k : ℕ) (x : G.vertices) : ℝ :=
+@[expose] def thetaPotential (G : LatticeGraph) (k : ℕ) (x : G.vertices) : ℝ :=
   squareTheta (scaledSite k x.val)
 
-def rotatedBoundaryPins (G : LatticeGraph) (k : ℕ) (P : G.vertices → Option (RP3.Spin))
+@[expose] def rotatedBoundaryPins (G : LatticeGraph) (k : ℕ) (P : G.vertices → Option (RP3.Spin))
     (t : ℝ) : G.vertices → Option (RP3.Spin) :=
   fun x => (P x).map (spinRotation (Quadratic.SpinSystem.potentialRotation (G.thetaPotential k) t x))
 

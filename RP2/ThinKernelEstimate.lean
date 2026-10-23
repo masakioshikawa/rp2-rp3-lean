@@ -1,7 +1,11 @@
-import RP2.ThinProfileLattice
-import RP2.ThinResponse
-import RP2.ThinDyadicParameters
-import RP2.LogSquarePacking
+module
+
+public import RP2.ThinProfileLattice
+public import RP2.ThinResponse
+public import RP2.ThinDyadicParameters
+public import RP2.LogSquarePacking
+
+public section
 
 /-! Actual full-graph kernel comparison from the thin-annulus response. -/
 namespace RP2.Fourier.LatticeGraph

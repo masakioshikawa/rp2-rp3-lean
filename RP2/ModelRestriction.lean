@@ -1,4 +1,8 @@
-import RP2.ModelAssembly
+module
+
+public import RP2.ModelAssembly
+
+public section
 
 /-!
 # Restriction and relabeling of actual pinned RP² partitions
@@ -25,11 +29,11 @@ theorem referenceLaw_restrict_measurePreserving :
     (fun _ : V => sphereProbability) P
   exact measurePreserving_fst.comp hp
 
-def inducedEdge (edge : E → V × V) :
+@[expose] def inducedEdge (edge : E → V × V) :
     {e : E // P (edge e).1 ∧ P (edge e).2} → {v // P v} × {v // P v} :=
   fun e => (⟨(edge e.val).1, e.property.1⟩, ⟨(edge e.val).2, e.property.2⟩)
 
-def inducedPins (pins : Finset V) : Finset {v // P v} :=
+@[expose] def inducedPins (pins : Finset V) : Finset {v // P v} :=
   Finset.univ.filter (fun v => v.val ∈ pins)
 
 @[simp] theorem mem_inducedPins (pins : Finset V) (v : {v // P v}) :

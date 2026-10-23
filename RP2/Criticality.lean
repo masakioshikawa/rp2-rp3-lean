@@ -1,4 +1,8 @@
-import RP2.Rates
+module
+
+public import RP2.Rates
+
+public section
 
 /-! Scope of the decay conclusion: exclusion of nonzero algebraic lower
 bounds for this observable. This makes no assertion about other observables,

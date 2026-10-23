@@ -1,5 +1,9 @@
-import RP2.Model
-import RP2.PeriodicODE
+module
+
+public import RP2.Model
+public import RP2.PeriodicODE
+
+public section
 
 /-!
 # Pinned partition functions and the curvature-to-comparison interface
@@ -18,7 +22,7 @@ open MeasureTheory
 variable {V E : Type*} [Fintype V] [Fintype E] [DecidableEq V]
 
 /-- Overwrite pinned sites with the prescribed boundary configuration. -/
-noncomputable def fillPins (pins : Finset V) (τ : Configuration V) :
+@[expose] noncomputable def fillPins (pins : Finset V) (τ : Configuration V) :
     C(Configuration V, Configuration V) :=
   ⟨fun σ v => if v ∈ pins then τ v else σ v, by
     apply continuous_pi
@@ -28,11 +32,11 @@ noncomputable def fillPins (pins : Finset V) (τ : Configuration V) :
     · simpa only [hv, ite_false] using (continuous_apply v : Continuous (fun σ : Configuration V => σ v))⟩
 
 /-- Pinned spins are dummy integration variables with probability mass one. -/
-noncomputable def pinnedWeight (edge : E → V × V) (b : E → ℝ)
+@[expose] noncomputable def pinnedWeight (edge : E → V × V) (b : E → ℝ)
     (pins : Finset V) (τ : Configuration V) : C(Configuration V, ℝ) :=
   (weight edge b).comp (fillPins pins τ)
 
-noncomputable def pinnedPartition (edge : E → V × V) (b : E → ℝ)
+@[expose] noncomputable def pinnedPartition (edge : E → V × V) (b : E → ℝ)
     (pins : Finset V) (τ : Configuration V) : ℝ :=
   (integralOnCompact (referenceLaw (V := V))).linear (pinnedWeight edge b pins τ)
 
@@ -50,11 +54,11 @@ theorem pinnedPartition_pos (edge : E → V × V) (b : E → ℝ)
   exact zero_lt_one
 
 /-- Rotate all directors in the inner boundary by the same motion. -/
-noncomputable def twistBoundary (inner : Finset V) (ρ : ℝ → C(Spin, Spin))
+@[expose] noncomputable def twistBoundary (inner : Finset V) (ρ : ℝ → C(Spin, Spin))
     (τ : Configuration V) (t : ℝ) : Configuration V :=
   fun v => if v ∈ inner then ρ t (τ v) else τ v
 
-noncomputable def twistedPartition (edge : E → V × V) (b : E → ℝ)
+@[expose] noncomputable def twistedPartition (edge : E → V × V) (b : E → ℝ)
     (pins inner : Finset V) (ρ : ℝ → C(Spin, Spin)) (τ : Configuration V) : ℝ → ℝ :=
   fun t => pinnedPartition edge b pins (twistBoundary inner ρ τ t)
 
@@ -73,7 +77,7 @@ theorem twistedPartition_periodic (edge : E → V × V) (b : E → ℝ)
 
 /-- The analytic obligation. The desired annular input has
 `δ = constant(β) / log N`, uniformly in all boundary directors. -/
-def CurvatureBound (Z : ℝ → ℝ) (δ : ℝ) : Prop :=
+@[expose] def CurvatureBound (Z : ℝ → ℝ) (δ : ℝ) : Prop :=
   ∃ Z' Z'' : ℝ → ℝ,
     (∀ t, HasDerivAt Z (Z' t) t) ∧
     (∀ t, HasDerivAt Z' (Z'' t) t) ∧

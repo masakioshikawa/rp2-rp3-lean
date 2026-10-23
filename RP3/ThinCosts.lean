@@ -1,4 +1,8 @@
-import RP3.ThinFourier
+module
+
+public import RP3.ThinFourier
+
+public section
 
 /-! Numerical scaling of the balanced-profile and real-response costs. -/
 namespace RP3.Fourier.LatticeGraph

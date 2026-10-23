@@ -1,18 +1,11 @@
 name: Lean verification
-
 on:
   push:
+    branches: [main, palomar]
   pull_request:
   workflow_dispatch:
-    inputs:
-      replay:
-        description: Replay the full public dependency closure and standalone object
-        type: boolean
-        default: false
-
 permissions:
   contents: read
-
 jobs:
   verify:
     runs-on: ubuntu-24.04
@@ -20,36 +13,32 @@ jobs:
     env:
       LEAN_NUM_THREADS: "1"
     steps:
-      - name: Check out source
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
-      - name: Install the exact Lean distribution
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: ruby/setup-ruby@95ef2b042f9d7a56d8268cba8559e2842e2ad01b
+        with:
+          ruby-version: "3.3.12"
+      - name: Check source layout and interface freshness
+        run: |
+          python3 scripts/check-lean-sources.py
+          python3 scripts/generate-palomar-interface.py --check
+          ruby scripts/validate-formalization.rb
+      - name: Install exact Lean release
         shell: bash
         run: |
           curl --fail --location --retry 3 \
-            https://github.com/leanprover/lean4/releases/download/v4.34.1/lean-4.34.1-linux.tar.zst \
+            https://github.com/leanprover/lean4/releases/download/v4.35.0-rc2/lean-4.35.0-rc2-linux.tar.zst \
             --output "$RUNNER_TEMP/lean.tar.zst"
           printf '%s  %s\n' \
-            47bf4bbd78f70c2e9670598ab7124d92b6efb7330ff33e5fbb4030f6fd72e4e4 \
+            b67d0e0ba959fc74e186f1b44aebca32d6ecb6a28f8e9a029fc4e9f73398a049 \
             "$RUNNER_TEMP/lean.tar.zst" | sha256sum --check
-          tar --zstd -xf "$RUNNER_TEMP/lean.tar.zst" -C "$RUNNER_TEMP"
-          echo "$RUNNER_TEMP/lean-4.34.1-linux/bin" >> "$GITHUB_PATH"
-      - name: Compile, check semantic witnesses, and enforce the axiom policy
-        env:
-          RELEASE_REPLAY: ${{ inputs.replay }}
-        shell: bash
+          tar --no-same-owner --zstd -xf "$RUNNER_TEMP/lean.tar.zst" -C "$RUNNER_TEMP"
+          echo "$RUNNER_TEMP/lean-4.35.0-rc2-linux/bin" >> "$GITHUB_PATH"
+      - name: Compile libraries and independent interfaces
         run: |
-          extra=()
-          if [[ "$RELEASE_REPLAY" == true ]]; then
-            extra+=(--replay --replay-standalone --inventory)
-          fi
-          python3 scripts/verify.py --fetch-cache --standalone "${extra[@]}"
-          python3 scripts/verify_rp3.py --standalone --replay "${extra[@]}"
-      - name: Preserve verification records
-        if: always()
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
-        with:
-          name: lean-verification
-          path: |
-            verification/latest/
-            verification/rp3-latest/
-          if-no-files-found: warn
+          lake exe cache get
+          lake build
+          lake env lean SemanticWitnesses.lean
+          lake env lean RP3SemanticWitnesses.lean
+          lake env lean PalomarAxioms.lean

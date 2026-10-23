@@ -1,5 +1,9 @@
-import RP2.TwoEndpointRates
-import RP2.LimitCorollary
+module
+
+public import RP2.TwoEndpointRates
+public import RP2.LimitCorollary
+
+public section
 
 /-!
 # Stronger annular decay in free-boundary local limits

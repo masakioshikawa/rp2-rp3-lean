@@ -1,5 +1,9 @@
-import RP3.Averaging
-import RP3.Rates
+module
+
+public import RP3.Averaging
+public import RP3.Rates
+
+public section
 
 /-!
 # Conditional conclusion of the annular argument
@@ -37,7 +41,7 @@ namespace AnnularData
 
 variable {k : ℕ} {D L : ℝ} (A : AnnularData Ω k D L)
 
-noncomputable def correlation : ℝ :=
+@[expose] noncomputable def correlation : ℝ :=
   A.integral.linear (A.obs * A.base * ∏ i ∈ range k, A.kernels i) /
     A.integral.linear (A.base * ∏ i ∈ range k, A.kernels i)
 

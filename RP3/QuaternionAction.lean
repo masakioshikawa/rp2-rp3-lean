@@ -1,5 +1,9 @@
-import RP3.RotationGeometryBase
-import RP3.NestedCuts
+module
+
+public import RP3.RotationGeometryBase
+public import RP3.NestedCuts
+
+public section
 
 /-! The eight quaternion units acting on the unit sphere in real four-space. -/
 namespace RP3
@@ -10,7 +14,7 @@ open scoped BigOperators InnerProductSpace Pointwise
   index : Fin 8
   deriving DecidableEq, Fintype
 
-private def quaternionMul (g h : Quaternion) : Quaternion :=
+@[expose] def quaternionMul (g h : Quaternion) : Quaternion :=
   ⟨![![0, 1, 2, 3, 4, 5, 6, 7],
     ![1, 4, 3, 6, 5, 0, 7, 2],
     ![2, 7, 4, 1, 6, 3, 0, 5],
@@ -19,11 +23,11 @@ private def quaternionMul (g h : Quaternion) : Quaternion :=
     ![5, 0, 7, 2, 1, 4, 3, 6],
     ![6, 3, 0, 5, 2, 7, 4, 1],
     ![7, 6, 1, 0, 3, 2, 5, 4]] g.index h.index⟩
-private def quaternionInv (g : Quaternion) : Quaternion :=
+@[expose] def quaternionInv (g : Quaternion) : Quaternion :=
   ⟨![0,5,6,7,4,1,2,3] g.index⟩
 
 set_option maxHeartbeats 3000000 in
-instance : Group Quaternion where
+@[expose] instance : Group Quaternion where
   mul := quaternionMul
   one := ⟨0⟩
   inv := quaternionInv
@@ -32,7 +36,7 @@ instance : Group Quaternion where
   mul_one := by decide
   inv_mul_cancel := by decide
 
-def quaternionIndex : Quaternion ≃ Fin 8 where
+@[expose] def quaternionIndex : Quaternion ≃ Fin 8 where
   toFun g := g.index
   invFun i := ⟨i⟩
   left_inv _ := rfl
@@ -57,7 +61,7 @@ theorem quaternionRotate_mul (g h : Quaternion) (u : Fin 4 → ℝ) :
   fin_cases g <;> fin_cases h <;> ext i <;> fin_cases i <;>
     simp [quaternionMul, quaternionRotate]
 
-noncomputable def quaternionLinear (g : Quaternion) : E4 →ₗ[ℝ] E4 where
+@[expose] noncomputable def quaternionLinear (g : Quaternion) : E4 →ₗ[ℝ] E4 where
   toFun u := WithLp.toLp 2 (quaternionRotate g.index u)
   map_add' u v := by
     rcases g with ⟨g⟩
@@ -87,7 +91,7 @@ theorem quaternionLinear_norm (g : Quaternion) (u : E4) :
     exact quaternionRotate_squares g.index u
   nlinarith [norm_nonneg (quaternionLinear g u), norm_nonneg u]
 
-noncomputable def quaternionLinearIsometry (g : Quaternion) : E4 ≃ₗᵢ[ℝ] E4 where
+@[expose] noncomputable def quaternionLinearIsometry (g : Quaternion) : E4 ≃ₗᵢ[ℝ] E4 where
   toLinearEquiv := {
     quaternionLinear g with
     invFun := quaternionLinear g⁻¹
@@ -99,7 +103,7 @@ noncomputable def quaternionLinearIsometry (g : Quaternion) : E4 ≃ₗᵢ[ℝ] 
       rw [← quaternionLinear_mul, mul_inv_cancel, quaternionLinear_one] }
   norm_map' := quaternionLinear_norm g
 
-noncomputable def quaternionAction : FiniteAction Quaternion Spin where
+@[expose] noncomputable def quaternionAction : FiniteAction Quaternion Spin where
   move g := ⟨Rotation.spinRotation (quaternionLinearIsometry g),
     (Rotation.spinRotation (quaternionLinearIsometry g)).continuous⟩
   one_apply s := Subtype.ext (quaternionLinear_one s.val)
@@ -135,7 +139,7 @@ theorem quaternionAction_cut_average_zero {V : Type*} [Fintype V] [DecidableEq V
   rw [quaternionAction_sum_qPair_zero, mul_zero]
 
 /-- Concrete averaging system for any nested chain of spatial cuts. -/
-noncomputable def quaternionNestedSystem {V ι : Type*} [Fintype V] [DecidableEq V]
+@[expose] noncomputable def quaternionNestedSystem {V ι : Type*} [Fintype V] [DecidableEq V]
     (cuts : ι → Finset V) (hchain : ∀ i j, cuts i ⊆ cuts j ∨ cuts j ⊆ cuts i) :
     AveragingSystem (integralOnCompact (referenceLaw (V := V))) ι :=
   quaternionAction.nestedSystem sphereProbability quaternionAction_measurePreserving cuts hchain

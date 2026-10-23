@@ -1,6 +1,10 @@
-import RP3.RotationGeometry
-import RP3.PinnedKernel
-import RP3.NestedCuts
+module
+
+public import RP3.RotationGeometry
+public import RP3.PinnedKernel
+public import RP3.NestedCuts
+
+public section
 
 /-!
 # Concrete continuity and symmetry of pinned RP³ kernels
@@ -35,7 +39,7 @@ theorem continuous_pinnedPartition (edge : E → V × V) (b : E → ℝ)
   simpa only [Measure.restrict_univ] using hc
 
 /-- The actual pinned partition function as a continuous boundary kernel. -/
-def pinnedKernel (edge : E → V × V) (b : E → ℝ) (pins : Finset V) :
+@[expose] def pinnedKernel (edge : E → V × V) (b : E → ℝ) (pins : Finset V) :
     C(Configuration V, ℝ) :=
   ⟨pinnedPartition edge b pins, continuous_pinnedPartition edge b pins⟩
 
@@ -146,7 +150,7 @@ theorem pinnedKernel_weighted_factorization (edge : E → V × V) (b : E → ℝ
     _ = _ := integral_fillPins pins (outside * weight edge b)
 
 /-- A continuous function depends only on the specified coordinates. -/
-def DependsOnPins (pins : Finset V) (f : C(Configuration V, ℝ)) : Prop :=
+@[expose] def DependsOnPins (pins : Finset V) (f : C(Configuration V, ℝ)) : Prop :=
   ∀ τ σ, f (fillPins pins τ σ) = f τ
 
 /-- Edge weights are local, including when a common edge type is used with
@@ -171,7 +175,7 @@ theorem observable_dependsOnPins (pins : Finset V) (x y : V)
 
 /-- Integration over the complement of a pin set, with the remaining
 coordinates retained as continuous parameters. -/
-def boundaryAverage (pins : Finset V) (f : C(Configuration V, ℝ)) :
+@[expose] def boundaryAverage (pins : Finset V) (f : C(Configuration V, ℝ)) :
     C(Configuration V, ℝ) where
   toFun τ := ∫ σ, f (fillPins pins τ σ) ∂referenceLaw
   continuous_toFun := by

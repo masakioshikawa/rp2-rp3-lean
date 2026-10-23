@@ -1,3 +1,5 @@
+module
+
 /-
 Adapted from OpenAI, math repository, under the Apache License 2.0.
 Source: lean/OAI/Probability/ClassicalON/PeriodicODE.lean
@@ -5,7 +7,9 @@ Commit: adc7f1241b42e322a6451854ab7e4b4c146bf78a
 Changes: standalone Mathlib import; namespace RP2; added kernel_lower lemma.
 See LICENSE and NOTICE.
 -/
-import Mathlib
+public import Mathlib
+
+public section
 
 namespace RP2
 

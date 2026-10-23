@@ -1,0 +1,18 @@
+{
+  "preserved_at_commit": "e8ebad84b92e4fdfd99aff2fa7619c1deb36016d",
+  "reason": "Generated standalone copies and old executable audit tools are retained at the archive tag; the Palomar revision uses modular sources and current Comparator/kernel checks. Historical reports are not changed into fresh reports.",
+  "files": [
+    "RP2-Formalization.lean",
+    "RP3-Formalization.lean",
+    "ProbeGeo.lean",
+    "verification/AuditFinalUnion.lean",
+    "verification/RP3AuditEnvironment.lean",
+    "verification/AuditEnvironment.lean",
+    "verification/RP3SemanticEnvironment.lean",
+    "verification/CheckPublicUnion.lean",
+    "verification/rp2-audit-2026-10-09/checks/NewSemanticWitnesses.lean",
+    "verification/rp2-audit-2026-10-09/checker/verification/AuditFinalUnion.lean",
+    "verification/rp2-audit-2026-10-09/checker/verification/AuditEnvironment.lean",
+    "verification/rp2-audit-2026-10-09/checker/verification/CheckPublicUnion.lean"
+  ]
+}

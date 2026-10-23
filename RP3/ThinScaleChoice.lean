@@ -1,4 +1,8 @@
-import RP3.DenseRates
+module
+
+public import RP3.DenseRates
+
+public section
 
 /-!
 # An eventual dyadic choice for thin-annulus widths

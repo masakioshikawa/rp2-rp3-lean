@@ -1,4 +1,8 @@
-import RP2.TetrahedralPaths
+module
+
+public import RP2.TetrahedralPaths
+
+public section
 
 /-!
 # From one periodic axis estimate to the tetrahedral comparison
@@ -15,16 +19,16 @@ open Rotation
 variable {V : Type*} [DecidableEq V]
 
 /-- Rotate every spin of a configuration by the same tetrahedral element. -/
-def tetraGlobalMove (g : Tetrahedral) (σ : Configuration V) : Configuration V :=
+@[expose] def tetraGlobalMove (g : Tetrahedral) (σ : Configuration V) : Configuration V :=
   fun v => tetraAction.move g (σ v)
 
 /-- Rotate only sites in a cut by an arbitrary orthogonal transformation. -/
-def rotateCut (cut : Finset V) (R : E3 ≃ₗᵢ[ℝ] E3)
+@[expose] def rotateCut (cut : Finset V) (R : E3 ≃ₗᵢ[ℝ] E3)
     (σ : Configuration V) : Configuration V :=
   fun v => if v ∈ cut then Rotation.spinRotation R (σ v) else σ v
 
 /-- One coordinate-axis rotation localized to a cut. -/
-def coordinateCut (cut : Finset V) (a : Fin 3) (t : ℝ)
+@[expose] def coordinateCut (cut : Finset V) (a : Fin 3) (t : ℝ)
     (σ : Configuration V) : Configuration V :=
   rotateCut cut (coordinateRotation a t) σ
 

@@ -1,4 +1,8 @@
-import RP2.QuadraticFamily
+module
+
+public import RP2.QuadraticFamily
+
+public section
 
 /-!
 # Paper notation for the pinned quadratic response
@@ -19,7 +23,7 @@ universe uV uE uI
 variable {V : Type uV} {E : Type uE} {I : Type uI}
 
 /-- Pointwise complex conjugation, used explicitly in all response evaluations. -/
-def conjugate {A : Type*} (h : A → ℂ) : A → ℂ := fun a => conj (h a)
+@[expose] def conjugate {A : Type*} (h : A → ℂ) : A → ℂ := fun a => conj (h a)
 
 @[simp] theorem conjugate_conjugate {A : Type*} (h : A → ℂ) :
     conjugate (conjugate h) = h := by ext a; simp [conjugate]
@@ -29,12 +33,12 @@ variable [Fintype V] [Fintype E]
 
 /-- The note's complex-bilinear response `R(h,k) = -D²W(0)[hc,kc]`.
 The rotation axis is the fixed generator `axisC` from the concrete development. -/
-def R (S : SpinSystem V E) (h k : E → ℂ) : ℂ :=
+@[expose] def R (S : SpinSystem V E) (h k : E → ℂ) : ℂ :=
   -S.complexSecondResponse h k
 
 /-- Its real Hermitian evaluation. `R_hermitian_eq` proves that no imaginary
 part is discarded by this definition. -/
-def hermitianR (S : SpinSystem V E) (h : E → ℂ) : ℝ :=
+@[expose] def hermitianR (S : SpinSystem V E) (h : E → ℂ) : ℝ :=
   (R S h (conjugate h)).re
 
 theorem R_symm (S : SpinSystem V E) (h k : E → ℂ) : R S h k = R S k h := by
@@ -93,11 +97,11 @@ section Family
 variable [Fintype V] [Fintype E] [Fintype I]
 
 /-- The paper's Gram kernel `T(e,l) = ∑ᵢ dfᵢ(e) conj(dfᵢ(l))`. -/
-def T (S : SpinSystem V E) (f : I → V → ℂ) : E → E → ℂ :=
+@[expose] def T (S : SpinSystem V E) (f : I → V → ℂ) : E → E → ℂ :=
   familyKernel (fun i => S.edgeGradient (f i))
 
 /-- The current `q = ∑ᵢ S(fᵢ, conjugate fᵢ)`, with the paper's factor `1/2`. -/
-def q (S : SpinSystem V E) (f : I → V → ℂ) : E → ℂ :=
+@[expose] def q (S : SpinSystem V E) (f : I → V → ℂ) : E → ℂ :=
   ∑ i, S.commutatorForm (f i) (conjugate (f i))
 
 omit [Fintype V] [Fintype E] in

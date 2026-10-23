@@ -1,5 +1,9 @@
-import RP2.ThinAnnuli
-import RP2.KernelEstimate
+module
+
+public import RP2.ThinAnnuli
+public import RP2.KernelEstimate
+
+public section
 
 /-! Exact restriction and centering of arbitrary-width annular kernels. -/
 namespace RP2.Fourier.LatticeGraph
@@ -7,21 +11,21 @@ noncomputable section
 open scoped Classical
 open RP2
 
-def thinAnnulusGraph (G : LatticeGraph) (R S : ℤ) (z : Site) :=
+@[expose] def thinAnnulusGraph (G : LatticeGraph) (R S : ℤ) (z : Site) :=
   G.restrict (· ∈ thinAnnulusSites R S z)
 
-def thinAnnulusInner (G : LatticeGraph) (R S : ℤ) (z : Site) :
+@[expose] def thinAnnulusInner (G : LatticeGraph) (R S : ℤ) (z : Site) :
     Set (G.thinAnnulusGraph R S z).vertices := {v | siteRadius z v.val = R}
 
-def thinAnnulusOuter (G : LatticeGraph) (R S : ℤ) (z : Site) :
+@[expose] def thinAnnulusOuter (G : LatticeGraph) (R S : ℤ) (z : Site) :
     Set (G.thinAnnulusGraph R S z).vertices := {v | siteRadius z v.val = S}
 
-def thinAnnulusPins (G : LatticeGraph) (R S : ℤ) (z : Site) :
+@[expose] def thinAnnulusPins (G : LatticeGraph) (R S : ℤ) (z : Site) :
     Set (G.thinAnnulusGraph R S z).vertices :=
   G.thinAnnulusInner R S z ∪ G.thinAnnulusOuter R S z
 
 /-- The finite pin set on the two boundary layers of the restricted annulus. -/
-def thinAnnulusPinFinset (G : LatticeGraph) (R S : ℤ) (z : Site) :
+@[expose] def thinAnnulusPinFinset (G : LatticeGraph) (R S : ℤ) (z : Site) :
     Finset (G.thinAnnulusGraph R S z).vertices :=
   Finset.univ.filter (fun v => v ∈ G.thinAnnulusPins R S z)
 
@@ -66,7 +70,7 @@ theorem pinnedKernel_thinAnnulus_restrict (G : LatticeGraph) (R S : ℤ) (z : Si
   exact h
 
 /-- The original vertex corresponding to a site of the centered annulus. -/
-def thinAnnulusOriginalVertex (G : LatticeGraph) (R S : ℤ) (z : Site)
+@[expose] def thinAnnulusOriginalVertex (G : LatticeGraph) (R S : ℤ) (z : Site)
     (v : ((G.thinAnnulusGraph R S z).translate z).vertices) : G.vertices :=
   G.restrictVertex (· ∈ thinAnnulusSites R S z)
     (((G.thinAnnulusGraph R S z).translateVertexEquiv z).symm v)

@@ -1,6 +1,10 @@
-import RP2.LogSquareRates
-import RP2.ThinAnnuli
-import RP2.ThinScaleChoice
+module
+
+public import RP2.LogSquareRates
+public import RP2.ThinAnnuli
+public import RP2.ThinScaleChoice
+
+public section
 
 /-!
 # Packing dyadic thin annuli
@@ -13,13 +17,13 @@ noncomputable section
 open Finset MeasureTheory
 open RP2.Fourier
 
-def thinShellCount (h : ℕ) : ℕ := 2^(h-1)
+@[expose] def thinShellCount (h : ℕ) : ℕ := 2^(h-1)
 
-def thinShellWidth (n h : ℕ) : ℕ := 2^(n-h)
+@[expose] def thinShellWidth (n h : ℕ) : ℕ := 2^(n-h)
 
-def thinShellInner (n h j : ℕ) : ℕ := 2^n + 2*j*thinShellWidth n h
+@[expose] def thinShellInner (n h j : ℕ) : ℕ := 2^n + 2*j*thinShellWidth n h
 
-def thinShellOuter (n h j : ℕ) : ℕ := thinShellInner n h j + thinShellWidth n h
+@[expose] def thinShellOuter (n h j : ℕ) : ℕ := thinShellInner n h j + thinShellWidth n h
 
 theorem thinShell_fills_band {n h : ℕ} (hh : 1 ≤ h) (hhn : h ≤ n) :
     2 * thinShellCount h * thinShellWidth n h = 2^n := by
@@ -157,13 +161,13 @@ end Fourier.LatticeGraph
 
 /-- Numerical error in the thin-shell comparison after the periodic and
 tetrahedral comparison constants have been included. -/
-def thinDyadicError (E F : ℝ) (n h : ℕ) : ℝ :=
+@[expose] def thinDyadicError (E F : ℝ) (n h : ℕ) : ℝ :=
   E*(2:ℝ)^h/(n-h : ℕ) + F*(2:ℝ)^(6*h)/(2:ℝ)^n
 
 /-- The precise analytic input consumed by the packing argument.  The
 eventual choice of scales below proves the small-error hypothesis, before
 any finite graph or coupling is chosen. -/
-def SignedThinDyadicKernelComparison (β E F : ℝ) : Prop :=
+@[expose] def SignedThinDyadicKernelComparison (β E F : ℝ) : Prop :=
   ∀ n h : ℕ, 1 ≤ h → 2*h ≤ n → 4 ≤ n-h → thinDyadicError E F n h ≤ 1/2 →
     ∀ j : ℕ, j < thinShellCount h → ∀ (G : Fourier.LatticeGraph)
     (b : G.edges → ℝ), (∀ e, |b e| ≤ β) →

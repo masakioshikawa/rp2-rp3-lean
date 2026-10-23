@@ -1,4 +1,8 @@
-import RP3.ActivePaths
+module
+
+public import RP3.ActivePaths
+
+public section
 
 /-! Sharper path counting: after the first step a simple path has at most
 three choices on a graph of maximum degree four. -/
@@ -9,7 +13,7 @@ open scoped BigOperators Classical
 variable {V E : Type*} [Fintype V] [Fintype E] [DecidableEq V] [DecidableEq E]
 
 /-- Simple paths of a fixed length avoiding one specified vertex. -/
-def avoidingPaths (H : SimpleGraph V) (prev : V) (n : ℕ) (x y : V) :
+@[expose] def avoidingPaths (H : SimpleGraph V) (prev : V) (n : ℕ) (x y : V) :
     Finset (H.Walk x y) :=
   (H.finsetWalkLength n x y).filter (fun p => p.IsPath ∧ prev ∉ p.support)
 

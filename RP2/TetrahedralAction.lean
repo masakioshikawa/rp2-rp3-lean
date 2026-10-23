@@ -1,5 +1,9 @@
-import RP2.RotationGeometry
-import RP2.NestedCuts
+module
+
+public import RP2.RotationGeometry
+public import RP2.NestedCuts
+
+public section
 
 /-!
 # The actual twelve-element tetrahedral rotation action
@@ -21,33 +25,33 @@ open scoped BigOperators InnerProductSpace Pointwise
   sign : Fin 4
   deriving DecidableEq, Fintype
 
-private def signProduct (a b : Fin 4) : Fin 4 :=
+@[expose] def signProduct (a b : Fin 4) : Fin 4 :=
   ![![0, 1, 2, 3], ![1, 0, 3, 2], ![2, 3, 0, 1], ![3, 2, 1, 0]] a b
 
-private def signShift (a : Fin 3) (b : Fin 4) : Fin 4 :=
+@[expose] def signShift (a : Fin 3) (b : Fin 4) : Fin 4 :=
   ![![0, 1, 2, 3], ![0, 3, 1, 2], ![0, 2, 3, 1]] a b
 
-private def cycleInverse (a : Fin 3) : Fin 3 := ![0, 2, 1] a
+@[expose] def cycleInverse (a : Fin 3) : Fin 3 := ![0, 2, 1] a
 
-private def tetraMul (g h : Tetrahedral) : Tetrahedral :=
+@[expose] def tetraMul (g h : Tetrahedral) : Tetrahedral :=
   ⟨g.cycle + h.cycle, signProduct g.sign (signShift g.cycle h.sign)⟩
 
-private def tetraInv (g : Tetrahedral) : Tetrahedral :=
+@[expose] def tetraInv (g : Tetrahedral) : Tetrahedral :=
   ⟨cycleInverse g.cycle, signShift (cycleInverse g.cycle) g.sign⟩
 
-private theorem signProduct_assoc (a b c : Fin 4) :
+theorem signProduct_assoc (a b c : Fin 4) :
     signProduct (signProduct a b) c = signProduct a (signProduct b c) := by
   fin_cases a <;> fin_cases b <;> fin_cases c <;> rfl
 
-private theorem signShift_product (a : Fin 3) (b c : Fin 4) :
+theorem signShift_product (a : Fin 3) (b c : Fin 4) :
     signShift a (signProduct b c) = signProduct (signShift a b) (signShift a c) := by
   fin_cases a <;> fin_cases b <;> fin_cases c <;> rfl
 
-private theorem signShift_add (a b : Fin 3) (c : Fin 4) :
+theorem signShift_add (a b : Fin 3) (c : Fin 4) :
     signShift (a + b) c = signShift a (signShift b c) := by
   fin_cases a <;> fin_cases b <;> fin_cases c <;> rfl
 
-private theorem tetraMul_assoc (g h k : Tetrahedral) :
+theorem tetraMul_assoc (g h k : Tetrahedral) :
     tetraMul (tetraMul g h) k = tetraMul g (tetraMul h k) := by
   apply Tetrahedral.ext
   · exact add_assoc g.cycle h.cycle k.cycle
@@ -58,7 +62,7 @@ private theorem tetraMul_assoc (g h k : Tetrahedral) :
 
 set_option maxRecDepth 100000 in
 set_option maxHeartbeats 2000000 in
-instance : Group Tetrahedral where
+@[expose] instance : Group Tetrahedral where
   mul := tetraMul
   one := ⟨0, 0⟩
   inv := tetraInv
@@ -84,7 +88,7 @@ instance : Group Tetrahedral where
     (g * h).sign = signProduct g.sign (signShift g.cycle h.sign) := rfl
 
 /-- The index equivalence used to reuse the finite polynomial certificate. -/
-def tetrahedralIndex : Tetrahedral ≃ Fin 3 × Fin 4 where
+@[expose] def tetrahedralIndex : Tetrahedral ≃ Fin 3 × Fin 4 where
   toFun g := (g.cycle, g.sign)
   invFun p := ⟨p.1, p.2⟩
   left_inv _ := rfl
@@ -115,7 +119,7 @@ set_option maxHeartbeats 2000000 in
       tetraRotate, evenSigns, cyclic]
 
 /-- Tetrahedral rotations as real linear maps. -/
-noncomputable def tetraLinear (g : Tetrahedral) : E3 →ₗ[ℝ] E3 where
+@[expose] noncomputable def tetraLinear (g : Tetrahedral) : E3 →ₗ[ℝ] E3 where
   toFun u := WithLp.toLp 2 (tetraRotate g.cycle g.sign u)
   map_add' u v := by
     rcases g with ⟨a, b⟩
@@ -157,7 +161,7 @@ theorem tetraLinear_det (g : Tetrahedral) : LinearMap.det (tetraLinear g) = 1 :=
       PiLp.single_apply]
 
 /-- Each element is an actual orthogonal linear equivalence of three-space. -/
-noncomputable def tetraLinearIsometry (g : Tetrahedral) : E3 ≃ₗᵢ[ℝ] E3 where
+@[expose] noncomputable def tetraLinearIsometry (g : Tetrahedral) : E3 ≃ₗᵢ[ℝ] E3 where
   toLinearEquiv := {
     tetraLinear g with
     invFun := tetraLinear g⁻¹
@@ -170,7 +174,7 @@ noncomputable def tetraLinearIsometry (g : Tetrahedral) : E3 ≃ₗᵢ[ℝ] E3 w
   norm_map' := tetraLinear_norm g
 
 /-- A continuous action of the finite tetrahedral group on the spin sphere. -/
-noncomputable def tetraAction : FiniteAction Tetrahedral Spin where
+@[expose] noncomputable def tetraAction : FiniteAction Tetrahedral Spin where
   move g := ⟨Rotation.spinRotation (tetraLinearIsometry g),
     (Rotation.spinRotation (tetraLinearIsometry g)).continuous⟩
   one_apply s := Subtype.ext (tetraLinear_one s.val)
@@ -206,7 +210,7 @@ theorem tetraAction_cut_average_zero {V : Type*} [Fintype V] [DecidableEq V]
   rw [tetraAction_sum_qPair_zero, mul_zero]
 
 /-- Concrete averaging system for any nested chain of spatial cuts. -/
-noncomputable def tetraNestedSystem {V ι : Type*} [Fintype V] [DecidableEq V]
+@[expose] noncomputable def tetraNestedSystem {V ι : Type*} [Fintype V] [DecidableEq V]
     (cuts : ι → Finset V) (hchain : ∀ i j, cuts i ⊆ cuts j ∨ cuts j ⊆ cuts i) :
     AveragingSystem (integralOnCompact (referenceLaw (V := V))) ι :=
   tetraAction.nestedSystem sphereProbability tetraAction_measurePreserving cuts hchain

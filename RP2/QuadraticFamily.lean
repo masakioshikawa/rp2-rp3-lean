@@ -1,5 +1,9 @@
-import RP2.QuadraticFamilyLower
-import RP2.QuadraticSecondBound
+module
+
+public import RP2.QuadraticFamilyLower
+public import RP2.QuadraticSecondBound
+
+public section
 /-!
 # Fourth-order family inequality for pinned quadratic RP² systems
 Adapted from OpenAI ClassicalON/RotationInequality, commit
@@ -17,7 +21,7 @@ open scoped BigOperators InnerProductSpace ComplexConjugate
 namespace SpinSystem
 variable {V : Type uV} {E : Type uE} {I : Type uI} [Fintype V] [Fintype E] [Fintype I]
 omit [Fintype I] in
-def complexSecondBilin (S : SpinSystem V E) : (E → ℂ) →ₗ[ℂ] (E → ℂ) →ₗ[ℂ] ℂ where
+@[expose] def complexSecondBilin (S : SpinSystem V E) : (E → ℂ) →ₗ[ℂ] (E → ℂ) →ₗ[ℂ] ℂ where
   toFun u := {
     toFun := S.complexSecondResponse u
     map_add' := S.complexSecondResponse_add_right u

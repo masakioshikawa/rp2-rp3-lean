@@ -1,4 +1,8 @@
-import RP3.MathlibImports
+module
+
+public import RP3.MathlibImports
+
+public section
 
 /-! Pure Fourier/lattice estimates, concatenated for economical compilation. -/
 
@@ -10,11 +14,11 @@ universe uI uE
 open scoped BigOperators ComplexConjugate
 variable {I : Type uI} {E : Type uE} [Fintype I] [Fintype E]
 
-def familyKernel (u : I → E → ℂ) (e l : E) : ℂ := ∑ i, u i e * conj (u i l)
+@[expose] def familyKernel (u : I → E → ℂ) (e l : E) : ℂ := ∑ i, u i e * conj (u i l)
 
-def rowSquare (u : I → E → ℂ) (e : E) : ℝ := ∑ l, ‖familyKernel u e l‖^2
+@[expose] def rowSquare (u : I → E → ℂ) (e : E) : ℝ := ∑ l, ‖familyKernel u e l‖^2
 
-def familyHSSquare (u : I → E → ℂ) : ℝ := ∑ e, rowSquare u e
+@[expose] def familyHSSquare (u : I → E → ℂ) : ℝ := ∑ e, rowSquare u e
 
 omit [Fintype E] in
 @[simp] theorem familyKernel_conj (u : I → E → ℂ) (e l : E) :
@@ -45,7 +49,7 @@ namespace RP3.Fourier
 
 abbrev Site := ℤ × ℤ
 
-def PositiveNeighbor (x y : Site) : Prop :=
+@[expose] def PositiveNeighbor (x y : Site) : Prop :=
   (y.1 = x.1 + 1 ∧ y.2 = x.2) ∨ (y.1 = x.1 ∧ y.2 = x.2 + 1)
 
 structure LatticeGraph where
@@ -53,7 +57,7 @@ structure LatticeGraph where
   edges : Finset (vertices × vertices)
   nearest : ∀ e ∈ edges, PositiveNeighbor e.1.val e.2.val
 
-noncomputable def siteDistance (x y : Site) : ℝ :=
+@[expose] noncomputable def siteDistance (x y : Site) : ℝ :=
   Real.sqrt (((x.1 : ℝ) - (y.1 : ℝ)) ^ 2 + ((x.2 : ℝ) - (y.2 : ℝ)) ^ 2)
 
 
@@ -75,7 +79,7 @@ namespace Fourier
 
 abbrev DiscreteTorus (L : ℕ) := ZMod L × ZMod L
 
-def torusWave {L : ℕ} [NeZero L] (p x : DiscreteTorus L) : ℂ :=
+@[expose] def torusWave {L : ℕ} [NeZero L] (p x : DiscreteTorus L) : ℂ :=
   ZMod.stdAddChar (p.1*x.1+p.2*x.2)
 
 variable {L : ℕ} [NeZero L]
@@ -184,9 +188,9 @@ namespace Fourier
 
 abbrev DyadicFreq (k : ℕ) := Σ j : Fin k, Fin (2^j.val) × Fin (2*2^j.val+1)
 
-def dyadicRadius {k : ℕ} (p : DyadicFreq k) : ℕ := 2^p.1.val
+@[expose] def dyadicRadius {k : ℕ} (p : DyadicFreq k) : ℕ := 2^p.1.val
 
-def dyadicPoint {k : ℕ} (p : DyadicFreq k) : ℤ × ℤ :=
+@[expose] def dyadicPoint {k : ℕ} (p : DyadicFreq k) : ℤ × ℤ :=
   ((dyadicRadius p : ℤ)+p.2.1.val, (p.2.2.val:ℤ)-dyadicRadius p)
 
 theorem dyadicRadius_pos {k : ℕ} (p : DyadicFreq k) : 0 < dyadicRadius p := by
@@ -241,7 +245,7 @@ theorem zmod_cast_inj_interval (L : ℕ) (c a b : ℤ)
   have hz := CharP.intCast_injOn_Ico (R := ZMod L) L ha' hb' hh
   omega
 
-def dyadicTorusPoint {k : ℕ} (p : DyadicFreq k) : DiscreteTorus (16*2^k) :=
+@[expose] def dyadicTorusPoint {k : ℕ} (p : DyadicFreq k) : DiscreteTorus (16*2^k) :=
   (((dyadicPoint p).1:ZMod (16*2^k)), ((dyadicPoint p).2:ZMod (16*2^k)))
 
 theorem dyadicTorusPoint_injective {k : ℕ} : Function.Injective (dyadicTorusPoint (k := k)) := by
@@ -287,19 +291,19 @@ open scoped Topology ContDiff
 
 namespace Fourier
 
-def thetaBump : ContDiffBump (0 : ℝ) := ⟨4/3, 5/3, by norm_num, by norm_num⟩
-def outerBump : ContDiffBump (0 : ℝ) := ⟨7/4, 15/8, by norm_num, by norm_num⟩
-def innerBump : ContDiffBump (0 : ℝ) := ⟨9/8, 5/4, by norm_num, by norm_num⟩
+@[expose] def thetaBump : ContDiffBump (0 : ℝ) := ⟨4/3, 5/3, by norm_num, by norm_num⟩
+@[expose] def outerBump : ContDiffBump (0 : ℝ) := ⟨7/4, 15/8, by norm_num, by norm_num⟩
+@[expose] def innerBump : ContDiffBump (0 : ℝ) := ⟨9/8, 5/4, by norm_num, by norm_num⟩
 
-def squareTheta (z : ℝ × ℝ) : ℝ := thetaBump z.1 * thetaBump z.2
+@[expose] def squareTheta (z : ℝ × ℝ) : ℝ := thetaBump z.1 * thetaBump z.2
 
-def squareCutoff (z : ℝ × ℝ) : ℝ :=
+@[expose] def squareCutoff (z : ℝ × ℝ) : ℝ :=
   outerBump z.1 * outerBump z.2 * (1-innerBump z.1*innerBump z.2)
 
-def squareGradient (m : Bool) (z : ℝ × ℝ) : ℝ :=
+@[expose] def squareGradient (m : Bool) (z : ℝ × ℝ) : ℝ :=
   if m then thetaBump z.1 * deriv thetaBump z.2 else deriv thetaBump z.1 * thetaBump z.2
 
-def squareProfile (m sign : Bool) (z : ℝ × ℝ) : ℝ :=
+@[expose] def squareProfile (m sign : Bool) (z : ℝ × ℝ) : ℝ :=
   if sign then (squareCutoff z-squareGradient m z)/2 else
     (squareCutoff z+squareGradient m z)/2
 
@@ -572,7 +576,7 @@ open Set Function
 open scoped ContDiff BigOperators
 namespace Fourier
 
-def squareStep (m : Bool) (ε : ℝ) (z : ℝ × ℝ) : ℝ × ℝ :=
+@[expose] def squareStep (m : Bool) (ε : ℝ) (z : ℝ × ℝ) : ℝ × ℝ :=
   if m then (z.1,z.2+ε) else (z.1+ε,z.2)
 
 @[simp] theorem squareStep_distance (m : Bool) (ε : ℝ) (z : ℝ × ℝ) :
@@ -710,9 +714,9 @@ noncomputable section
 open scoped BigOperators
 namespace Fourier
 
-def dyadicAngle (k : ℕ) (t : ℝ) : ℝ := 2*Real.pi*t/(16*(2:ℝ)^k)
+@[expose] def dyadicAngle (k : ℕ) (t : ℝ) : ℝ := 2*Real.pi*t/(16*(2:ℝ)^k)
 
-def dyadicLambda (k : ℕ) : ℝ :=
+@[expose] def dyadicLambda (k : ℕ) : ℝ :=
   (2:ℝ)^k * ∑ p : DyadicFreq k,
     (1/(dyadicRadius p:ℝ))^3 * Real.sin (dyadicAngle k (dyadicPoint p).1)
 
@@ -768,7 +772,7 @@ theorem dyadicLambda_lower (k : ℕ) : (k:ℝ)/2 ≤ dyadicLambda k := by
                       _ ≤ _ := mul_le_mul_of_nonneg_right hc (by positivity)
        _ ≤ _ := Finset.sum_le_sum fun p _ => hp p
 
-def dyadicReflect {k : ℕ} (p : DyadicFreq k) : DyadicFreq k :=
+@[expose] def dyadicReflect {k : ℕ} (p : DyadicFreq k) : DyadicFreq k :=
   ⟨p.1, p.2.1, p.2.2.rev⟩
 
 @[simp] theorem dyadicReflect_radius {k : ℕ} (p : DyadicFreq k) :
@@ -812,15 +816,15 @@ noncomputable section
 open scoped BigOperators
 namespace Fourier
 
-def latticeAxis (m : Bool) : Site := if m then (0,1) else (1,0)
+@[expose] def latticeAxis (m : Bool) : Site := if m then (0,1) else (1,0)
 
-def latticeTorus (L : ℕ) (x : Site) : DiscreteTorus L := ((x.1:ZMod L),(x.2:ZMod L))
+@[expose] def latticeTorus (L : ℕ) (x : Site) : DiscreteTorus L := ((x.1:ZMod L),(x.2:ZMod L))
 
 @[simp] theorem latticeTorus_add (L : ℕ) (x y : Site) :
     latticeTorus L (x+y) = latticeTorus L x+latticeTorus L y := by
   ext <;> simp [latticeTorus]
 
-def scaledSite (k : ℕ) (x : Site) : ℝ × ℝ :=
+@[expose] def scaledSite (k : ℕ) (x : Site) : ℝ × ℝ :=
   ((x.1:ℝ)/(2:ℝ)^k, (x.2:ℝ)/(2:ℝ)^k)
 
 @[simp] theorem scaledSite_add_axis (k : ℕ) (x : Site) (m : Bool) :
@@ -829,7 +833,7 @@ def scaledSite (k : ℕ) (x : Site) : ℝ × ℝ :=
 
 namespace LatticeGraph
 
-def edgeDirection (G : LatticeGraph) (e : G.edges) : Bool :=
+@[expose] def edgeDirection (G : LatticeGraph) (e : G.edges) : Bool :=
   decide (e.val.2.val.1 = e.val.1.val.1)
 
 theorem edge_step (G : LatticeGraph) (e : G.edges) :
@@ -858,7 +862,7 @@ theorem directional_origin_injective (G : LatticeGraph) (m : Bool) :
   apply Subtype.ext
   exact Prod.ext h hy
 
-def WithinDyadicBox (G : LatticeGraph) (k : ℕ) : Prop :=
+@[expose] def WithinDyadicBox (G : LatticeGraph) (k : ℕ) : Prop :=
   ∀ x : G.vertices, |x.val.1| ≤ 2*(2^k:ℕ) ∧ |x.val.2| ≤ 2*(2^k:ℕ)
 
 theorem torus_site_injective (G : LatticeGraph) (k : ℕ) (hG : G.WithinDyadicBox k) :
@@ -926,14 +930,14 @@ namespace Fourier
 
 variable {k : ℕ}
 
-def groupedPoint (m s : Bool) (p : DyadicFreq k) : ℤ × ℤ :=
+@[expose] def groupedPoint (m s : Bool) (p : DyadicFreq k) : ℤ × ℤ :=
   let q := if m then (dyadicPoint p).swap else dyadicPoint p
   if s then -q else q
 
-def groupedTorusPoint (m s : Bool) (p : DyadicFreq k) : DiscreteTorus (16*2^k) :=
+@[expose] def groupedTorusPoint (m s : Bool) (p : DyadicFreq k) : DiscreteTorus (16*2^k) :=
   (((groupedPoint m s p).1:ZMod (16*2^k)), ((groupedPoint m s p).2:ZMod (16*2^k)))
 
-instance dyadicModulus_neZero (k : ℕ) : NeZero (16*2^k) := ⟨by positivity⟩
+@[expose] instance dyadicModulus_neZero (k : ℕ) : NeZero (16*2^k) := ⟨by positivity⟩
 
 theorem groupedTorusPoint_injective (m s : Bool) :
     Function.Injective (groupedTorusPoint (k := k) m s) := by
@@ -946,7 +950,7 @@ theorem groupedTorusPoint_injective (m s : Bool) :
       simpa [groupedTorusPoint, groupedPoint, dyadicTorusPoint, Prod.ext_iff] using h
     exact Prod.swap_injective h'
 
-def dyadicWeight (p : DyadicFreq k) : ℝ :=
+@[expose] def dyadicWeight (p : DyadicFreq k) : ℝ :=
   1/((dyadicRadius p:ℝ)*Real.sqrt (dyadicRadius p:ℝ))
 
 theorem dyadicWeight_pos (p : DyadicFreq k) : 0 < dyadicWeight p := by
@@ -998,7 +1002,7 @@ open scoped BigOperators ComplexConjugate
 
 namespace Fourier
 
-def SquareBound {X : Type uX} {P : Type uP} [Fintype X] [Fintype P]
+@[expose] def SquareBound {X : Type uX} {P : Type uP} [Fintype X] [Fintype P]
     (U : X → P → ℂ) (a : ℝ) : Prop :=
   ∀ v : P → ℂ, (∑ x, ‖∑ p, U x p*v p‖^2) ≤ a^2*∑ p, ‖v p‖^2
 
@@ -1316,7 +1320,7 @@ namespace Fourier
 
 variable {k : ℕ}
 
-def latticeMode (m s : Bool) (p : DyadicFreq k) (x : Site) : ℂ :=
+@[expose] def latticeMode (m s : Bool) (p : DyadicFreq k) (x : Site) : ℂ :=
   (dyadicWeight p:ℂ) * (squareProfile m s (scaledSite k x):ℂ) *
     torusWave (groupedTorusPoint m s p) (latticeTorus (16*2^k) x)
 
@@ -1379,10 +1383,10 @@ theorem latticeMode_norm_bound (m s : Bool) (p : DyadicFreq k) (x : Site) (C : �
 
 namespace LatticeGraph
 
-def modeGradient (G : LatticeGraph) (m s : Bool) (p : DyadicFreq k) (e : G.edges) : ℂ :=
+@[expose] def modeGradient (G : LatticeGraph) (m s : Bool) (p : DyadicFreq k) (e : G.edges) : ℂ :=
   latticeMode m s p e.val.2.val-latticeMode m s p e.val.1.val
 
-def scaledModeGradient (G : LatticeGraph) (m s : Bool) (p : DyadicFreq k) (e : G.edges) : ℂ :=
+@[expose] def scaledModeGradient (G : LatticeGraph) (m s : Bool) (p : DyadicFreq k) (e : G.edges) : ℂ :=
   (Real.sqrt (dyadicRadius p:ℝ):ℂ)*G.modeGradient m s p e
 
 theorem scaledModeGradient_formula (G : LatticeGraph) (m s : Bool) (p : DyadicFreq k) (e : G.edges) :
@@ -1545,7 +1549,7 @@ namespace Fourier
 namespace LatticeGraph
 variable {k : ℕ}
 
-def modeBlockConstant (C : ℝ) : ℝ := Real.sqrt (512*(C^2+C^2*(Real.pi/4)^2))
+@[expose] def modeBlockConstant (C : ℝ) : ℝ := Real.sqrt (512*(C^2+C^2*(Real.pi/4)^2))
 
 theorem scaledModes_direction_bound (G : LatticeGraph) (hG : G.WithinDyadicBox k)
     (C : ℝ)
@@ -1663,10 +1667,10 @@ theorem mode_group_gram_bound (G : LatticeGraph) (m s : Bool) (a : ℝ)
 
 abbrev ModeIndex (k : ℕ) := (Bool × Bool) × DyadicFreq k
 
-def modes (G : LatticeGraph) (i : ModeIndex k) (x : G.vertices) : ℂ :=
+@[expose] def modes (G : LatticeGraph) (i : ModeIndex k) (x : G.vertices) : ℂ :=
   latticeMode i.1.1 i.1.2 i.2 x.val
 
-def modeDifferences (G : LatticeGraph) (i : ModeIndex k) (e : G.edges) : ℂ :=
+@[expose] def modeDifferences (G : LatticeGraph) (i : ModeIndex k) (e : G.edges) : ℂ :=
   G.modeGradient i.1.1 i.1.2 i.2 e
 
 theorem modes_HS_bound (G : LatticeGraph) (a : ℝ)
@@ -1755,17 +1759,17 @@ theorem grouped_sine_sum (m s j : Bool) :
 
 namespace LatticeGraph
 
-def modeCommutator (G : LatticeGraph) (m s : Bool) (p : DyadicFreq k) (e : G.edges) : ℂ :=
+@[expose] def modeCommutator (G : LatticeGraph) (m s : Bool) (p : DyadicFreq k) (e : G.edges) : ℂ :=
   (latticeMode m s p e.val.1.val*conj (latticeMode m s p e.val.2.val)-
     conj (latticeMode m s p e.val.1.val)*latticeMode m s p e.val.2.val)/2
 
-def profileEdge (G : LatticeGraph) (k : ℕ) (e : G.edges) : ℝ :=
+@[expose] def profileEdge (G : LatticeGraph) (k : ℕ) (e : G.edges) : ℝ :=
   (1/(2:ℝ)^k)*(squareProfile (G.edgeDirection e) false (scaledSite k e.val.1.val)*
     squareProfile (G.edgeDirection e) false (scaledSite k e.val.2.val)-
     squareProfile (G.edgeDirection e) true (scaledSite k e.val.1.val)*
     squareProfile (G.edgeDirection e) true (scaledSite k e.val.2.val))
 
-def thetaEdge (G : LatticeGraph) (k : ℕ) (e : G.edges) : ℝ :=
+@[expose] def thetaEdge (G : LatticeGraph) (k : ℕ) (e : G.edges) : ℝ :=
   squareTheta (scaledSite k e.val.2.val)-squareTheta (scaledSite k e.val.1.val)
 
 theorem modeCommutator_formula (G : LatticeGraph) (m s : Bool) (p : DyadicFreq k) (e : G.edges) :
@@ -1921,28 +1925,28 @@ open Set
 open scoped Classical
 namespace Fourier.LatticeGraph
 
-def restrictVertices (G : LatticeGraph) (P : Site → Prop) : Finset Site := G.vertices.filter P
+@[expose] def restrictVertices (G : LatticeGraph) (P : Site → Prop) : Finset Site := G.vertices.filter P
 
-def restrictVertex (G : LatticeGraph) (P : Site → Prop) (v : G.restrictVertices P) : G.vertices :=
+@[expose] def restrictVertex (G : LatticeGraph) (P : Site → Prop) (v : G.restrictVertices P) : G.vertices :=
   ⟨v.val,(Finset.mem_filter.mp v.property).1⟩
 
-def restrict (G : LatticeGraph) (P : Site → Prop) : LatticeGraph where
+@[expose] def restrict (G : LatticeGraph) (P : Site → Prop) : LatticeGraph where
   vertices := G.restrictVertices P
   edges := Finset.univ.filter (fun e : G.restrictVertices P × G.restrictVertices P =>
     (G.restrictVertex P e.1,G.restrictVertex P e.2)∈G.edges)
   nearest _e he := G.nearest _ (Finset.mem_filter.mp he).2
 
-def restrictEdge (G : LatticeGraph) (P : Site → Prop) (e : (G.restrict P).edges) : G.edges :=
+@[expose] def restrictEdge (G : LatticeGraph) (P : Site → Prop) (e : (G.restrict P).edges) : G.edges :=
   ⟨(G.restrictVertex P e.val.1,G.restrictVertex P e.val.2),(Finset.mem_filter.mp e.property).2⟩
 
-def restrictVertexEquiv (G : LatticeGraph) (P : Site → Prop) :
+@[expose] def restrictVertexEquiv (G : LatticeGraph) (P : Site → Prop) :
     {v : G.vertices // P v.val} ≃ (G.restrict P).vertices where
   toFun v := ⟨v.val.val,Finset.mem_filter.mpr ⟨v.val.property,v.property⟩⟩
   invFun v := ⟨G.restrictVertex P v,(Finset.mem_filter.mp v.property).2⟩
   left_inv _ := rfl
   right_inv _ := rfl
 
-def restrictEdgeEquiv (G : LatticeGraph) (P : Site → Prop) :
+@[expose] def restrictEdgeEquiv (G : LatticeGraph) (P : Site → Prop) :
     {e : G.edges // P e.val.1.val ∧ P e.val.2.val} ≃ (G.restrict P).edges where
   toFun e := ⟨(⟨e.val.val.1.val,Finset.mem_filter.mpr ⟨e.val.val.1.property,e.property.1⟩⟩,
     ⟨e.val.val.2.val,Finset.mem_filter.mpr ⟨e.val.val.2.property,e.property.2⟩⟩),
@@ -1963,11 +1967,11 @@ def restrictEdgeEquiv (G : LatticeGraph) (P : Site → Prop) :
     (e : {e : G.edges // P e.val.1.val ∧ P e.val.2.val}) :
     (G.restrictEdgeEquiv P e).val.2=G.restrictVertexEquiv P ⟨e.val.val.2,e.property.2⟩ := rfl
 
-def translateVertexEquiv (G : LatticeGraph) (z : Site) :
+@[expose] def translateVertexEquiv (G : LatticeGraph) (z : Site) :
     G.vertices ≃ G.vertices.map (Equiv.addRight (-z)).toEmbedding :=
   Finset.equivMap (Equiv.addRight (-z)).toEmbedding G.vertices
 
-def translate (G : LatticeGraph) (z : Site) : LatticeGraph where
+@[expose] def translate (G : LatticeGraph) (z : Site) : LatticeGraph where
   vertices := G.vertices.map (Equiv.addRight (-z)).toEmbedding
   edges := G.edges.map ((Equiv.prodCongr (G.translateVertexEquiv z) (G.translateVertexEquiv z)).toEmbedding)
   nearest e he := by
@@ -1984,7 +1988,7 @@ def translate (G : LatticeGraph) (z : Site) : LatticeGraph where
       · omega
       · omega
 
-def translateEdgeEquiv (G : LatticeGraph) (z : Site) : G.edges ≃ (G.translate z).edges :=
+@[expose] def translateEdgeEquiv (G : LatticeGraph) (z : Site) : G.edges ≃ (G.translate z).edges :=
   Finset.equivMap ((Equiv.prodCongr (G.translateVertexEquiv z) (G.translateVertexEquiv z)).toEmbedding) G.edges
 
 @[simp] theorem translateVertexEquiv_val (G : LatticeGraph) (z : Site) (v : G.vertices) :
@@ -2014,7 +2018,7 @@ open Set
 open scoped Classical
 namespace Fourier
 
-def siteRadius (z v : Site) : ℤ := max |v.1-z.1| |v.2-z.2|
+@[expose] def siteRadius (z v : Site) : ℤ := max |v.1-z.1| |v.2-z.2|
 
 @[simp] theorem siteRadius_self (z : Site) : siteRadius z z=0 := by simp [siteRadius]
 
@@ -2055,11 +2059,11 @@ theorem siteRadius_neighbor_step (z : Site) {x y : Site} (h : PositiveNeighbor x
   · have := siteRadius_triangle z y x
     rwa [siteRadius_symm y x,hh] at this
 
-def annulusSites (N : ℤ) (z : Site) : Set Site := {v | N≤ siteRadius z v ∧ siteRadius z v≤2*N}
+@[expose] def annulusSites (N : ℤ) (z : Site) : Set Site := {v | N≤ siteRadius z v ∧ siteRadius z v≤2*N}
 
-def annulusBoundary (N : ℤ) (z : Site) : Set Site := {v | siteRadius z v=N ∨ siteRadius z v=2*N}
+@[expose] def annulusBoundary (N : ℤ) (z : Site) : Set Site := {v | siteRadius z v=N ∨ siteRadius z v=2*N}
 
-def annulusInterior (N : ℤ) (z : Site) : Set Site := {v | N<siteRadius z v ∧ siteRadius z v<2*N}
+@[expose] def annulusInterior (N : ℤ) (z : Site) : Set Site := {v | N<siteRadius z v ∧ siteRadius z v<2*N}
 
 theorem annulusSites_not_boundary (N : ℤ) (z v : Site) :
     v∈annulusSites N z ∧ v∉annulusBoundary N z ↔ v∈annulusInterior N z := by
@@ -2085,18 +2089,18 @@ theorem annuli_disjoint {N : ℤ} {x y : Site} (hxy : 4*N<siteRadius x y) :
 
 namespace LatticeGraph
 
-def annulusGraph (G : LatticeGraph) (N : ℤ) (z : Site) := G.restrict (·∈annulusSites N z)
+@[expose] def annulusGraph (G : LatticeGraph) (N : ℤ) (z : Site) := G.restrict (·∈annulusSites N z)
 
-def annulusInner (G : LatticeGraph) (N : ℤ) (z : Site) : Set (G.annulusGraph N z).vertices :=
+@[expose] def annulusInner (G : LatticeGraph) (N : ℤ) (z : Site) : Set (G.annulusGraph N z).vertices :=
   {v | siteRadius z v.val=N}
 
-def annulusOuter (G : LatticeGraph) (N : ℤ) (z : Site) : Set (G.annulusGraph N z).vertices :=
+@[expose] def annulusOuter (G : LatticeGraph) (N : ℤ) (z : Site) : Set (G.annulusGraph N z).vertices :=
   {v | siteRadius z v.val=2*N}
 
-def annulusPins (G : LatticeGraph) (N : ℤ) (z : Site) : Set (G.annulusGraph N z).vertices :=
+@[expose] def annulusPins (G : LatticeGraph) (N : ℤ) (z : Site) : Set (G.annulusGraph N z).vertices :=
   G.annulusInner N z∪G.annulusOuter N z
 
-def annulusCoupling (G : LatticeGraph) (b : G.edges → ℝ) (N : ℤ) (z : Site) :
+@[expose] def annulusCoupling (G : LatticeGraph) (b : G.edges → ℝ) (N : ℤ) (z : Site) :
     (G.annulusGraph N z).edges → ℝ := fun e => b (G.restrictEdge _ e)
 
 end LatticeGraph
@@ -2118,11 +2122,11 @@ noncomputable section
 open scoped BigOperators
 namespace LatticeGraph
 
-def rotationCostConstant (M C : ℝ) : ℝ :=
+@[expose] def rotationCostConstant (M C : ℝ) : ℝ :=
   4*((6*M^2+4*M*Real.sqrt M+M)*(48*(2*modeBlockConstant C)^4)+
         M*(576*C^2*(2*modeBlockConstant C)^2))
 
-def transferCostConstant (M L D : ℝ) : ℝ :=
+@[expose] def transferCostConstant (M L D : ℝ) : ℝ :=
   M*(512*D*(2*L+D)) + (M*512*D)*(M*(512*L^2)+1) + (M*512*D)^2
 
 theorem rotationCostConstant_nonneg (M C : ℝ) (hM : 0 ≤ M) :
