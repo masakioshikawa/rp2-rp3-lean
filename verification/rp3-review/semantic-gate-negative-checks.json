@@ -1,0 +1,23 @@
+{
+  "method": "Controlled mutations of captured inventory data, with declaration names and counts unchanged. These are tests of the comparison gate, not altered Lean proofs.",
+  "checks": [
+    {
+      "case": "definition-body",
+      "declaration_names_and_counts_unchanged": true,
+      "expected_exit_code": 1,
+      "actual_exit_code": 1,
+      "result": "rejected as required",
+      "log": "semantic-negative-definition-body.log",
+      "log_sha256": "6c7ea2931bf4dcb3bd7114634d13bda12b85bca3cb0fe86b87cf188415b75e9a"
+    },
+    {
+      "case": "statement-type",
+      "declaration_names_and_counts_unchanged": true,
+      "expected_exit_code": 1,
+      "actual_exit_code": 1,
+      "result": "rejected as required",
+      "log": "semantic-negative-statement-type.log",
+      "log_sha256": "c45534a9dc58674ccb668897bf4ca018cceaea242d4278caacc43c6045a90f1b"
+    }
+  ]
+}

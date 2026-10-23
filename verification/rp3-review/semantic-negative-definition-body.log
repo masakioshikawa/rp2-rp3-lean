@@ -1,0 +1,15 @@
+Semantic definitions or statement types changed; review is required.
+--- reviewed baseline
+
++++ observed semantics
+
+@@ -260,7 +260,7 @@
+
+           "kind": "definition",
+           "level_parameters": [],
+           "type_sha256": "ca2b69d43b5f3db846b873282e28c82f66704ed3cfad3172f99192119e613faa",
+-          "value_sha256": "bf5f0fc22c02a5446e4b5bde1dc4128168d5678e7d724ae738fed28c2c6bd00b"
++          "value_sha256": "337a3910b02940fe90a4a5bf2b1af63fc8db9d004913d077391318550d777229"
+         },
+         {
+           "name": "RP3.qPair._proof_1",

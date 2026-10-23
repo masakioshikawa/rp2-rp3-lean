@@ -1,0 +1,42 @@
+{
+  "standalone_sha256": "843e4759583ab05a60e0b5d25cd36fe7a3df432f0411447bdb44a15ebc26b5ad",
+  "reviewed_semantics": [
+    "normalized spherical product probability",
+    "squared dot-product Gibbs weight",
+    "strictly positive partition denominator",
+    "quadrupolar observable with same-site value 2/3",
+    "unoriented simple retained square-lattice graph via positive edge orientation",
+    "integer sup distance",
+    "uniform constants before graph/couplings/sites",
+    "signed coupling bound",
+    "free-boundary local-limit predicate and common-sequence pair convergence"
+  ],
+  "reviewed_new_mechanisms": [
+    "plateau rescaling and cubic coordinate-step error",
+    "whole-frequency-shell truncation and lambda >= n/4",
+    "thin support edge count <=64 delta N^2",
+    "column energy independent of width",
+    "weighted Gram inequality retaining column energy",
+    "family cost O(n/delta)",
+    "real response transfer with delta^-6 mesh error",
+    "uniform pinned-kernel comparison",
+    "integer dyadic width choice and nested shell packing",
+    "quadratic cumulative count and all-distance log-square conversion",
+    "positive activities after subtracting min(b,0)",
+    "disconnected component tetrahedral cancellation",
+    "prescribed edge-set probability bound",
+    "nonbacktracking prefix count and explicit mass"
+  ],
+  "scope_exclusions": [
+    "all-temperature exponential decay",
+    "arbitrary boundary-condition Gibbs states",
+    "existence or uniqueness of infinite-volume limits",
+    "free-energy analyticity",
+    "correlations of arbitrary bond or vortex observables",
+    "optimized FK thresholds"
+  ],
+  "source_mutations": false,
+  "kernel_run_status": "passed",
+  "public_root_count": 69,
+  "public_closure_count": 53315
+}

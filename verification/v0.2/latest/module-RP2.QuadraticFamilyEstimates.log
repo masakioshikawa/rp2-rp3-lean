@@ -1,0 +1,27 @@
+RP2/QuadraticFamilyEstimates.lean:17:16: warning: Local variable 'a' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+RP2/QuadraticFamilyEstimates.lean:18:5: warning: Local variable 'a' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+RP2/QuadraticFamilyEstimates.lean:25:16: warning: Local variable 'a' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+RP2/QuadraticFamilyEstimates.lean:26:5: warning: Local variable 'a' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+RP2/QuadraticFamilyEstimates.lean:26:7: warning: Local variable 'b' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.b' - write '.b' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.b' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+RP2/QuadraticFamilyEstimates.lean:38:16: warning: Local variable 'a' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+RP2/QuadraticFamilyEstimates.lean:39:5: warning: Local variable 'a' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+RP2/QuadraticFamilyEstimates.lean:59:16: warning: Local variable 'a' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+RP2/QuadraticFamilyEstimates.lean:60:5: warning: Local variable 'a' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`

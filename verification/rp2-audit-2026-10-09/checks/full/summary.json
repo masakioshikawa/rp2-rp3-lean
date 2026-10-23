@@ -1,0 +1,2480 @@
+{
+  "started_utc": "2026-10-09T01:55:19.676783+00:00",
+  "input_snapshot_sha256": "7532f9dae28ea98554cf54bbc28917db94fce03bd1f84e0bc8e1465b4256478d",
+  "source_sha256": {
+    "AxiomAudit.lean": "d07ef4b13c3f645db57778ba41e8ca60e2809bae8d0b4701c8f98d9bc88c9053",
+    "ProbeGeo.lean": "5657d88853dec68ec221f00ab7b473a0206913ebd01baa92ae023dbd73fad50f",
+    "RP2/ActiveEdgeBounds.lean": "31c8103dea15eca593e871035d9276718e075319441ef15c6abf9096b96bf3d6",
+    "RP2/ActivePaths.lean": "5df74b317f1af6539e26c7cbe607baf6b8ef2dccdee6a813aaf4bcece9912b1a",
+    "RP2/AnnularEstimate.lean": "9b4606b0ad5b94f4b2938f32236a8285e4fcb8955523eb5f198413ecdb3b2dba",
+    "RP2/Averaging.lean": "896b80e078cf9a1e47a9b7663bd3e2f397a0fc648baa78c8dc2e2568a9b2b995",
+    "RP2/AveragingInterface.lean": "a1de490810b0321320f9f4da9f7b7c3a7a13420b396200890e4da145c1896506",
+    "RP2/Calculus.lean": "e1f02ceedcd0bf28d38be5f02e7b6b2cc3afbf978f2aa3e366d190d13c273c0a",
+    "RP2/ComplexCurrents.lean": "bcaceb0bf22a4ccd4b45b844d33f91d0e3427c124a11bf8a1c2c79bef37062c2",
+    "RP2/ConcreteAnnuli.lean": "ea6f19f34a0c9598c8655d594214a80813b7ac1945bab6ec2ebe9604759ac786",
+    "RP2/Criticality.lean": "248d32e31462ae4c6a058f5ae4e251eb459f9faa8ef917d3ac197b4fc038b93f",
+    "RP2/DenseLimits.lean": "685db5e3bdfa4034fe6b0be541e4e088bf34ef91fc73dbf6e09d0e5ea068fa0a",
+    "RP2/DenseLogarithmicRate.lean": "92a9f8b73bcf71a47a8ef7072352ff5cdd9971ea48de23c4e791026b578a916d",
+    "RP2/DenseRates.lean": "f0060086cd0e9bc5ed400f161526867316be2660d78e159f22c24c9c311adcdd",
+    "RP2/FiniteAveraging.lean": "940fc322737870f963cc626725ec7b4946c307c4b106dda0b316b5b69a7acf6e",
+    "RP2/Fourier/AnnulusResponse.lean": "e2f2d38460ef8ce6c2a3df6b9d45196ca53e47d2610bdb94dc6ecf7d85093562",
+    "RP2/Fourier/ModelModes.lean": "e95f6729688af7fe70a5267815aeaacffc01dfed0abef3193904b2be48cdb43f",
+    "RP2/Fourier/ResponseTransfer.lean": "447c96e731aa0a67f8f7c5e2f945b21c3d9a36d405a09c1179ccaf753621b457",
+    "RP2/FourierAll.lean": "f6057642c043d2ef58803a3373b4247a55993d5d0b6c35eb2d774bd7c221027e",
+    "RP2/Full.lean": "0dbee0ba5426674c2910fea95ded0060e3e62bae8b1bf9024baec3040d2c5867",
+    "RP2/GibbsProbability.lean": "092ebcfde98db306a75be31b1ed17d417d216522dfe40323b99bfc3822a4d099",
+    "RP2/HighTemperature.lean": "95ab18d482de613db6395a5302e19e15d65eda8fa00bc94aeee260b803b382a8",
+    "RP2/HighTemperatureDecay.lean": "1d8ca549f7c58c7423c88d4a1a3320a56b6b4e9f9959fda733ec2ad1735e80bc",
+    "RP2/HighTemperatureExponential.lean": "4df9eb5172eb6d0f52a6a94fe19dfccd2b6c0f917bb9e8270947aefa395340fa",
+    "RP2/KernelEstimate.lean": "3c3d309896607962c297e122281affd67362dd66e1da97ec5f6772e89aabb511",
+    "RP2/LatticeAnnuli.lean": "051917ecd029835a557ccfd79f28b393ed9811e92d53d3d462433f9fdea324bd",
+    "RP2/LatticeModelRestriction.lean": "414688fa8eab099126cc1254d4fe9061373ae25afc477a90dcf4edb1fcad6594",
+    "RP2/LimitCorollary.lean": "8b2e2a402a5f152ccd1357e86890d8854de6f3ec275c592b48b34df444ed575a",
+    "RP2/LogSquareLimits.lean": "9101f5accea7ff391427c8da3ae4fcea7e7f160c82bd3d528df20deeb895418f",
+    "RP2/LogSquarePacking.lean": "69123da47ff651de9ba4701ab70b0b1f32b38ba48d89d5df9d7fc19e2158574a",
+    "RP2/LogSquareRates.lean": "0aeadd6d5a4e57bcf1d3c421b3e4ae7bbe561d56829bb17dfefc04195577cb6a",
+    "RP2/LogarithmicRate.lean": "f5dbb603c5a353a87faf182350d80501606713aebf96d0065da0fc54cf55f3ce",
+    "RP2/Main.lean": "974e99e53473bece94edc40ef98da312b51dbc7cfa310d78cd9e0f515f8f1d94",
+    "RP2/MixedAlgebra.lean": "a8ca4128b73c6ab9da7f331ab8833b38efbb3de911645b44adae21775dbe34f8",
+    "RP2/Model.lean": "1c1f53e667f828d8feba95e53894cc06714482f2303767e7db768cb3d50b61b3",
+    "RP2/ModelAssembly.lean": "d665050e4dbe079d06d0c1b3c07045f4ef7147cce24d8686207cd072bdb123fc",
+    "RP2/ModelConnection.lean": "c449aa456e08c5dc1f647ed20cff239744155c0dd1d5fa0cd7de853495e5f0e8",
+    "RP2/ModelRestriction.lean": "ce2b65037eb915b6a4c2ce1c532de612cc0e0d15130c56c953063ad3d31d25dd",
+    "RP2/NestedCuts.lean": "5880c0b408d5439c893c4b56c424c99b8379da6c765a01d61d2d0ced05d2b3c8",
+    "RP2/NonbacktrackingPaths.lean": "5b9f8a7957b2d69f6bde20a879738a433b917822413d532490f1fa575cdce96f",
+    "RP2/PaperInterface.lean": "35b209b93bad853ab3efe82f7afc996a2c89f1fdf53efb51da4b5b410819781a",
+    "RP2/PaperResponse.lean": "ca47869b34b5875a90bd97c251597166f7b932710f03bfe2e1091a6a80e90806",
+    "RP2/PeriodicODE.lean": "11bcadd31ddc91153d0f9edbed1c4ecc288fa476fa75bb59126686fdd27e5a98",
+    "RP2/PinnedKernel.lean": "aceba24f6244f14a8ff73fc444d2325b3e5610e23273703d9abd7e52c5cc5503",
+    "RP2/ProductJets.lean": "670b3e9920e21594a4ba800c8382b78a4bf873bf9a304ab02121add0ed3d8cfe",
+    "RP2/QuadraticAverages.lean": "7e64fccf7369142c10ccf5b6a8eb05e9715f1cea30c3774f54177827e1281dcc",
+    "RP2/QuadraticBounds.lean": "5f0b358d22504f77dde384635c11481820eb2d777de07dc0cc0b6fe263c4f6ee",
+    "RP2/QuadraticCoefficientBounds.lean": "7339f608b839a9a941819f810a7c91429873f756c7f73c385b84b0a961fef9f3",
+    "RP2/QuadraticComplexWard.lean": "c61e8f131c7397dcb4116d6a085cf0038c3cb8144ef5931fd383b9442583b072",
+    "RP2/QuadraticDerivatives.lean": "f7deab25a151cc38edf5c702b3472250b2dd6fa07e46b5ab8539509b477221dc",
+    "RP2/QuadraticFamily.lean": "b9fdcd55c8c891f3b80cd49a99e895cba462f378a0902406517bce0908da4ecb",
+    "RP2/QuadraticFamilyEstimates.lean": "25e81ddd7d1f8e9152e99aefc4da77daa6c59c090f88a3eebd2d62ccd3b7a407",
+    "RP2/QuadraticFamilyKernel.lean": "48e86a36b28f65a03b8d71758aeecf96f8649ad03db874197b21d8513163bf29",
+    "RP2/QuadraticFamilyLower.lean": "d2cf5baee42fca831210fd8a5c3752d456eb8fb14d54a9579a26985f597986d0",
+    "RP2/QuadraticGibbs.lean": "4001113068ed4eeb19f00326dbb0e815b7bc759aed52a6fe1bdc10c8f3fbc46a",
+    "RP2/QuadraticMixedJets.lean": "38d416df90ee3969daab3fc4051492bd59f4b4cb04d2bb3f89ba80d602462e3a",
+    "RP2/QuadraticMixedWard.lean": "7628d6c0da3c82cbf2b9ef53e5f6f1716ab63723a68f09b43a952b209f23912b",
+    "RP2/QuadraticPlane.lean": "f8c0b68aeaf29e607f748dccaa4e0a6d464806d6790a0bffc5f40e2a46c8f841",
+    "RP2/QuadraticPlaneResponse.lean": "faf5eb03adb7737f23d7172efeb2d59c841f5971f9065c9599fbc3c3b1d825af",
+    "RP2/QuadraticPotential.lean": "f307971c36fe06357ba8df432eca7cd749a3553a233b7050b91be7d5b334b95e",
+    "RP2/QuadraticSecondBound.lean": "8c01d4c21ccb9b9edd3920fa02b62ba13b616de19b381c3063be570f1b9ea549",
+    "RP2/QuadraticSecondGauge.lean": "2ec4d5b85ba05e51f6234cbb01c2afd94f04d6f6ba027661649eb5e38018bccc",
+    "RP2/QuadraticSecondResponse.lean": "172f0af6be80ce2507eeffbb0431a68a53ac9294ef706f56ea6866fcbc180586",
+    "RP2/QuadraticWard.lean": "448317bd21a25b80aafef86e776787c79d01ba388df5e3ae35c9b305ad7a8c20",
+    "RP2/Rates.lean": "65ceb9fd9cf2701ac2603864a0d96c8416f10db48c29210ba079cdd959582058",
+    "RP2/RotationGeometry.lean": "65ccc80cb4e141bc7ac3486ec7144ad90517b1e990d86c47a490cf7e302b755d",
+    "RP2/SquareRates.lean": "bd3036b741d5a39678696959320c4ab15ff6dec30a2c524d6315cc73cc075244",
+    "RP2/StructureFactor.lean": "5726112d65ea9e1f78829b465559c35f232c1ebdd27f20da38c51f72e44f5191",
+    "RP2/TetrahedralAction.lean": "a7f77461226bde32721743d0b11e55ae622a3ff8374f174e8fc629fd277c8e23",
+    "RP2/TetrahedralComparison.lean": "3ffa3412d8f6e863c0a91bda0da9d10f7b34b15fdfa669b0a303d0226c582c6a",
+    "RP2/TetrahedralPaths.lean": "619080f4eed525642ed037bebd866890062f0b1ca3a8f4d16bbf04c8ac5d1785",
+    "RP2/TetrahedralTensor.lean": "41a45daad61e168e961223ade118db0e2c4c224003637abcf8bd2c86cc16918b",
+    "RP2/ThinAnnuli.lean": "173e5d280711b942b8badc8d74bbb5d9a8e988fa31b9816eb5a244d711ff75f5",
+    "RP2/ThinCosts.lean": "0f56400740551939e711ceede1d1fab2c9f4549108d4b2bfc029e78a9188d794",
+    "RP2/ThinDyadicParameters.lean": "b1244ed33fc93628082b275f5f0682b537c26dce9035dc2bd3b86af5bbf6a43d",
+    "RP2/ThinEdgeResponse.lean": "e6824a9ec29cc4fe6f4492803dd021327c978d859095299dc406985fbf5c477b",
+    "RP2/ThinFourier.lean": "5efc5d0f3abda98502b9295e17a72c24373dad3e58105796598f6660733215ec",
+    "RP2/ThinKernel.lean": "47faaef160a87ea08b0e13388479d6a95de8bd6decffed31a60691dcfde3865f",
+    "RP2/ThinKernelEstimate.lean": "4fa8642fb096a70e8c6f84e553ad5cbe55bb1913c48e019a9292fcf5b4aa71ad",
+    "RP2/ThinProfileLattice.lean": "2e2676a58187e9de17157e5b0d37c1ff73cfbf2f0447a6f0a3434368fe4095b6",
+    "RP2/ThinProfiles.lean": "11021f2c9a9bb671514812db4332fda09eb719333b77a85f88b98217dfca8411",
+    "RP2/ThinResponse.lean": "c8ecde66d04ee2c22115c51a36dbf777f6d4a0b74b1441bc3a1799459f328bac",
+    "RP2/ThinScaleChoice.lean": "ca65a7413135d75b297f60bd707792909e4d254852ea6d1efd8358482c6d850e",
+    "RP2/ThinSupport.lean": "28633ee0f97e568bac5704713238d84ab038b9e7540fcb54de7c53fca827b078",
+    "RP2/TwoEndpointRates.lean": "49a6fa38c796d96df1d889cb839f8a07875c6c2e99a3d1e2684d01606989c24d",
+    "RP2/UniformDecay.lean": "28582f3b4a477a436c97506141abd3a42e646ce340461afcd915fe34c79fc5f1",
+    "RP2/WeightedSummability.lean": "c31be33062008bfa4c19b81595774490fef000124a76f5d2bbea479213d87d2f",
+    "RP2-Formalization.lean": "843e4759583ab05a60e0b5d25cd36fe7a3df432f0411447bdb44a15ebc26b5ad",
+    "RP2.lean": "fec5114df4d315e5bcca716e0e5cb540dcee82d6ee61c576dae4cd9a9c84368f",
+    "SemanticWitnesses.lean": "1bb6a9ca5c9636bb5bedaf380d9d4aad0a45cf0fd101b4629a372d99fb4c8514",
+    "bundle.py": "dbef054e91e9a6888f8c6b857ad85a95b5b90e64f935e3431ced56efa996ecb7",
+    "lake-manifest.json": "e9cbc5c9bcd4f1d8f69c0a853989becf1b0dc798d74b2ea34b0feab92dfc5f05",
+    "lakefile.toml": "33783e353fe42cb3084062dd6092319546457eb7ebb0923b6f61361085ef1744",
+    "lean-toolchain": "d5edba4e4b8faad9c1baeadb265716d20d03be4d1a2647dc5e35b0c0325bea7b",
+    "scripts/verify.py": "35b9363c1ca9f8486a715d5e90c1057ae64ec24479c783d397d722932b2e734c",
+    "verification/AuditEnvironment.lean": "88cf4874d1587ff69a727657b44967b01e7a9ececd578b3cfe0214ff8824bb2c",
+    "verification/dependency-pins.json": "14d8b2130b3d62ed0076a81ff0e13523eb730fbb570d7e04ac7b22c3d40cd716",
+    "verification/public-theorems.txt": "ca119bc7d4d98bc5e2fe332380eeeaf86ccbfe3731b26480bcda0828b20ca0ca"
+  },
+  "environment": {
+    "LEAN_NUM_THREADS": "1"
+  },
+  "commands": [
+    {
+      "label": "lean-version",
+      "command": [
+        "lean",
+        "--version"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T01:55:19.677171+00:00",
+      "completed_utc": "2026-10-09T01:55:19.741574+00:00",
+      "elapsed_seconds": 0.064,
+      "timed_out": false,
+      "log": "lean-version.log",
+      "log_sha256": "355a9a028f81641782d75d6e6b58dec70f29d2f61238a9e271690259d9bf5680",
+      "output_sha256": {}
+    },
+    {
+      "label": "revision-mathlib",
+      "command": [
+        "git",
+        "-C",
+        ".lake/packages/mathlib",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T01:55:19.742498+00:00",
+      "completed_utc": "2026-10-09T01:55:19.746177+00:00",
+      "elapsed_seconds": 0.004,
+      "timed_out": false,
+      "log": "revision-mathlib.log",
+      "log_sha256": "d26684ea790064f49bcb150415b3a062ec30b5e646b207927aa3fc5fcbb43fbe",
+      "output_sha256": {}
+    },
+    {
+      "label": "clean-mathlib",
+      "command": [
+        "git",
+        "-C",
+        ".lake/packages/mathlib",
+        "status",
+        "--porcelain",
+        "--untracked-files=all"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T01:55:19.746583+00:00",
+      "completed_utc": "2026-10-09T01:55:20.061137+00:00",
+      "elapsed_seconds": 0.315,
+      "timed_out": false,
+      "log": "clean-mathlib.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {}
+    },
+    {
+      "label": "revision-plausible",
+      "command": [
+        "git",
+        "-C",
+        ".lake/packages/plausible",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T01:55:20.061756+00:00",
+      "completed_utc": "2026-10-09T01:55:20.065526+00:00",
+      "elapsed_seconds": 0.004,
+      "timed_out": false,
+      "log": "revision-plausible.log",
+      "log_sha256": "8e19735519205e6e1b0a59824699f406af5b5ce84a32d2a6c583717ce045b900",
+      "output_sha256": {}
+    },
+    {
+      "label": "clean-plausible",
+      "command": [
+        "git",
+        "-C",
+        ".lake/packages/plausible",
+        "status",
+        "--porcelain",
+        "--untracked-files=all"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T01:55:20.065898+00:00",
+      "completed_utc": "2026-10-09T01:55:20.073586+00:00",
+      "elapsed_seconds": 0.008,
+      "timed_out": false,
+      "log": "clean-plausible.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {}
+    },
+    {
+      "label": "revision-LeanSearchClient",
+      "command": [
+        "git",
+        "-C",
+        ".lake/packages/LeanSearchClient",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T01:55:20.073958+00:00",
+      "completed_utc": "2026-10-09T01:55:20.077506+00:00",
+      "elapsed_seconds": 0.004,
+      "timed_out": false,
+      "log": "revision-LeanSearchClient.log",
+      "log_sha256": "969f2fabfb7ffe3973dce9836aa523b36b30aba71950f358c0148f7daf1909cd",
+      "output_sha256": {}
+    },
+    {
+      "label": "clean-LeanSearchClient",
+      "command": [
+        "git",
+        "-C",
+        ".lake/packages/LeanSearchClient",
+        "status",
+        "--porcelain",
+        "--untracked-files=all"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T01:55:20.077836+00:00",
+      "completed_utc": "2026-10-09T01:55:20.085465+00:00",
+      "elapsed_seconds": 0.008,
+      "timed_out": false,
+      "log": "clean-LeanSearchClient.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {}
+    },
+    {
+      "label": "revision-importGraph",
+      "command": [
+        "git",
+        "-C",
+        ".lake/packages/importGraph",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T01:55:20.085832+00:00",
+      "completed_utc": "2026-10-09T01:55:20.089500+00:00",
+      "elapsed_seconds": 0.004,
+      "timed_out": false,
+      "log": "revision-importGraph.log",
+      "log_sha256": "b7befbf415605485d009aa7b002b346adb7ee3ce028e97b697fe5f259d320274",
+      "output_sha256": {}
+    },
+    {
+      "label": "clean-importGraph",
+      "command": [
+        "git",
+        "-C",
+        ".lake/packages/importGraph",
+        "status",
+        "--porcelain",
+        "--untracked-files=all"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T01:55:20.089871+00:00",
+      "completed_utc": "2026-10-09T01:55:20.097747+00:00",
+      "elapsed_seconds": 0.008,
+      "timed_out": false,
+      "log": "clean-importGraph.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {}
+    },
+    {
+      "label": "revision-proofwidgets",
+      "command": [
+        "git",
+        "-C",
+        ".lake/packages/proofwidgets",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T01:55:20.098156+00:00",
+      "completed_utc": "2026-10-09T01:55:20.101699+00:00",
+      "elapsed_seconds": 0.004,
+      "timed_out": false,
+      "log": "revision-proofwidgets.log",
+      "log_sha256": "5c6fde3e5ec3bc7c00fcedc25e51a7d1d68b2dd0ba1057f4cd3a742f780cfc1d",
+      "output_sha256": {}
+    },
+    {
+      "label": "clean-proofwidgets",
+      "command": [
+        "git",
+        "-C",
+        ".lake/packages/proofwidgets",
+        "status",
+        "--porcelain",
+        "--untracked-files=all"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T01:55:20.102085+00:00",
+      "completed_utc": "2026-10-09T01:55:20.133945+00:00",
+      "elapsed_seconds": 0.032,
+      "timed_out": false,
+      "log": "clean-proofwidgets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {}
+    },
+    {
+      "label": "revision-aesop",
+      "command": [
+        "git",
+        "-C",
+        ".lake/packages/aesop",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T01:55:20.134622+00:00",
+      "completed_utc": "2026-10-09T01:55:20.138505+00:00",
+      "elapsed_seconds": 0.004,
+      "timed_out": false,
+      "log": "revision-aesop.log",
+      "log_sha256": "e2f238dae0ad15ad802261fd5664fbb7264ca23028ec463653ee359dedad69b1",
+      "output_sha256": {}
+    },
+    {
+      "label": "clean-aesop",
+      "command": [
+        "git",
+        "-C",
+        ".lake/packages/aesop",
+        "status",
+        "--porcelain",
+        "--untracked-files=all"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T01:55:20.139178+00:00",
+      "completed_utc": "2026-10-09T01:55:20.146855+00:00",
+      "elapsed_seconds": 0.008,
+      "timed_out": false,
+      "log": "clean-aesop.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {}
+    },
+    {
+      "label": "revision-Qq",
+      "command": [
+        "git",
+        "-C",
+        ".lake/packages/Qq",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T01:55:20.147332+00:00",
+      "completed_utc": "2026-10-09T01:55:20.150945+00:00",
+      "elapsed_seconds": 0.004,
+      "timed_out": false,
+      "log": "revision-Qq.log",
+      "log_sha256": "6ea0e5d827cd28719f0f8303c77c64ffd115d117fb873c61dcc064c789b49021",
+      "output_sha256": {}
+    },
+    {
+      "label": "clean-Qq",
+      "command": [
+        "git",
+        "-C",
+        ".lake/packages/Qq",
+        "status",
+        "--porcelain",
+        "--untracked-files=all"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T01:55:20.151333+00:00",
+      "completed_utc": "2026-10-09T01:55:20.158930+00:00",
+      "elapsed_seconds": 0.008,
+      "timed_out": false,
+      "log": "clean-Qq.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {}
+    },
+    {
+      "label": "revision-batteries",
+      "command": [
+        "git",
+        "-C",
+        ".lake/packages/batteries",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T01:55:20.159373+00:00",
+      "completed_utc": "2026-10-09T01:55:20.162943+00:00",
+      "elapsed_seconds": 0.004,
+      "timed_out": false,
+      "log": "revision-batteries.log",
+      "log_sha256": "a10c5cc1562c7e05002879cbb387405d1e84dfb2b052e4a9da3d7b0915278e17",
+      "output_sha256": {}
+    },
+    {
+      "label": "clean-batteries",
+      "command": [
+        "git",
+        "-C",
+        ".lake/packages/batteries",
+        "status",
+        "--porcelain",
+        "--untracked-files=all"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T01:55:20.163428+00:00",
+      "completed_utc": "2026-10-09T01:55:20.179193+00:00",
+      "elapsed_seconds": 0.016,
+      "timed_out": false,
+      "log": "clean-batteries.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {}
+    },
+    {
+      "label": "revision-Cli",
+      "command": [
+        "git",
+        "-C",
+        ".lake/packages/Cli",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T01:55:20.179702+00:00",
+      "completed_utc": "2026-10-09T01:55:20.183278+00:00",
+      "elapsed_seconds": 0.004,
+      "timed_out": false,
+      "log": "revision-Cli.log",
+      "log_sha256": "2e20e2a649dd57be51b7d287730d045342813e1fa6e2e7de3e2a6c249e2c51c1",
+      "output_sha256": {}
+    },
+    {
+      "label": "clean-Cli",
+      "command": [
+        "git",
+        "-C",
+        ".lake/packages/Cli",
+        "status",
+        "--porcelain",
+        "--untracked-files=all"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T01:55:20.183781+00:00",
+      "completed_utc": "2026-10-09T01:55:20.187329+00:00",
+      "elapsed_seconds": 0.004,
+      "timed_out": false,
+      "log": "clean-Cli.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {}
+    },
+    {
+      "label": "bundle-freshness",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "bundle.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T01:55:20.187919+00:00",
+      "completed_utc": "2026-10-09T01:55:20.251796+00:00",
+      "elapsed_seconds": 0.064,
+      "timed_out": false,
+      "log": "bundle-freshness.log",
+      "log_sha256": "c5e0b6782739f080cd8fdbee122e85a2ba511a37db0043880c266edbba225aaf",
+      "output_sha256": {}
+    },
+    {
+      "label": "module-RP2.Averaging",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/Averaging.olean",
+        "RP2/Averaging.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T01:55:20.260652+00:00",
+      "completed_utc": "2026-10-09T01:55:44.143365+00:00",
+      "elapsed_seconds": 23.883,
+      "timed_out": false,
+      "log": "module-RP2.Averaging.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/Averaging.olean": "310d16cc37b71f5c695a8fc31bc704f2a94b6e7dc318635dce5b3464d38ffc7b"
+      }
+    },
+    {
+      "label": "module-RP2.FiniteAveraging",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/FiniteAveraging.olean",
+        "RP2/FiniteAveraging.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T01:55:44.145957+00:00",
+      "completed_utc": "2026-10-09T01:55:50.627544+00:00",
+      "elapsed_seconds": 6.482,
+      "timed_out": false,
+      "log": "module-RP2.FiniteAveraging.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/FiniteAveraging.olean": "c9493e6848f649e902555156925ca0cb6cd4bd9728408754cb56fda75c3a98a2"
+      }
+    },
+    {
+      "label": "module-RP2.Model",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/Model.olean",
+        "RP2/Model.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T01:55:50.628686+00:00",
+      "completed_utc": "2026-10-09T01:56:00.073570+00:00",
+      "elapsed_seconds": 9.445,
+      "timed_out": false,
+      "log": "module-RP2.Model.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/Model.olean": "a871b47ede6cd7c1cffbfedcabb891edf16bdf6fee0412e0bd4016317f507ad7"
+      }
+    },
+    {
+      "label": "module-RP2.RotationGeometry",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/RotationGeometry.olean",
+        "RP2/RotationGeometry.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T01:56:00.076141+00:00",
+      "completed_utc": "2026-10-09T01:58:00.484527+00:00",
+      "elapsed_seconds": 120.408,
+      "timed_out": false,
+      "log": "module-RP2.RotationGeometry.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/RotationGeometry.olean": "af9174cc883ea99918ac24547802ed23f94579742e445ad5dbe3c703ac29414c"
+      }
+    },
+    {
+      "label": "module-RP2.Calculus",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/Calculus.olean",
+        "RP2/Calculus.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T01:58:00.496576+00:00",
+      "completed_utc": "2026-10-09T01:58:06.375753+00:00",
+      "elapsed_seconds": 5.879,
+      "timed_out": false,
+      "log": "module-RP2.Calculus.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/Calculus.olean": "cb99c9a6ab73dc5a1d071f054560b5b9a36b05619288a7d8051065487ddd80ee"
+      }
+    },
+    {
+      "label": "module-RP2.QuadraticGibbs",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/QuadraticGibbs.olean",
+        "RP2/QuadraticGibbs.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T01:58:06.376855+00:00",
+      "completed_utc": "2026-10-09T01:58:13.809953+00:00",
+      "elapsed_seconds": 7.433,
+      "timed_out": false,
+      "log": "module-RP2.QuadraticGibbs.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/QuadraticGibbs.olean": "af417149e11226bfe528eaac0d24f24276739ec17c46ec506cb0476ec96588c7"
+      }
+    },
+    {
+      "label": "module-RP2.ProductJets",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/ProductJets.olean",
+        "RP2/ProductJets.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T01:58:13.811260+00:00",
+      "completed_utc": "2026-10-09T01:58:18.688020+00:00",
+      "elapsed_seconds": 4.877,
+      "timed_out": false,
+      "log": "module-RP2.ProductJets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/ProductJets.olean": "3e9eadc4380b3e8ef92766ba05bd01de127b4490ed475a82d38602f5ed79c7bd"
+      }
+    },
+    {
+      "label": "module-RP2.QuadraticDerivatives",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/QuadraticDerivatives.olean",
+        "RP2/QuadraticDerivatives.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T01:58:18.689142+00:00",
+      "completed_utc": "2026-10-09T01:58:31.488266+00:00",
+      "elapsed_seconds": 12.799,
+      "timed_out": false,
+      "log": "module-RP2.QuadraticDerivatives.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/QuadraticDerivatives.olean": "3e185bf27702e02a1915a51aad5b86b063c7f07083e335111d75ae9e5d3e0e56"
+      }
+    },
+    {
+      "label": "module-RP2.QuadraticWard",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/QuadraticWard.olean",
+        "RP2/QuadraticWard.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T01:58:31.489601+00:00",
+      "completed_utc": "2026-10-09T01:58:38.226631+00:00",
+      "elapsed_seconds": 6.737,
+      "timed_out": false,
+      "log": "module-RP2.QuadraticWard.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/QuadraticWard.olean": "aa8ac899435c6ce5655502eac435cd6e0cfa0ec46566793f7d32c8cb2c4087dd"
+      }
+    },
+    {
+      "label": "module-RP2.QuadraticPlane",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/QuadraticPlane.olean",
+        "RP2/QuadraticPlane.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T01:58:38.228144+00:00",
+      "completed_utc": "2026-10-09T01:58:50.774792+00:00",
+      "elapsed_seconds": 12.547,
+      "timed_out": false,
+      "log": "module-RP2.QuadraticPlane.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/QuadraticPlane.olean": "01f6f42ada748fce850ee6ef7228f02a516c06514558f8f84c149cc191cbd73c"
+      }
+    },
+    {
+      "label": "module-RP2.QuadraticBounds",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/QuadraticBounds.olean",
+        "RP2/QuadraticBounds.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T01:58:50.776156+00:00",
+      "completed_utc": "2026-10-09T01:58:57.257706+00:00",
+      "elapsed_seconds": 6.482,
+      "timed_out": false,
+      "log": "module-RP2.QuadraticBounds.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/QuadraticBounds.olean": "8b891356cd6c0186ebb234fbff5b16256d81ff4816d376ff5c3544c4d5dce021"
+      }
+    },
+    {
+      "label": "module-RP2.QuadraticPlaneResponse",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/QuadraticPlaneResponse.olean",
+        "RP2/QuadraticPlaneResponse.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T01:58:57.259379+00:00",
+      "completed_utc": "2026-10-09T01:59:03.646719+00:00",
+      "elapsed_seconds": 6.387,
+      "timed_out": false,
+      "log": "module-RP2.QuadraticPlaneResponse.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/QuadraticPlaneResponse.olean": "4fef3cd1e0da88dfba2ceef97102a8ec2cc53c70d1c942364bd3bbb0f0ad45b6"
+      }
+    },
+    {
+      "label": "module-RP2.PeriodicODE",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/PeriodicODE.olean",
+        "RP2/PeriodicODE.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T01:59:03.648242+00:00",
+      "completed_utc": "2026-10-09T01:59:09.228523+00:00",
+      "elapsed_seconds": 5.58,
+      "timed_out": false,
+      "log": "module-RP2.PeriodicODE.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/PeriodicODE.olean": "aabbd1d2aeee538f711d64a7f4cf562c72b24dfdcfb0113941bc8ebae8bc6ed5"
+      }
+    },
+    {
+      "label": "module-RP2.PinnedKernel",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/PinnedKernel.olean",
+        "RP2/PinnedKernel.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T01:59:09.229991+00:00",
+      "completed_utc": "2026-10-09T01:59:14.208135+00:00",
+      "elapsed_seconds": 4.978,
+      "timed_out": false,
+      "log": "module-RP2.PinnedKernel.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/PinnedKernel.olean": "2b941767e90289324aafb3b8de8ab00d2ea24c3c11a1f3abc5f2e75e8d81d2a5"
+      }
+    },
+    {
+      "label": "module-RP2.ModelConnection",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/ModelConnection.olean",
+        "RP2/ModelConnection.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T01:59:14.209372+00:00",
+      "completed_utc": "2026-10-09T01:59:19.392194+00:00",
+      "elapsed_seconds": 5.183,
+      "timed_out": false,
+      "log": "module-RP2.ModelConnection.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/ModelConnection.olean": "2f820564c46b92c848472e6c8c891ca4d58b0f4955260078f1cdd8e03af3582c"
+      }
+    },
+    {
+      "label": "module-RP2.NestedCuts",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/NestedCuts.olean",
+        "RP2/NestedCuts.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T01:59:19.393309+00:00",
+      "completed_utc": "2026-10-09T01:59:24.476557+00:00",
+      "elapsed_seconds": 5.083,
+      "timed_out": false,
+      "log": "module-RP2.NestedCuts.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/NestedCuts.olean": "38ec2996833141ca8a2aff3befb24e4c364038ea326c76960f55f70c1eb39c98"
+      }
+    },
+    {
+      "label": "module-RP2.Rates",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/Rates.olean",
+        "RP2/Rates.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T01:59:24.477816+00:00",
+      "completed_utc": "2026-10-09T01:59:29.961605+00:00",
+      "elapsed_seconds": 5.484,
+      "timed_out": false,
+      "log": "module-RP2.Rates.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/Rates.olean": "e13585f8dc6093c33e4a716e77e3329109d5f16908f26b8ec99ea5ecd1caaf5b"
+      }
+    },
+    {
+      "label": "module-RP2.Main",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/Main.olean",
+        "RP2/Main.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T01:59:29.963229+00:00",
+      "completed_utc": "2026-10-09T01:59:35.091943+00:00",
+      "elapsed_seconds": 5.129,
+      "timed_out": false,
+      "log": "module-RP2.Main.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/Main.olean": "b0345586b8b0a1de4f45a1950e6dfc1f6c2e5351af2b3adbf454ddf3d08b6401"
+      }
+    },
+    {
+      "label": "module-RP2.Criticality",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/Criticality.olean",
+        "RP2/Criticality.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T01:59:35.094173+00:00",
+      "completed_utc": "2026-10-09T01:59:40.123534+00:00",
+      "elapsed_seconds": 5.029,
+      "timed_out": false,
+      "log": "module-RP2.Criticality.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/Criticality.olean": "b393086145aa9610bae898cdf1d0dd20f5984d65622f5a1f5c78ae68dd629d81"
+      }
+    },
+    {
+      "label": "module-RP2.ModelAssembly",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/ModelAssembly.olean",
+        "RP2/ModelAssembly.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T01:59:40.124929+00:00",
+      "completed_utc": "2026-10-09T01:59:48.515105+00:00",
+      "elapsed_seconds": 8.39,
+      "timed_out": false,
+      "log": "module-RP2.ModelAssembly.log",
+      "log_sha256": "b152b0cf5d5ee28c7a7af31647e16318048f6246096d3e32eeeb4582c71d8d8a",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/ModelAssembly.olean": "e91d0049ceb3b8351dfbb972fb7a261c4f65f8bd098c2a8bc2bffac4b2d57cdf"
+      }
+    },
+    {
+      "label": "module-RP2.ModelRestriction",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/ModelRestriction.olean",
+        "RP2/ModelRestriction.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T01:59:48.516644+00:00",
+      "completed_utc": "2026-10-09T01:59:54.195308+00:00",
+      "elapsed_seconds": 5.679,
+      "timed_out": false,
+      "log": "module-RP2.ModelRestriction.log",
+      "log_sha256": "ecfe39b0a8a987fb735b1fa67a7912d7f39bd5007e1735a01dc0b31afb6fdf55",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/ModelRestriction.olean": "070afa7de9b9cf295ca4ea325feb538ade33fa7416c0e03f0556e1b7307313c1"
+      }
+    },
+    {
+      "label": "module-RP2.FourierAll",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/FourierAll.olean",
+        "RP2/FourierAll.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T01:59:54.196559+00:00",
+      "completed_utc": "2026-10-09T02:00:31.364101+00:00",
+      "elapsed_seconds": 37.168,
+      "timed_out": false,
+      "log": "module-RP2.FourierAll.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/FourierAll.olean": "741c568ca8646c020a0893b64d4f0981b5c5207adea5335e5540d1b9dac22d79"
+      }
+    },
+    {
+      "label": "module-RP2.LatticeAnnuli",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/LatticeAnnuli.olean",
+        "RP2/LatticeAnnuli.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:00:31.370711+00:00",
+      "completed_utc": "2026-10-09T02:00:39.162777+00:00",
+      "elapsed_seconds": 7.792,
+      "timed_out": false,
+      "log": "module-RP2.LatticeAnnuli.log",
+      "log_sha256": "4ba03a89e57b858b1dee1a5853baca9e4e1c48654c8bb9fab33629fe18332af2",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/LatticeAnnuli.olean": "da3eec8a9e233801958683d11668d9e36bec6f7384d471a4df2a713e57b97cd4"
+      }
+    },
+    {
+      "label": "module-RP2.LatticeModelRestriction",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/LatticeModelRestriction.olean",
+        "RP2/LatticeModelRestriction.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:00:39.164172+00:00",
+      "completed_utc": "2026-10-09T02:00:44.342103+00:00",
+      "elapsed_seconds": 5.178,
+      "timed_out": false,
+      "log": "module-RP2.LatticeModelRestriction.log",
+      "log_sha256": "460a40c384ac194fcb3b27d3f33f95edb91d9d2182f50f9dd8f433740aec46ac",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/LatticeModelRestriction.olean": "9a5e261d13878eb8f8baa33fdfc338d477fd0a5274e48d6d0170a3df1625df08"
+      }
+    },
+    {
+      "label": "module-RP2.QuadraticAverages",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/QuadraticAverages.olean",
+        "RP2/QuadraticAverages.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:00:44.343508+00:00",
+      "completed_utc": "2026-10-09T02:00:50.727379+00:00",
+      "elapsed_seconds": 6.384,
+      "timed_out": false,
+      "log": "module-RP2.QuadraticAverages.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/QuadraticAverages.olean": "b10cab81924d94d88bd75fcd734f5884cf8cba69c2b19058410adec1edd470ce"
+      }
+    },
+    {
+      "label": "module-RP2.ComplexCurrents",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/ComplexCurrents.olean",
+        "RP2/ComplexCurrents.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:00:50.728794+00:00",
+      "completed_utc": "2026-10-09T02:00:58.313562+00:00",
+      "elapsed_seconds": 7.585,
+      "timed_out": false,
+      "log": "module-RP2.ComplexCurrents.log",
+      "log_sha256": "d914af88707c66ce7c8c1c125c4a734e860b3b04422c4e1ad0e76371c71a58f3",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/ComplexCurrents.olean": "fa02da6f1983975da5aca85d527f299fe7e3426ec43bf8bdece84a12387b19ae"
+      }
+    },
+    {
+      "label": "module-RP2.MixedAlgebra",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/MixedAlgebra.olean",
+        "RP2/MixedAlgebra.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:00:58.315442+00:00",
+      "completed_utc": "2026-10-09T02:01:07.605358+00:00",
+      "elapsed_seconds": 9.29,
+      "timed_out": false,
+      "log": "module-RP2.MixedAlgebra.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/MixedAlgebra.olean": "d35ba2cb6f2960d1e7bbe36dda41a8e87e3b2c0752a4e0b4b59ca94378fa9628"
+      }
+    },
+    {
+      "label": "module-RP2.QuadraticSecondResponse",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/QuadraticSecondResponse.olean",
+        "RP2/QuadraticSecondResponse.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:01:07.610081+00:00",
+      "completed_utc": "2026-10-09T02:01:15.597623+00:00",
+      "elapsed_seconds": 7.988,
+      "timed_out": false,
+      "log": "module-RP2.QuadraticSecondResponse.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/QuadraticSecondResponse.olean": "a5c58ef1879f3749e2b8091ddcae13cff98bf2a87520e8a94c77ab9322b4f326"
+      }
+    },
+    {
+      "label": "module-RP2.QuadraticSecondGauge",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/QuadraticSecondGauge.olean",
+        "RP2/QuadraticSecondGauge.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:01:15.599157+00:00",
+      "completed_utc": "2026-10-09T02:01:22.431238+00:00",
+      "elapsed_seconds": 6.832,
+      "timed_out": false,
+      "log": "module-RP2.QuadraticSecondGauge.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/QuadraticSecondGauge.olean": "24245c936e48177ccf2927f161371945d1365944effaa225bde5f71212f16541"
+      }
+    },
+    {
+      "label": "module-RP2.TetrahedralAction",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/TetrahedralAction.olean",
+        "RP2/TetrahedralAction.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:01:22.432725+00:00",
+      "completed_utc": "2026-10-09T02:02:29.530232+00:00",
+      "elapsed_seconds": 67.098,
+      "timed_out": false,
+      "log": "module-RP2.TetrahedralAction.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/TetrahedralAction.olean": "c62dc1dbdae7ce179f796f04c33b1aff59bc6432b8d3a08489492e2b39baf246"
+      }
+    },
+    {
+      "label": "module-RP2.TetrahedralPaths",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/TetrahedralPaths.olean",
+        "RP2/TetrahedralPaths.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:02:29.550839+00:00",
+      "completed_utc": "2026-10-09T02:03:16.146104+00:00",
+      "elapsed_seconds": 46.595,
+      "timed_out": false,
+      "log": "module-RP2.TetrahedralPaths.log",
+      "log_sha256": "1a8eb86af21ba76700a2206d48b932496f631d42155e5297eacf6204937fa9a8",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/TetrahedralPaths.olean": "44b0aa60620a8fc47a3e62125984f05f87d9a93e160c2b6c139ae86020ee9da8"
+      }
+    },
+    {
+      "label": "module-RP2.QuadraticPotential",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/QuadraticPotential.olean",
+        "RP2/QuadraticPotential.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:03:16.149413+00:00",
+      "completed_utc": "2026-10-09T02:03:24.084975+00:00",
+      "elapsed_seconds": 7.936,
+      "timed_out": false,
+      "log": "module-RP2.QuadraticPotential.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/QuadraticPotential.olean": "00cc30b968f547fe1443819742ca175a9083fc6ae2ca2463c9550bf0ca550405"
+      }
+    },
+    {
+      "label": "module-RP2.QuadraticSecondBound",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/QuadraticSecondBound.olean",
+        "RP2/QuadraticSecondBound.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:03:24.086550+00:00",
+      "completed_utc": "2026-10-09T02:03:30.118720+00:00",
+      "elapsed_seconds": 6.032,
+      "timed_out": false,
+      "log": "module-RP2.QuadraticSecondBound.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/QuadraticSecondBound.olean": "f720df41252480ab1a0c918a5b9795c2712f835d99f5feeaf08a42589cf3474e"
+      }
+    },
+    {
+      "label": "module-RP2.Fourier.ModelModes",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/Fourier/ModelModes.olean",
+        "RP2/Fourier/ModelModes.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:03:30.120338+00:00",
+      "completed_utc": "2026-10-09T02:03:35.453163+00:00",
+      "elapsed_seconds": 5.333,
+      "timed_out": false,
+      "log": "module-RP2.Fourier.ModelModes.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/Fourier/ModelModes.olean": "5c33e7f77386c9779ed010e64d171315b9d089bc77034e5238b2bb6bfd16b5d7"
+      }
+    },
+    {
+      "label": "module-RP2.Fourier.ResponseTransfer",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/Fourier/ResponseTransfer.olean",
+        "RP2/Fourier/ResponseTransfer.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:03:35.454789+00:00",
+      "completed_utc": "2026-10-09T02:03:43.903083+00:00",
+      "elapsed_seconds": 8.448,
+      "timed_out": false,
+      "log": "module-RP2.Fourier.ResponseTransfer.log",
+      "log_sha256": "1d0af7b11d2610de1528ed400bd400b6b2233ff269f1248370f9bb084459f4a4",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/Fourier/ResponseTransfer.olean": "15845350d43b103ce69f5ef6ad0b0450e7ca152d5b1250a2d9a1228d9c0f279c"
+      }
+    },
+    {
+      "label": "module-RP2.QuadraticMixedJets",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/QuadraticMixedJets.olean",
+        "RP2/QuadraticMixedJets.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:03:43.904690+00:00",
+      "completed_utc": "2026-10-09T02:03:54.548683+00:00",
+      "elapsed_seconds": 10.644,
+      "timed_out": false,
+      "log": "module-RP2.QuadraticMixedJets.log",
+      "log_sha256": "8f7fbf01554c93e0351910a3fbf3c0f617b4e37f1686d959e949061bcf1351c7",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/QuadraticMixedJets.olean": "7d2ddcfd693f698bd445b801b82b9a611726325f83d129830f001f0302ec4240"
+      }
+    },
+    {
+      "label": "module-RP2.QuadraticMixedWard",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/QuadraticMixedWard.olean",
+        "RP2/QuadraticMixedWard.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:03:54.551419+00:00",
+      "completed_utc": "2026-10-09T02:04:00.331785+00:00",
+      "elapsed_seconds": 5.78,
+      "timed_out": false,
+      "log": "module-RP2.QuadraticMixedWard.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/QuadraticMixedWard.olean": "55f5757dc2f8c739665708a4b82cff9715aa753248ef7ae494db20b4b1f864db"
+      }
+    },
+    {
+      "label": "module-RP2.QuadraticComplexWard",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/QuadraticComplexWard.olean",
+        "RP2/QuadraticComplexWard.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:04:00.333287+00:00",
+      "completed_utc": "2026-10-09T02:04:08.019413+00:00",
+      "elapsed_seconds": 7.686,
+      "timed_out": false,
+      "log": "module-RP2.QuadraticComplexWard.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/QuadraticComplexWard.olean": "9085b1bb924e9b58afed7fb9257c4c21624cc8b2ced99e58ceb02d8bf3e5f2d0"
+      }
+    },
+    {
+      "label": "module-RP2.QuadraticCoefficientBounds",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/QuadraticCoefficientBounds.olean",
+        "RP2/QuadraticCoefficientBounds.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:04:08.021159+00:00",
+      "completed_utc": "2026-10-09T02:04:16.811882+00:00",
+      "elapsed_seconds": 8.791,
+      "timed_out": false,
+      "log": "module-RP2.QuadraticCoefficientBounds.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/QuadraticCoefficientBounds.olean": "68a7de458c3d4cbed76b143c6c3043f9e3bf6b5e7106049e04c4c103de488348"
+      }
+    },
+    {
+      "label": "module-RP2.QuadraticFamilyKernel",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/QuadraticFamilyKernel.olean",
+        "RP2/QuadraticFamilyKernel.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:04:16.813482+00:00",
+      "completed_utc": "2026-10-09T02:04:31.770098+00:00",
+      "elapsed_seconds": 14.957,
+      "timed_out": false,
+      "log": "module-RP2.QuadraticFamilyKernel.log",
+      "log_sha256": "c9bb7b4abb5c9d9ce6d418149b2a22323c73614bbea782b397cb91cd10cdf2a0",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/QuadraticFamilyKernel.olean": "a4e9f9c76b1c7bfc3add0e01b7fc581bc8c07930318a05d1a320080a75739ac3"
+      }
+    },
+    {
+      "label": "module-RP2.QuadraticFamilyEstimates",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/QuadraticFamilyEstimates.olean",
+        "RP2/QuadraticFamilyEstimates.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:04:31.772152+00:00",
+      "completed_utc": "2026-10-09T02:04:36.699483+00:00",
+      "elapsed_seconds": 4.927,
+      "timed_out": false,
+      "log": "module-RP2.QuadraticFamilyEstimates.log",
+      "log_sha256": "2efe341e5e37d31ce239c7feb8384cf094f386e4da2499066e80a351efd90177",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/QuadraticFamilyEstimates.olean": "382834abe3bde402fc050fcfa2d735519cf3c3f7652aa336ee39fe92c71fdd40"
+      }
+    },
+    {
+      "label": "module-RP2.QuadraticFamilyLower",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/QuadraticFamilyLower.olean",
+        "RP2/QuadraticFamilyLower.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:04:36.700865+00:00",
+      "completed_utc": "2026-10-09T02:04:42.279389+00:00",
+      "elapsed_seconds": 5.579,
+      "timed_out": false,
+      "log": "module-RP2.QuadraticFamilyLower.log",
+      "log_sha256": "d224b0fb465cdcf68bd729d56c7424c83944e94abb6cef3259fb14e9ef7bc2a6",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/QuadraticFamilyLower.olean": "cf5f38be5e1f146df57cc937aa526844c1a8d75fa51a0e7def55a51c78b82eac"
+      }
+    },
+    {
+      "label": "module-RP2.QuadraticFamily",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/QuadraticFamily.olean",
+        "RP2/QuadraticFamily.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:04:42.280927+00:00",
+      "completed_utc": "2026-10-09T02:04:47.608067+00:00",
+      "elapsed_seconds": 5.327,
+      "timed_out": false,
+      "log": "module-RP2.QuadraticFamily.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/QuadraticFamily.olean": "8553982a29bef47cf60a5c8092859b047a5e5d64ede29773807f8446e500e672"
+      }
+    },
+    {
+      "label": "module-RP2.Fourier.AnnulusResponse",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/Fourier/AnnulusResponse.olean",
+        "RP2/Fourier/AnnulusResponse.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:04:47.610208+00:00",
+      "completed_utc": "2026-10-09T02:04:53.542666+00:00",
+      "elapsed_seconds": 5.932,
+      "timed_out": false,
+      "log": "module-RP2.Fourier.AnnulusResponse.log",
+      "log_sha256": "e9f2ef0d84a069e09ec56326f7012f0cc77b29cb35c53e0d8a4a202557d5488b",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/Fourier/AnnulusResponse.olean": "20c830db39042347d497b18a778e641860a8aa14291a1d188845a0878b0e478b"
+      }
+    },
+    {
+      "label": "module-RP2.AnnularEstimate",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/AnnularEstimate.olean",
+        "RP2/AnnularEstimate.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:04:53.544418+00:00",
+      "completed_utc": "2026-10-09T02:04:58.372971+00:00",
+      "elapsed_seconds": 4.829,
+      "timed_out": false,
+      "log": "module-RP2.AnnularEstimate.log",
+      "log_sha256": "2d2a6dac285b328bb6a741344d9d5731c2d680982ff776ab5a6b445b30adaea5",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/AnnularEstimate.olean": "7f461526af84179baea4aa3ad1edc664800bf90398513f5db2f0cca0f65e1876"
+      }
+    },
+    {
+      "label": "module-RP2.TetrahedralComparison",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/TetrahedralComparison.olean",
+        "RP2/TetrahedralComparison.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:04:58.374717+00:00",
+      "completed_utc": "2026-10-09T02:05:03.604293+00:00",
+      "elapsed_seconds": 5.23,
+      "timed_out": false,
+      "log": "module-RP2.TetrahedralComparison.log",
+      "log_sha256": "19e32a43e4f79b5a0db928185893e4a2f4fc9b23c1bcd6a8bb5ecc3aa9d4dad1",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/TetrahedralComparison.olean": "17a945c0b38bfbc95a0c138a13590813b4d5efd130e26520b4679e06a7c1f3eb"
+      }
+    },
+    {
+      "label": "module-RP2.ConcreteAnnuli",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/ConcreteAnnuli.olean",
+        "RP2/ConcreteAnnuli.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:05:03.605902+00:00",
+      "completed_utc": "2026-10-09T02:05:09.135226+00:00",
+      "elapsed_seconds": 5.529,
+      "timed_out": false,
+      "log": "module-RP2.ConcreteAnnuli.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/ConcreteAnnuli.olean": "ff4c98e327f96f70fd315a1174fde1420e78c96c1c82b2e1f922add280000d5d"
+      }
+    },
+    {
+      "label": "module-RP2.SquareRates",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/SquareRates.olean",
+        "RP2/SquareRates.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:05:09.136720+00:00",
+      "completed_utc": "2026-10-09T02:05:15.017988+00:00",
+      "elapsed_seconds": 5.881,
+      "timed_out": false,
+      "log": "module-RP2.SquareRates.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/SquareRates.olean": "6d38667bdc0ef3dea4917518d71785df2796d1effd4ad25b96723f7e70bf4ef3"
+      }
+    },
+    {
+      "label": "module-RP2.KernelEstimate",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/KernelEstimate.olean",
+        "RP2/KernelEstimate.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:05:15.019799+00:00",
+      "completed_utc": "2026-10-09T02:05:21.253018+00:00",
+      "elapsed_seconds": 6.233,
+      "timed_out": false,
+      "log": "module-RP2.KernelEstimate.log",
+      "log_sha256": "0727b538de61927897e79247f9aab4bbb87fad13bd81f9a17df1afc73ff660e1",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/KernelEstimate.olean": "71df8638f72e3d476112a4118506837c0096ce56761890f2e717843119a193c0"
+      }
+    },
+    {
+      "label": "module-RP2.UniformDecay",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/UniformDecay.olean",
+        "RP2/UniformDecay.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:05:21.254790+00:00",
+      "completed_utc": "2026-10-09T02:05:26.534272+00:00",
+      "elapsed_seconds": 5.279,
+      "timed_out": false,
+      "log": "module-RP2.UniformDecay.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/UniformDecay.olean": "bf0b10a4c39c8ff75d1b23618b04d7806ff9614ad3457060b0f2cb925dc72893"
+      }
+    },
+    {
+      "label": "module-RP2.LogarithmicRate",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/LogarithmicRate.olean",
+        "RP2/LogarithmicRate.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:05:26.536011+00:00",
+      "completed_utc": "2026-10-09T02:05:37.935234+00:00",
+      "elapsed_seconds": 11.399,
+      "timed_out": false,
+      "log": "module-RP2.LogarithmicRate.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/LogarithmicRate.olean": "1d1a9d744213977e985fa34cf72a91b4e1e575c67bece3b0cac378e937f9b3b6"
+      }
+    },
+    {
+      "label": "module-RP2.Full",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/Full.olean",
+        "RP2/Full.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:05:37.937082+00:00",
+      "completed_utc": "2026-10-09T02:05:43.015901+00:00",
+      "elapsed_seconds": 5.079,
+      "timed_out": false,
+      "log": "module-RP2.Full.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/Full.olean": "17deaab58223fd7b4464418c35588ea32b0f3890a5df883921071500b8f7f145"
+      }
+    },
+    {
+      "label": "module-RP2.GibbsProbability",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/GibbsProbability.olean",
+        "RP2/GibbsProbability.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:05:43.017629+00:00",
+      "completed_utc": "2026-10-09T02:05:48.847644+00:00",
+      "elapsed_seconds": 5.83,
+      "timed_out": false,
+      "log": "module-RP2.GibbsProbability.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/GibbsProbability.olean": "524747e84c439f3fbdee14a302b8bd471b59161a9845209c36fd9f3ab637d576"
+      }
+    },
+    {
+      "label": "module-RP2.WeightedSummability",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/WeightedSummability.olean",
+        "RP2/WeightedSummability.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:05:48.849345+00:00",
+      "completed_utc": "2026-10-09T02:05:53.726007+00:00",
+      "elapsed_seconds": 4.877,
+      "timed_out": false,
+      "log": "module-RP2.WeightedSummability.log",
+      "log_sha256": "85b395622e4d6078d7878b019aa0d82a917689796f20ca547a983999dc854aca",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/WeightedSummability.olean": "f7394d951abb6294467544088770b244f7d9c9cab9a98a9fb3921a68b7130928"
+      }
+    },
+    {
+      "label": "module-RP2.LimitCorollary",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/LimitCorollary.olean",
+        "RP2/LimitCorollary.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:05:53.728373+00:00",
+      "completed_utc": "2026-10-09T02:05:58.457469+00:00",
+      "elapsed_seconds": 4.729,
+      "timed_out": false,
+      "log": "module-RP2.LimitCorollary.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/LimitCorollary.olean": "da7fde702f28d827bf943a43c13671d4bd465e80483c64d92ab9399bc62c0795"
+      }
+    },
+    {
+      "label": "module-RP2.PaperResponse",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/PaperResponse.olean",
+        "RP2/PaperResponse.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:05:58.459128+00:00",
+      "completed_utc": "2026-10-09T02:06:03.738189+00:00",
+      "elapsed_seconds": 5.279,
+      "timed_out": false,
+      "log": "module-RP2.PaperResponse.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/PaperResponse.olean": "a1f577c21dc9255c1bcb1236800129f3cc54bd3f84eeb3aef8aa74985a1fc1d1"
+      }
+    },
+    {
+      "label": "module-RP2.TetrahedralTensor",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/TetrahedralTensor.olean",
+        "RP2/TetrahedralTensor.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:06:03.740437+00:00",
+      "completed_utc": "2026-10-09T02:06:10.578491+00:00",
+      "elapsed_seconds": 6.838,
+      "timed_out": false,
+      "log": "module-RP2.TetrahedralTensor.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/TetrahedralTensor.olean": "f1418946d51219d7d66a35257e48b6d58d243aa84423ecab618e3deaffa85ea9"
+      }
+    },
+    {
+      "label": "module-RP2.AveragingInterface",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/AveragingInterface.olean",
+        "RP2/AveragingInterface.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:06:10.580713+00:00",
+      "completed_utc": "2026-10-09T02:06:15.408234+00:00",
+      "elapsed_seconds": 4.828,
+      "timed_out": false,
+      "log": "module-RP2.AveragingInterface.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/AveragingInterface.olean": "b1928008e8bff506e01a2f65fec68599de0a148322a30876ba4111c2e6e4b455"
+      }
+    },
+    {
+      "label": "module-RP2.PaperInterface",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/PaperInterface.olean",
+        "RP2/PaperInterface.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:06:15.409818+00:00",
+      "completed_utc": "2026-10-09T02:06:19.835884+00:00",
+      "elapsed_seconds": 4.426,
+      "timed_out": false,
+      "log": "module-RP2.PaperInterface.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/PaperInterface.olean": "c4c79a05e88905ebe34e05299ba3c0c0a922adefd624f68e6c52a9e22ca9c83d"
+      }
+    },
+    {
+      "label": "module-RP2.StructureFactor",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/StructureFactor.olean",
+        "RP2/StructureFactor.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:06:19.837356+00:00",
+      "completed_utc": "2026-10-09T02:06:26.668814+00:00",
+      "elapsed_seconds": 6.831,
+      "timed_out": false,
+      "log": "module-RP2.StructureFactor.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/StructureFactor.olean": "ea65fee5c13b8b55e9eff1df5a2b9ce51016adcf9d3dc4e96f9ae94b0b1a8320"
+      }
+    },
+    {
+      "label": "module-RP2.DenseRates",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/DenseRates.olean",
+        "RP2/DenseRates.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:06:26.670791+00:00",
+      "completed_utc": "2026-10-09T02:06:32.350299+00:00",
+      "elapsed_seconds": 5.68,
+      "timed_out": false,
+      "log": "module-RP2.DenseRates.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/DenseRates.olean": "b8fe22c5b75260d4b4ac1405a15c68c95ad64276c9fe7ff3031a88d3fac320a1"
+      }
+    },
+    {
+      "label": "module-RP2.DenseLogarithmicRate",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/DenseLogarithmicRate.olean",
+        "RP2/DenseLogarithmicRate.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:06:32.352094+00:00",
+      "completed_utc": "2026-10-09T02:06:44.051881+00:00",
+      "elapsed_seconds": 11.7,
+      "timed_out": false,
+      "log": "module-RP2.DenseLogarithmicRate.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/DenseLogarithmicRate.olean": "982027aa61d75d472be829de7b72afb3a4f9ad100f8b724c93287c6f5b8fe1e7"
+      }
+    },
+    {
+      "label": "module-RP2.TwoEndpointRates",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/TwoEndpointRates.olean",
+        "RP2/TwoEndpointRates.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:06:44.054228+00:00",
+      "completed_utc": "2026-10-09T02:06:51.048841+00:00",
+      "elapsed_seconds": 6.995,
+      "timed_out": false,
+      "log": "module-RP2.TwoEndpointRates.log",
+      "log_sha256": "caa43946dcf1fab078c7668cc64449d9c889abcdd777651c8babeb7addbce0bf",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/TwoEndpointRates.olean": "c05c92d47c3ed4eb5018372a5289324f46c22a5b9d5cb5eba2db03b839b5716b"
+      }
+    },
+    {
+      "label": "module-RP2.DenseLimits",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/DenseLimits.olean",
+        "RP2/DenseLimits.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:06:51.051079+00:00",
+      "completed_utc": "2026-10-09T02:06:56.077981+00:00",
+      "elapsed_seconds": 5.027,
+      "timed_out": false,
+      "log": "module-RP2.DenseLimits.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/DenseLimits.olean": "3470cb0a391d6a321c08b6850cd932bd2abe5336934bb63741e783585129310d"
+      }
+    },
+    {
+      "label": "module-RP2.HighTemperature",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/HighTemperature.olean",
+        "RP2/HighTemperature.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:06:56.079781+00:00",
+      "completed_utc": "2026-10-09T02:07:02.560918+00:00",
+      "elapsed_seconds": 6.481,
+      "timed_out": false,
+      "log": "module-RP2.HighTemperature.log",
+      "log_sha256": "41b4c90b5fbc2879e98261f0cdd0e51ff566e4082e21ecaec1bc09b501ecadf1",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/HighTemperature.olean": "b45cab2ceec0b58e8fd6f91850c328f31d14fe185c3686d4d41d898edad96ac5"
+      }
+    },
+    {
+      "label": "module-RP2.ThinProfiles",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/ThinProfiles.olean",
+        "RP2/ThinProfiles.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:07:02.562991+00:00",
+      "completed_utc": "2026-10-09T02:07:10.147205+00:00",
+      "elapsed_seconds": 7.584,
+      "timed_out": false,
+      "log": "module-RP2.ThinProfiles.log",
+      "log_sha256": "99c7b1e39d1ca926d87ea1a8db54655b8f4f0d01b3c97e59bd4c6d17ea48b384",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/ThinProfiles.olean": "02a6816c6af7768bf21e56a0c34207c46826757f776ab9da72661ae393588047"
+      }
+    },
+    {
+      "label": "module-RP2.ThinAnnuli",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/ThinAnnuli.olean",
+        "RP2/ThinAnnuli.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:07:10.149293+00:00",
+      "completed_utc": "2026-10-09T02:07:16.433242+00:00",
+      "elapsed_seconds": 6.284,
+      "timed_out": false,
+      "log": "module-RP2.ThinAnnuli.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/ThinAnnuli.olean": "defb146261cf8d2a93bfb10c4e80ff275d4f051c9196a9cb31df41dc732bc6c9"
+      }
+    },
+    {
+      "label": "module-RP2.ThinKernel",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/ThinKernel.olean",
+        "RP2/ThinKernel.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:07:16.436844+00:00",
+      "completed_utc": "2026-10-09T02:07:21.766186+00:00",
+      "elapsed_seconds": 5.329,
+      "timed_out": false,
+      "log": "module-RP2.ThinKernel.log",
+      "log_sha256": "b8e5227cb6af76355e0f0555ab530d4ff01b55899361956e5cc4b24f60ca590a",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/ThinKernel.olean": "0f1a8c0238d43ca2311053e320db3e5400d2c02e4654a0f7ad9fbf52b9df5064"
+      }
+    },
+    {
+      "label": "module-RP2.ThinProfileLattice",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/ThinProfileLattice.olean",
+        "RP2/ThinProfileLattice.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:07:21.768062+00:00",
+      "completed_utc": "2026-10-09T02:07:29.053308+00:00",
+      "elapsed_seconds": 7.285,
+      "timed_out": false,
+      "log": "module-RP2.ThinProfileLattice.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/ThinProfileLattice.olean": "7ef10479bdfe6909a4d1185c7f592dc9192bbb03192bc6063ff81bee377a6c41"
+      }
+    },
+    {
+      "label": "module-RP2.ThinFourier",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/ThinFourier.olean",
+        "RP2/ThinFourier.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:07:29.055305+00:00",
+      "completed_utc": "2026-10-09T02:07:43.110110+00:00",
+      "elapsed_seconds": 14.055,
+      "timed_out": false,
+      "log": "module-RP2.ThinFourier.log",
+      "log_sha256": "60acde636a0a8b08d8d4d1c27784f84dd54ef7421ae10e08f6dd8d2d44e08e3d",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/ThinFourier.olean": "84ebd92914edd2bceb125a771b82c57abf86fc3f476832fee0af021c93e0d451"
+      }
+    },
+    {
+      "label": "module-RP2.ThinEdgeResponse",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/ThinEdgeResponse.olean",
+        "RP2/ThinEdgeResponse.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:07:43.113127+00:00",
+      "completed_utc": "2026-10-09T02:07:49.200358+00:00",
+      "elapsed_seconds": 6.087,
+      "timed_out": false,
+      "log": "module-RP2.ThinEdgeResponse.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/ThinEdgeResponse.olean": "fb7486b5cc715dfcfd4187f126d3389fbf35626e79f1999c509eb050a115e415"
+      }
+    },
+    {
+      "label": "module-RP2.ThinCosts",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/ThinCosts.olean",
+        "RP2/ThinCosts.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:07:49.202909+00:00",
+      "completed_utc": "2026-10-09T02:07:54.935890+00:00",
+      "elapsed_seconds": 5.733,
+      "timed_out": false,
+      "log": "module-RP2.ThinCosts.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/ThinCosts.olean": "a46f7e7fa119d71a6e9e5c2abc857838ce50bc20766749950f1e7c28ba78c41f"
+      }
+    },
+    {
+      "label": "module-RP2.ThinSupport",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/ThinSupport.olean",
+        "RP2/ThinSupport.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:07:54.937938+00:00",
+      "completed_utc": "2026-10-09T02:08:00.723863+00:00",
+      "elapsed_seconds": 5.786,
+      "timed_out": false,
+      "log": "module-RP2.ThinSupport.log",
+      "log_sha256": "28ecd2105179fe5416f5bc6c5f519832d7c9f03d7f6d94e76b2f74d29250a84a",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/ThinSupport.olean": "55801570ee0f25ab98e02606ebcf32e3b4da88615175ac0b09dec3fc38b05262"
+      }
+    },
+    {
+      "label": "module-RP2.ThinResponse",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/ThinResponse.olean",
+        "RP2/ThinResponse.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:08:00.726117+00:00",
+      "completed_utc": "2026-10-09T02:08:05.654899+00:00",
+      "elapsed_seconds": 4.929,
+      "timed_out": false,
+      "log": "module-RP2.ThinResponse.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/ThinResponse.olean": "e8260d0c8cfaebc133edd81a9a8fd2a462f477f64e28abf86d885477f7366803"
+      }
+    },
+    {
+      "label": "module-RP2.ThinDyadicParameters",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/ThinDyadicParameters.olean",
+        "RP2/ThinDyadicParameters.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:08:05.657085+00:00",
+      "completed_utc": "2026-10-09T02:08:11.046864+00:00",
+      "elapsed_seconds": 5.39,
+      "timed_out": false,
+      "log": "module-RP2.ThinDyadicParameters.log",
+      "log_sha256": "3b3c8dfcafa89321dbf6ebbd2188f628a42f56d35aa4bed227e774b4e6deb51e",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/ThinDyadicParameters.olean": "7feaa73d409bb322002b2df57488bf29f31fe0f2716999ab7547cbe7b59a10d1"
+      }
+    },
+    {
+      "label": "module-RP2.LogSquareRates",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/LogSquareRates.olean",
+        "RP2/LogSquareRates.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:08:11.048923+00:00",
+      "completed_utc": "2026-10-09T02:08:17.430244+00:00",
+      "elapsed_seconds": 6.381,
+      "timed_out": false,
+      "log": "module-RP2.LogSquareRates.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/LogSquareRates.olean": "30d35f1ed05282d6e427b7c6b09da0cb80762207a0767aeeebc07ee7f968899b"
+      }
+    },
+    {
+      "label": "module-RP2.ThinScaleChoice",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/ThinScaleChoice.olean",
+        "RP2/ThinScaleChoice.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:08:17.432192+00:00",
+      "completed_utc": "2026-10-09T02:08:23.515387+00:00",
+      "elapsed_seconds": 6.083,
+      "timed_out": false,
+      "log": "module-RP2.ThinScaleChoice.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/ThinScaleChoice.olean": "9d0a05e324fe24761bf17461a5fbdc5918aa0dd142f9f9ca2b0afc18549cea48"
+      }
+    },
+    {
+      "label": "module-RP2.LogSquarePacking",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/LogSquarePacking.olean",
+        "RP2/LogSquarePacking.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:08:23.517324+00:00",
+      "completed_utc": "2026-10-09T02:08:29.706483+00:00",
+      "elapsed_seconds": 6.189,
+      "timed_out": false,
+      "log": "module-RP2.LogSquarePacking.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/LogSquarePacking.olean": "8751f8cbb903d6fa1673d104032f3b8caba4af5edad6164b85716c202d08023d"
+      }
+    },
+    {
+      "label": "module-RP2.ThinKernelEstimate",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/ThinKernelEstimate.olean",
+        "RP2/ThinKernelEstimate.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:08:29.708573+00:00",
+      "completed_utc": "2026-10-09T02:08:35.438203+00:00",
+      "elapsed_seconds": 5.73,
+      "timed_out": false,
+      "log": "module-RP2.ThinKernelEstimate.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/ThinKernelEstimate.olean": "029fd082c596a6e5dccc1d0f47d17c67d4bdb63fe7e1a39f2f1ff1097cb0e052"
+      }
+    },
+    {
+      "label": "module-RP2.LogSquareLimits",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/LogSquareLimits.olean",
+        "RP2/LogSquareLimits.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:08:35.440323+00:00",
+      "completed_utc": "2026-10-09T02:08:39.865026+00:00",
+      "elapsed_seconds": 4.425,
+      "timed_out": false,
+      "log": "module-RP2.LogSquareLimits.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/LogSquareLimits.olean": "d7007b3b638263cecdf29bf474e60a3c82c6d13ddbe7662bfddddb45700c4973"
+      }
+    },
+    {
+      "label": "module-RP2.ActiveEdgeBounds",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/ActiveEdgeBounds.olean",
+        "RP2/ActiveEdgeBounds.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:08:39.866824+00:00",
+      "completed_utc": "2026-10-09T02:08:45.345292+00:00",
+      "elapsed_seconds": 5.478,
+      "timed_out": false,
+      "log": "module-RP2.ActiveEdgeBounds.log",
+      "log_sha256": "c7e4c162c165be1be2293124a9cbcebbaef7971854a0a67ea3e8b7b1abb1eba1",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/ActiveEdgeBounds.olean": "ea87c7321ddb88427dedb829696db2b8554c90545da60132ef4b57359b5d7a8e"
+      }
+    },
+    {
+      "label": "module-RP2.ActivePaths",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/ActivePaths.olean",
+        "RP2/ActivePaths.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:08:45.347294+00:00",
+      "completed_utc": "2026-10-09T02:08:51.238589+00:00",
+      "elapsed_seconds": 5.891,
+      "timed_out": false,
+      "log": "module-RP2.ActivePaths.log",
+      "log_sha256": "8c60a5ae9c3d1b7c052ec00f63da742f6cbe03b6a5073c3e7764a37b5f41b037",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/ActivePaths.olean": "4a852c3fbbd0b7a50c1efc0cd919ca2cd6a9d450a69830a463950adce44403e6"
+      }
+    },
+    {
+      "label": "module-RP2.HighTemperatureDecay",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/HighTemperatureDecay.olean",
+        "RP2/HighTemperatureDecay.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:08:51.240724+00:00",
+      "completed_utc": "2026-10-09T02:08:56.821352+00:00",
+      "elapsed_seconds": 5.581,
+      "timed_out": false,
+      "log": "module-RP2.HighTemperatureDecay.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/HighTemperatureDecay.olean": "6b3cd0e6d72c3cd629c5cfca2e45381ee7ff7382e0a6b32c8e844d8ddfcb34ca"
+      }
+    },
+    {
+      "label": "module-RP2.NonbacktrackingPaths",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/NonbacktrackingPaths.olean",
+        "RP2/NonbacktrackingPaths.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:08:56.823459+00:00",
+      "completed_utc": "2026-10-09T02:09:02.563681+00:00",
+      "elapsed_seconds": 5.74,
+      "timed_out": false,
+      "log": "module-RP2.NonbacktrackingPaths.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/NonbacktrackingPaths.olean": "07b993242e35474275915d9d503cb9f9f630ac225344882dc2fcecabeda8e74b"
+      }
+    },
+    {
+      "label": "module-RP2.HighTemperatureExponential",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2/HighTemperatureExponential.olean",
+        "RP2/HighTemperatureExponential.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:09:02.565885+00:00",
+      "completed_utc": "2026-10-09T02:09:08.508587+00:00",
+      "elapsed_seconds": 5.943,
+      "timed_out": false,
+      "log": "module-RP2.HighTemperatureExponential.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2/HighTemperatureExponential.olean": "b60c43132a35e85a8e06be92d081a73c5f8c54877edbbb07036f12ba62abe1aa"
+      }
+    },
+    {
+      "label": "module-RP2",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP2.olean",
+        "RP2.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:09:08.510775+00:00",
+      "completed_utc": "2026-10-09T02:09:12.987821+00:00",
+      "elapsed_seconds": 4.477,
+      "timed_out": false,
+      "log": "module-RP2.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP2.olean": "fcf427afbd843d860451dba8557eda5107b4cf5662e524e65d2ea266f1ccd3ce"
+      }
+    },
+    {
+      "label": "semantic-witnesses",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "SemanticWitnesses.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:09:12.989888+00:00",
+      "completed_utc": "2026-10-09T02:09:18.521243+00:00",
+      "elapsed_seconds": 5.531,
+      "timed_out": false,
+      "log": "semantic-witnesses.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {}
+    },
+    {
+      "label": "readable-axioms",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "AxiomAudit.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:09:18.522942+00:00",
+      "completed_utc": "2026-10-09T02:09:22.999270+00:00",
+      "elapsed_seconds": 4.476,
+      "timed_out": false,
+      "log": "readable-axioms.log",
+      "log_sha256": "39a6d69f37997561c4d2cfb90c63368ae7e9c7e649d6b6ad534783b2b39cab6e",
+      "output_sha256": {}
+    },
+    {
+      "label": "public-dependencies",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "--run",
+        "verification/AuditEnvironment.lean",
+        "--replay",
+        "--inventory"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:09:23.000926+00:00",
+      "completed_utc": "2026-10-09T02:13:37.022987+00:00",
+      "elapsed_seconds": 254.022,
+      "timed_out": false,
+      "log": "public-dependencies.log",
+      "log_sha256": "75b4d0f5da51e9e69250d251278b30dc85a102ac35b7fc61841443dd77cbe832",
+      "output_sha256": {}
+    },
+    {
+      "label": "standalone-source",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/verification/standalone/RP2-Formalization.olean",
+        "RP2-Formalization.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:13:37.032355+00:00",
+      "completed_utc": "2026-10-09T02:20:59.281764+00:00",
+      "elapsed_seconds": 442.249,
+      "timed_out": false,
+      "log": "standalone-source.log",
+      "log_sha256": "4132db391dfc6225e65210a2a70a08e62b1fd94782d23add3e3e22496f65209c",
+      "output_sha256": {
+        ".lake/verification/standalone/RP2-Formalization.olean": "ad5140a9c663c138b39f354de97d8ccd807be8589178d9fabfe77f71cb60d66a"
+      }
+    },
+    {
+      "label": "lake-lean-path",
+      "command": [
+        "lake",
+        "env",
+        "printenv",
+        "LEAN_PATH"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:20:59.350390+00:00",
+      "completed_utc": "2026-10-09T02:21:00.968974+00:00",
+      "elapsed_seconds": 1.619,
+      "timed_out": false,
+      "log": "lake-lean-path.log",
+      "log_sha256": "5cf6b20cb21d46993b4f96676dd01841b321e1dc476d05f076cad9a46e6bc16d",
+      "output_sha256": {}
+    },
+    {
+      "label": "standalone-kernel-replay",
+      "command": [
+        "leanchecker",
+        "-v",
+        "\u00abRP2-Formalization\u00bb"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-09T02:21:00.970663+00:00",
+      "completed_utc": "2026-10-09T02:21:41.499635+00:00",
+      "elapsed_seconds": 40.529,
+      "timed_out": false,
+      "log": "standalone-kernel-replay.log",
+      "log_sha256": "1432232b97af0dde4f424deabd9ae4443dfe10a83010352a7c9a0947a4f7100d",
+      "output_sha256": {}
+    }
+  ],
+  "result": "passed",
+  "module_count": 86,
+  "completed_utc": "2026-10-09T02:21:41.744856+00:00"
+}

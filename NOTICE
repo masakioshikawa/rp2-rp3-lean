@@ -1,0 +1,49 @@
+This project includes code adapted from the OpenAI math repository:
+https://github.com/openai/math
+Commit adc7f1241b42e322a6451854ab7e4b4c146bf78a
+Licensed under the Apache License, Version 2.0; see LICENSE.
+No upstream NOTICE file was present at that commit.
+
+The upstream source directory is:
+lean/OAI/Probability/ClassicalON/
+
+The adapted material includes:
+- PeriodicODE, FiniteVolume, and RotationWork: compact integral calculus,
+  rotation geometry, probability invariance, and Gibbs/gauge/Ward patterns.
+- MixedAlgebra, MixedWard, ComplexWard, FamilyKernel, FamilyBound,
+  FamilyEstimate, FamilyLower, and RotationInequality: mixed fourth-order
+  algebra and finite-family contraction patterns.
+- Interaction-independent smooth-profile, lattice, dyadic-mode, Fourier
+  operator, matrix-square, and annular response estimates: the corresponding
+  subsections are marked in RP2/FourierAll.lean.
+- PotentialRotation, PeriodicPartition, and AnnulusPartition: boundary
+  rotation paths and the periodic partition-ratio argument.
+
+Modifications include changed imports and namespaces; specialization to the
+three-dimensional spin sphere; replacement of the linear edge interaction by
+its square; new squared-interaction derivative jets and mixed coefficients;
+new coefficient/current bounds; and explicit connection to the RP2 partition
+function and pinned kernels. The pure Fourier construction is independent of
+this interaction change.
+
+RP2-specific additions include concrete tetrahedral rotations and cancellation,
+exact integration and edge allocation for disjoint annular interiors, retained
+lattice restrictions, uniform factorial and real-exponent bounds, an explicit
+logarithmic envelope, and weak-limit/summability statements. Relevant source
+files carry local provenance notes.
+
+RP3 extension (October 2026)
+---------------------------
+The RP3 namespace adapts the RP2 version 0.4.0 proof to unit vectors in real
+four-space, with quaternion half-generators and quaternion-unit averaging.
+The original RP2 modules and their provenance remain unchanged. The lattice
+Fourier and annular proofs are adapted in the RP3 namespace. See README-RP3.md
+for the exact model, theorem scope, and verification instructions.
+
+RP3 review revision (October 2026)
+---------------------------------
+The moment/positivity, compactness, and SO(3) bridge proofs integrate code in
+the Claude Opus review supplied by the user as RP3-Improvement-Suggestions.lean.
+The original review is retained under review/ and its scope is discussed in
+REVIEW-RESPONSE.md. The RP3 high-temperature development adapts the supplied
+RP2 version 0.4.0 active-edge and nonbacktracking path proofs.

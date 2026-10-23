@@ -1,0 +1,179 @@
+theorem RP2.superpolynomial_quadrupolar_decay_signed : ∀ (β : ℝ),
+  0 ≤ β →
+    ∀ (p : ℝ),
+      ∃ A,
+        0 < A ∧
+          ∀ (G : RP2.Fourier.LatticeGraph) (b : ↥G.edges → ℝ),
+            (∀ (e : ↥G.edges), |b e| ≤ β) →
+              ∀ (x y : ↥G.vertices),
+                |RP2.correlation (fun e => ↑e) b x y| ≤ A * (1 + ↑(RP2.Fourier.siteRadius ↑x ↑y)) ^ (-p) :=
+fun β hβ p =>
+  Exists.casesOn (RP2.Fourier.LatticeGraph.dyadic_kernel_comparison_signed β hβ) fun D h =>
+    And.casesOn h fun hD right =>
+      Exists.casesOn right fun a h =>
+        And.casesOn h fun ha hcomparison =>
+          RP2.Fourier.LatticeGraph.uniform_decay_of_dyadic_comparison_signed hD a ha hcomparison p
+theorem RP2.factorial_quadrupolar_decay_signed : ∀ (β : ℝ),
+  0 ≤ β →
+    ∃ D,
+      0 < D ∧
+        ∃ a,
+          2 ≤ a ∧
+            ∀ (G : RP2.Fourier.LatticeGraph) (b : ↥G.edges → ℝ),
+              (∀ (e : ↥G.edges), |b e| ≤ β) →
+                ∀ (x y : ↥G.vertices),
+                  have r := (RP2.Fourier.siteRadius ↑x ↑y).toNat;
+                  have k := RP2.annulusCount (2 ^ a) r ⋯;
+                  |RP2.correlation (fun e => ↑e) b x y| ≤ 2 / 3 * (D / 2) ^ k / ↑k.factorial :=
+fun β hβ =>
+  Exists.casesOn (RP2.Fourier.LatticeGraph.dyadic_kernel_comparison_signed β hβ) fun D h =>
+    And.casesOn h fun hD right =>
+      Exists.casesOn right fun a h =>
+        And.casesOn h fun ha hcomparison =>
+          Exists.intro D
+            ⟨hD,
+              Exists.intro a
+                ⟨ha, fun G b hb x y =>
+                  RP2.Fourier.LatticeGraph.factorial_of_dyadic_comparison_signed hD a ha hcomparison G b hb x y⟩⟩
+theorem RP2.logarithmic_quadrupolar_decay_signed : ∀ (β : ℝ),
+  0 ≤ β →
+    ∃ C ≥ 0,
+      ∃ R,
+        ∀ (G : RP2.Fourier.LatticeGraph) (b : ↥G.edges → ℝ),
+          (∀ (e : ↥G.edges), |b e| ≤ β) →
+            ∀ (x y : ↥G.vertices),
+              R ≤ (RP2.Fourier.siteRadius ↑x ↑y).toNat →
+                |RP2.correlation (fun e => ↑e) b x y| ≤
+                  Real.exp
+                    (-Real.log ↑(RP2.Fourier.siteRadius ↑x ↑y) * Real.log (Real.log ↑(RP2.Fourier.siteRadius ↑x ↑y)) /
+                        Real.log 4 +
+                      C * Real.log ↑(RP2.Fourier.siteRadius ↑x ↑y)) :=
+fun β hβ =>
+  Exists.casesOn (RP2.factorial_quadrupolar_decay_signed β hβ) fun D h =>
+    And.casesOn h fun hD right =>
+      Exists.casesOn right fun a h =>
+        And.casesOn h fun ha hfactorial =>
+          Exists.casesOn
+            (RP2.factorial_annulus_logarithmic_bound (2 ^ a)
+              (pow_pos
+                (Mathlib.Meta.Positivity.pos_of_isNat (Mathlib.Meta.NormNum.isNat_ofNat ℕ (Eq.refl 2))
+                  (Eq.refl (Nat.ble 1 2)))
+                a)
+              (D / 2)
+              (div_pos hD
+                (Mathlib.Meta.Positivity.pos_of_isNat (Mathlib.Meta.NormNum.isNat_ofNat ℝ (Eq.refl 2))
+                  (Eq.refl (Nat.ble 1 2)))))
+            fun C h =>
+            And.casesOn h fun hC right =>
+              Exists.casesOn right fun R hlog =>
+                Exists.intro C
+                  ⟨hC,
+                    Exists.intro R fun G b hb x y hr =>
+                      have hn :=
+                        cast
+                          (Eq.symm
+                            (Eq.trans
+                              (congrArg (fun x_1 => x_1 = ↑(RP2.Fourier.siteRadius ↑x ↑y))
+                                (Eq.symm (Int.cast_natCast (RP2.Fourier.siteRadius ↑x ↑y).toNat)))
+                              Int.cast_inj._simp_1))
+                          (Int.toNat_of_nonneg (RP2.Fourier.siteRadius_nonneg ↑x ↑y));
+                      have h := LE.le.trans (hfactorial G b hb x y) (hlog (RP2.Fourier.siteRadius ↑x ↑y).toNat hr);
+                      Eq.mp
+                        (congrArg (LE.le |RP2.correlation (fun e => ↑e) b x y|)
+                          (congrArg Real.exp
+                            (congr
+                              (congrArg HAdd.hAdd
+                                (congrFun'
+                                  (congrArg HDiv.hDiv
+                                    (congr (congrArg HMul.hMul (congrArg Neg.neg (congrArg Real.log hn)))
+                                      (congrArg Real.log (congrArg Real.log hn))))
+                                  (Real.log 4)))
+                              (congrArg (HMul.hMul C) (congrArg Real.log hn)))))
+                        h⟩
+'RP2.superpolynomial_quadrupolar_decay_signed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RP2.factorial_quadrupolar_decay_signed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RP2.logarithmic_quadrupolar_decay_signed' depends on axioms: [propext, Classical.choice, Quot.sound]
+theorem RP2.superpolynomial_quadrupolar_decay : ∀ (β : ℝ),
+  0 ≤ β →
+    ∀ (p : ℝ),
+      ∃ A,
+        0 < A ∧
+          ∀ (G : RP2.Fourier.LatticeGraph) (b : ↥G.edges → ℝ),
+            (∀ (e : ↥G.edges), 0 ≤ b e ∧ b e ≤ β) →
+              ∀ (x y : ↥G.vertices),
+                |RP2.correlation (fun e => ↑e) b x y| ≤ A * (1 + ↑(RP2.Fourier.siteRadius ↑x ↑y)) ^ (-p) :=
+fun β hβ p =>
+  Exists.casesOn (RP2.superpolynomial_quadrupolar_decay_signed β hβ p) fun A h =>
+    And.casesOn h fun hA hbound =>
+      Exists.intro A
+        ⟨hA, fun G b hb x y =>
+          hbound G b (fun e => Eq.mpr (id (congrArg (fun _a => _a ≤ β) (abs_of_nonneg (hb e).left))) (hb e).right) x y⟩
+theorem RP2.factorial_quadrupolar_decay : ∀ (β : ℝ),
+  0 ≤ β →
+    ∃ D,
+      0 < D ∧
+        ∃ a,
+          2 ≤ a ∧
+            ∀ (G : RP2.Fourier.LatticeGraph) (b : ↥G.edges → ℝ),
+              (∀ (e : ↥G.edges), 0 ≤ b e ∧ b e ≤ β) →
+                ∀ (x y : ↥G.vertices),
+                  have r := (RP2.Fourier.siteRadius ↑x ↑y).toNat;
+                  have k := RP2.annulusCount (2 ^ a) r ⋯;
+                  |RP2.correlation (fun e => ↑e) b x y| ≤ 2 / 3 * (D / 2) ^ k / ↑k.factorial :=
+fun β hβ =>
+  Exists.casesOn (RP2.factorial_quadrupolar_decay_signed β hβ) fun D h =>
+    And.casesOn h fun hD right =>
+      Exists.casesOn right fun a h =>
+        And.casesOn h fun ha hbound =>
+          Exists.intro D
+            ⟨hD,
+              Exists.intro a
+                ⟨ha, fun G b hb x y =>
+                  hbound G b
+                    (fun e => Eq.mpr (id (congrArg (fun _a => _a ≤ β) (abs_of_nonneg (hb e).left))) (hb e).right) x y⟩⟩
+theorem RP2.logarithmic_quadrupolar_decay : ∀ (β : ℝ),
+  0 ≤ β →
+    ∃ C ≥ 0,
+      ∃ R,
+        ∀ (G : RP2.Fourier.LatticeGraph) (b : ↥G.edges → ℝ),
+          (∀ (e : ↥G.edges), 0 ≤ b e ∧ b e ≤ β) →
+            ∀ (x y : ↥G.vertices),
+              R ≤ (RP2.Fourier.siteRadius ↑x ↑y).toNat →
+                |RP2.correlation (fun e => ↑e) b x y| ≤
+                  Real.exp
+                    (-Real.log ↑(RP2.Fourier.siteRadius ↑x ↑y) * Real.log (Real.log ↑(RP2.Fourier.siteRadius ↑x ↑y)) /
+                        Real.log 4 +
+                      C * Real.log ↑(RP2.Fourier.siteRadius ↑x ↑y)) :=
+fun β hβ =>
+  Exists.casesOn (RP2.logarithmic_quadrupolar_decay_signed β hβ) fun C h =>
+    And.casesOn h fun hC right =>
+      Exists.casesOn right fun R hbound =>
+        Exists.intro C
+          ⟨hC,
+            Exists.intro R fun G b hb x y hr =>
+              hbound G b (fun e => Eq.mpr (id (congrArg (fun _a => _a ≤ β) (abs_of_nonneg (hb e).left))) (hb e).right) x
+                y hr⟩
+theorem RP2.superpolynomial_quadrupolar_decay_local_limit : ∀ (β : ℝ),
+  0 ≤ β →
+    ∀ (p : ℝ),
+      ∃ A,
+        0 < A ∧
+          ∀ (μ : MeasureTheory.ProbabilityMeasure RP2.InfiniteConfiguration),
+            RP2.IsFreeBoundaryLocalLimit β μ →
+              ∀ (x y : RP2.Fourier.Site),
+                |RP2.infiniteCorrelation μ x y| ≤ A * (1 + ↑(RP2.Fourier.siteRadius x y)) ^ (-p) :=
+fun β hβ p =>
+  Exists.casesOn (RP2.superpolynomial_quadrupolar_decay_local_limit_signed β hβ p) fun A h =>
+    And.casesOn h fun hA hbound => Exists.intro A ⟨hA, fun μ hμ => hbound μ (RP2.IsFreeBoundaryLocalLimit.signed hμ)⟩
+theorem RP2.weighted_summability_local_limit : ∀ (β : ℝ),
+  0 ≤ β →
+    ∀ (μ : MeasureTheory.ProbabilityMeasure RP2.InfiniteConfiguration),
+      RP2.IsFreeBoundaryLocalLimit β μ →
+        ∀ (x : RP2.Fourier.Site) (s : ℝ),
+          Summable fun y => (1 + ↑(RP2.Fourier.siteRadius x y)) ^ s * |RP2.infiniteCorrelation μ x y| :=
+fun β hβ μ hμ x s => RP2.weighted_summability_local_limit_signed β hβ μ (RP2.IsFreeBoundaryLocalLimit.signed hμ) x s
+'RP2.superpolynomial_quadrupolar_decay' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RP2.factorial_quadrupolar_decay' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RP2.logarithmic_quadrupolar_decay' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RP2.superpolynomial_quadrupolar_decay_local_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RP2.weighted_summability_local_limit' depends on axioms: [propext, Classical.choice, Quot.sound]

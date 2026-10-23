@@ -1,0 +1,63 @@
+RP2/QuadraticFamilyKernel.lean:24:53: warning: Local variable 'a' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+RP2/QuadraticFamilyKernel.lean:29:50: warning: Local variable 'a' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+RP2/QuadraticFamilyKernel.lean:55:8: warning: automatically included section variable(s) unused in theorem `RP2.Quadratic.SpinSystem.mixedCoefficientObservable_conj`:
+  [Fintype E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+RP2/QuadraticFamilyKernel.lean:56:5: warning: Local variable 'a' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+RP2/QuadraticFamilyKernel.lean:92:5: warning: Local variable 'a' resembles constructor 'RP2.Quadratic.MixedAlgebra.Slot.a' - write '.a' (with a dot) or 'RP2.Quadratic.MixedAlgebra.Slot.a' to use the constructor.
+
+Note: This linter can be disabled with `set_option linter.constructorNameAsVariable false`
+RP2/QuadraticFamilyKernel.lean:161:67: warning: This simp argument is unused:
+  familyKernel
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [MixedAlgebra.weighted, MixedAlgebra.kernel, map_sum, map_mul, map_add, map_ofNat,
+    Complex.conj_ofReal, starRingEnd_self_apply, Pi.mul_apply, Complex.ofReal_mul, Complex.ofReal_add,
+    Complex.ofReal_pow, one_apply_eq_self, mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+RP2/QuadraticFamilyKernel.lean:162:4: warning: This simp argument is unused:
+  map_sum
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [MixedAlgebra.weighted, MixedAlgebra.kernel, familyKernel, map_mul, map_add, map_ofNat,
+    Complex.conj_ofReal, starRingEnd_self_apply, Pi.mul_apply, Complex.ofReal_mul, Complex.ofReal_add,
+    Complex.ofReal_pow, one_apply_eq_self, mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+RP2/QuadraticFamilyKernel.lean:162:31: warning: This simp argument is unused:
+  map_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [MixedAlgebra.weighted, MixedAlgebra.kernel, familyKernel, map_sum, map_mul, map_add,
+    Complex.conj_ofReal, starRingEnd_self_apply, Pi.mul_apply, Complex.ofReal_mul, Complex.ofReal_add,
+    Complex.ofReal_pow, one_apply_eq_self, mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+RP2/QuadraticFamilyKernel.lean:163:4: warning: This simp argument is unused:
+  starRingEnd_self_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [MixedAlgebra.weighted, MixedAlgebra.kernel, familyKernel, map_sum, map_mul, map_add, map_ofNat,
+    Complex.conj_ofReal, Pi.mul_apply, Complex.ofReal_mul, Complex.ofReal_add, Complex.ofReal_pow, one_apply_eq_self,
+    mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+RP2/QuadraticFamilyKernel.lean:164:4: warning: This simp argument is unused:
+  Complex.ofReal_pow
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [MixedAlgebra.weighted, MixedAlgebra.kernel, familyKernel, map_sum, map_mul, map_add, map_ofNat,
+    Complex.conj_ofReal, starRingEnd_self_apply, Pi.mul_apply, Complex.ofReal_mul, Complex.ofReal_add,
+    one_apply_eq_self, mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

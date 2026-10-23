@@ -1,0 +1,621 @@
+{
+  "source_hashes": [
+    {
+      "path": "AxiomAudit.lean",
+      "expected": "d07ef4b13c3f645db57778ba41e8ca60e2809bae8d0b4701c8f98d9bc88c9053",
+      "actual": "d07ef4b13c3f645db57778ba41e8ca60e2809bae8d0b4701c8f98d9bc88c9053",
+      "match": true
+    },
+    {
+      "path": "ProbeGeo.lean",
+      "expected": "5657d88853dec68ec221f00ab7b473a0206913ebd01baa92ae023dbd73fad50f",
+      "actual": "5657d88853dec68ec221f00ab7b473a0206913ebd01baa92ae023dbd73fad50f",
+      "match": true
+    },
+    {
+      "path": "RP2/ActiveEdgeBounds.lean",
+      "expected": "31c8103dea15eca593e871035d9276718e075319441ef15c6abf9096b96bf3d6",
+      "actual": "31c8103dea15eca593e871035d9276718e075319441ef15c6abf9096b96bf3d6",
+      "match": true
+    },
+    {
+      "path": "RP2/ActivePaths.lean",
+      "expected": "5df74b317f1af6539e26c7cbe607baf6b8ef2dccdee6a813aaf4bcece9912b1a",
+      "actual": "5df74b317f1af6539e26c7cbe607baf6b8ef2dccdee6a813aaf4bcece9912b1a",
+      "match": true
+    },
+    {
+      "path": "RP2/AnnularEstimate.lean",
+      "expected": "9b4606b0ad5b94f4b2938f32236a8285e4fcb8955523eb5f198413ecdb3b2dba",
+      "actual": "9b4606b0ad5b94f4b2938f32236a8285e4fcb8955523eb5f198413ecdb3b2dba",
+      "match": true
+    },
+    {
+      "path": "RP2/Averaging.lean",
+      "expected": "896b80e078cf9a1e47a9b7663bd3e2f397a0fc648baa78c8dc2e2568a9b2b995",
+      "actual": "896b80e078cf9a1e47a9b7663bd3e2f397a0fc648baa78c8dc2e2568a9b2b995",
+      "match": true
+    },
+    {
+      "path": "RP2/AveragingInterface.lean",
+      "expected": "a1de490810b0321320f9f4da9f7b7c3a7a13420b396200890e4da145c1896506",
+      "actual": "a1de490810b0321320f9f4da9f7b7c3a7a13420b396200890e4da145c1896506",
+      "match": true
+    },
+    {
+      "path": "RP2/Calculus.lean",
+      "expected": "e1f02ceedcd0bf28d38be5f02e7b6b2cc3afbf978f2aa3e366d190d13c273c0a",
+      "actual": "e1f02ceedcd0bf28d38be5f02e7b6b2cc3afbf978f2aa3e366d190d13c273c0a",
+      "match": true
+    },
+    {
+      "path": "RP2/ComplexCurrents.lean",
+      "expected": "bcaceb0bf22a4ccd4b45b844d33f91d0e3427c124a11bf8a1c2c79bef37062c2",
+      "actual": "bcaceb0bf22a4ccd4b45b844d33f91d0e3427c124a11bf8a1c2c79bef37062c2",
+      "match": true
+    },
+    {
+      "path": "RP2/ConcreteAnnuli.lean",
+      "expected": "ea6f19f34a0c9598c8655d594214a80813b7ac1945bab6ec2ebe9604759ac786",
+      "actual": "ea6f19f34a0c9598c8655d594214a80813b7ac1945bab6ec2ebe9604759ac786",
+      "match": true
+    },
+    {
+      "path": "RP2/Criticality.lean",
+      "expected": "248d32e31462ae4c6a058f5ae4e251eb459f9faa8ef917d3ac197b4fc038b93f",
+      "actual": "248d32e31462ae4c6a058f5ae4e251eb459f9faa8ef917d3ac197b4fc038b93f",
+      "match": true
+    },
+    {
+      "path": "RP2/DenseLimits.lean",
+      "expected": "685db5e3bdfa4034fe6b0be541e4e088bf34ef91fc73dbf6e09d0e5ea068fa0a",
+      "actual": "685db5e3bdfa4034fe6b0be541e4e088bf34ef91fc73dbf6e09d0e5ea068fa0a",
+      "match": true
+    },
+    {
+      "path": "RP2/DenseLogarithmicRate.lean",
+      "expected": "92a9f8b73bcf71a47a8ef7072352ff5cdd9971ea48de23c4e791026b578a916d",
+      "actual": "92a9f8b73bcf71a47a8ef7072352ff5cdd9971ea48de23c4e791026b578a916d",
+      "match": true
+    },
+    {
+      "path": "RP2/DenseRates.lean",
+      "expected": "f0060086cd0e9bc5ed400f161526867316be2660d78e159f22c24c9c311adcdd",
+      "actual": "f0060086cd0e9bc5ed400f161526867316be2660d78e159f22c24c9c311adcdd",
+      "match": true
+    },
+    {
+      "path": "RP2/FiniteAveraging.lean",
+      "expected": "940fc322737870f963cc626725ec7b4946c307c4b106dda0b316b5b69a7acf6e",
+      "actual": "940fc322737870f963cc626725ec7b4946c307c4b106dda0b316b5b69a7acf6e",
+      "match": true
+    },
+    {
+      "path": "RP2/Fourier/AnnulusResponse.lean",
+      "expected": "e2f2d38460ef8ce6c2a3df6b9d45196ca53e47d2610bdb94dc6ecf7d85093562",
+      "actual": "e2f2d38460ef8ce6c2a3df6b9d45196ca53e47d2610bdb94dc6ecf7d85093562",
+      "match": true
+    },
+    {
+      "path": "RP2/Fourier/ModelModes.lean",
+      "expected": "e95f6729688af7fe70a5267815aeaacffc01dfed0abef3193904b2be48cdb43f",
+      "actual": "e95f6729688af7fe70a5267815aeaacffc01dfed0abef3193904b2be48cdb43f",
+      "match": true
+    },
+    {
+      "path": "RP2/Fourier/ResponseTransfer.lean",
+      "expected": "447c96e731aa0a67f8f7c5e2f945b21c3d9a36d405a09c1179ccaf753621b457",
+      "actual": "447c96e731aa0a67f8f7c5e2f945b21c3d9a36d405a09c1179ccaf753621b457",
+      "match": true
+    },
+    {
+      "path": "RP2/FourierAll.lean",
+      "expected": "f6057642c043d2ef58803a3373b4247a55993d5d0b6c35eb2d774bd7c221027e",
+      "actual": "f6057642c043d2ef58803a3373b4247a55993d5d0b6c35eb2d774bd7c221027e",
+      "match": true
+    },
+    {
+      "path": "RP2/Full.lean",
+      "expected": "0dbee0ba5426674c2910fea95ded0060e3e62bae8b1bf9024baec3040d2c5867",
+      "actual": "0dbee0ba5426674c2910fea95ded0060e3e62bae8b1bf9024baec3040d2c5867",
+      "match": true
+    },
+    {
+      "path": "RP2/GibbsProbability.lean",
+      "expected": "092ebcfde98db306a75be31b1ed17d417d216522dfe40323b99bfc3822a4d099",
+      "actual": "092ebcfde98db306a75be31b1ed17d417d216522dfe40323b99bfc3822a4d099",
+      "match": true
+    },
+    {
+      "path": "RP2/HighTemperature.lean",
+      "expected": "95ab18d482de613db6395a5302e19e15d65eda8fa00bc94aeee260b803b382a8",
+      "actual": "95ab18d482de613db6395a5302e19e15d65eda8fa00bc94aeee260b803b382a8",
+      "match": true
+    },
+    {
+      "path": "RP2/HighTemperatureDecay.lean",
+      "expected": "1d8ca549f7c58c7423c88d4a1a3320a56b6b4e9f9959fda733ec2ad1735e80bc",
+      "actual": "1d8ca549f7c58c7423c88d4a1a3320a56b6b4e9f9959fda733ec2ad1735e80bc",
+      "match": true
+    },
+    {
+      "path": "RP2/HighTemperatureExponential.lean",
+      "expected": "4df9eb5172eb6d0f52a6a94fe19dfccd2b6c0f917bb9e8270947aefa395340fa",
+      "actual": "4df9eb5172eb6d0f52a6a94fe19dfccd2b6c0f917bb9e8270947aefa395340fa",
+      "match": true
+    },
+    {
+      "path": "RP2/KernelEstimate.lean",
+      "expected": "3c3d309896607962c297e122281affd67362dd66e1da97ec5f6772e89aabb511",
+      "actual": "3c3d309896607962c297e122281affd67362dd66e1da97ec5f6772e89aabb511",
+      "match": true
+    },
+    {
+      "path": "RP2/LatticeAnnuli.lean",
+      "expected": "051917ecd029835a557ccfd79f28b393ed9811e92d53d3d462433f9fdea324bd",
+      "actual": "051917ecd029835a557ccfd79f28b393ed9811e92d53d3d462433f9fdea324bd",
+      "match": true
+    },
+    {
+      "path": "RP2/LatticeModelRestriction.lean",
+      "expected": "414688fa8eab099126cc1254d4fe9061373ae25afc477a90dcf4edb1fcad6594",
+      "actual": "414688fa8eab099126cc1254d4fe9061373ae25afc477a90dcf4edb1fcad6594",
+      "match": true
+    },
+    {
+      "path": "RP2/LimitCorollary.lean",
+      "expected": "8b2e2a402a5f152ccd1357e86890d8854de6f3ec275c592b48b34df444ed575a",
+      "actual": "8b2e2a402a5f152ccd1357e86890d8854de6f3ec275c592b48b34df444ed575a",
+      "match": true
+    },
+    {
+      "path": "RP2/LogSquareLimits.lean",
+      "expected": "9101f5accea7ff391427c8da3ae4fcea7e7f160c82bd3d528df20deeb895418f",
+      "actual": "9101f5accea7ff391427c8da3ae4fcea7e7f160c82bd3d528df20deeb895418f",
+      "match": true
+    },
+    {
+      "path": "RP2/LogSquarePacking.lean",
+      "expected": "69123da47ff651de9ba4701ab70b0b1f32b38ba48d89d5df9d7fc19e2158574a",
+      "actual": "69123da47ff651de9ba4701ab70b0b1f32b38ba48d89d5df9d7fc19e2158574a",
+      "match": true
+    },
+    {
+      "path": "RP2/LogSquareRates.lean",
+      "expected": "0aeadd6d5a4e57bcf1d3c421b3e4ae7bbe561d56829bb17dfefc04195577cb6a",
+      "actual": "0aeadd6d5a4e57bcf1d3c421b3e4ae7bbe561d56829bb17dfefc04195577cb6a",
+      "match": true
+    },
+    {
+      "path": "RP2/LogarithmicRate.lean",
+      "expected": "f5dbb603c5a353a87faf182350d80501606713aebf96d0065da0fc54cf55f3ce",
+      "actual": "f5dbb603c5a353a87faf182350d80501606713aebf96d0065da0fc54cf55f3ce",
+      "match": true
+    },
+    {
+      "path": "RP2/Main.lean",
+      "expected": "974e99e53473bece94edc40ef98da312b51dbc7cfa310d78cd9e0f515f8f1d94",
+      "actual": "974e99e53473bece94edc40ef98da312b51dbc7cfa310d78cd9e0f515f8f1d94",
+      "match": true
+    },
+    {
+      "path": "RP2/MixedAlgebra.lean",
+      "expected": "a8ca4128b73c6ab9da7f331ab8833b38efbb3de911645b44adae21775dbe34f8",
+      "actual": "a8ca4128b73c6ab9da7f331ab8833b38efbb3de911645b44adae21775dbe34f8",
+      "match": true
+    },
+    {
+      "path": "RP2/Model.lean",
+      "expected": "1c1f53e667f828d8feba95e53894cc06714482f2303767e7db768cb3d50b61b3",
+      "actual": "1c1f53e667f828d8feba95e53894cc06714482f2303767e7db768cb3d50b61b3",
+      "match": true
+    },
+    {
+      "path": "RP2/ModelAssembly.lean",
+      "expected": "d665050e4dbe079d06d0c1b3c07045f4ef7147cce24d8686207cd072bdb123fc",
+      "actual": "d665050e4dbe079d06d0c1b3c07045f4ef7147cce24d8686207cd072bdb123fc",
+      "match": true
+    },
+    {
+      "path": "RP2/ModelConnection.lean",
+      "expected": "c449aa456e08c5dc1f647ed20cff239744155c0dd1d5fa0cd7de853495e5f0e8",
+      "actual": "c449aa456e08c5dc1f647ed20cff239744155c0dd1d5fa0cd7de853495e5f0e8",
+      "match": true
+    },
+    {
+      "path": "RP2/ModelRestriction.lean",
+      "expected": "ce2b65037eb915b6a4c2ce1c532de612cc0e0d15130c56c953063ad3d31d25dd",
+      "actual": "ce2b65037eb915b6a4c2ce1c532de612cc0e0d15130c56c953063ad3d31d25dd",
+      "match": true
+    },
+    {
+      "path": "RP2/NestedCuts.lean",
+      "expected": "5880c0b408d5439c893c4b56c424c99b8379da6c765a01d61d2d0ced05d2b3c8",
+      "actual": "5880c0b408d5439c893c4b56c424c99b8379da6c765a01d61d2d0ced05d2b3c8",
+      "match": true
+    },
+    {
+      "path": "RP2/NonbacktrackingPaths.lean",
+      "expected": "5b9f8a7957b2d69f6bde20a879738a433b917822413d532490f1fa575cdce96f",
+      "actual": "5b9f8a7957b2d69f6bde20a879738a433b917822413d532490f1fa575cdce96f",
+      "match": true
+    },
+    {
+      "path": "RP2/PaperInterface.lean",
+      "expected": "35b209b93bad853ab3efe82f7afc996a2c89f1fdf53efb51da4b5b410819781a",
+      "actual": "35b209b93bad853ab3efe82f7afc996a2c89f1fdf53efb51da4b5b410819781a",
+      "match": true
+    },
+    {
+      "path": "RP2/PaperResponse.lean",
+      "expected": "ca47869b34b5875a90bd97c251597166f7b932710f03bfe2e1091a6a80e90806",
+      "actual": "ca47869b34b5875a90bd97c251597166f7b932710f03bfe2e1091a6a80e90806",
+      "match": true
+    },
+    {
+      "path": "RP2/PeriodicODE.lean",
+      "expected": "11bcadd31ddc91153d0f9edbed1c4ecc288fa476fa75bb59126686fdd27e5a98",
+      "actual": "11bcadd31ddc91153d0f9edbed1c4ecc288fa476fa75bb59126686fdd27e5a98",
+      "match": true
+    },
+    {
+      "path": "RP2/PinnedKernel.lean",
+      "expected": "aceba24f6244f14a8ff73fc444d2325b3e5610e23273703d9abd7e52c5cc5503",
+      "actual": "aceba24f6244f14a8ff73fc444d2325b3e5610e23273703d9abd7e52c5cc5503",
+      "match": true
+    },
+    {
+      "path": "RP2/ProductJets.lean",
+      "expected": "670b3e9920e21594a4ba800c8382b78a4bf873bf9a304ab02121add0ed3d8cfe",
+      "actual": "670b3e9920e21594a4ba800c8382b78a4bf873bf9a304ab02121add0ed3d8cfe",
+      "match": true
+    },
+    {
+      "path": "RP2/QuadraticAverages.lean",
+      "expected": "7e64fccf7369142c10ccf5b6a8eb05e9715f1cea30c3774f54177827e1281dcc",
+      "actual": "7e64fccf7369142c10ccf5b6a8eb05e9715f1cea30c3774f54177827e1281dcc",
+      "match": true
+    },
+    {
+      "path": "RP2/QuadraticBounds.lean",
+      "expected": "5f0b358d22504f77dde384635c11481820eb2d777de07dc0cc0b6fe263c4f6ee",
+      "actual": "5f0b358d22504f77dde384635c11481820eb2d777de07dc0cc0b6fe263c4f6ee",
+      "match": true
+    },
+    {
+      "path": "RP2/QuadraticCoefficientBounds.lean",
+      "expected": "7339f608b839a9a941819f810a7c91429873f756c7f73c385b84b0a961fef9f3",
+      "actual": "7339f608b839a9a941819f810a7c91429873f756c7f73c385b84b0a961fef9f3",
+      "match": true
+    },
+    {
+      "path": "RP2/QuadraticComplexWard.lean",
+      "expected": "c61e8f131c7397dcb4116d6a085cf0038c3cb8144ef5931fd383b9442583b072",
+      "actual": "c61e8f131c7397dcb4116d6a085cf0038c3cb8144ef5931fd383b9442583b072",
+      "match": true
+    },
+    {
+      "path": "RP2/QuadraticDerivatives.lean",
+      "expected": "f7deab25a151cc38edf5c702b3472250b2dd6fa07e46b5ab8539509b477221dc",
+      "actual": "f7deab25a151cc38edf5c702b3472250b2dd6fa07e46b5ab8539509b477221dc",
+      "match": true
+    },
+    {
+      "path": "RP2/QuadraticFamily.lean",
+      "expected": "b9fdcd55c8c891f3b80cd49a99e895cba462f378a0902406517bce0908da4ecb",
+      "actual": "b9fdcd55c8c891f3b80cd49a99e895cba462f378a0902406517bce0908da4ecb",
+      "match": true
+    },
+    {
+      "path": "RP2/QuadraticFamilyEstimates.lean",
+      "expected": "25e81ddd7d1f8e9152e99aefc4da77daa6c59c090f88a3eebd2d62ccd3b7a407",
+      "actual": "25e81ddd7d1f8e9152e99aefc4da77daa6c59c090f88a3eebd2d62ccd3b7a407",
+      "match": true
+    },
+    {
+      "path": "RP2/QuadraticFamilyKernel.lean",
+      "expected": "48e86a36b28f65a03b8d71758aeecf96f8649ad03db874197b21d8513163bf29",
+      "actual": "48e86a36b28f65a03b8d71758aeecf96f8649ad03db874197b21d8513163bf29",
+      "match": true
+    },
+    {
+      "path": "RP2/QuadraticFamilyLower.lean",
+      "expected": "d2cf5baee42fca831210fd8a5c3752d456eb8fb14d54a9579a26985f597986d0",
+      "actual": "d2cf5baee42fca831210fd8a5c3752d456eb8fb14d54a9579a26985f597986d0",
+      "match": true
+    },
+    {
+      "path": "RP2/QuadraticGibbs.lean",
+      "expected": "4001113068ed4eeb19f00326dbb0e815b7bc759aed52a6fe1bdc10c8f3fbc46a",
+      "actual": "4001113068ed4eeb19f00326dbb0e815b7bc759aed52a6fe1bdc10c8f3fbc46a",
+      "match": true
+    },
+    {
+      "path": "RP2/QuadraticMixedJets.lean",
+      "expected": "38d416df90ee3969daab3fc4051492bd59f4b4cb04d2bb3f89ba80d602462e3a",
+      "actual": "38d416df90ee3969daab3fc4051492bd59f4b4cb04d2bb3f89ba80d602462e3a",
+      "match": true
+    },
+    {
+      "path": "RP2/QuadraticMixedWard.lean",
+      "expected": "7628d6c0da3c82cbf2b9ef53e5f6f1716ab63723a68f09b43a952b209f23912b",
+      "actual": "7628d6c0da3c82cbf2b9ef53e5f6f1716ab63723a68f09b43a952b209f23912b",
+      "match": true
+    },
+    {
+      "path": "RP2/QuadraticPlane.lean",
+      "expected": "f8c0b68aeaf29e607f748dccaa4e0a6d464806d6790a0bffc5f40e2a46c8f841",
+      "actual": "f8c0b68aeaf29e607f748dccaa4e0a6d464806d6790a0bffc5f40e2a46c8f841",
+      "match": true
+    },
+    {
+      "path": "RP2/QuadraticPlaneResponse.lean",
+      "expected": "faf5eb03adb7737f23d7172efeb2d59c841f5971f9065c9599fbc3c3b1d825af",
+      "actual": "faf5eb03adb7737f23d7172efeb2d59c841f5971f9065c9599fbc3c3b1d825af",
+      "match": true
+    },
+    {
+      "path": "RP2/QuadraticPotential.lean",
+      "expected": "f307971c36fe06357ba8df432eca7cd749a3553a233b7050b91be7d5b334b95e",
+      "actual": "f307971c36fe06357ba8df432eca7cd749a3553a233b7050b91be7d5b334b95e",
+      "match": true
+    },
+    {
+      "path": "RP2/QuadraticSecondBound.lean",
+      "expected": "8c01d4c21ccb9b9edd3920fa02b62ba13b616de19b381c3063be570f1b9ea549",
+      "actual": "8c01d4c21ccb9b9edd3920fa02b62ba13b616de19b381c3063be570f1b9ea549",
+      "match": true
+    },
+    {
+      "path": "RP2/QuadraticSecondGauge.lean",
+      "expected": "2ec4d5b85ba05e51f6234cbb01c2afd94f04d6f6ba027661649eb5e38018bccc",
+      "actual": "2ec4d5b85ba05e51f6234cbb01c2afd94f04d6f6ba027661649eb5e38018bccc",
+      "match": true
+    },
+    {
+      "path": "RP2/QuadraticSecondResponse.lean",
+      "expected": "172f0af6be80ce2507eeffbb0431a68a53ac9294ef706f56ea6866fcbc180586",
+      "actual": "172f0af6be80ce2507eeffbb0431a68a53ac9294ef706f56ea6866fcbc180586",
+      "match": true
+    },
+    {
+      "path": "RP2/QuadraticWard.lean",
+      "expected": "448317bd21a25b80aafef86e776787c79d01ba388df5e3ae35c9b305ad7a8c20",
+      "actual": "448317bd21a25b80aafef86e776787c79d01ba388df5e3ae35c9b305ad7a8c20",
+      "match": true
+    },
+    {
+      "path": "RP2/Rates.lean",
+      "expected": "65ceb9fd9cf2701ac2603864a0d96c8416f10db48c29210ba079cdd959582058",
+      "actual": "65ceb9fd9cf2701ac2603864a0d96c8416f10db48c29210ba079cdd959582058",
+      "match": true
+    },
+    {
+      "path": "RP2/RotationGeometry.lean",
+      "expected": "65ccc80cb4e141bc7ac3486ec7144ad90517b1e990d86c47a490cf7e302b755d",
+      "actual": "65ccc80cb4e141bc7ac3486ec7144ad90517b1e990d86c47a490cf7e302b755d",
+      "match": true
+    },
+    {
+      "path": "RP2/SquareRates.lean",
+      "expected": "bd3036b741d5a39678696959320c4ab15ff6dec30a2c524d6315cc73cc075244",
+      "actual": "bd3036b741d5a39678696959320c4ab15ff6dec30a2c524d6315cc73cc075244",
+      "match": true
+    },
+    {
+      "path": "RP2/StructureFactor.lean",
+      "expected": "5726112d65ea9e1f78829b465559c35f232c1ebdd27f20da38c51f72e44f5191",
+      "actual": "5726112d65ea9e1f78829b465559c35f232c1ebdd27f20da38c51f72e44f5191",
+      "match": true
+    },
+    {
+      "path": "RP2/TetrahedralAction.lean",
+      "expected": "a7f77461226bde32721743d0b11e55ae622a3ff8374f174e8fc629fd277c8e23",
+      "actual": "a7f77461226bde32721743d0b11e55ae622a3ff8374f174e8fc629fd277c8e23",
+      "match": true
+    },
+    {
+      "path": "RP2/TetrahedralComparison.lean",
+      "expected": "3ffa3412d8f6e863c0a91bda0da9d10f7b34b15fdfa669b0a303d0226c582c6a",
+      "actual": "3ffa3412d8f6e863c0a91bda0da9d10f7b34b15fdfa669b0a303d0226c582c6a",
+      "match": true
+    },
+    {
+      "path": "RP2/TetrahedralPaths.lean",
+      "expected": "619080f4eed525642ed037bebd866890062f0b1ca3a8f4d16bbf04c8ac5d1785",
+      "actual": "619080f4eed525642ed037bebd866890062f0b1ca3a8f4d16bbf04c8ac5d1785",
+      "match": true
+    },
+    {
+      "path": "RP2/TetrahedralTensor.lean",
+      "expected": "41a45daad61e168e961223ade118db0e2c4c224003637abcf8bd2c86cc16918b",
+      "actual": "41a45daad61e168e961223ade118db0e2c4c224003637abcf8bd2c86cc16918b",
+      "match": true
+    },
+    {
+      "path": "RP2/ThinAnnuli.lean",
+      "expected": "173e5d280711b942b8badc8d74bbb5d9a8e988fa31b9816eb5a244d711ff75f5",
+      "actual": "173e5d280711b942b8badc8d74bbb5d9a8e988fa31b9816eb5a244d711ff75f5",
+      "match": true
+    },
+    {
+      "path": "RP2/ThinCosts.lean",
+      "expected": "0f56400740551939e711ceede1d1fab2c9f4549108d4b2bfc029e78a9188d794",
+      "actual": "0f56400740551939e711ceede1d1fab2c9f4549108d4b2bfc029e78a9188d794",
+      "match": true
+    },
+    {
+      "path": "RP2/ThinDyadicParameters.lean",
+      "expected": "b1244ed33fc93628082b275f5f0682b537c26dce9035dc2bd3b86af5bbf6a43d",
+      "actual": "b1244ed33fc93628082b275f5f0682b537c26dce9035dc2bd3b86af5bbf6a43d",
+      "match": true
+    },
+    {
+      "path": "RP2/ThinEdgeResponse.lean",
+      "expected": "e6824a9ec29cc4fe6f4492803dd021327c978d859095299dc406985fbf5c477b",
+      "actual": "e6824a9ec29cc4fe6f4492803dd021327c978d859095299dc406985fbf5c477b",
+      "match": true
+    },
+    {
+      "path": "RP2/ThinFourier.lean",
+      "expected": "5efc5d0f3abda98502b9295e17a72c24373dad3e58105796598f6660733215ec",
+      "actual": "5efc5d0f3abda98502b9295e17a72c24373dad3e58105796598f6660733215ec",
+      "match": true
+    },
+    {
+      "path": "RP2/ThinKernel.lean",
+      "expected": "47faaef160a87ea08b0e13388479d6a95de8bd6decffed31a60691dcfde3865f",
+      "actual": "47faaef160a87ea08b0e13388479d6a95de8bd6decffed31a60691dcfde3865f",
+      "match": true
+    },
+    {
+      "path": "RP2/ThinKernelEstimate.lean",
+      "expected": "4fa8642fb096a70e8c6f84e553ad5cbe55bb1913c48e019a9292fcf5b4aa71ad",
+      "actual": "4fa8642fb096a70e8c6f84e553ad5cbe55bb1913c48e019a9292fcf5b4aa71ad",
+      "match": true
+    },
+    {
+      "path": "RP2/ThinProfileLattice.lean",
+      "expected": "2e2676a58187e9de17157e5b0d37c1ff73cfbf2f0447a6f0a3434368fe4095b6",
+      "actual": "2e2676a58187e9de17157e5b0d37c1ff73cfbf2f0447a6f0a3434368fe4095b6",
+      "match": true
+    },
+    {
+      "path": "RP2/ThinProfiles.lean",
+      "expected": "11021f2c9a9bb671514812db4332fda09eb719333b77a85f88b98217dfca8411",
+      "actual": "11021f2c9a9bb671514812db4332fda09eb719333b77a85f88b98217dfca8411",
+      "match": true
+    },
+    {
+      "path": "RP2/ThinResponse.lean",
+      "expected": "c8ecde66d04ee2c22115c51a36dbf777f6d4a0b74b1441bc3a1799459f328bac",
+      "actual": "c8ecde66d04ee2c22115c51a36dbf777f6d4a0b74b1441bc3a1799459f328bac",
+      "match": true
+    },
+    {
+      "path": "RP2/ThinScaleChoice.lean",
+      "expected": "ca65a7413135d75b297f60bd707792909e4d254852ea6d1efd8358482c6d850e",
+      "actual": "ca65a7413135d75b297f60bd707792909e4d254852ea6d1efd8358482c6d850e",
+      "match": true
+    },
+    {
+      "path": "RP2/ThinSupport.lean",
+      "expected": "28633ee0f97e568bac5704713238d84ab038b9e7540fcb54de7c53fca827b078",
+      "actual": "28633ee0f97e568bac5704713238d84ab038b9e7540fcb54de7c53fca827b078",
+      "match": true
+    },
+    {
+      "path": "RP2/TwoEndpointRates.lean",
+      "expected": "49a6fa38c796d96df1d889cb839f8a07875c6c2e99a3d1e2684d01606989c24d",
+      "actual": "49a6fa38c796d96df1d889cb839f8a07875c6c2e99a3d1e2684d01606989c24d",
+      "match": true
+    },
+    {
+      "path": "RP2/UniformDecay.lean",
+      "expected": "28582f3b4a477a436c97506141abd3a42e646ce340461afcd915fe34c79fc5f1",
+      "actual": "28582f3b4a477a436c97506141abd3a42e646ce340461afcd915fe34c79fc5f1",
+      "match": true
+    },
+    {
+      "path": "RP2/WeightedSummability.lean",
+      "expected": "c31be33062008bfa4c19b81595774490fef000124a76f5d2bbea479213d87d2f",
+      "actual": "c31be33062008bfa4c19b81595774490fef000124a76f5d2bbea479213d87d2f",
+      "match": true
+    },
+    {
+      "path": "RP2-Formalization.lean",
+      "expected": "843e4759583ab05a60e0b5d25cd36fe7a3df432f0411447bdb44a15ebc26b5ad",
+      "actual": "843e4759583ab05a60e0b5d25cd36fe7a3df432f0411447bdb44a15ebc26b5ad",
+      "match": true
+    },
+    {
+      "path": "RP2.lean",
+      "expected": "fec5114df4d315e5bcca716e0e5cb540dcee82d6ee61c576dae4cd9a9c84368f",
+      "actual": "fec5114df4d315e5bcca716e0e5cb540dcee82d6ee61c576dae4cd9a9c84368f",
+      "match": true
+    },
+    {
+      "path": "SemanticWitnesses.lean",
+      "expected": "1bb6a9ca5c9636bb5bedaf380d9d4aad0a45cf0fd101b4629a372d99fb4c8514",
+      "actual": "1bb6a9ca5c9636bb5bedaf380d9d4aad0a45cf0fd101b4629a372d99fb4c8514",
+      "match": true
+    },
+    {
+      "path": "bundle.py",
+      "expected": "dbef054e91e9a6888f8c6b857ad85a95b5b90e64f935e3431ced56efa996ecb7",
+      "actual": "dbef054e91e9a6888f8c6b857ad85a95b5b90e64f935e3431ced56efa996ecb7",
+      "match": true
+    },
+    {
+      "path": "lake-manifest.json",
+      "expected": "e9cbc5c9bcd4f1d8f69c0a853989becf1b0dc798d74b2ea34b0feab92dfc5f05",
+      "actual": "e9cbc5c9bcd4f1d8f69c0a853989becf1b0dc798d74b2ea34b0feab92dfc5f05",
+      "match": true
+    },
+    {
+      "path": "lakefile.toml",
+      "expected": "33783e353fe42cb3084062dd6092319546457eb7ebb0923b6f61361085ef1744",
+      "actual": "33783e353fe42cb3084062dd6092319546457eb7ebb0923b6f61361085ef1744",
+      "match": true
+    },
+    {
+      "path": "lean-toolchain",
+      "expected": "d5edba4e4b8faad9c1baeadb265716d20d03be4d1a2647dc5e35b0c0325bea7b",
+      "actual": "d5edba4e4b8faad9c1baeadb265716d20d03be4d1a2647dc5e35b0c0325bea7b",
+      "match": true
+    },
+    {
+      "path": "scripts/verify.py",
+      "expected": "35b9363c1ca9f8486a715d5e90c1057ae64ec24479c783d397d722932b2e734c",
+      "actual": "35b9363c1ca9f8486a715d5e90c1057ae64ec24479c783d397d722932b2e734c",
+      "match": true
+    },
+    {
+      "path": "verification/AuditEnvironment.lean",
+      "expected": "88cf4874d1587ff69a727657b44967b01e7a9ececd578b3cfe0214ff8824bb2c",
+      "actual": "88cf4874d1587ff69a727657b44967b01e7a9ececd578b3cfe0214ff8824bb2c",
+      "match": true
+    },
+    {
+      "path": "verification/dependency-pins.json",
+      "expected": "14d8b2130b3d62ed0076a81ff0e13523eb730fbb570d7e04ac7b22c3d40cd716",
+      "actual": "14d8b2130b3d62ed0076a81ff0e13523eb730fbb570d7e04ac7b22c3d40cd716",
+      "match": true
+    },
+    {
+      "path": "verification/public-theorems.txt",
+      "expected": "ca119bc7d4d98bc5e2fe332380eeeaf86ccbfe3731b26480bcda0828b20ca0ca",
+      "actual": "ca119bc7d4d98bc5e2fe332380eeeaf86ccbfe3731b26480bcda0828b20ca0ca",
+      "match": true
+    }
+  ],
+  "command_logs": [
+    {
+      "path": "verification/v0.4/bundle-freshness.log",
+      "recorded_exit": 0,
+      "hash_match": true
+    },
+    {
+      "path": "verification/v0.4/semantic-witnesses.log",
+      "recorded_exit": 0,
+      "hash_match": true
+    },
+    {
+      "path": "verification/v0.4/principal-statements-and-axioms.log",
+      "recorded_exit": 0,
+      "hash_match": true
+    },
+    {
+      "path": "verification/v0.4/public-dependencies.log",
+      "recorded_exit": 0,
+      "hash_match": true
+    },
+    {
+      "path": "verification/v0.4/standalone-default.log",
+      "recorded_exit": 0,
+      "hash_match": true
+    }
+  ],
+  "all_source_match": true,
+  "all_logs_match": true
+}

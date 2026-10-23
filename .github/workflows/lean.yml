@@ -1,0 +1,55 @@
+name: Lean verification
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      replay:
+        description: Replay the full public dependency closure and standalone object
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    env:
+      LEAN_NUM_THREADS: "1"
+    steps:
+      - name: Check out source
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Install the exact Lean distribution
+        shell: bash
+        run: |
+          curl --fail --location --retry 3 \
+            https://github.com/leanprover/lean4/releases/download/v4.34.1/lean-4.34.1-linux.tar.zst \
+            --output "$RUNNER_TEMP/lean.tar.zst"
+          printf '%s  %s\n' \
+            47bf4bbd78f70c2e9670598ab7124d92b6efb7330ff33e5fbb4030f6fd72e4e4 \
+            "$RUNNER_TEMP/lean.tar.zst" | sha256sum --check
+          tar --zstd -xf "$RUNNER_TEMP/lean.tar.zst" -C "$RUNNER_TEMP"
+          echo "$RUNNER_TEMP/lean-4.34.1-linux/bin" >> "$GITHUB_PATH"
+      - name: Compile, check semantic witnesses, and enforce the axiom policy
+        env:
+          RELEASE_REPLAY: ${{ inputs.replay }}
+        shell: bash
+        run: |
+          extra=()
+          if [[ "$RELEASE_REPLAY" == true ]]; then
+            extra+=(--replay --replay-standalone --inventory)
+          fi
+          python3 scripts/verify.py --fetch-cache --standalone "${extra[@]}"
+          python3 scripts/verify_rp3.py --standalone --replay "${extra[@]}"
+      - name: Preserve verification records
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: lean-verification
+          path: |
+            verification/latest/
+            verification/rp3-latest/
+          if-no-files-found: warn

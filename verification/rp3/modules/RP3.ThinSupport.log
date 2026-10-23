@@ -1,0 +1,7 @@
+RP3/ThinSupport.lean:14:35: warning: This simp argument is unused:
+  max_le_iff
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [integerSquare, siteRadius, abs_le, and_assoc, and_left_comm, and_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

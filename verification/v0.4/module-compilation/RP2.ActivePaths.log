@@ -1,0 +1,23 @@
+RP2/ActivePaths.lean:22:0: warning: automatically included section variable(s) unused in theorem `RP2.HighTemperature.activeGraph_le_full`:
+  [Fintype V]
+  [DecidableEq V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+RP2/ActivePaths.lean:27:0: warning: automatically included section variable(s) unused in theorem `RP2.HighTemperature.activeConnected_reachable`:
+  [Fintype E]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+RP2/ActivePaths.lean:45:0: warning: automatically included section variable(s) unused in theorem `RP2.HighTemperature.adjacencyEdge_spec`:
+  [Fintype V]
+  [DecidableEq V]
+  [DecidableEq E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] [DecidableEq E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`

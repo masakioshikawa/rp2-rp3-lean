@@ -1,0 +1,290 @@
+{
+  "lean_version": "4.34.1",
+  "mathlib_commit": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "module_count": 56,
+  "entrypoint": "RP2.lean",
+  "entrypoint_exit_code": 0,
+  "modules": [
+    {
+      "module": "RP2.Averaging",
+      "source_sha256": "896b80e078cf9a1e47a9b7663bd3e2f397a0fc648baa78c8dc2e2568a9b2b995",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.FiniteAveraging",
+      "source_sha256": "940fc322737870f963cc626725ec7b4946c307c4b106dda0b316b5b69a7acf6e",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.Model",
+      "source_sha256": "1c1f53e667f828d8feba95e53894cc06714482f2303767e7db768cb3d50b61b3",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.RotationGeometry",
+      "source_sha256": "65ccc80cb4e141bc7ac3486ec7144ad90517b1e990d86c47a490cf7e302b755d",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.Calculus",
+      "source_sha256": "e1f02ceedcd0bf28d38be5f02e7b6b2cc3afbf978f2aa3e366d190d13c273c0a",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.QuadraticGibbs",
+      "source_sha256": "4001113068ed4eeb19f00326dbb0e815b7bc759aed52a6fe1bdc10c8f3fbc46a",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.ProductJets",
+      "source_sha256": "670b3e9920e21594a4ba800c8382b78a4bf873bf9a304ab02121add0ed3d8cfe",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.QuadraticDerivatives",
+      "source_sha256": "f7deab25a151cc38edf5c702b3472250b2dd6fa07e46b5ab8539509b477221dc",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.QuadraticWard",
+      "source_sha256": "448317bd21a25b80aafef86e776787c79d01ba388df5e3ae35c9b305ad7a8c20",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.QuadraticPlane",
+      "source_sha256": "f8c0b68aeaf29e607f748dccaa4e0a6d464806d6790a0bffc5f40e2a46c8f841",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.QuadraticBounds",
+      "source_sha256": "5f0b358d22504f77dde384635c11481820eb2d777de07dc0cc0b6fe263c4f6ee",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.QuadraticPlaneResponse",
+      "source_sha256": "faf5eb03adb7737f23d7172efeb2d59c841f5971f9065c9599fbc3c3b1d825af",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.PeriodicODE",
+      "source_sha256": "11bcadd31ddc91153d0f9edbed1c4ecc288fa476fa75bb59126686fdd27e5a98",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.PinnedKernel",
+      "source_sha256": "fb1f3d089df43a0ebec56594446db1470725ae7614579ea1844551af7a51e01e",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.ModelConnection",
+      "source_sha256": "c449aa456e08c5dc1f647ed20cff239744155c0dd1d5fa0cd7de853495e5f0e8",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.NestedCuts",
+      "source_sha256": "5880c0b408d5439c893c4b56c424c99b8379da6c765a01d61d2d0ced05d2b3c8",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.Rates",
+      "source_sha256": "65ceb9fd9cf2701ac2603864a0d96c8416f10db48c29210ba079cdd959582058",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.Main",
+      "source_sha256": "974e99e53473bece94edc40ef98da312b51dbc7cfa310d78cd9e0f515f8f1d94",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.Criticality",
+      "source_sha256": "248d32e31462ae4c6a058f5ae4e251eb459f9faa8ef917d3ac197b4fc038b93f",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.ModelAssembly",
+      "source_sha256": "d665050e4dbe079d06d0c1b3c07045f4ef7147cce24d8686207cd072bdb123fc",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.ModelRestriction",
+      "source_sha256": "ce2b65037eb915b6a4c2ce1c532de612cc0e0d15130c56c953063ad3d31d25dd",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.FourierAll",
+      "source_sha256": "f6057642c043d2ef58803a3373b4247a55993d5d0b6c35eb2d774bd7c221027e",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.LatticeAnnuli",
+      "source_sha256": "94e11824fd0dd5edc47b903a9722e78c4799c90c8fdae08153ad652584aadea4",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.LatticeModelRestriction",
+      "source_sha256": "414688fa8eab099126cc1254d4fe9061373ae25afc477a90dcf4edb1fcad6594",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.QuadraticAverages",
+      "source_sha256": "7e64fccf7369142c10ccf5b6a8eb05e9715f1cea30c3774f54177827e1281dcc",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.ComplexCurrents",
+      "source_sha256": "bcaceb0bf22a4ccd4b45b844d33f91d0e3427c124a11bf8a1c2c79bef37062c2",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.MixedAlgebra",
+      "source_sha256": "a8ca4128b73c6ab9da7f331ab8833b38efbb3de911645b44adae21775dbe34f8",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.QuadraticSecondResponse",
+      "source_sha256": "172f0af6be80ce2507eeffbb0431a68a53ac9294ef706f56ea6866fcbc180586",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.QuadraticSecondGauge",
+      "source_sha256": "2ec4d5b85ba05e51f6234cbb01c2afd94f04d6f6ba027661649eb5e38018bccc",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.TetrahedralAction",
+      "source_sha256": "a7f77461226bde32721743d0b11e55ae622a3ff8374f174e8fc629fd277c8e23",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.TetrahedralPaths",
+      "source_sha256": "d4be76e8511d17027c1a78eed890c1cfd5ac4b412a38fdab55a319893ebf5e09",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.QuadraticPotential",
+      "source_sha256": "f307971c36fe06357ba8df432eca7cd749a3553a233b7050b91be7d5b334b95e",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.QuadraticSecondBound",
+      "source_sha256": "8c01d4c21ccb9b9edd3920fa02b62ba13b616de19b381c3063be570f1b9ea549",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.Fourier.ModelModes",
+      "source_sha256": "e95f6729688af7fe70a5267815aeaacffc01dfed0abef3193904b2be48cdb43f",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.Fourier.ResponseTransfer",
+      "source_sha256": "447c96e731aa0a67f8f7c5e2f945b21c3d9a36d405a09c1179ccaf753621b457",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.QuadraticMixedJets",
+      "source_sha256": "38d416df90ee3969daab3fc4051492bd59f4b4cb04d2bb3f89ba80d602462e3a",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.QuadraticMixedWard",
+      "source_sha256": "7628d6c0da3c82cbf2b9ef53e5f6f1716ab63723a68f09b43a952b209f23912b",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.QuadraticComplexWard",
+      "source_sha256": "c61e8f131c7397dcb4116d6a085cf0038c3cb8144ef5931fd383b9442583b072",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.QuadraticCoefficientBounds",
+      "source_sha256": "7339f608b839a9a941819f810a7c91429873f756c7f73c385b84b0a961fef9f3",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.QuadraticFamilyKernel",
+      "source_sha256": "48e86a36b28f65a03b8d71758aeecf96f8649ad03db874197b21d8513163bf29",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.QuadraticFamilyEstimates",
+      "source_sha256": "25e81ddd7d1f8e9152e99aefc4da77daa6c59c090f88a3eebd2d62ccd3b7a407",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.QuadraticFamilyLower",
+      "source_sha256": "d2cf5baee42fca831210fd8a5c3752d456eb8fb14d54a9579a26985f597986d0",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.QuadraticFamily",
+      "source_sha256": "b9fdcd55c8c891f3b80cd49a99e895cba462f378a0902406517bce0908da4ecb",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.Fourier.AnnulusResponse",
+      "source_sha256": "e2f2d38460ef8ce6c2a3df6b9d45196ca53e47d2610bdb94dc6ecf7d85093562",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.AnnularEstimate",
+      "source_sha256": "9b4606b0ad5b94f4b2938f32236a8285e4fcb8955523eb5f198413ecdb3b2dba",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.TetrahedralComparison",
+      "source_sha256": "3ffa3412d8f6e863c0a91bda0da9d10f7b34b15fdfa669b0a303d0226c582c6a",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.ConcreteAnnuli",
+      "source_sha256": "ea6f19f34a0c9598c8655d594214a80813b7ac1945bab6ec2ebe9604759ac786",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.SquareRates",
+      "source_sha256": "733b452d1db5c94faf577ca3495b0764753ed000d2c4cf85506d029502267bb0",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.KernelEstimate",
+      "source_sha256": "100620d0a35fcba750036b4757dc66ca9ffcaf74df10ee9768616c7d7dd8f669",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.UniformDecay",
+      "source_sha256": "0a459c72d93ca3adce56f00e1174631ef470f0e26b439a89710e1a297b4ad58b",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.LogarithmicRate",
+      "source_sha256": "f5dbb603c5a353a87faf182350d80501606713aebf96d0065da0fc54cf55f3ce",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.Full",
+      "source_sha256": "73bc8714dc3facd9bf25edde053e02bd8d6b07034b06102542bcfa276c9e668e",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.GibbsProbability",
+      "source_sha256": "33c5143b2de90c01b2418dbfaa2c33204cad385ee48a4e7fc41d8fcaf750afad",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.WeightedSummability",
+      "source_sha256": "c31be33062008bfa4c19b81595774490fef000124a76f5d2bbea479213d87d2f",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2.LimitCorollary",
+      "source_sha256": "b03c8d0626304eff87828530d43336be33408cac3819950c51381e3fe68d926e",
+      "status": "compiled"
+    },
+    {
+      "module": "RP2",
+      "source_sha256": "d815d90e07effb94651b34e739e56da1bb558373eab77ff91f5d972881b2e402",
+      "status": "compiled"
+    }
+  ],
+  "full_audit_started": false
+}

@@ -1,0 +1,15 @@
+Semantic definitions or statement types changed; review is required.
+--- reviewed baseline
+
++++ observed semantics
+
+@@ -6,7 +6,7 @@
+
+         "name": "RP3.log_square_quadrupolar_decay_signed",
+         "kind": "theorem",
+         "level_parameters": [],
+-        "type_sha256": "57a6985169ef2e5308d71f8d2775a9afeeb86e22d8e2821e571997b9498f8ac4",
++        "type_sha256": "07d72573103557be4dc33cf74edbc6b200f38bf2ae1b951aed1172e39ea33838",
+         "value_sha256": null
+       },
+       "declarations": [

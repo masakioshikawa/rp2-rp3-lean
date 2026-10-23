@@ -1,0 +1,207 @@
+RP3/RotationGeometry.lean:16:33: warning: This simp argument is unused:
+  mul_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, third, axisMatrixC_eq_qMatrix, pow_succ, pow_zero, one_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+RP3/RotationGeometry.lean:82:46: warning: This simp argument is unused:
+  mixedMatrixAAB
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixABB, mixedMatrixAABB, axisMatrixA_eq_qMatrix,
+    axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+RP3/RotationGeometry.lean:82:62: warning: This simp argument is unused:
+  mixedMatrixABB
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixAABB, axisMatrixA_eq_qMatrix,
+    axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+RP3/RotationGeometry.lean:83:4: warning: This simp argument is unused:
+  mixedMatrixAABB
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, axisMatrixA_eq_qMatrix,
+    axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+RP3/RotationGeometry.lean:84:33: warning: This simp argument is unused:
+  mul_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB,
+    axisMatrixA_eq_qMatrix, axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+RP3/RotationGeometry.lean:91:31: warning: This simp argument is unused:
+  mixedMatrixAB
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB, axisMatrixA_eq_qMatrix,
+    axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+RP3/RotationGeometry.lean:92:4: warning: This simp argument is unused:
+  mixedMatrixAABB
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, axisMatrixA_eq_qMatrix,
+    axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+RP3/RotationGeometry.lean:93:33: warning: This simp argument is unused:
+  mul_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB,
+    axisMatrixA_eq_qMatrix, axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+RP3/RotationGeometry.lean:93:42: warning: This simp argument is unused:
+  smul_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB,
+    axisMatrixA_eq_qMatrix, axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+RP3/RotationGeometry.lean:93:53: warning: This simp argument is unused:
+  add_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB,
+    axisMatrixA_eq_qMatrix, axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, smul_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+RP3/RotationGeometry.lean:101:31: warning: This simp argument is unused:
+  mixedMatrixAB
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB, axisMatrixA_eq_qMatrix,
+    axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+RP3/RotationGeometry.lean:101:46: warning: This simp argument is unused:
+  mixedMatrixAAB
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixABB, mixedMatrixAABB, axisMatrixA_eq_qMatrix,
+    axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+RP3/RotationGeometry.lean:101:62: warning: This simp argument is unused:
+  mixedMatrixABB
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixAABB, axisMatrixA_eq_qMatrix,
+    axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+RP3/RotationGeometry.lean:103:33: warning: This simp argument is unused:
+  mul_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB,
+    axisMatrixA_eq_qMatrix, axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+RP3/RotationGeometry.lean:103:42: warning: This simp argument is unused:
+  smul_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB,
+    axisMatrixA_eq_qMatrix, axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+RP3/RotationGeometry.lean:103:53: warning: This simp argument is unused:
+  add_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB,
+    axisMatrixA_eq_qMatrix, axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, smul_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+RP3/RotationGeometry.lean:109:13: warning: This simp argument is unused:
+  plane_eq_qMatrix
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB, axisMatrixA_eq_qMatrix,
+    axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+RP3/RotationGeometry.lean:109:46: warning: This simp argument is unused:
+  mixedMatrixAAB
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixABB, mixedMatrixAABB, axisMatrixA_eq_qMatrix,
+    axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+RP3/RotationGeometry.lean:109:62: warning: This simp argument is unused:
+  mixedMatrixABB
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixAABB, axisMatrixA_eq_qMatrix,
+    axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+RP3/RotationGeometry.lean:110:4: warning: This simp argument is unused:
+  mixedMatrixAABB
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, axisMatrixA_eq_qMatrix,
+    axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+RP3/RotationGeometry.lean:111:4: warning: This simp argument is unused:
+  pow_succ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB,
+    axisMatrixA_eq_qMatrix, axisMatrixB_eq_qMatrix, pow_zero, one_mul, mul_one, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+RP3/RotationGeometry.lean:111:14: warning: This simp argument is unused:
+  pow_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB,
+    axisMatrixA_eq_qMatrix, axisMatrixB_eq_qMatrix, pow_succ, one_mul, mul_one, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+RP3/RotationGeometry.lean:111:24: warning: This simp argument is unused:
+  one_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB,
+    axisMatrixA_eq_qMatrix, axisMatrixB_eq_qMatrix, pow_succ, pow_zero, mul_one, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+RP3/RotationGeometry.lean:111:33: warning: This simp argument is unused:
+  mul_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB,
+    axisMatrixA_eq_qMatrix, axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, smul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+RP3/RotationGeometry.lean:111:42: warning: This simp argument is unused:
+  smul_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB,
+    axisMatrixA_eq_qMatrix, axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+RP3/RotationGeometry.lean:111:53: warning: This simp argument is unused:
+  add_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [plane_eq_qMatrix, mixedMatrixAB, mixedMatrixAAB, mixedMatrixABB, mixedMatrixAABB,
+    axisMatrixA_eq_qMatrix, axisMatrixB_eq_qMatrix, pow_succ, pow_zero, one_mul, mul_one, smul_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

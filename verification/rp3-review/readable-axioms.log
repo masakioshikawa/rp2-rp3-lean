@@ -1,0 +1,24 @@
+'RP3.log_square_quadrupolar_decay_signed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RP3.log_square_quadrupolar_decay' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RP3.log_square_quadrupolar_decay_local_limit_signed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RP3.log_square_quadrupolar_decay_local_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RP3.superpolynomial_quadrupolar_decay_signed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RP3.factorial_quadrupolar_decay_signed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RP3.trace_Q_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RP3.quaternionAction_sum_qPair_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RP3.interaction_signChange' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RP3.ModelWitnesses.exists_distinct_sites_positive_correlation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RP3.exists_signed_local_limit_of_sequence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RP3.exists_signed_free_boundary_local_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RP3.local_limit_endpoint_nonvacuous' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RP3.SO3.rotOf_mem_SO3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RP3.SO3.qPair_eq_trace' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RP3.SO3.so3_log_square_decay_signed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RP3.SO3.haarInvariance_of_surjective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RP3.elementary_exponential_quadrupolar_decay_signed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RP3.elementary_exponential_quadrupolar_decay_local_limit_signed' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RP3.exists_free_boundary_local_limit' depends on axioms: [propext, Classical.choice, Quot.sound]

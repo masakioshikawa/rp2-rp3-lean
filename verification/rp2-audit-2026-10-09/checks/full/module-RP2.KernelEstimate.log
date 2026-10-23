@@ -1,0 +1,6 @@
+RP2/KernelEstimate.lean:18:5: warning: Ambiguous namespace `Fourier`: it is interpreted as `_root_.RP2.Fourier` because this `open` occurs inside `namespace RP2`, while `_root_.Fourier` is silently not opened. Specify the namespace unambiguously, e.g. `_root_.RP2.Fourier`. The warning can sometimes also be addressed by moving the `open` outside of the surrounding `namespace`.
+
+Note: This linter can be disabled with `set_option linter.ambiguousOpen false`
+RP2/KernelEstimate.lean:181:20: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`

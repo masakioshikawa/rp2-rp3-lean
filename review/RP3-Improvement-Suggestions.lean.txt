@@ -1,0 +1,729 @@
+import RP3Standalone
+
+/-!
+# Suggested improvements to the RP³ formalization
+
+Reviewer's suggestions for `rp3-lean` / `RP3-Formalization.lean`
+(SHA-256 `abc85359…49f66`; Lean 4.34.1, Mathlib `d13f23b`), 11 October 2026.
+
+This file compiles after the audited development. Here it is imported as the
+standalone file compiled under the module name `RP3Standalone`. Inside the
+modular project, write `import RP3` instead; the namespaces are identical.
+Nothing here uses `sorry`. Proposed theorems that are *not* proved here are
+stated as `def … : Prop` targets. Their statements are type-checked, not
+asserted.
+
+## Priority summary
+
+**P1. Close the semantic gaps in the witness suite.** Proofs are supplied
+below and are ready to merge into `RP3SemanticWitnesses.lean`.
+
+1. §1: the coupling really links distinct sites. For the one-bond graph and
+   every `b > 0`, the correlation between the two endpoints is `> 0`. The
+   existing check only uses `x = y`, whose value `3/4` holds for any weight.
+2. §2: the local-limit hypothesis is satisfiable. For every `β ≥ 0`, a
+   free-boundary local limit exists (boxes `[-n,n]²`, Prokhorov). Without
+   this, `…_local_limit_signed` could be vacuous.
+3. §3: a mechanical trust-base listing to use as a CI gate. Commit its output
+   and fail the build on any change to the semantic closure of the headline
+   statements. This section appears after §8, because it is a metaprogram
+   that lives outside the `RP3Review` namespace.
+
+**P2. Quick win: the SO(3) matrix-model form.** Proofs are supplied below.
+
+4. §4: `rotOf : S³ → SO(3)` is proved to land in `SO(3)`, to be multiplicative,
+   and to satisfy `(q·q')² − 1/4 = ¼ Tr(R(q)ᵀ R(q'))`. The log-square
+   theorem is restated with the SO(3) observable and Gibbs weight. The README
+   mentions this identification as unformalized.
+
+**P3. Mathematical extensions.** Targets are stated below; they are not proved.
+
+5. §5: arbitrary boundary conditions. The quadrupolar one-point function
+   decays with the distance to *any* pinned boundary configuration. This
+   gives "no quadrupolar order in any boundary-condition Gibbs state", the
+   physically stronger form of the result. The existing pinned machinery
+   (`fillPins`, `pinnedPartition`, `twistBoundary`, and
+   `pinned_kernel_comparison`, which is uniform in boundary directors)
+   suggests it is within reach.
+6. §6: high-temperature exponential decay for RP³. Port
+   `RP2.elementary_exponential_quadrupolar_decay_signed`; the constants
+   change with the dimension.
+7. §7: the Haar pushforward `S³ → SO(3)`. Here it is *reduced* to
+   surjectivity of `rotOf` onto `SO(3)`. The invariance argument given that
+   surjectivity is proved below (`haarInvariance_of_surjective`).
+8. §8: explicit β-dependence of the constants. The proof computes them, but
+   the endpoints hide them behind `∃`.
+
+**P4. Engineering.** These are comments only; see §9.
+
+- De-duplicate against RP²: 34 of the 67 modules shared with RP² are
+  identical up to renaming, and most others differ only in dimension and
+  constants.
+- Use Mathlib's `QuaternionGroup 2` and `ℍ` instead of hand-written 8×8 and
+  4×4 sign tables. This removes the 3,000,000-heartbeat `decide` instance and
+  the confusing `RP3.Quaternion` name.
+- Replace `import Mathlib` with minimal imports, remove the three
+  `backward.isDefEq.respectTransparency` options, and clean up the 102 linter
+  warnings.
+- Strengthen release checks: replay, an independent checker, and recording
+  where each check ran.
+-/
+
+noncomputable section
+open MeasureTheory Filter RP3
+open scoped InnerProductSpace BigOperators Matrix Topology
+
+namespace RP3Review
+
+/-! ## §1. Distinct-site non-triviality (proof supplied)
+
+Averaging over the 24 left multiplications by the binary tetrahedral group
+`2T ⊂ SU(2)` reproduces the uniform moments on `S³` exactly. Its orbits form a
+spherical 5-design, so `∑ ⟨g s,t⟩² = 6` and `∑ ⟨g s,t⟩⁴ = 3` for unit `s,t`.
+Then `E τ = 0` and `E τ² = 1/16` for `τ = ⟨s,t⟩² − 1/4`. Together with
+`τ e^{bτ} ≥ τ + b e^{-b/4} τ²`, this gives a numerator `≥ b/16`. The same
+left-multiplication isometries are reused in §7. -/
+
+/-- Index set for `±1, ±i, ±j, ±k` and `(±1 ± i ± j ± k)/2`. -/
+abbrev Idx := (Fin 4 × Bool) ⊕ (Bool × Bool × Bool × Bool)
+
+def sg (b : Bool) : ℝ := if b then 1 else -1
+
+/-- Real coordinates of the 24 unit quaternions of `2T`. -/
+def gvec : Idx → Fin 4 → ℝ
+  | .inl (k, s) => fun i => if i = k then sg s else 0
+  | .inr (a, b, c, d) => ![sg a / 2, sg b / 2, sg c / 2, sg d / 2]
+
+theorem card_Idx : Fintype.card Idx = 24 := by simp
+
+theorem gvec_sq (g : Idx) : ∑ i, gvec g i ^ 2 = 1 := by
+  rcases g with ⟨k, s⟩ | ⟨a, b, c, d⟩
+  · fin_cases k <;> cases s <;> simp [gvec, sg]
+  · cases a <;> cases b <;> cases c <;> cases d <;> simp [gvec, sg, Fin.sum_univ_four] <;> norm_num
+
+theorem orbit_moment2 (w : Fin 4 → ℝ) :
+    ∑ g : Idx, (∑ i, gvec g i * w i) ^ 2 = 6 * ∑ i, w i ^ 2 := by
+  simp [Fintype.sum_sum_type, Fintype.sum_prod_type, Fin.sum_univ_four, gvec, sg]
+  ring
+
+theorem orbit_moment4 (w : Fin 4 → ℝ) :
+    ∑ g : Idx, (∑ i, gvec g i * w i) ^ 4 = 3 * (∑ i, w i ^ 2) ^ 2 := by
+  simp [Fintype.sum_sum_type, Fintype.sum_prod_type, Fin.sum_univ_four, gvec, sg]
+  ring
+
+/-- Left multiplication by the quaternion `g` in real coordinates (`= qMatrix`). -/
+def lmulFun (g u : Fin 4 → ℝ) : Fin 4 → ℝ :=
+  ![g 0 * u 0 - g 1 * u 1 - g 2 * u 2 - g 3 * u 3,
+    g 1 * u 0 + g 0 * u 1 - g 3 * u 2 + g 2 * u 3,
+    g 2 * u 0 + g 3 * u 1 + g 0 * u 2 - g 1 * u 3,
+    g 3 * u 0 - g 2 * u 1 + g 1 * u 2 + g 0 * u 3]
+
+/-- Coordinates of `v ū`; then `⟨g u, v⟩ = ⟨g, v ū⟩`. -/
+def W (u v : Fin 4 → ℝ) : Fin 4 → ℝ :=
+  ![v 0 * u 0 + v 1 * u 1 + v 2 * u 2 + v 3 * u 3,
+    -v 0 * u 1 + v 1 * u 0 - v 2 * u 3 + v 3 * u 2,
+    -v 0 * u 2 + v 1 * u 3 + v 2 * u 0 - v 3 * u 1,
+    -v 0 * u 3 - v 1 * u 2 + v 2 * u 1 + v 3 * u 0]
+
+theorem pair_eq (g u v : Fin 4 → ℝ) :
+    ∑ i, lmulFun g u i * v i = ∑ i, g i * W u v i := by
+  simp [Fin.sum_univ_four, lmulFun, W]
+  ring
+
+theorem W_sq (u v : Fin 4 → ℝ) :
+    ∑ i, W u v i ^ 2 = (∑ i, u i ^ 2) * (∑ i, v i ^ 2) := by
+  simp [Fin.sum_univ_four, W]
+  ring
+
+theorem lmul_sq (g u : Fin 4 → ℝ) :
+    ∑ i, lmulFun g u i ^ 2 = (∑ i, g i ^ 2) * (∑ i, u i ^ 2) := by
+  simp [Fin.sum_univ_four, lmulFun]
+  ring
+
+def lmulLin (g : Fin 4 → ℝ) : E4 →ₗ[ℝ] E4 where
+  toFun u := WithLp.toLp 2 (lmulFun g u)
+  map_add' u v := by
+    ext i
+    fin_cases i <;> simp [lmulFun] <;> ring
+  map_smul' r u := by
+    ext i
+    fin_cases i <;> simp [lmulFun] <;> ring
+
+@[simp] theorem lmulLin_apply (g : Fin 4 → ℝ) (u : E4) (i : Fin 4) :
+    lmulLin g u i = lmulFun g u i := rfl
+
+theorem lmulLin_norm (g : Fin 4 → ℝ) (hg : ∑ i, g i ^ 2 = 1) (u : E4) :
+    ‖lmulLin g u‖ = ‖u‖ := by
+  have hs : ‖lmulLin g u‖ ^ 2 = ‖u‖ ^ 2 := by
+    rw [EuclideanSpace.real_norm_sq_eq, EuclideanSpace.real_norm_sq_eq]
+    simp only [lmulLin_apply]
+    rw [lmul_sq, hg, one_mul]
+  nlinarith [norm_nonneg (lmulLin g u), norm_nonneg u]
+
+/-- Left multiplication by any unit quaternion, as a linear isometry of `ℝ⁴`. -/
+def lmulIsoOf (g : Fin 4 → ℝ) (hg : ∑ i, g i ^ 2 = 1) : E4 ≃ₗᵢ[ℝ] E4 :=
+  LinearIsometry.toLinearIsometryEquiv
+    { lmulLin g with norm_map' := lmulLin_norm g hg } rfl
+
+@[simp] theorem lmulIsoOf_apply (g : Fin 4 → ℝ) (hg : ∑ i, g i ^ 2 = 1) (u : E4) (i : Fin 4) :
+    lmulIsoOf g hg u i = lmulFun g u i := rfl
+
+def lmulIso (x : Idx) : E4 ≃ₗᵢ[ℝ] E4 := lmulIsoOf (gvec x) (gvec_sq x)
+
+@[simp] theorem lmulIso_apply (x : Idx) (u : E4) (i : Fin 4) :
+    lmulIso x u i = lmulFun (gvec x) u i := rfl
+
+theorem inner_eq_sum (a b : E4) : ⟪a, b⟫_ℝ = ∑ i, a i * b i := by
+  simp [PiLp.inner_apply, mul_comm]
+
+theorem orbit_sum_tau (s t : Spin) :
+    ∑ x : Idx, (⟪lmulIso x s.val, t.val⟫_ℝ ^ 2 - 1 / 4) = 0 := by
+  have h2 := orbit_moment2 (W s.val t.val)
+  rw [W_sq, spin_squares, spin_squares] at h2
+  simp only [inner_eq_sum, lmulIso_apply, pair_eq]
+  rw [Finset.sum_sub_distrib, h2]
+  simp
+  norm_num
+
+theorem orbit_sum_tau_sq (s t : Spin) :
+    ∑ x : Idx, (⟪lmulIso x s.val, t.val⟫_ℝ ^ 2 - 1 / 4) ^ 2 = 24 * (1 / 16) := by
+  have h2 := orbit_moment2 (W s.val t.val)
+  have h4 := orbit_moment4 (W s.val t.val)
+  rw [W_sq, spin_squares, spin_squares] at h2 h4
+  simp only [inner_eq_sum, lmulIso_apply, pair_eq]
+  have hexp : ∀ z : ℝ, (z ^ 2 - 1 / 4) ^ 2 = z ^ 4 - (1 / 2) * z ^ 2 + 1 / 16 := by
+    intro z; ring
+  simp only [hexp, Finset.sum_add_distrib, Finset.sum_sub_distrib, ← Finset.mul_sum, h2, h4]
+  simp
+  norm_num
+
+section Averaging
+variable {V : Type*} [Fintype V] [DecidableEq V]
+
+/-- Rotate the spin at one site by `lmulIso x`, leaving all others fixed. -/
+def rotAt (v₀ : V) (x : Idx) (σ : Configuration V) : Configuration V :=
+  fun v => (if v = v₀ then (Rotation.spinRotation (lmulIso x) : Spin → Spin) else id) (σ v)
+
+theorem rotAt_mp (v₀ : V) (x : Idx) :
+    MeasurePreserving (rotAt v₀ x) (referenceLaw (V := V)) referenceLaw := by
+  unfold rotAt referenceLaw
+  refine measurePreserving_pi (fun _ => sphereProbability) (fun _ => sphereProbability)
+    (fun v => ?_)
+  by_cases hv : v = v₀
+  · simp only [hv, ite_true]
+    exact Rotation.spinRotation_preserves_probability (lmulIso x)
+  · simp only [hv, ite_false]
+    exact MeasurePreserving.id _
+
+theorem integral_eq_of_orbit (v₀ : V) (F : Configuration V → ℝ) (hF : Continuous F)
+    (c : ℝ) (havg : ∀ σ, ∑ x : Idx, F (rotAt v₀ x σ) = 24 * c) :
+    ∫ σ, F σ ∂(referenceLaw (V := V)) = c := by
+  have hFi : Integrable F (referenceLaw (V := V)) :=
+    hF.integrable_of_hasCompactSupport (HasCompactSupport.of_compactSpace _)
+  have hcomp : ∀ x : Idx, ∫ σ, F (rotAt v₀ x σ) ∂(referenceLaw (V := V)) =
+      ∫ σ, F σ ∂(referenceLaw (V := V)) := by
+    intro x
+    rw [← integral_map (rotAt_mp v₀ x).measurable.aemeasurable
+      hF.aestronglyMeasurable, (rotAt_mp v₀ x).map_eq]
+  have hint : ∀ x : Idx, Integrable (fun σ => F (rotAt v₀ x σ)) (referenceLaw (V := V)) :=
+    fun x => ((rotAt_mp v₀ x).integrable_comp hF.aestronglyMeasurable).mpr hFi
+  have hsum : ∫ σ, ∑ x : Idx, F (rotAt v₀ x σ) ∂(referenceLaw (V := V)) =
+      24 * ∫ σ, F σ ∂(referenceLaw (V := V)) := by
+    rw [integral_finsetSum _ (fun x _ => hint x)]
+    simp [hcomp]
+  simp only [havg] at hsum
+  simp at hsum
+  linarith
+
+end Averaging
+
+/-- The one-bond graph `(0,0) — (1,0)`. -/
+def V0 : Finset Fourier.Site := {(0, 0), (1, 0)}
+def L0' : V0 := ⟨(0, 0), by simp [V0]⟩
+def R0' : V0 := ⟨(1, 0), by simp [V0]⟩
+
+def G1 : Fourier.LatticeGraph where
+  vertices := V0
+  edges := {(L0', R0')}
+  nearest := by
+    intro e he
+    simp only [Finset.mem_singleton] at he
+    subst e
+    left
+    norm_num [L0', R0']
+
+def L0 : G1.vertices := L0'
+def R0 : G1.vertices := R0'
+
+theorem L0_ne_R0 : L0 ≠ R0 := by
+  intro h
+  have := congrArg Subtype.val h
+  simp [L0, R0, L0', R0'] at this
+
+theorem interaction_G1 (b0 : ℝ) (σ : Configuration G1.vertices) :
+    interaction (fun e : G1.edges => e.val) (fun _ => b0) σ =
+      b0 * ⟪(σ L0).val, (σ R0).val⟫_ℝ ^ 2 := by
+  unfold interaction
+  rw [Finset.sum_coe_sort G1.edges
+    (fun e => b0 * ⟪(σ e.1).val, (σ e.2).val⟫_ℝ ^ 2),
+    show G1.edges = ({(L0, R0)} : Finset (G1.vertices × G1.vertices)) from rfl,
+    Finset.sum_singleton]
+
+theorem exp_lower (b τ : ℝ) (hb : 0 < b) (hτ : -1 / 4 ≤ τ) :
+    τ + b * Real.exp (-b / 4) * τ ^ 2 ≤ τ * Real.exp (b * τ) := by
+  have hE := Real.add_one_le_exp (b * τ)
+  have hF := Real.add_one_le_exp (-(b * τ))
+  have hEF : Real.exp (b * τ) * Real.exp (-(b * τ)) = 1 := by
+    rw [← Real.exp_add]; simp
+  have hm : Real.exp (-b / 4) ≤ 1 := by
+    rw [Real.exp_le_one_iff]; linarith
+  have hm0 : 0 < Real.exp (-b / 4) := Real.exp_pos _
+  have hE0 : 0 < Real.exp (b * τ) := Real.exp_pos _
+  rcases le_or_gt 0 τ with h0 | h0
+  · have : τ * (b * τ + 1) ≤ τ * Real.exp (b * τ) := mul_le_mul_of_nonneg_left hE h0
+    nlinarith [sq_nonneg τ, mul_nonneg hb.le (sq_nonneg τ)]
+  · have hlow : Real.exp (-b / 4) ≤ Real.exp (b * τ) := by
+      apply Real.exp_le_exp.mpr; nlinarith
+    have hstep : Real.exp (b * τ) - 1 ≤ b * τ * Real.exp (b * τ) := by
+      nlinarith [hF, hEF, hE0]
+    have hstep2 : b * τ * Real.exp (b * τ) ≤ b * τ * Real.exp (-b / 4) := by
+      have hbτ : b * τ ≤ 0 := by nlinarith
+      exact mul_le_mul_of_nonpos_left hlow hbτ
+    nlinarith [hstep, hstep2]
+
+/-- **Suggested witness.** On the one-bond graph, every positive coupling gives a
+strictly positive correlation between the two distinct endpoints. -/
+theorem G1_correlation_pos (b0 : ℝ) (hb : 0 < b0) :
+    0 < correlation (fun e : G1.edges => e.val) (fun _ => b0) L0 R0 := by
+  apply div_pos _ (partition_pos _ _)
+  change 0 < ∫ σ, qPair (σ L0) (σ R0) *
+    Real.exp (interaction (fun e : G1.edges => e.val) (fun _ => b0) σ) ∂referenceLaw
+  simp_rw [interaction_G1]
+  set τ : Configuration G1.vertices → ℝ := fun σ => qPair (σ L0) (σ R0) with hτdef
+  have hτc : Continuous τ := by
+    simp only [hτdef, qPair]; fun_prop
+  have hrot : ∀ (x : Idx) σ, τ (rotAt L0 x σ) =
+      ⟪lmulIso x (σ L0).val, (σ R0).val⟫_ℝ ^ 2 - 1 / 4 := by
+    intro x σ
+    simp [hτdef, qPair, rotAt, L0_ne_R0.symm]
+  have hmean : ∫ σ, τ σ ∂(referenceLaw (V := G1.vertices)) = 0 :=
+    integral_eq_of_orbit L0 τ hτc 0 (fun σ => by
+      simp only [hrot]; rw [orbit_sum_tau]; ring)
+  have hvar : ∫ σ, τ σ ^ 2 ∂(referenceLaw (V := G1.vertices)) = 1 / 16 :=
+    integral_eq_of_orbit L0 (fun σ => τ σ ^ 2) (hτc.pow 2) (1 / 16) (fun σ => by
+      simp only [hrot]; exact orbit_sum_tau_sq _ _)
+  have hw : ∀ σ : Configuration G1.vertices,
+      qPair (σ L0) (σ R0) * Real.exp (b0 * ⟪(σ L0).val, (σ R0).val⟫_ℝ ^ 2) =
+        Real.exp (b0 / 4) * (τ σ * Real.exp (b0 * τ σ)) := by
+    intro σ
+    simp only [hτdef, qPair]
+    rw [show b0 * ⟪(σ L0).val, (σ R0).val⟫_ℝ ^ 2 =
+      b0 / 4 + b0 * (⟪(σ L0).val, (σ R0).val⟫_ℝ ^ 2 - 1 / 4) by ring, Real.exp_add]
+    ring
+  simp_rw [hw]
+  rw [integral_const_mul]
+  apply mul_pos (Real.exp_pos _)
+  have hint1 : Integrable (fun σ => τ σ + b0 * Real.exp (-b0 / 4) * τ σ ^ 2)
+      (referenceLaw (V := G1.vertices)) :=
+    (by fun_prop : Continuous fun σ => τ σ + b0 * Real.exp (-b0 / 4) * τ σ ^ 2)
+      |>.integrable_of_hasCompactSupport (HasCompactSupport.of_compactSpace _)
+  have hint2 : Integrable (fun σ => τ σ * Real.exp (b0 * τ σ))
+      (referenceLaw (V := G1.vertices)) :=
+    (by fun_prop : Continuous fun σ => τ σ * Real.exp (b0 * τ σ))
+      |>.integrable_of_hasCompactSupport (HasCompactSupport.of_compactSpace _)
+  have hlow : ∫ σ, (τ σ + b0 * Real.exp (-b0 / 4) * τ σ ^ 2) ∂referenceLaw ≤
+      ∫ σ, τ σ * Real.exp (b0 * τ σ) ∂referenceLaw := by
+    apply integral_mono hint1 hint2
+    intro σ
+    apply exp_lower b0 (τ σ) hb
+    have : 0 ≤ ⟪(σ L0).val, (σ R0).val⟫_ℝ ^ 2 := sq_nonneg _
+    simp only [hτdef, qPair]; linarith
+  have hval : ∫ σ, (τ σ + b0 * Real.exp (-b0 / 4) * τ σ ^ 2)
+      ∂(referenceLaw (V := G1.vertices)) = b0 * Real.exp (-b0 / 4) * (1 / 16) := by
+    have hτi : Integrable τ (referenceLaw (V := G1.vertices)) :=
+      hτc.integrable_of_hasCompactSupport (HasCompactSupport.of_compactSpace _)
+    have hτ2i : Integrable (fun σ => b0 * Real.exp (-b0 / 4) * τ σ ^ 2)
+        (referenceLaw (V := G1.vertices)) :=
+      (by fun_prop : Continuous fun σ => b0 * Real.exp (-b0 / 4) * τ σ ^ 2)
+        |>.integrable_of_hasCompactSupport (HasCompactSupport.of_compactSpace _)
+    rw [integral_add hτi hτ2i, integral_const_mul, hmean, hvar]
+    ring
+  have hpos : 0 < b0 * Real.exp (-b0 / 4) * (1 / 16) := by positivity
+  linarith
+
+/-- **Suggested witness.** The headline bound concerns a quantity that is not
+identically zero off the diagonal. -/
+theorem exists_distinct_sites_positive_correlation (β : ℝ) (hβ : 0 < β) :
+    ∃ (G : Fourier.LatticeGraph) (b : G.edges → ℝ) (x y : G.vertices),
+      x ≠ y ∧ (∀ e, |b e| ≤ β) ∧ 0 < correlation (fun e : G.edges => e.val) b x y :=
+  ⟨G1, fun _ => β, L0, R0, L0_ne_R0, fun _ => by simp [abs_of_pos hβ],
+    G1_correlation_pos β hβ⟩
+
+/-! ## §2. The local-limit hypothesis is satisfiable (proof supplied) -/
+
+open Classical in
+/-- The full box `[-n,n]²` with every positively oriented nearest-neighbour bond. -/
+def box (n : ℕ) : Fourier.LatticeGraph where
+  vertices := Finset.Icc (-(n : ℤ)) n ×ˢ Finset.Icc (-(n : ℤ)) n
+  edges := (Finset.univ : Finset (_ × _)).filter
+    (fun e => Fourier.PositiveNeighbor e.1.val e.2.val)
+  nearest := by
+    intro e he
+    exact (Finset.mem_filter.mp he).2
+
+theorem box_exhausts (z : Fourier.Site) : ∀ᶠ n in atTop, z ∈ (box n).vertices := by
+  refine eventually_atTop.mpr ⟨(max |z.1| |z.2|).toNat, fun n hn => ?_⟩
+  have h1 : |z.1| ≤ n := by
+    have := Int.self_le_toNat (max |z.1| |z.2|)
+    have := le_max_left |z.1| |z.2|
+    omega
+  have h2 : |z.2| ≤ n := by
+    have := Int.self_le_toNat (max |z.1| |z.2|)
+    have := le_max_right |z.1| |z.2|
+    omega
+  simp only [box, Finset.mem_product, Finset.mem_Icc]
+  constructor <;> constructor <;> [linarith [neg_abs_le z.1]; linarith [le_abs_self z.1];
+    linarith [neg_abs_le z.2]; linarith [le_abs_self z.2]]
+
+/-- Any exhausting sequence with admissible signed couplings has a local limit. -/
+theorem exists_signed_local_limit (β : ℝ) (G : ℕ → Fourier.LatticeGraph)
+    (b : ∀ n, (G n).edges → ℝ) (hb : ∀ n e, |b n e| ≤ β)
+    (hexhaust : ∀ z : Fourier.Site, ∀ᶠ n in atTop, z ∈ (G n).vertices) (s₀ : Spin) :
+    ∃ μ : ProbabilityMeasure InfiniteConfiguration, IsSignedFreeBoundaryLocalLimit β μ := by
+  obtain ⟨μ, -, φ, hφ, hlim⟩ :=
+    (isCompact_univ (X := ProbabilityMeasure InfiniteConfiguration)).tendsto_subseq
+      (x := fun n => extendedFreeGibbsWith (G n) (b n) (fun _ => s₀)) (fun _ => Set.mem_univ _)
+  exact ⟨μ, isSignedFreeBoundaryLocalLimit_of_weak_limit_with β (fun n => G (φ n))
+    (fun n => b (φ n)) (fun n e => hb (φ n) e)
+    (fun z => hφ.tendsto_atTop.eventually (hexhaust z)) (fun _ _ => s₀) μ hlim⟩
+
+/-- **Suggested witness.** The local-limit endpoint applies to an actual measure. -/
+theorem local_limit_endpoint_nonvacuous (β : ℝ) (hβ : 0 ≤ β) (s₀ : Spin) :
+    ∃ C : ℝ, 0 < C ∧ ∃ c : ℝ, 0 < c ∧
+      ∃ μ : ProbabilityMeasure InfiniteConfiguration, IsSignedFreeBoundaryLocalLimit β μ ∧
+      ∀ x y : Fourier.Site, |infiniteCorrelation μ x y| ≤
+        C * Real.exp (-c * (Real.log (2 + (Fourier.siteRadius x y : ℝ))) ^ 2) := by
+  obtain ⟨C, hC, c, hc, h⟩ := log_square_quadrupolar_decay_local_limit_signed β hβ
+  obtain ⟨μ, hμ⟩ := exists_signed_local_limit β box (fun _ _ => β)
+    (fun _ _ => by rw [abs_of_nonneg hβ]) box_exhausts s₀
+  exact ⟨C, hC, c, hc, μ, hμ, h μ hμ⟩
+
+/-! ## §4. SO(3) matrix-model form (proofs supplied)
+
+For a unit quaternion `q`, `rotOf q ∈ SO(3)` is the rotation `v ↦ q v q̄`.
+Then `(q·q')² − 1/4 = ¼ Tr(R(q)ᵀ R(q'))`. So the RP³ model is the SO(3)
+principal-chiral model with weight `exp(∑ b_e (1 + Tr R_xᵀR_y)/4)`, and the
+headline theorem bounds its vector correlator `⟨Tr R_xᵀR_y⟩/4`. -/
+
+/-- Rotation matrix of `q = q₀ + q₁ i + q₂ j + q₃ k` (unnormalized). -/
+def rotMat (q : Fin 4 → ℝ) : Matrix (Fin 3) (Fin 3) ℝ :=
+  !![q 0 ^ 2 + q 1 ^ 2 - q 2 ^ 2 - q 3 ^ 2, 2 * (q 1 * q 2 - q 0 * q 3), 2 * (q 1 * q 3 + q 0 * q 2);
+     2 * (q 1 * q 2 + q 0 * q 3), q 0 ^ 2 - q 1 ^ 2 + q 2 ^ 2 - q 3 ^ 2, 2 * (q 2 * q 3 - q 0 * q 1);
+     2 * (q 1 * q 3 - q 0 * q 2), 2 * (q 2 * q 3 + q 0 * q 1), q 0 ^ 2 - q 1 ^ 2 - q 2 ^ 2 + q 3 ^ 2]
+
+theorem trace_rotMat (u v : Fin 4 → ℝ) :
+    Matrix.trace ((rotMat u)ᵀ * rotMat v) =
+      4 * (∑ i, u i * v i) ^ 2 - (∑ i, u i ^ 2) * (∑ i, v i ^ 2) := by
+  simp [Matrix.trace, Matrix.mul_apply, Fin.sum_univ_three, Fin.sum_univ_four, rotMat]
+  ring
+
+theorem rotMat_orthogonal (u : Fin 4 → ℝ) (hu : ∑ i, u i ^ 2 = 1) :
+    (rotMat u)ᵀ * rotMat u = 1 := by
+  simp [Fin.sum_univ_four] at hu
+  ext i j
+  fin_cases i <;> fin_cases j <;>
+    simp [Matrix.mul_apply, Fin.sum_univ_three, rotMat] <;>
+    first
+      | ring1
+      | linear_combination (u 0 ^ 2 + u 1 ^ 2 + u 2 ^ 2 + u 3 ^ 2 + 1) * hu
+
+theorem rotMat_det (u : Fin 4 → ℝ) (hu : ∑ i, u i ^ 2 = 1) : (rotMat u).det = 1 := by
+  simp [Fin.sum_univ_four] at hu
+  rw [Matrix.det_fin_three]
+  simp [rotMat]
+  linear_combination ((u 0 ^ 2 + u 1 ^ 2 + u 2 ^ 2 + u 3 ^ 2) ^ 2 +
+    (u 0 ^ 2 + u 1 ^ 2 + u 2 ^ 2 + u 3 ^ 2) + 1) * hu
+
+/-- `rotMat` is multiplicative: `R(p) R(q) = R(p q)` (Hamilton product). -/
+theorem rotMat_mul (p q : Fin 4 → ℝ) :
+    rotMat p * rotMat q = rotMat (lmulFun p q) := by
+  ext i j
+  fin_cases i <;> fin_cases j <;>
+    simp [Matrix.mul_apply, Fin.sum_univ_three, rotMat, lmulFun] <;> ring
+
+/-- The SO(3) rotation of an `S³` spin. -/
+def rotOf (s : Spin) : Matrix (Fin 3) (Fin 3) ℝ := rotMat s.val
+
+theorem rotOf_mem_SO3 (s : Spin) : rotOf s ∈ Matrix.specialOrthogonalGroup (Fin 3) ℝ := by
+  rw [Matrix.mem_specialUnitaryGroup_iff, Matrix.mem_unitaryGroup_iff']
+  refine ⟨?_, rotMat_det _ (spin_squares s)⟩
+  rw [Matrix.star_eq_conjTranspose, Matrix.conjTranspose_eq_transpose_of_trivial]
+  exact rotMat_orthogonal _ (spin_squares s)
+
+theorem qPair_eq_trace (s t : Spin) :
+    qPair s t = (1 / 4) * Matrix.trace ((rotOf s)ᵀ * rotOf t) := by
+  rw [rotOf, rotOf, trace_rotMat, spin_squares, spin_squares, qPair, inner_eq_sum]
+  ring
+
+theorem inner_sq_eq_trace (s t : Spin) :
+    ⟪s.val, t.val⟫_ℝ ^ 2 = (1 + Matrix.trace ((rotOf s)ᵀ * rotOf t)) / 4 := by
+  rw [rotOf, rotOf, trace_rotMat, spin_squares, spin_squares, inner_eq_sum]
+  ring
+
+/-- The actual correlation, rewritten entirely in SO(3) variables. -/
+theorem correlation_eq_so3 {V E : Type*} [Fintype V] [Fintype E]
+    (edge : E → V × V) (b : E → ℝ) (x y : V) :
+    correlation edge b x y =
+      (∫ σ, (1 / 4 * Matrix.trace ((rotOf (σ x))ᵀ * rotOf (σ y))) *
+          Real.exp (∑ e, b e *
+            ((1 + Matrix.trace ((rotOf (σ (edge e).1))ᵀ * rotOf (σ (edge e).2))) / 4))
+        ∂referenceLaw) /
+      (∫ σ, Real.exp (∑ e, b e *
+            ((1 + Matrix.trace ((rotOf (σ (edge e).1))ᵀ * rotOf (σ (edge e).2))) / 4))
+        ∂referenceLaw) := by
+  change (∫ σ, qPair (σ x) (σ y) * Real.exp (interaction edge b σ) ∂referenceLaw) /
+    (∫ σ, Real.exp (interaction edge b σ) ∂referenceLaw) = _
+  simp only [interaction, qPair_eq_trace, inner_sq_eq_trace]
+
+/-- **Suggested restatement.** The log-square theorem for the SO(3) matrix model. -/
+theorem so3_log_square_decay_signed (β : ℝ) (hβ : 0 ≤ β) :
+    ∃ C : ℝ, 0 < C ∧ ∃ c : ℝ, 0 < c ∧
+      ∀ (G : Fourier.LatticeGraph) (b : G.edges → ℝ), (∀ e, |b e| ≤ β) →
+      ∀ (x y : G.vertices),
+      |(∫ σ, (1 / 4 * Matrix.trace ((rotOf (σ x))ᵀ * rotOf (σ y))) *
+          Real.exp (∑ e : G.edges, b e *
+            ((1 + Matrix.trace ((rotOf (σ e.val.1))ᵀ * rotOf (σ e.val.2))) / 4))
+        ∂referenceLaw) /
+      (∫ σ, Real.exp (∑ e : G.edges, b e *
+            ((1 + Matrix.trace ((rotOf (σ e.val.1))ᵀ * rotOf (σ e.val.2))) / 4))
+        ∂referenceLaw)| ≤
+        C * Real.exp (-c * Real.log (2 + (Fourier.siteRadius x.val y.val : ℝ)) ^ 2) := by
+  obtain ⟨C, hC, c, hc, h⟩ := log_square_quadrupolar_decay_signed β hβ
+  refine ⟨C, hC, c, hc, fun G b hb x y => ?_⟩
+  have h1 := h G b hb x y
+  rwa [correlation_eq_so3] at h1
+
+/-! ## §5. Target: arbitrary boundary conditions (not proved) -/
+
+section Boundary
+variable {V E : Type*} [Fintype V] [Fintype E] [DecidableEq V]
+
+/-- Gibbs expectation of `f` with the spins on `pins` frozen to `τ`. This is
+the finite-volume state with an arbitrary boundary condition, built from the
+development's own `fillPins`, `pinnedWeight` and `pinnedPartition`. -/
+def pinnedExpectation (edge : E → V × V) (b : E → ℝ) (pins : Finset V)
+    (τ : Configuration V) (f : Configuration V → ℝ) : ℝ :=
+  (∫ σ, f (fillPins pins τ σ) * pinnedWeight edge b pins τ σ ∂referenceLaw) /
+    pinnedPartition edge b pins τ
+
+end Boundary
+
+/-- **Target.** The quadrupolar one-point function decays with the distance `R`
+from the site to any pinned boundary configuration. Since `qPair (σ x) s =
+Tr(Q(σ x) Q(s))`, this controls the whole order parameter `⟨Q(σ x)⟩`. It
+implies that every limit of boundary-condition states has `⟨Q⟩ = 0`, i.e. no
+quadrupolar order in any such Gibbs state. With `pins = ∅` it reduces to the
+(true) vanishing of the free one-point function. The rotation argument already
+works conditionally on the spins outside a cut, which is how
+`pinned_kernel_comparison` is set up, so this looks within reach. -/
+def BoundaryOnePointDecay : Prop :=
+  ∀ β : ℝ, 0 ≤ β → ∃ C : ℝ, 0 < C ∧ ∃ c : ℝ, 0 < c ∧
+    ∀ (G : Fourier.LatticeGraph) (b : G.edges → ℝ), (∀ e, |b e| ≤ β) →
+    ∀ (pins : Finset G.vertices) (τ : Configuration G.vertices) (x : G.vertices) (R : ℕ),
+      (∀ z ∈ pins, (R : ℤ) ≤ Fourier.siteRadius x.val z.val) →
+      ∀ s : Spin,
+      |pinnedExpectation (fun e : G.edges => e.val) b pins τ (fun σ => qPair (σ x) s)| ≤
+        C * Real.exp (-c * Real.log (2 + (R : ℝ)) ^ 2)
+
+/-! ## §6. Target: high-temperature exponential decay for RP³ (not proved)
+
+`RP2.elementary_exponential_quadrupolar_decay_signed` proves this for RP² with
+`β₀ = log(3/2)` and an explicit mass, by the positive edge expansion and
+counting simple-path prefixes. The same route should give the RP³ statement,
+with constants adjusted for the dimension. -/
+
+def HighTemperatureExponentialDecay : Prop :=
+  ∃ β₀ : ℝ, 0 < β₀ ∧ ∀ β : ℝ, 0 ≤ β → β < β₀ → ∃ m : ℝ, 0 < m ∧ ∃ C : ℝ, 0 < C ∧
+    ∀ (G : Fourier.LatticeGraph) (b : G.edges → ℝ), (∀ e, |b e| ≤ β) →
+    ∀ (x y : G.vertices),
+      |correlation (fun e : G.edges => e.val) b x y| ≤
+        C * Real.exp (-m * (Fourier.siteRadius x.val y.val : ℝ))
+
+/-! ## §7. Haar pushforward `S³ → SO(3)`: reduced to surjectivity (reduction proved) -/
+
+/-- The pushforward of the uniform law under `rotOf` is left-invariant, hence Haar. -/
+def HaarInvariance : Prop :=
+  ∀ R ∈ Matrix.specialOrthogonalGroup (Fin 3) ℝ, ∀ f : C(Matrix (Fin 3) (Fin 3) ℝ, ℝ),
+    ∫ s, f (R * rotOf s) ∂sphereProbability = ∫ s, f (rotOf s) ∂sphereProbability
+
+/-- **Remaining target.** Every rotation comes from a unit quaternion. This is
+classical: take `q₀ = √(1 + Tr R)/2` when `Tr R > -1`, and use the analogous
+formulas from a dominant diagonal entry otherwise. -/
+def RotOfSurjective : Prop :=
+  ∀ R ∈ Matrix.specialOrthogonalGroup (Fin 3) ℝ, ∃ p : Spin, rotOf p = R
+
+theorem continuous_rotOf : Continuous rotOf := by
+  have hc : ∀ k : Fin 4, Continuous fun s : Spin => (s.val : E4) k := fun k =>
+    (PiLp.continuous_apply 2 (fun _ : Fin 4 => ℝ) k).comp continuous_subtype_val
+  have h0 := hc 0
+  have h1 := hc 1
+  have h2 := hc 2
+  have h3 := hc 3
+  refine continuous_matrix fun i j => ?_
+  fin_cases i <;> fin_cases j <;> simp [rotOf, rotMat] <;> fun_prop
+
+theorem rotOf_lmul (p s : Spin) :
+    rotOf (Rotation.spinRotation (lmulIsoOf p.val (spin_squares p)) s) =
+      rotOf p * rotOf s := by
+  rw [rotOf, rotOf, rotOf, rotMat_mul]
+  congr 1
+
+/-- **Proved reduction.** Given surjectivity, the pushforward is left-invariant,
+because `rotOf` is multiplicative and left multiplication by a unit quaternion
+preserves the uniform law. -/
+theorem haarInvariance_of_surjective (h : RotOfSurjective) : HaarInvariance := by
+  intro R hR f
+  obtain ⟨p, rfl⟩ := h R hR
+  have hmp := Rotation.spinRotation_preserves_probability (lmulIsoOf p.val (spin_squares p))
+  have hcont : Continuous fun s : Spin => f (rotOf s) := f.continuous.comp continuous_rotOf
+  calc ∫ s, f (rotOf p * rotOf s) ∂sphereProbability
+      = ∫ s, f (rotOf (Rotation.spinRotation (lmulIsoOf p.val (spin_squares p)) s))
+          ∂sphereProbability := by simp_rw [rotOf_lmul]
+    _ = ∫ s, f (rotOf s) ∂sphereProbability := by
+        rw [← integral_map hmp.measurable.aemeasurable hcont.aestronglyMeasurable, hmp.map_eq]
+
+/-! ## §8. Target: explicit constants (not proved)
+
+The proof computes `C` and `c` from the comparison constants. Exposing them as
+explicit functions of `β` would make the theorem quantitatively usable, for
+example to compare `c(β)` with the expected scaling of the correlation length. -/
+
+def ExplicitLogSquareDecay (Cβ cβ : ℝ → ℝ) : Prop :=
+  ∀ β : ℝ, 0 ≤ β → 0 < Cβ β ∧ 0 < cβ β ∧
+    ∀ (G : Fourier.LatticeGraph) (b : G.edges → ℝ), (∀ e, |b e| ≤ β) →
+    ∀ (x y : G.vertices),
+      |correlation (fun e : G.edges => e.val) b x y| ≤
+        Cβ β * Real.exp (-cβ β * Real.log (2 + (Fourier.siteRadius x.val y.val : ℝ)) ^ 2)
+
+end RP3Review
+
+/-! ## §3. Trust-base listing for CI (metaprogram)
+
+Keep this in a separate audit file, never imported by the library. It lists
+every `RP3.*` constant reachable from the given statements through definition
+bodies, structure fields and instance terms, but not through proofs. Commit the
+output and fail CI when it changes, so that any edit to the meaning of the
+headline statements is caught. For the current release it lists 37 constants
+(finite volume) and 44 (local limit). -/
+
+open Lean in
+def kindOf : ConstantInfo → String
+  | .defnInfo d => match d.safety with
+      | .safe => "def" | .unsafe => "UNSAFE def" | .partial => "PARTIAL def"
+  | .thmInfo _ => "theorem"
+  | .axiomInfo _ => "AXIOM"
+  | .opaqueInfo _ => "OPAQUE"
+  | .inductInfo _ => "inductive/structure"
+  | .ctorInfo _ => "constructor"
+  | .recInfo _ => "recursor"
+  | .quotInfo _ => "quot"
+
+open Lean in
+partial def trustBase (env : Environment) (roots : List Name) : Array (Name × String) := Id.run do
+  let mut seen : NameSet := {}
+  let mut out : Array (Name × String) := #[]
+  let mut stack : List Name := []
+  for r in roots do
+    if let some ci := env.find? r then
+      stack := ci.type.getUsedConstants.toList ++ stack
+  while !stack.isEmpty do
+    match stack with
+    | [] => pure ()
+    | c :: rest =>
+      stack := rest
+      if seen.contains c then continue
+      seen := seen.insert c
+      unless (`RP3).isPrefixOf c do continue
+      let some ci := env.find? c | continue
+      out := out.push (c, kindOf ci)
+      let mut next : Array Name := ci.type.getUsedConstants
+      match ci with
+      | .defnInfo d => next := next ++ d.value.getUsedConstants
+      | .inductInfo i =>
+          for ctor in i.ctors do
+            if let some cc := env.find? ctor then
+              next := next ++ cc.type.getUsedConstants
+      | _ => pure ()
+      stack := next.toList ++ stack
+  return out.qsort (fun a b => a.1.toString < b.1.toString)
+
+open Lean Elab Command in
+elab "#trust_base " ids:ident* : command => do
+  let tb := trustBase (← getEnv) (ids.toList.map (·.getId))
+  logInfo m!"{tb.size} project constants in the semantic closure:\n{String.intercalate "\n" (tb.toList.map fun (n, k) => s!"{k}\t{n}")}"
+
+#trust_base RP3.log_square_quadrupolar_decay_signed
+
+/-! ## §9. Engineering suggestions
+
+1. **De-duplicate RP² and RP³.** Of the 67 modules the two developments share,
+   34 are identical after renaming, and most others differ only in the
+   dimension and constants (`1/3 ↦ 1/4`, `2/3 ↦ 3/4`, `Fin 3 ↦ Fin 4`). Factor
+   the shared Fourier, annulus, averaging and limit machinery into one library
+   parameterized by a structure bundling:
+   - the sphere dimension;
+   - three skew generators with `[a,b] = c`, `a² = -κ·1` and `‖·‖ ≤ 1`;
+   - the rotation period;
+   - a finite group acting by isometries with `∑_g qPair (g • s) t = 0`.
+
+   RP² (`SO(3)` and the tetrahedral group) and RP³ (`SU(2)_L` and `Q₈`) then
+   become instances. This roughly halves the audit surface, and fixes apply
+   to both.
+2. **Use Mathlib's quaternion API.** It provides `QuaternionGroup 2` (`Q₈`,
+   with `Group`, `Fintype` and `card = 8`), the normed division ring `ℍ`
+   (`‖p q‖ = ‖p‖ ‖q‖`), and `Quaternion.linearIsometryEquivTuple`. Using them
+   replaces the 8×8 multiplication table proved by `decide` under
+   `maxHeartbeats 3000000`, `quaternionRotate`, and most of `qMatrix`. It also
+   removes the name `RP3.Quaternion`, which shadows Mathlib's `Quaternion`
+   inside `namespace RP3`. See the examples below.
+3. **Minimal imports.** Six of the 72 modules have `import Mathlib`, and every
+   other module reaches all of Mathlib through them. So each of the 73 Lean
+   processes in a module build loads the whole library, at 6–8 GB per
+   process. That is impractical on a laptop; the reviewer had to abandon it.
+   Pruning those six imports with `#min_imports` would shrink every process.
+4. **Future-proofing.**
+   - Remove the three `set_option backward.isDefEq.respectTransparency false`
+     options; they are compatibility switches likely to disappear in later Lean
+     versions.
+   - Fix the 102 linter warnings: unused `simp` arguments, `if_true`/`if_false`
+     (now `ite_true`/`ite_false`), `integral_finset_sum` (now
+     `integral_finsetSum`), and unused variables.
+   - Unify `RP3.Spin` with `RP3.Rotation.Spin 4`.
+5. **Release checks.**
+   - Merge §1 and §2 into `RP3SemanticWitnesses.lean`, and gate CI on §3.
+   - Run `--replay` for releases. Replay uses the same kernel, so also consider
+     an independently implemented checker.
+   - Record where each check ran. The archived records come from a container
+     needing an `LD_PRELOAD` shim, which is benign but needs explaining.
+6. **Documentation.**
+   - Ship the RP³ analytical note that `README-RP3.md` cites; the archive's
+     `analytical-addendum/` is RP²-only.
+   - State the SO(3) form (§4) in the README.
+   - Once §2 is merged, update the sentence saying existence of local limits
+     is not asserted.
+7. **Optional stronger witness.** On a path graph, the correlation at distance
+   `r` factorizes exactly as `(3/4) λ(b)^r` with `λ(b) > 0` for `b > 0`.
+   Formalizing this would show non-triviality at every distance, not only
+   `r = 1`.
+-/
+
+-- §9.2: the Mathlib API that could replace the hand-written quaternion tables.
+example : Fintype.card (QuaternionGroup 2) = 8 := by rw [QuaternionGroup.card]
+example (p q : Quaternion ℝ) : ‖p * q‖ = ‖p‖ * ‖q‖ := norm_mul p q
+example : Quaternion ℝ ≃ₗᵢ[ℝ] EuclideanSpace ℝ (Fin 4) := Quaternion.linearIsometryEquivTuple
+
+#print axioms RP3Review.exists_distinct_sites_positive_correlation
+#print axioms RP3Review.local_limit_endpoint_nonvacuous
+#print axioms RP3Review.so3_log_square_decay_signed
+#print axioms RP3Review.rotOf_mem_SO3
+#print axioms RP3Review.haarInvariance_of_surjective

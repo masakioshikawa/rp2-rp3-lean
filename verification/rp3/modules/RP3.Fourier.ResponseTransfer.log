@@ -1,0 +1,7 @@
+RP3/Fourier/ResponseTransfer.lean:48:10: warning: `mul_le_one₀` has been deprecated: No replacement, use constituent lemmas from proof.
+RP3/Fourier/ResponseTransfer.lean:33:0: warning: automatically included section variable(s) unused in theorem `RP3.Quadratic.SpinSystem.abs_axisSecondCoefficient_le`:
+  [Fintype E]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype E] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`

@@ -1,0 +1,737 @@
+{
+  "method": "Serial source compilation with dependency fingerprints; state is written only after compiler exit code 0. All fingerprints rechecked against final sources.",
+  "recorded_utc": "2026-10-12T01:03:09.384208+00:00",
+  "module_count": 73,
+  "modules": [
+    {
+      "module": "RP3.FourierAll",
+      "source": "RP3/FourierAll.lean",
+      "source_sha256": "d7ba47bf8abf614ba9fef6e0ff0ef0d38b3af548bb803c2d4343b4df03945f7e",
+      "dependency_fingerprint": "d7ba47bf8abf614ba9fef6e0ff0ef0d38b3af548bb803c2d4343b4df03945f7e",
+      "olean_sha256": "c7077227572b275496908a28e2da1bb895ee4d7f2c89ad4635ff5432fdcf1fae",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.FourierAll.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.ThinProfiles",
+      "source": "RP3/ThinProfiles.lean",
+      "source_sha256": "1d77164292004c43452e3502f332469ca1263744145aebd96752ee102309466b",
+      "dependency_fingerprint": "dee55013f3d23f3ff38938623e2e5565cb8d129cc468a713e31a2797dcf657a5",
+      "olean_sha256": "62556667deb87fe0714370e6d9f835fcff91ee4746659bdb9285b85bd01099db",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.ThinProfiles.log",
+      "log_sha256": "833305556b19125c5941f01233d34b80b36f3a0e0173d1aa2d07d40f46ca7ef4"
+    },
+    {
+      "module": "RP3.Averaging",
+      "source": "RP3/Averaging.lean",
+      "source_sha256": "b6d6c2abd94bfdc5accc333456e49b9f916508c68482835101e580fc591d0d88",
+      "dependency_fingerprint": "b6d6c2abd94bfdc5accc333456e49b9f916508c68482835101e580fc591d0d88",
+      "olean_sha256": "2a058a4aeaba27fbf183aea976ea924241d82c902e729c12d7cf5a51b1905ae6",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.Averaging.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.FiniteAveraging",
+      "source": "RP3/FiniteAveraging.lean",
+      "source_sha256": "c9a74faf96c66deddc8d189b3ec3c3a3477cdd28af3b0f9f65779485dd440ba2",
+      "dependency_fingerprint": "ab4f500f7147fd225e0b5c84c62aa0d747fe47e13e6bbf1f48b828c9f41d18ba",
+      "olean_sha256": "681e324f1b5bece76017c576d037e038d3eaf893d1dc05e00f7756ebcf746c67",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.FiniteAveraging.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.Model",
+      "source": "RP3/Model.lean",
+      "source_sha256": "e66a568f5bc04ac6d08b3b260ba588465f875fc9aea69fe2bca7e2fc876111f5",
+      "dependency_fingerprint": "e0616920fb7e412ff8274526e5d1efa9528e10eb10965420ec85b7f45f88b262",
+      "olean_sha256": "170c537e7c770f8cdbea4ea6aaefd97a80f95149b9e145c0074b5b38b554503b",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.Model.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.RotationGeometryBase",
+      "source": "RP3/RotationGeometryBase.lean",
+      "source_sha256": "39726a740931dd3bba468655faa55880d95dd414e03fd7b336bae1a20c305c84",
+      "dependency_fingerprint": "e11006534e59d94e901703d4c042fef3867e92154233fd1a8d662ff8e98a7555",
+      "olean_sha256": "0d7dc6c0fff78e9dffa30a3af776cd9fbc65a4762295aa07a20ee1b07089cdde",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.RotationGeometryBase.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.QuaternionAlgebra",
+      "source": "RP3/QuaternionAlgebra.lean",
+      "source_sha256": "ebb2acb0f7acb02f5666714d7f6a2d239a9ff2fbfc01d2bbfc10f9a7fc33ca81",
+      "dependency_fingerprint": "48d98ba32e4cdb4aa9c74984d48655ccee147a8af8ffb8ea01a78a4768685f00",
+      "olean_sha256": "287d5b2826a2a962a10cb9face91314fa3c13a1f93633d0fb8fd52355e8b1b17",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.QuaternionAlgebra.log",
+      "log_sha256": "d4359a639cf11516828ba9999ea49db1c6ee339d846849ae78ae2adde6a10693"
+    },
+    {
+      "module": "RP3.RotationGeometry",
+      "source": "RP3/RotationGeometry.lean",
+      "source_sha256": "de334c85147f7573581d105665f8270ad8d14a59aed3535663a294c57903927c",
+      "dependency_fingerprint": "e13d9d9b8f1b9391ca1f04a15fae91f27ac250bbc510a0b4af06eeb3c40747b5",
+      "olean_sha256": "80cddf2da40cdef1d769db3ebe17772615e5cd73d05dbae267f31a4709cb89ab",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.RotationGeometry.log",
+      "log_sha256": "28f02ae836cf217d729ab5a7c107ec0fef348802ff65233e5af0914f0023dbf8"
+    },
+    {
+      "module": "RP3.PeriodicODE",
+      "source": "RP3/PeriodicODE.lean",
+      "source_sha256": "8c9327b06096fb11f87c4a478ad98282abeea7f210cbaac9f35ec22674563eb4",
+      "dependency_fingerprint": "8c9327b06096fb11f87c4a478ad98282abeea7f210cbaac9f35ec22674563eb4",
+      "olean_sha256": "1ecaceb33d13f1f4069db87fbc6bdc610f20d0a5c04076912466f3e5a4513d1d",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.PeriodicODE.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.PinnedKernel",
+      "source": "RP3/PinnedKernel.lean",
+      "source_sha256": "bb5d9172ce83a7dfebdc0beb8bd270f5725230e2a27d1f6fa8df6ebd350d5d5a",
+      "dependency_fingerprint": "4e1b823b4ccd09545b6bbda22acad08cd014cfc849632164372d973a649a2046",
+      "olean_sha256": "7bc1192bbb893915b61b5dacb328ac671bb04185f8fd949cf3c6004b04f340a8",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.PinnedKernel.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.NestedCuts",
+      "source": "RP3/NestedCuts.lean",
+      "source_sha256": "bdb788e85410c661563162397ebd0af1f762e0cbac4b4988dcc066bb667539d6",
+      "dependency_fingerprint": "4640b1c93f686923418fa3f60c253e453faeed02c676ec15e8076f30ce1b3fc7",
+      "olean_sha256": "86a1867b7063bec6247375c92f440316a1a05339f965df3810811f902aa1091e",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.NestedCuts.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.ModelAssembly",
+      "source": "RP3/ModelAssembly.lean",
+      "source_sha256": "7ca9137338837851d159c562162cf6bfc359fe1a0d08eb13b0a17adaeb0d56a7",
+      "dependency_fingerprint": "14c20fd63327cd94c9c148de49008b0ed62ce4b7d7cc610c6c8f022a3b82801e",
+      "olean_sha256": "933337006b6dff07116e54a5d1483a410642fc991f4c8120d821949c5c8d9bc6",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.ModelAssembly.log",
+      "log_sha256": "ef9d1f24714eda077dfa5f4253110e5a28fd91235d56f56ba9806d08d62a4d0b"
+    },
+    {
+      "module": "RP3.QuaternionAction",
+      "source": "RP3/QuaternionAction.lean",
+      "source_sha256": "1ec5538d0bdc18b4c4417dd969c72bf5ba24696a70c25a3f07cfa1c71d951958",
+      "dependency_fingerprint": "59b53076546c2ded64029db61bb067c1b0d2d91b471e16bc53d86f421ee17b62",
+      "olean_sha256": "53f678d18ad34670e75e0e0e99f55928d1f85d45807b869ef48db62ec87b0534",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.QuaternionAction.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.LatticeAnnuli",
+      "source": "RP3/LatticeAnnuli.lean",
+      "source_sha256": "2b20f341522a31ce79184f9334d8c2e8bd3cb79b0c8ac0ec1c8eba1901351a15",
+      "dependency_fingerprint": "dbb624e95ed4e5c7a9753c955abf0561e259bef726dd35e720c8ba4713348170",
+      "olean_sha256": "b7d581f5a90320bca92be4331834da3c682350132fa56ff1072c82a133081aa4",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.LatticeAnnuli.log",
+      "log_sha256": "ab244634905154a46491660525d7fd8818b55c90a6fd72d39e32d666db29e095"
+    },
+    {
+      "module": "RP3.Rates",
+      "source": "RP3/Rates.lean",
+      "source_sha256": "be873c5d28d798e60c94fa54fee0421f2ea7c8759614710cd9d9626cba1968b7",
+      "dependency_fingerprint": "be873c5d28d798e60c94fa54fee0421f2ea7c8759614710cd9d9626cba1968b7",
+      "olean_sha256": "5972c4e6366a3bb1ce816217aee16be6e93330379aa1640392ed59c27fad31cd",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.Rates.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.Main",
+      "source": "RP3/Main.lean",
+      "source_sha256": "b6c5b4cdd3fb3475317fe8f458573510c706c16b2e70e3bbab4d54354bfea05f",
+      "dependency_fingerprint": "50af68a4d4daf64ff245ad012f0770bbba423b3b0a26e7fd031af685435d074f",
+      "olean_sha256": "7c771506fb78e64e44dc81de0810fc39c94ba3dbb8ea0d631117323556348c34",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.Main.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.ConcreteAnnuli",
+      "source": "RP3/ConcreteAnnuli.lean",
+      "source_sha256": "407e176a656c817270418f2b598841c08277f36872c96576bf28ef48ca3ceb80",
+      "dependency_fingerprint": "b7ed38dbbe50b5881388020dfe96bb6f48d2bb36aaa362bc5099dd82cb188b1a",
+      "olean_sha256": "be4471bdcbe0a9d6fb62a96000f4a65cebeafd2698cff9ce0542e249ed7cc830",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.ConcreteAnnuli.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.ThinAnnuli",
+      "source": "RP3/ThinAnnuli.lean",
+      "source_sha256": "398b3897c99f0a79e2d6f2488151d6f4f8076bc994f9f1c9042b2d65057a6f27",
+      "dependency_fingerprint": "02ea65fd897aa7b13bb1b73f963d4e1142e97eacbff816ef45c2c76cf336dde3",
+      "olean_sha256": "d93b426bcc694cfe8630918f4b8274508610e30e3e8dd091378d863a5c95f00b",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.ThinAnnuli.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.ModelRestriction",
+      "source": "RP3/ModelRestriction.lean",
+      "source_sha256": "7d2b7781db3be274c87877a8bc4396ebf97458e46d2f720d681d45ceca7c1ea4",
+      "dependency_fingerprint": "28c2519f452a8419bfab1afff15686d4be9d4b3cb8b0f22316ed32a0512fee81",
+      "olean_sha256": "2009c6a593edc277c5aea747d9e4f3adc1c322df19f3556a7d7d74d3d51692d6",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.ModelRestriction.log",
+      "log_sha256": "7a8f5622c4eaab7de89c0ac26073febc131c1b4d6a22375b4e3fbadffec67124"
+    },
+    {
+      "module": "RP3.LatticeModelRestriction",
+      "source": "RP3/LatticeModelRestriction.lean",
+      "source_sha256": "a865edf1000e4592fe95e71865f8d99170719251a9f3b502ba47c3958787a935",
+      "dependency_fingerprint": "4e9a756ced4589133ee6700e0dc0546e1efbde3496fd486eedafa1d8f142b50b",
+      "olean_sha256": "94b0df65e2ac3111bec2f6e4d1c4a5bf49849a3eb8fb3a514cb7a6d6cf321868",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.LatticeModelRestriction.log",
+      "log_sha256": "064ac8b2484605c6193762045b7969242c508be65115f5da3ba5435d1de942a3"
+    },
+    {
+      "module": "RP3.Calculus",
+      "source": "RP3/Calculus.lean",
+      "source_sha256": "147a75554839704e769e702900a48dab0ca6a967c9108c7aaf81e76532d40166",
+      "dependency_fingerprint": "147a75554839704e769e702900a48dab0ca6a967c9108c7aaf81e76532d40166",
+      "olean_sha256": "62eee92d6296bc4ede93997ac6292ffe3cf19f8a7fd10336ff7cfd756ec0b785",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.Calculus.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.QuadraticGibbs",
+      "source": "RP3/QuadraticGibbs.lean",
+      "source_sha256": "4c031f2199b15db918afef2dea78074af8cdde753e387157e50da1a4a7b2ad56",
+      "dependency_fingerprint": "f7e3e2f1dca58da49fefe1812fa5006b05fd233463179567f1aa15373cd6a4a4",
+      "olean_sha256": "8b9824acd0cd1ada5247a3e684c1826df819c27c8b71e41419aafaf504912114",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.QuadraticGibbs.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.ProductJets",
+      "source": "RP3/ProductJets.lean",
+      "source_sha256": "9cf4178beb57a4a270da23dc94a960e7e6188237fec269628f0d2e542cdccb78",
+      "dependency_fingerprint": "40e8088717cfddafe7ffa4b243b60fec142c7d712d6afe9556c82d5ad8e93e3c",
+      "olean_sha256": "06fd4c7c9eac082875ba535759341208b3d8d32b93f8005eb2d7b366495e042c",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.ProductJets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.QuadraticDerivatives",
+      "source": "RP3/QuadraticDerivatives.lean",
+      "source_sha256": "180f9c1f59a34befa0ac2bc36dbea03a3e37b12223d293d00e8dfd3c0d42defd",
+      "dependency_fingerprint": "c16c1513b32b531bf9bd907444149e67074fbf71e1c009d419eda4c1e1536563",
+      "olean_sha256": "01b81d0632b523bb5b02ae79c7d2233e5bd71561203456caa5c6795c7efead20",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.QuadraticDerivatives.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.QuadraticWard",
+      "source": "RP3/QuadraticWard.lean",
+      "source_sha256": "53b16bef71b37aeecef270e19260fd909b15463e453f50463950a91ddc189ec3",
+      "dependency_fingerprint": "49af8297ea082f7d2a9601af9917f8183ca0402929872c83678c21870a21ba00",
+      "olean_sha256": "18ad3621adc9036ff5182304284bd312d005019ba6eeb1a7b20bfb9e007a5905",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.QuadraticWard.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.ModelConnection",
+      "source": "RP3/ModelConnection.lean",
+      "source_sha256": "e6bb2425c1914d20cc8cd6ba5059c566ef94102db7f0a0b53e6fecbb73dc3c42",
+      "dependency_fingerprint": "bb811bf2bb3d2fd72998bfdab9a4b9cc5efbfed3fcef455c6df595d1dadda1f7",
+      "olean_sha256": "128728787cd63edd3e9de685f0068949c706df0ad3a0c4861cd6c67cd91e6475",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.ModelConnection.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.QuadraticPlane",
+      "source": "RP3/QuadraticPlane.lean",
+      "source_sha256": "dacec3f592514803d2c54fd80a854ad4f7b045a3d42446e3be5b8ac451c979cb",
+      "dependency_fingerprint": "7375dad45b3d0502ea170f0144e6b0454e68f5169cd651365966aa35113996ea",
+      "olean_sha256": "5464e3f4c2d0cd1cfd7c868705fec5f4469cfe5ee0a7a0bcd8d9f20c6812ab8e",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.QuadraticPlane.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.QuadraticBounds",
+      "source": "RP3/QuadraticBounds.lean",
+      "source_sha256": "956917c74e566daffd3bc5d2b1b044a53cb1a63074f0138cff14f821d9c5080b",
+      "dependency_fingerprint": "7613ba409f451248175045bfe9be6c72099968dfe6879f6cef812263757286b1",
+      "olean_sha256": "512672e6aa321b7de94d051c3c6e6ae8affe986dff117874360ef40b880eebeb",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.QuadraticBounds.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.QuadraticPlaneResponse",
+      "source": "RP3/QuadraticPlaneResponse.lean",
+      "source_sha256": "88d7037f03de6e4852f0633e645b78a93914cdc87bcb37f4278cf09a5b801cda",
+      "dependency_fingerprint": "f7af9f05fd6080ae4724a3baafd1fcc9e209e297bbf4cbaf2c39b907ace151fb",
+      "olean_sha256": "be6041223d3be85b07382a5fa3d61f3cb7925b5ad71ab0efe87b83dfc1b10e17",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.QuadraticPlaneResponse.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.QuadraticAverages",
+      "source": "RP3/QuadraticAverages.lean",
+      "source_sha256": "61b6ccf4ac464d94292cffb4bdf40f8095e405801f478b5979021b83b395135e",
+      "dependency_fingerprint": "a9a853f7ccdb1707307160fce8da67fd3c1bbbdadc5f3d4975619a00c296e5b5",
+      "olean_sha256": "abfb349c164a5556394c6365e4fd16bdc2d5b2859d128f7753aa7ef0dfe73e9d",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.QuadraticAverages.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.ComplexCurrents",
+      "source": "RP3/ComplexCurrents.lean",
+      "source_sha256": "3294afcccec093e846ae277fe07dfb20b0c5ab42ca37bd020b741f7f27ef1504",
+      "dependency_fingerprint": "92cf31e8718b2f50215eec95e4dba24e7aeaa551d0f2ad33ba6b846c62021715",
+      "olean_sha256": "93f8634145dc9021dddc1cd345dca4e29ad66b77651b1778d080e576a1a0702b",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.ComplexCurrents.log",
+      "log_sha256": "6124a59d4e6a181954ca02111b4ab51b106d231db49337d0ff94eee7a5148e46"
+    },
+    {
+      "module": "RP3.MixedAlgebra",
+      "source": "RP3/MixedAlgebra.lean",
+      "source_sha256": "2ee628b071c2adc63928d6aa82051b0b0d2c24c246cf4ae16f98998f7a44b283",
+      "dependency_fingerprint": "2ee628b071c2adc63928d6aa82051b0b0d2c24c246cf4ae16f98998f7a44b283",
+      "olean_sha256": "6c5dd8d4dd1fcce499ab91a3ab1a0036ed06529c650c7ebd92dddd5edc08777c",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.MixedAlgebra.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.QuadraticSecondResponse",
+      "source": "RP3/QuadraticSecondResponse.lean",
+      "source_sha256": "39040a91e45bda37cd4d305670441f3a0ce49069a14712120aaa4422a355635b",
+      "dependency_fingerprint": "259bd81232b9c5165762cdab596bec42be421978de4c70ea8f7d4792c8ade1a7",
+      "olean_sha256": "0543a9a675b4b02442ea397ebe3b400b77543911960cc3dbaf280c7324f7df22",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.QuadraticSecondResponse.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.QuadraticSecondGauge",
+      "source": "RP3/QuadraticSecondGauge.lean",
+      "source_sha256": "be91d17cfd46f24c0f53051cc2557d48a790e68eb204055473d82913b4410e2c",
+      "dependency_fingerprint": "250c1984b34e6b2839e8615709cbb024c3d65b80230284ec1829262f475bf067",
+      "olean_sha256": "3cb10f6b86ae3da2660ad2e6e2eb4ce6d348c254f71668f8e5905a9bd1b3e33d",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.QuadraticSecondGauge.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.QuaternionPaths",
+      "source": "RP3/QuaternionPaths.lean",
+      "source_sha256": "493fb2eba6743dcb056c54093cd3d9d6a8d7b820e012e9c61ea1b44da8424e09",
+      "dependency_fingerprint": "a422528b7517b3a91ca5bd1c7731353d59daefd1c7833e4b2dc74543bd6f2698",
+      "olean_sha256": "e77eeefd8a8ff21165ba757adb5a84bbd1d4b2af2c333a3ba456773f8d49766b",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.QuaternionPaths.log",
+      "log_sha256": "bf84ef94014bd94463cec80febf5d5adfa46e48a314284ac7a16c20d2b1621ef"
+    },
+    {
+      "module": "RP3.QuadraticPotential",
+      "source": "RP3/QuadraticPotential.lean",
+      "source_sha256": "f37162ecba5c642926fdd0cc9ab30538067dbd1d2da05a78ee683a4bec3ba8d3",
+      "dependency_fingerprint": "bbbce3042e5695e8deb6f410f7a7e490e738001701a8461de54ff2fbe34235a3",
+      "olean_sha256": "268bf06bb4435c9a781d2d8efe98bf1d7c1f909f42a3a7e659b93297b10575e3",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.QuadraticPotential.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.QuadraticSecondBound",
+      "source": "RP3/QuadraticSecondBound.lean",
+      "source_sha256": "006783c4ad6101a66f616e05cc1e98171dc828e1c96544faef082c9629a596e4",
+      "dependency_fingerprint": "0ac6c47650e650a47b312ac7e2f537fc6be8c7c528b1daeb91e0043fc8693437",
+      "olean_sha256": "7e520fdaafed28f9c2c69779cc55d3fc1bff80c629101aedef14a37004821861",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.QuadraticSecondBound.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.Fourier.ModelModes",
+      "source": "RP3/Fourier/ModelModes.lean",
+      "source_sha256": "2279bc251e757f9da87438ed2b651289e9fd54d066d594911c048b414aa77ac5",
+      "dependency_fingerprint": "2e987df43d7a1a3011eb1a2f9918ef7122bc970a6bef4ef0a8bd1d72c3554859",
+      "olean_sha256": "d36d65fa9d56edb57bf3fc9bba8d8ff140e8c2e55fcb475024c34d6b62ed4068",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.Fourier.ModelModes.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.Fourier.ResponseTransfer",
+      "source": "RP3/Fourier/ResponseTransfer.lean",
+      "source_sha256": "bd67f7c5defe2b3fad7fa499d6fc7c170e682b397530a3401195f4abcd905ac6",
+      "dependency_fingerprint": "f2f1704710adc38630de4ae1a19b14039607bde39633db37a6506fa3aef55769",
+      "olean_sha256": "300b349995fb23edcf678200db7399762f9fd0d4bd113cd786ba268cfb9186f7",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.Fourier.ResponseTransfer.log",
+      "log_sha256": "50f3ea61ae9affbd78b77884ace7dd7bc8bebb3d0accf4457b8cd850ad5df63f"
+    },
+    {
+      "module": "RP3.QuadraticMixedJets",
+      "source": "RP3/QuadraticMixedJets.lean",
+      "source_sha256": "997f0f1af5e2318481baaa733b5e924dfa127666ddc4855ccd7b4608959d30a4",
+      "dependency_fingerprint": "d1447621df645a8d259da95794a63cfcfa123de2082c3a8226e4fb25e93f184c",
+      "olean_sha256": "636f1325d13f9bdf9ca5ce973af47e1e5cf49d72b8c2b1722830cfecb7d3a8d1",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.QuadraticMixedJets.log",
+      "log_sha256": "b0013bc9635161564174f0d9f8962b358b6ddc7836d64965924d14a87f4da7df"
+    },
+    {
+      "module": "RP3.QuadraticMixedWard",
+      "source": "RP3/QuadraticMixedWard.lean",
+      "source_sha256": "a2ee0c27851b4a2bd2001d178a5ff4d91fdbe68c761eecabc6e4da24bd42a55a",
+      "dependency_fingerprint": "dc428f46b6365e5f4fed9ff68b0619ee60a979f9439340fa1e5175e1165dd409",
+      "olean_sha256": "6b1c5fb584d86b585e8e70dc42364c9e80f92f5d24045c020b809b9205d89b0f",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.QuadraticMixedWard.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.QuadraticComplexWard",
+      "source": "RP3/QuadraticComplexWard.lean",
+      "source_sha256": "862d071d6493eaa11e4f508ae828dfb1c74e0aef59c208bc5b33f6102ce6a750",
+      "dependency_fingerprint": "21a3adfe3b1522bfcdccfdaf2f87acd17c30b1b4922c0cc1d4f2f16fff6697e9",
+      "olean_sha256": "82932abdf48fdf08ebb28081d6cf4dc4cf40ece28cfd67d00d1bbb09265e06c8",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.QuadraticComplexWard.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.QuadraticCoefficientBounds",
+      "source": "RP3/QuadraticCoefficientBounds.lean",
+      "source_sha256": "a58eea940cd1526d763584688d028d51e1048edda59609fecb4340f496844e56",
+      "dependency_fingerprint": "4b5e484bf2b24e605907cbc83cbf402c09c847e3c1546af69b627eb41b21aaef",
+      "olean_sha256": "c36a8695ea5025b83bbc91f46157713bdb6c5c7d0c96823e4473faa4a7b5ea41",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.QuadraticCoefficientBounds.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.QuadraticFamilyKernel",
+      "source": "RP3/QuadraticFamilyKernel.lean",
+      "source_sha256": "2c0229d6e84a19b3c12c83178a1c7482b42cbbf06dc59ffc10d89e7646f98ccf",
+      "dependency_fingerprint": "d99a1ccec4895ba6594346c3ac8591134d7cdd90572c8ce2162d6d3ccac376a6",
+      "olean_sha256": "535c21cdb67d93114d20cbf66b43463531fb11bdd9a6b77c14f3911d8023cc18",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.QuadraticFamilyKernel.log",
+      "log_sha256": "7abbe199d6450bdbae984efc492b29e5191d477cc798c7e87831e5dc474bfb2b"
+    },
+    {
+      "module": "RP3.QuadraticFamilyEstimates",
+      "source": "RP3/QuadraticFamilyEstimates.lean",
+      "source_sha256": "3bddb7f0b857a16cbe37d313306bc08df885b831633de0c46612183a0f66cbfa",
+      "dependency_fingerprint": "ebb652233031b794aff27b42c75b29ee6691ca9472ffa6cfcdd1aceedcd89406",
+      "olean_sha256": "ee9593971a011d1ba5228085697194c6058f5691a0a48ba7ab4156ca89451ea2",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.QuadraticFamilyEstimates.log",
+      "log_sha256": "f42353f06cc045853c46a6d8dd2961531abedc2b05810c51cdab11d6946e5d2e"
+    },
+    {
+      "module": "RP3.QuadraticFamilyLower",
+      "source": "RP3/QuadraticFamilyLower.lean",
+      "source_sha256": "e997c56eb92de97006a474448140db6564a78787f9a0a028b9fa7da01d256df6",
+      "dependency_fingerprint": "5ad85e8e6c616c007f1ca1d8da20e43c31759087745eef6ab007cbeb7a83160f",
+      "olean_sha256": "64c1df58185ba96bcc2ec9c5b7939549b20ecb6847ac228f66d8a11ff90e0530",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.QuadraticFamilyLower.log",
+      "log_sha256": "6cc53b002252891f99bcfdd571f68357660ab18722e4e423b36c292d75dca5b7"
+    },
+    {
+      "module": "RP3.QuadraticFamily",
+      "source": "RP3/QuadraticFamily.lean",
+      "source_sha256": "628361f877af4cef84e2dc23b4bc9d2d5bd935e726b25bc0a1710df5a9b5fbb7",
+      "dependency_fingerprint": "df9dee303d78bdc5a28dc636d1ceffddff2cd7a025bff3e7c330ebfd09fe6137",
+      "olean_sha256": "abe2563fe3a415b7ecb17613bba2c55c2ac439c1a484aa7bb3c41c6670abbd91",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.QuadraticFamily.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.Fourier.AnnulusResponse",
+      "source": "RP3/Fourier/AnnulusResponse.lean",
+      "source_sha256": "07587e80cbb7524ffd3042431ac85ed23df6f431f2e1cc2527aa381e3913f3d7",
+      "dependency_fingerprint": "67adaed1bd226f67a1e4c5cf97b05ce3c6b3e45a779d7a373e791da4f49945f9",
+      "olean_sha256": "9646b141a20a38797c3d9f6ca3321c4dd438e0f26b871c6dac1de84be5e20235",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.Fourier.AnnulusResponse.log",
+      "log_sha256": "5105292edafaed2fb800de95ffdf429bdbf0bd00ea33d88ab45bf6febbcda269"
+    },
+    {
+      "module": "RP3.AnnularEstimate",
+      "source": "RP3/AnnularEstimate.lean",
+      "source_sha256": "479c6d7ac573ff6596fa6ef07e766aa53d79feb20b39f89868deeec06cb29f18",
+      "dependency_fingerprint": "7c867ec802df79dbc18846f815ef4e9cd92880dc4138055e2097c7fba5f37fbf",
+      "olean_sha256": "fac6ce50148b9d31c673e8c977530e4ccc6bbf0a6d5e6ed997959d8f3e896366",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.AnnularEstimate.log",
+      "log_sha256": "0436833f0882b6a3137a3d1be16905573d79750d33dc62d8b4fd43ad1cfe05c1"
+    },
+    {
+      "module": "RP3.QuaternionComparison",
+      "source": "RP3/QuaternionComparison.lean",
+      "source_sha256": "4805e71a92432863003e146bcb4b3a06417e29a8aa9c509802abc16385188796",
+      "dependency_fingerprint": "73475cc7ffd1d1dd0213bb38a13934e429e6c3fbd6733cd4ee18b73b6037b591",
+      "olean_sha256": "bc08aa1e8a2ce72e64ba8223e66073f0de19b3a3c235eb08ff1810fe9867830c",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.QuaternionComparison.log",
+      "log_sha256": "e441fdc54766690dc3f9c66c5367bf2536376b3f1b522cd16bbfef3818286c73"
+    },
+    {
+      "module": "RP3.SquareRates",
+      "source": "RP3/SquareRates.lean",
+      "source_sha256": "34e68c30cae76b9a9e223d7c686e8fc2c255e1deec54360166534e23299a36a7",
+      "dependency_fingerprint": "b75a0e999f14ced7e06afe799e8cd67153bce76d5ad91d13c43c910475739b47",
+      "olean_sha256": "3bf289884d0817684464af331a8aaaae3a070853e701e840266a3d441f2323b3",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.SquareRates.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.KernelEstimate",
+      "source": "RP3/KernelEstimate.lean",
+      "source_sha256": "c3f9202b1e23518196d34708a1b733ed44321560b4d2f40a7cd513c5155dcb43",
+      "dependency_fingerprint": "6cfd2f381bfa498ce71ea81b966663280c1fababe6fec950c8cf51645b3017f2",
+      "olean_sha256": "1a400d17723ab728c0bf3cd9b9c36cdbc35d01ba1de882c322ec34337dda6165",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.KernelEstimate.log",
+      "log_sha256": "10ef6a899ac05a16c33627baefe5539d5d9621f05186adb774a40cb48591dd6a"
+    },
+    {
+      "module": "RP3.ThinKernel",
+      "source": "RP3/ThinKernel.lean",
+      "source_sha256": "ed2a046be311a1fb2962c6197983e826591a778f51c9e10f7616d74c9d8af3a5",
+      "dependency_fingerprint": "9bc007d9e5079d6b69069814cf39caa1fc024444f0aba42dcd1c7b8aa497f725",
+      "olean_sha256": "47427e3dd412476b5875361e2798bb66be4d0be0e555b741e6672d356048ce1a",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.ThinKernel.log",
+      "log_sha256": "ceff27025ebdd87634190f9a61ec18cf7ac3af6cb36ba2063f842a3b2d2af988"
+    },
+    {
+      "module": "RP3.ThinProfileLattice",
+      "source": "RP3/ThinProfileLattice.lean",
+      "source_sha256": "263dee4a801a1c591852c841b12c109ead6aeb5e8e5c0d6cfabeb15d0405c4ff",
+      "dependency_fingerprint": "d3c6eb2c0bd5d37a33a26658d2a37544382121ea69b779911d6fd98af54a760b",
+      "olean_sha256": "de91a218f87bedf0b2886360a42030fc018f6f3e209849f7b93a7b3932e96299",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.ThinProfileLattice.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.ThinFourier",
+      "source": "RP3/ThinFourier.lean",
+      "source_sha256": "e9b5b88f9d0558f2dd4f990b3ea2d72760fe0a18301e8cc60d670ddfa88d739c",
+      "dependency_fingerprint": "4e108e2bfb2bbca55e7d6ea767ad34373b85702eb0c5972d98b86519baa01bbb",
+      "olean_sha256": "8ace10fdbe7d08125d2428c483c6a3cc1df5906c85e9e8f73b96961decca1d62",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.ThinFourier.log",
+      "log_sha256": "09ae23d4b4700345f540451a344ede84cf4fa44489d614aeaf78c5d9c616897c"
+    },
+    {
+      "module": "RP3.ThinEdgeResponse",
+      "source": "RP3/ThinEdgeResponse.lean",
+      "source_sha256": "d06094139d7ed2b0a8e871fccf3ea319ec578e05a7e2edac9d2119b16cae441d",
+      "dependency_fingerprint": "d9f948e8e4398407fad6b3376f9327bb8e539c61073decbab02e0b393032190a",
+      "olean_sha256": "36df6987b5a12f4ac7ccb5b773c165842a6d20e3f099f5aa1510dddcc6588144",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.ThinEdgeResponse.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.ThinCosts",
+      "source": "RP3/ThinCosts.lean",
+      "source_sha256": "9b04ad7abf1d3592614e5be2670b04819c3032e3d45abf1c6d1d72bf27ff5b95",
+      "dependency_fingerprint": "a0262cb656c88537cd8fee62b4d28135a79beff09f77e03d338f1b1e4288259e",
+      "olean_sha256": "91e76b22074280c5565d43e75da68da99c69c3e60dfebd7a408013819554b64c",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.ThinCosts.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.ThinSupport",
+      "source": "RP3/ThinSupport.lean",
+      "source_sha256": "b86f6f699c1f6a7b10d0e35c1e266e689e5cbbf09a279e9d73cdb1407a5a1a9a",
+      "dependency_fingerprint": "28c2c120d6d846f75b67275db9ac2a6147e787cb23bc2a2500d6027c6339457d",
+      "olean_sha256": "27795a6a7b8ea0233ff27c954df0f7e8503d5e90867b1a9bf393ca24c8698105",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.ThinSupport.log",
+      "log_sha256": "18f647e7ad2a99e9cb5b0f8fd540623307f607836b1744943518baf66c3fd701"
+    },
+    {
+      "module": "RP3.ThinResponse",
+      "source": "RP3/ThinResponse.lean",
+      "source_sha256": "cf4f7dae78a3855b8125df23633652bf86601b19da7c5a7dda306be2f8af4cb7",
+      "dependency_fingerprint": "3ff044758ab1ca692a2f5e4004baf213a63b24ef6df010c0015eb5731c240748",
+      "olean_sha256": "658a7cd432ff6732157c66de1adec317252daebb42e439a0d392072f2215fff6",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.ThinResponse.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.ThinDyadicParameters",
+      "source": "RP3/ThinDyadicParameters.lean",
+      "source_sha256": "61c6fb37f754c620b7b9fa4bcd2ea7ae8ae03019c6edecd5a873c894c9e48c6e",
+      "dependency_fingerprint": "7c3de40bce4d17414ae4fefb09337d2892a610a3ab7abaae6331cbf2affb9b95",
+      "olean_sha256": "f48700274880527e1e0d7d8b1b3ea208cec936538318886eccbcbaf9255454c2",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.ThinDyadicParameters.log",
+      "log_sha256": "961a153b82c048a98a2acb3f6c420fde4bd18ef7a7034ae50bb048190bf01155"
+    },
+    {
+      "module": "RP3.DenseRates",
+      "source": "RP3/DenseRates.lean",
+      "source_sha256": "e84836e75f8c43f8bb29c4743d5885464c3961d78fc33c0972c2e1c3ae225d05",
+      "dependency_fingerprint": "f233a77aac9c8d3feba73bf6c431c801eca77b6c46d9eae1d611f0b024cb972d",
+      "olean_sha256": "c6471e7abfde7d3655b343f3bb19924b7bbdd845a2036e97b9979a8d3a5df4d2",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.DenseRates.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.LogSquareRates",
+      "source": "RP3/LogSquareRates.lean",
+      "source_sha256": "0ec4f3d3d13ff4d24fd9a590b8151c44dd90ebcc10b5779884f9388f6d7faac6",
+      "dependency_fingerprint": "10f061fa307fd3416bbea311fe5ac78dc04ff580c4885e62bff538a0643a9057",
+      "olean_sha256": "514e99d0f4046402efc3f64702732d6c97c8fa3a6ec0172ad67c4bcc18043742",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.LogSquareRates.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.ThinScaleChoice",
+      "source": "RP3/ThinScaleChoice.lean",
+      "source_sha256": "1794475b286681b6aec360102ae163980efeb99159785149b08d3a7e34ee3818",
+      "dependency_fingerprint": "e00c6a9562da1a184ef3f2fbc4c9d4dd52c886dd5ca6825adfad8ba84ba4fb7d",
+      "olean_sha256": "e542fcf798a35270ce303aa0758182d5428b664405309c1744581373a161b690",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.ThinScaleChoice.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.LogSquarePacking",
+      "source": "RP3/LogSquarePacking.lean",
+      "source_sha256": "41e32c46643e6bdadaa65557926e7dae5aca8c5d6bf0849ecbed0bc2464955aa",
+      "dependency_fingerprint": "fb7b0a4d92cb0e14e046b41c576bb49108f1bbf1a329c2388eb4ec49de75b462",
+      "olean_sha256": "c1e9c4074760cb46d733e3d1ad5763f7edb176a98b2c0bae3b0e709305a40559",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.LogSquarePacking.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.ThinKernelEstimate",
+      "source": "RP3/ThinKernelEstimate.lean",
+      "source_sha256": "1afc30b62d8cca539e35972637b3346605bdce9e49089b1a8bbdd83fbba2386d",
+      "dependency_fingerprint": "7fa3ba539c8c1ec52f5cba56d64c04f2b5c8d08547d63747f2cd1abf99408df0",
+      "olean_sha256": "79bb13f3d9c213913af9dd09d694946b3946d49c360fcce574a4c2f64b501977",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.ThinKernelEstimate.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.UniformDecay",
+      "source": "RP3/UniformDecay.lean",
+      "source_sha256": "a342202be3a067b1d76b1fc88e4d7abf4d6f3ce4764f7694440eab210340bb30",
+      "dependency_fingerprint": "bd74ac120f51a113aaf494392e56fe3c425b3eff5d21f459dc6a5b65cd033b5d",
+      "olean_sha256": "3fc8cd7dbe225fc85ed67a600190b8bfd650b63f301147376dd11e8e9ea73732",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.UniformDecay.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.LogarithmicRate",
+      "source": "RP3/LogarithmicRate.lean",
+      "source_sha256": "a5048fb1ca81939b5021f3f84bfa9691a53f92aef095eb4f9825a4c17619709c",
+      "dependency_fingerprint": "cfe40cab9893874696350e20410953e9eb5630279fc2ba54601fc763d85a9dc3",
+      "olean_sha256": "e43603dd6da8df586929df1fa557302993e452a382f81f5cf22d74cfe6a3fbbb",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.LogarithmicRate.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.Full",
+      "source": "RP3/Full.lean",
+      "source_sha256": "8dc450114b57856e51953f8857fff3c5e414bf15e84d5c68d95a483446f0938e",
+      "dependency_fingerprint": "438bacb18958aa841725ce6a79f4928a4ec32a08d868a35d0c27c097ee3b4f11",
+      "olean_sha256": "6dc59b4eae30e56a4f49311f0d2f5af96a17e259cfbb929ab8a58c393f9cd12f",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.Full.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.GibbsProbability",
+      "source": "RP3/GibbsProbability.lean",
+      "source_sha256": "4fd61ed20d5fc523baefce163e563fbca94e1ada09f81216b0fe95fb9b42d3f7",
+      "dependency_fingerprint": "4a5677c97d2596d0841f4e6d9785f5a260dd69b64834a6e00b7783ebdb881741",
+      "olean_sha256": "35b62e4cd5c2da6e99673528b156adf30baf88a2eed2e78754ff1511957fe77e",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.GibbsProbability.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.WeightedSummability",
+      "source": "RP3/WeightedSummability.lean",
+      "source_sha256": "8664442abc02864ee41fb38cdc977c0c6fecf4ec668f5793d01dd84af714b01d",
+      "dependency_fingerprint": "4e5a1cd270ea8c0730c793ce2dbe9c05d844af5011e7c03782de00d24ee4ca17",
+      "olean_sha256": "e6933cc6df98688e1a93d09b25748b5289c1c8c7f0adf203ec224837966841a2",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.WeightedSummability.log",
+      "log_sha256": "5070d51767ef6b7a7d4fac91e218c3abf44ff675a6b47d43f84efd26e994a25f"
+    },
+    {
+      "module": "RP3.LimitCorollary",
+      "source": "RP3/LimitCorollary.lean",
+      "source_sha256": "255732cbb5d462fd51ff968791d2c6e9285372f4318377badd1c1ffefc8ad9aa",
+      "dependency_fingerprint": "a1145d6b83f70af6ee150de6da10133c2369b8e4669bd9963ece41110e59b52d",
+      "olean_sha256": "81a8cb1ecec3ec144df0297c5cbbe0b4dbe5ac9f1b2a7ddce82b425d83b41372",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.LimitCorollary.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3.LogSquareLimits",
+      "source": "RP3/LogSquareLimits.lean",
+      "source_sha256": "f6fdebbf06d5f1af50cfaabe7a1829c169cd986d645c5e69ed73a3ccfa0eab27",
+      "dependency_fingerprint": "ef7d16433111ac0eb5302b8bf9c51fb97bc357ad5a2f1bc22042f15996082f6a",
+      "olean_sha256": "f5d84af1f3efa1332de87840d35fbfe9d09c33f313ab31afaf1047f015c8b6ee",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.LogSquareLimits.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "module": "RP3",
+      "source": "RP3.lean",
+      "source_sha256": "49acefa47a6a56a129f07f261cf84fa82e34046bd712bbd15429d0cc94ace8a8",
+      "dependency_fingerprint": "8123d124ba2ccdba9ac43d8a78a70280a6c7f5c17ba65814da0c5f2d9d6515b1",
+      "olean_sha256": "676498ab7032743d0d8ec3bec5fdb16bab67a45d615235451a4a859895692898",
+      "compiler_exit_code": 0,
+      "log": "modules/RP3.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

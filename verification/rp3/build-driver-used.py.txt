@@ -1,0 +1,33 @@
+from pathlib import Path
+import hashlib, json, os, subprocess, sys, time
+root=Path(__file__).parent/'source/rp2-lean'
+logs=Path(__file__).parent/'build-logs';logs.mkdir(exist_ok=True)
+env=dict(os.environ)
+runtime=Path(__file__).parents[1]/'lean-runtime'
+env['PATH']=str(runtime/'lean-4.34.1-linux/bin')+os.pathsep+env['PATH']
+env['LD_PRELOAD']=str(runtime/'app-path-compat.so')
+env['LEAN_NUM_THREADS']='1'
+statefile=logs/'state.json'
+state=json.loads(statefile.read_text()) if statefile.exists() else {}
+seen=set(); digests={}
+def visit(m):
+ if m in seen:return
+ seen.add(m)
+ src=root/(m.replace('.','/')+'.lean')
+ content=src.read_text();deps=[]
+ for line in content.splitlines():
+  if line.startswith('import '):
+   for dep in line.split()[1:]:
+    if dep=='RP3' or dep.startswith('RP3.'):
+     visit(dep);deps.append(digests[dep])
+ key=hashlib.sha256((content+''.join(deps)).encode()).hexdigest();digests[m]=key
+ out=root/'.lake/build/lib/lean'/(m.replace('.','/')+'.olean');out.parent.mkdir(parents=True,exist_ok=True)
+ if state.get(m)==key and out.exists():return
+ log=logs/(m+'.log');t=time.monotonic();print('BUILD',m,flush=True)
+ with log.open('w') as f:
+  p=subprocess.run(['lake','env','lean','-j1','-o',str(out),str(src.relative_to(root))],cwd=root,env=env,stdout=f,stderr=subprocess.STDOUT)
+ if p.returncode:
+  print(log.read_text()[-16000:],flush=True);sys.exit(p.returncode)
+ state[m]=key;statefile.write_text(json.dumps(state,indent=2)+'\n')
+ print('OK',m,round(time.monotonic()-t,1),'s',flush=True)
+for m in sys.argv[1:] or ['RP3']:visit(m)

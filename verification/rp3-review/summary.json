@@ -1,0 +1,2712 @@
+{
+  "started_utc": "2026-10-12T03:47:41.737238+00:00",
+  "input_snapshot_sha256": "3be7bcd576e4e7e78306c444c2a0454c9754211f8ab5a3cc03853646ff8c7a9a",
+  "source_sha256": {
+    "AxiomAudit.lean": "d07ef4b13c3f645db57778ba41e8ca60e2809bae8d0b4701c8f98d9bc88c9053",
+    "ProbeGeo.lean": "5657d88853dec68ec221f00ab7b473a0206913ebd01baa92ae023dbd73fad50f",
+    "RP2/ActiveEdgeBounds.lean": "31c8103dea15eca593e871035d9276718e075319441ef15c6abf9096b96bf3d6",
+    "RP2/ActivePaths.lean": "5df74b317f1af6539e26c7cbe607baf6b8ef2dccdee6a813aaf4bcece9912b1a",
+    "RP2/AnnularEstimate.lean": "9b4606b0ad5b94f4b2938f32236a8285e4fcb8955523eb5f198413ecdb3b2dba",
+    "RP2/Averaging.lean": "896b80e078cf9a1e47a9b7663bd3e2f397a0fc648baa78c8dc2e2568a9b2b995",
+    "RP2/AveragingInterface.lean": "a1de490810b0321320f9f4da9f7b7c3a7a13420b396200890e4da145c1896506",
+    "RP2/Calculus.lean": "e1f02ceedcd0bf28d38be5f02e7b6b2cc3afbf978f2aa3e366d190d13c273c0a",
+    "RP2/ComplexCurrents.lean": "bcaceb0bf22a4ccd4b45b844d33f91d0e3427c124a11bf8a1c2c79bef37062c2",
+    "RP2/ConcreteAnnuli.lean": "ea6f19f34a0c9598c8655d594214a80813b7ac1945bab6ec2ebe9604759ac786",
+    "RP2/Criticality.lean": "248d32e31462ae4c6a058f5ae4e251eb459f9faa8ef917d3ac197b4fc038b93f",
+    "RP2/DenseLimits.lean": "685db5e3bdfa4034fe6b0be541e4e088bf34ef91fc73dbf6e09d0e5ea068fa0a",
+    "RP2/DenseLogarithmicRate.lean": "92a9f8b73bcf71a47a8ef7072352ff5cdd9971ea48de23c4e791026b578a916d",
+    "RP2/DenseRates.lean": "f0060086cd0e9bc5ed400f161526867316be2660d78e159f22c24c9c311adcdd",
+    "RP2/FiniteAveraging.lean": "940fc322737870f963cc626725ec7b4946c307c4b106dda0b316b5b69a7acf6e",
+    "RP2/Fourier/AnnulusResponse.lean": "e2f2d38460ef8ce6c2a3df6b9d45196ca53e47d2610bdb94dc6ecf7d85093562",
+    "RP2/Fourier/ModelModes.lean": "e95f6729688af7fe70a5267815aeaacffc01dfed0abef3193904b2be48cdb43f",
+    "RP2/Fourier/ResponseTransfer.lean": "447c96e731aa0a67f8f7c5e2f945b21c3d9a36d405a09c1179ccaf753621b457",
+    "RP2/FourierAll.lean": "f6057642c043d2ef58803a3373b4247a55993d5d0b6c35eb2d774bd7c221027e",
+    "RP2/Full.lean": "0dbee0ba5426674c2910fea95ded0060e3e62bae8b1bf9024baec3040d2c5867",
+    "RP2/GibbsProbability.lean": "092ebcfde98db306a75be31b1ed17d417d216522dfe40323b99bfc3822a4d099",
+    "RP2/HighTemperature.lean": "95ab18d482de613db6395a5302e19e15d65eda8fa00bc94aeee260b803b382a8",
+    "RP2/HighTemperatureDecay.lean": "1d8ca549f7c58c7423c88d4a1a3320a56b6b4e9f9959fda733ec2ad1735e80bc",
+    "RP2/HighTemperatureExponential.lean": "4df9eb5172eb6d0f52a6a94fe19dfccd2b6c0f917bb9e8270947aefa395340fa",
+    "RP2/KernelEstimate.lean": "3c3d309896607962c297e122281affd67362dd66e1da97ec5f6772e89aabb511",
+    "RP2/LatticeAnnuli.lean": "051917ecd029835a557ccfd79f28b393ed9811e92d53d3d462433f9fdea324bd",
+    "RP2/LatticeModelRestriction.lean": "414688fa8eab099126cc1254d4fe9061373ae25afc477a90dcf4edb1fcad6594",
+    "RP2/LimitCorollary.lean": "8b2e2a402a5f152ccd1357e86890d8854de6f3ec275c592b48b34df444ed575a",
+    "RP2/LogSquareLimits.lean": "9101f5accea7ff391427c8da3ae4fcea7e7f160c82bd3d528df20deeb895418f",
+    "RP2/LogSquarePacking.lean": "69123da47ff651de9ba4701ab70b0b1f32b38ba48d89d5df9d7fc19e2158574a",
+    "RP2/LogSquareRates.lean": "0aeadd6d5a4e57bcf1d3c421b3e4ae7bbe561d56829bb17dfefc04195577cb6a",
+    "RP2/LogarithmicRate.lean": "f5dbb603c5a353a87faf182350d80501606713aebf96d0065da0fc54cf55f3ce",
+    "RP2/Main.lean": "974e99e53473bece94edc40ef98da312b51dbc7cfa310d78cd9e0f515f8f1d94",
+    "RP2/MixedAlgebra.lean": "a8ca4128b73c6ab9da7f331ab8833b38efbb3de911645b44adae21775dbe34f8",
+    "RP2/Model.lean": "1c1f53e667f828d8feba95e53894cc06714482f2303767e7db768cb3d50b61b3",
+    "RP2/ModelAssembly.lean": "d665050e4dbe079d06d0c1b3c07045f4ef7147cce24d8686207cd072bdb123fc",
+    "RP2/ModelConnection.lean": "c449aa456e08c5dc1f647ed20cff239744155c0dd1d5fa0cd7de853495e5f0e8",
+    "RP2/ModelRestriction.lean": "ce2b65037eb915b6a4c2ce1c532de612cc0e0d15130c56c953063ad3d31d25dd",
+    "RP2/NestedCuts.lean": "5880c0b408d5439c893c4b56c424c99b8379da6c765a01d61d2d0ced05d2b3c8",
+    "RP2/NonbacktrackingPaths.lean": "5b9f8a7957b2d69f6bde20a879738a433b917822413d532490f1fa575cdce96f",
+    "RP2/PaperInterface.lean": "35b209b93bad853ab3efe82f7afc996a2c89f1fdf53efb51da4b5b410819781a",
+    "RP2/PaperResponse.lean": "ca47869b34b5875a90bd97c251597166f7b932710f03bfe2e1091a6a80e90806",
+    "RP2/PeriodicODE.lean": "11bcadd31ddc91153d0f9edbed1c4ecc288fa476fa75bb59126686fdd27e5a98",
+    "RP2/PinnedKernel.lean": "aceba24f6244f14a8ff73fc444d2325b3e5610e23273703d9abd7e52c5cc5503",
+    "RP2/ProductJets.lean": "670b3e9920e21594a4ba800c8382b78a4bf873bf9a304ab02121add0ed3d8cfe",
+    "RP2/QuadraticAverages.lean": "7e64fccf7369142c10ccf5b6a8eb05e9715f1cea30c3774f54177827e1281dcc",
+    "RP2/QuadraticBounds.lean": "5f0b358d22504f77dde384635c11481820eb2d777de07dc0cc0b6fe263c4f6ee",
+    "RP2/QuadraticCoefficientBounds.lean": "7339f608b839a9a941819f810a7c91429873f756c7f73c385b84b0a961fef9f3",
+    "RP2/QuadraticComplexWard.lean": "c61e8f131c7397dcb4116d6a085cf0038c3cb8144ef5931fd383b9442583b072",
+    "RP2/QuadraticDerivatives.lean": "f7deab25a151cc38edf5c702b3472250b2dd6fa07e46b5ab8539509b477221dc",
+    "RP2/QuadraticFamily.lean": "b9fdcd55c8c891f3b80cd49a99e895cba462f378a0902406517bce0908da4ecb",
+    "RP2/QuadraticFamilyEstimates.lean": "25e81ddd7d1f8e9152e99aefc4da77daa6c59c090f88a3eebd2d62ccd3b7a407",
+    "RP2/QuadraticFamilyKernel.lean": "48e86a36b28f65a03b8d71758aeecf96f8649ad03db874197b21d8513163bf29",
+    "RP2/QuadraticFamilyLower.lean": "d2cf5baee42fca831210fd8a5c3752d456eb8fb14d54a9579a26985f597986d0",
+    "RP2/QuadraticGibbs.lean": "4001113068ed4eeb19f00326dbb0e815b7bc759aed52a6fe1bdc10c8f3fbc46a",
+    "RP2/QuadraticMixedJets.lean": "38d416df90ee3969daab3fc4051492bd59f4b4cb04d2bb3f89ba80d602462e3a",
+    "RP2/QuadraticMixedWard.lean": "7628d6c0da3c82cbf2b9ef53e5f6f1716ab63723a68f09b43a952b209f23912b",
+    "RP2/QuadraticPlane.lean": "f8c0b68aeaf29e607f748dccaa4e0a6d464806d6790a0bffc5f40e2a46c8f841",
+    "RP2/QuadraticPlaneResponse.lean": "faf5eb03adb7737f23d7172efeb2d59c841f5971f9065c9599fbc3c3b1d825af",
+    "RP2/QuadraticPotential.lean": "f307971c36fe06357ba8df432eca7cd749a3553a233b7050b91be7d5b334b95e",
+    "RP2/QuadraticSecondBound.lean": "8c01d4c21ccb9b9edd3920fa02b62ba13b616de19b381c3063be570f1b9ea549",
+    "RP2/QuadraticSecondGauge.lean": "2ec4d5b85ba05e51f6234cbb01c2afd94f04d6f6ba027661649eb5e38018bccc",
+    "RP2/QuadraticSecondResponse.lean": "172f0af6be80ce2507eeffbb0431a68a53ac9294ef706f56ea6866fcbc180586",
+    "RP2/QuadraticWard.lean": "448317bd21a25b80aafef86e776787c79d01ba388df5e3ae35c9b305ad7a8c20",
+    "RP2/Rates.lean": "65ceb9fd9cf2701ac2603864a0d96c8416f10db48c29210ba079cdd959582058",
+    "RP2/RotationGeometry.lean": "65ccc80cb4e141bc7ac3486ec7144ad90517b1e990d86c47a490cf7e302b755d",
+    "RP2/SquareRates.lean": "bd3036b741d5a39678696959320c4ab15ff6dec30a2c524d6315cc73cc075244",
+    "RP2/StructureFactor.lean": "5726112d65ea9e1f78829b465559c35f232c1ebdd27f20da38c51f72e44f5191",
+    "RP2/TetrahedralAction.lean": "a7f77461226bde32721743d0b11e55ae622a3ff8374f174e8fc629fd277c8e23",
+    "RP2/TetrahedralComparison.lean": "3ffa3412d8f6e863c0a91bda0da9d10f7b34b15fdfa669b0a303d0226c582c6a",
+    "RP2/TetrahedralPaths.lean": "619080f4eed525642ed037bebd866890062f0b1ca3a8f4d16bbf04c8ac5d1785",
+    "RP2/TetrahedralTensor.lean": "41a45daad61e168e961223ade118db0e2c4c224003637abcf8bd2c86cc16918b",
+    "RP2/ThinAnnuli.lean": "173e5d280711b942b8badc8d74bbb5d9a8e988fa31b9816eb5a244d711ff75f5",
+    "RP2/ThinCosts.lean": "0f56400740551939e711ceede1d1fab2c9f4549108d4b2bfc029e78a9188d794",
+    "RP2/ThinDyadicParameters.lean": "b1244ed33fc93628082b275f5f0682b537c26dce9035dc2bd3b86af5bbf6a43d",
+    "RP2/ThinEdgeResponse.lean": "e6824a9ec29cc4fe6f4492803dd021327c978d859095299dc406985fbf5c477b",
+    "RP2/ThinFourier.lean": "5efc5d0f3abda98502b9295e17a72c24373dad3e58105796598f6660733215ec",
+    "RP2/ThinKernel.lean": "47faaef160a87ea08b0e13388479d6a95de8bd6decffed31a60691dcfde3865f",
+    "RP2/ThinKernelEstimate.lean": "4fa8642fb096a70e8c6f84e553ad5cbe55bb1913c48e019a9292fcf5b4aa71ad",
+    "RP2/ThinProfileLattice.lean": "2e2676a58187e9de17157e5b0d37c1ff73cfbf2f0447a6f0a3434368fe4095b6",
+    "RP2/ThinProfiles.lean": "11021f2c9a9bb671514812db4332fda09eb719333b77a85f88b98217dfca8411",
+    "RP2/ThinResponse.lean": "c8ecde66d04ee2c22115c51a36dbf777f6d4a0b74b1441bc3a1799459f328bac",
+    "RP2/ThinScaleChoice.lean": "ca65a7413135d75b297f60bd707792909e4d254852ea6d1efd8358482c6d850e",
+    "RP2/ThinSupport.lean": "28633ee0f97e568bac5704713238d84ab038b9e7540fcb54de7c53fca827b078",
+    "RP2/TwoEndpointRates.lean": "49a6fa38c796d96df1d889cb839f8a07875c6c2e99a3d1e2684d01606989c24d",
+    "RP2/UniformDecay.lean": "28582f3b4a477a436c97506141abd3a42e646ce340461afcd915fe34c79fc5f1",
+    "RP2/WeightedSummability.lean": "c31be33062008bfa4c19b81595774490fef000124a76f5d2bbea479213d87d2f",
+    "RP2-Formalization.lean": "843e4759583ab05a60e0b5d25cd36fe7a3df432f0411447bdb44a15ebc26b5ad",
+    "RP2.lean": "fec5114df4d315e5bcca716e0e5cb540dcee82d6ee61c576dae4cd9a9c84368f",
+    "RP3/ActiveEdgeBounds.lean": "4bfcce3674405b2a9ed991daae723c23e52196bc7be523f6e74ea530446b088b",
+    "RP3/ActivePaths.lean": "9878947e173123b175a911a6f0747712cca979085c12ba9ab132a3150873e334",
+    "RP3/AnnularEstimate.lean": "479c6d7ac573ff6596fa6ef07e766aa53d79feb20b39f89868deeec06cb29f18",
+    "RP3/Averaging.lean": "dcbd3a976a73c3cc1b2c22a6957427777819bf0dd7fb4b0d6083cfdcac269332",
+    "RP3/Calculus.lean": "9115979bac32d2ca59fe604e37d2fb6aa5c2a42acf23b0128952683f1df23ea2",
+    "RP3/ComplexCurrents.lean": "3294afcccec093e846ae277fe07dfb20b0c5ab42ca37bd020b741f7f27ef1504",
+    "RP3/ConcreteAnnuli.lean": "407e176a656c817270418f2b598841c08277f36872c96576bf28ef48ca3ceb80",
+    "RP3/DenseRates.lean": "e84836e75f8c43f8bb29c4743d5885464c3961d78fc33c0972c2e1c3ae225d05",
+    "RP3/FiniteAveraging.lean": "c9a74faf96c66deddc8d189b3ec3c3a3477cdd28af3b0f9f65779485dd440ba2",
+    "RP3/Fourier/AnnulusResponse.lean": "07587e80cbb7524ffd3042431ac85ed23df6f431f2e1cc2527aa381e3913f3d7",
+    "RP3/Fourier/ModelModes.lean": "2279bc251e757f9da87438ed2b651289e9fd54d066d594911c048b414aa77ac5",
+    "RP3/Fourier/ResponseTransfer.lean": "bd67f7c5defe2b3fad7fa499d6fc7c170e682b397530a3401195f4abcd905ac6",
+    "RP3/FourierAll.lean": "cf9d50654befd459c121e049605ad2820664e7abae28d777ee6f399f6a7d6a69",
+    "RP3/Full.lean": "8dc450114b57856e51953f8857fff3c5e414bf15e84d5c68d95a483446f0938e",
+    "RP3/GibbsProbability.lean": "4fd61ed20d5fc523baefce163e563fbca94e1ada09f81216b0fe95fb9b42d3f7",
+    "RP3/HighTemperature.lean": "8bccb1c79015b65a29e462b233704135c889ee67c431dde9deee082ae12fc41b",
+    "RP3/HighTemperatureDecay.lean": "8453179714095bca30413ed77e016f299a8ea2cdc17041996331d405655d937a",
+    "RP3/HighTemperatureExponential.lean": "c962f1b6c7406bbf4e8eed976a2fa70f27dbd7e4a38f914ad40be414d550bf78",
+    "RP3/KernelEstimate.lean": "c3f9202b1e23518196d34708a1b733ed44321560b4d2f40a7cd513c5155dcb43",
+    "RP3/LatticeAnnuli.lean": "2b20f341522a31ce79184f9334d8c2e8bd3cb79b0c8ac0ec1c8eba1901351a15",
+    "RP3/LatticeModelRestriction.lean": "a187c32fc43ae33c2c5d8c443e966a6544738c28d91f5fe95c7a126a386844d8",
+    "RP3/LimitCorollary.lean": "255732cbb5d462fd51ff968791d2c6e9285372f4318377badd1c1ffefc8ad9aa",
+    "RP3/LocalLimitExistence.lean": "94b3296cf9b34adb0e18d65b7e5d5ebb652b4f0dbda951ba635a6eef0e3f305a",
+    "RP3/LogSquareLimits.lean": "f6fdebbf06d5f1af50cfaabe7a1829c169cd986d645c5e69ed73a3ccfa0eab27",
+    "RP3/LogSquarePacking.lean": "41e32c46643e6bdadaa65557926e7dae5aca8c5d6bf0849ecbed0bc2464955aa",
+    "RP3/LogSquareRates.lean": "0ec4f3d3d13ff4d24fd9a590b8151c44dd90ebcc10b5779884f9388f6d7faac6",
+    "RP3/LogarithmicRate.lean": "a5048fb1ca81939b5021f3f84bfa9691a53f92aef095eb4f9825a4c17619709c",
+    "RP3/Main.lean": "b6c5b4cdd3fb3475317fe8f458573510c706c16b2e70e3bbab4d54354bfea05f",
+    "RP3/MathlibImports.lean": "e507730385eff366378710d3b552f5a8925ebbd326abc2fa7a1e2edddbc207a0",
+    "RP3/MixedAlgebra.lean": "75db848abab6ed3f44affca47481271ce6439712ca32fec36d230dd25ccffee4",
+    "RP3/Model.lean": "e66a568f5bc04ac6d08b3b260ba588465f875fc9aea69fe2bca7e2fc876111f5",
+    "RP3/ModelAssembly.lean": "7ca9137338837851d159c562162cf6bfc359fe1a0d08eb13b0a17adaeb0d56a7",
+    "RP3/ModelConnection.lean": "e6bb2425c1914d20cc8cd6ba5059c566ef94102db7f0a0b53e6fecbb73dc3c42",
+    "RP3/ModelRestriction.lean": "7d2b7781db3be274c87877a8bc4396ebf97458e46d2f720d681d45ceca7c1ea4",
+    "RP3/ModelWitnesses.lean": "c0ad966018862f95200151cf3a793a5f86227d6c83fe283daa0e804f15ef1bf0",
+    "RP3/NestedCuts.lean": "bdb788e85410c661563162397ebd0af1f762e0cbac4b4988dcc066bb667539d6",
+    "RP3/NonbacktrackingPaths.lean": "231ab2f77473a9d2595487551997f50eaf6c060d9d5189eece1dc3f901fea2b8",
+    "RP3/PeriodicODE.lean": "660df86c3e368cac61b0561671902a736e394f2411a0648161a5ef759a2f40ac",
+    "RP3/PinnedKernel.lean": "bb5d9172ce83a7dfebdc0beb8bd270f5725230e2a27d1f6fa8df6ebd350d5d5a",
+    "RP3/ProductJets.lean": "9cf4178beb57a4a270da23dc94a960e7e6188237fec269628f0d2e542cdccb78",
+    "RP3/QuadraticAverages.lean": "61b6ccf4ac464d94292cffb4bdf40f8095e405801f478b5979021b83b395135e",
+    "RP3/QuadraticBounds.lean": "956917c74e566daffd3bc5d2b1b044a53cb1a63074f0138cff14f821d9c5080b",
+    "RP3/QuadraticCoefficientBounds.lean": "a58eea940cd1526d763584688d028d51e1048edda59609fecb4340f496844e56",
+    "RP3/QuadraticComplexWard.lean": "862d071d6493eaa11e4f508ae828dfb1c74e0aef59c208bc5b33f6102ce6a750",
+    "RP3/QuadraticDerivatives.lean": "180f9c1f59a34befa0ac2bc36dbea03a3e37b12223d293d00e8dfd3c0d42defd",
+    "RP3/QuadraticFamily.lean": "628361f877af4cef84e2dc23b4bc9d2d5bd935e726b25bc0a1710df5a9b5fbb7",
+    "RP3/QuadraticFamilyEstimates.lean": "3bddb7f0b857a16cbe37d313306bc08df885b831633de0c46612183a0f66cbfa",
+    "RP3/QuadraticFamilyKernel.lean": "2c0229d6e84a19b3c12c83178a1c7482b42cbbf06dc59ffc10d89e7646f98ccf",
+    "RP3/QuadraticFamilyLower.lean": "e997c56eb92de97006a474448140db6564a78787f9a0a028b9fa7da01d256df6",
+    "RP3/QuadraticGibbs.lean": "4c031f2199b15db918afef2dea78074af8cdde753e387157e50da1a4a7b2ad56",
+    "RP3/QuadraticMixedJets.lean": "997f0f1af5e2318481baaa733b5e924dfa127666ddc4855ccd7b4608959d30a4",
+    "RP3/QuadraticMixedWard.lean": "a2ee0c27851b4a2bd2001d178a5ff4d91fdbe68c761eecabc6e4da24bd42a55a",
+    "RP3/QuadraticPlane.lean": "dacec3f592514803d2c54fd80a854ad4f7b045a3d42446e3be5b8ac451c979cb",
+    "RP3/QuadraticPlaneResponse.lean": "88d7037f03de6e4852f0633e645b78a93914cdc87bcb37f4278cf09a5b801cda",
+    "RP3/QuadraticPotential.lean": "f37162ecba5c642926fdd0cc9ab30538067dbd1d2da05a78ee683a4bec3ba8d3",
+    "RP3/QuadraticSecondBound.lean": "006783c4ad6101a66f616e05cc1e98171dc828e1c96544faef082c9629a596e4",
+    "RP3/QuadraticSecondGauge.lean": "be91d17cfd46f24c0f53051cc2557d48a790e68eb204055473d82913b4410e2c",
+    "RP3/QuadraticSecondResponse.lean": "39040a91e45bda37cd4d305670441f3a0ce49069a14712120aaa4422a355635b",
+    "RP3/QuadraticWard.lean": "53b16bef71b37aeecef270e19260fd909b15463e453f50463950a91ddc189ec3",
+    "RP3/QuaternionAction.lean": "1ec5538d0bdc18b4c4417dd969c72bf5ba24696a70c25a3f07cfa1c71d951958",
+    "RP3/QuaternionAlgebra.lean": "ebb2acb0f7acb02f5666714d7f6a2d239a9ff2fbfc01d2bbfc10f9a7fc33ca81",
+    "RP3/QuaternionComparison.lean": "4805e71a92432863003e146bcb4b3a06417e29a8aa9c509802abc16385188796",
+    "RP3/QuaternionPaths.lean": "493fb2eba6743dcb056c54093cd3d9d6a8d7b820e012e9c61ea1b44da8424e09",
+    "RP3/Rates.lean": "c9d07e86a7ae468acb6b55684144c5317da8953a0d6d4815c7d2cf5835a70c44",
+    "RP3/RotationGeometry.lean": "de334c85147f7573581d105665f8270ad8d14a59aed3535663a294c57903927c",
+    "RP3/RotationGeometryBase.lean": "39726a740931dd3bba468655faa55880d95dd414e03fd7b336bae1a20c305c84",
+    "RP3/SO3.lean": "bbfa31ccc121c39c9bcf7e102bb9d79d3437ac96db4a78011d36432884d761bc",
+    "RP3/SquareRates.lean": "34e68c30cae76b9a9e223d7c686e8fc2c255e1deec54360166534e23299a36a7",
+    "RP3/ThinAnnuli.lean": "398b3897c99f0a79e2d6f2488151d6f4f8076bc994f9f1c9042b2d65057a6f27",
+    "RP3/ThinCosts.lean": "9b04ad7abf1d3592614e5be2670b04819c3032e3d45abf1c6d1d72bf27ff5b95",
+    "RP3/ThinDyadicParameters.lean": "61c6fb37f754c620b7b9fa4bcd2ea7ae8ae03019c6edecd5a873c894c9e48c6e",
+    "RP3/ThinEdgeResponse.lean": "d06094139d7ed2b0a8e871fccf3ea319ec578e05a7e2edac9d2119b16cae441d",
+    "RP3/ThinFourier.lean": "e9b5b88f9d0558f2dd4f990b3ea2d72760fe0a18301e8cc60d670ddfa88d739c",
+    "RP3/ThinKernel.lean": "7ea4d9d59078fbf52c4a6bfd6cc148c18b37afa534ddac506e3f5288bff11c3c",
+    "RP3/ThinKernelEstimate.lean": "1afc30b62d8cca539e35972637b3346605bdce9e49089b1a8bbdd83fbba2386d",
+    "RP3/ThinProfileLattice.lean": "263dee4a801a1c591852c841b12c109ead6aeb5e8e5c0d6cfabeb15d0405c4ff",
+    "RP3/ThinProfiles.lean": "1d77164292004c43452e3502f332469ca1263744145aebd96752ee102309466b",
+    "RP3/ThinResponse.lean": "cf4f7dae78a3855b8125df23633652bf86601b19da7c5a7dda306be2f8af4cb7",
+    "RP3/ThinScaleChoice.lean": "1794475b286681b6aec360102ae163980efeb99159785149b08d3a7e34ee3818",
+    "RP3/ThinSupport.lean": "b86f6f699c1f6a7b10d0e35c1e266e689e5cbbf09a279e9d73cdb1407a5a1a9a",
+    "RP3/UniformDecay.lean": "a342202be3a067b1d76b1fc88e4d7abf4d6f3ce4764f7694440eab210340bb30",
+    "RP3/WeightedSummability.lean": "6b9d15e905d90996299a878da79be1055fab58652d77b1d2028915f4b7f10195",
+    "RP3-Formalization.lean": "f0b6d06374f5565842bdf30620a715f1e854dbe992c5eeb5f850bdac034f43d9",
+    "RP3.lean": "ec6697fe72627b3b82ddc9d1130e8efd3da0a8cc58878661d5dc477a84eed4c3",
+    "RP3AxiomAudit.lean": "cf59f74a13b669cf23fcdd52508156337862e57d83fd82d9f0818596bedbcc95",
+    "RP3SemanticWitnesses.lean": "e36fa1ca8c58a2a5287349af5e1c1462ab35874f3b93e5f13ff228fd17f329fc",
+    "SemanticWitnesses.lean": "1bb6a9ca5c9636bb5bedaf380d9d4aad0a45cf0fd101b4629a372d99fb4c8514",
+    "bundle_rp3.py": "2b7754fccdffdb91ddc6fef155e55f0bb7419c763ea74bf9aad43ad6f76d4886",
+    "lake-manifest.json": "e9cbc5c9bcd4f1d8f69c0a853989becf1b0dc798d74b2ea34b0feab92dfc5f05",
+    "lakefile.toml": "f568627f0abddf1417748c7f24927158155d4736bde00763ecbfa948f9011ac0",
+    "lean-toolchain": "d5edba4e4b8faad9c1baeadb265716d20d03be4d1a2647dc5e35b0c0325bea7b",
+    "scripts/check_rp3_semantics.py": "149eb1f307f03d58d960c7160d98fc1293f0d073465e8908243258038e683662",
+    "scripts/verify_rp3.py": "526c9395d1d3603fe88646669abefa471688db78b8e24346688fcf9fc60816b1",
+    "verification/RP3AuditEnvironment.lean": "6020f6ce91796b0f09250e7c4eb9a35a0302fcaf91952338d7375b433437d8b4",
+    "verification/RP3SemanticEnvironment.lean": "fafa8dd4263894592c76c165a5db038699c550b1f8c357258f0411bc72c13d3d",
+    "verification/dependency-pins.json": "14d8b2130b3d62ed0076a81ff0e13523eb730fbb570d7e04ac7b22c3d40cd716",
+    "verification/rp3-public-theorems.txt": "1117575a0fd28408e018f9adcdfd56a1e5401ea49af8120b234837e26e70dad8",
+    "verification/rp3-semantic-roots.txt": "7c6ed8256555ca8a512ec6a13b23e26dfff91149a74413cbadfad8f10d50fd68"
+  },
+  "environment": {
+    "LEAN_NUM_THREADS": "1"
+  },
+  "commands": [
+    {
+      "label": "lean-version",
+      "command": [
+        "lean",
+        "--version"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:47:41.737487+00:00",
+      "completed_utc": "2026-10-12T03:47:41.801684+00:00",
+      "elapsed_seconds": 0.064,
+      "timed_out": false,
+      "log": "lean-version.log",
+      "log_sha256": "355a9a028f81641782d75d6e6b58dec70f29d2f61238a9e271690259d9bf5680",
+      "output_sha256": {}
+    },
+    {
+      "label": "revision-mathlib",
+      "command": [
+        "git",
+        "-C",
+        ".lake/packages/mathlib",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:47:41.802401+00:00",
+      "completed_utc": "2026-10-12T03:47:41.806151+00:00",
+      "elapsed_seconds": 0.004,
+      "timed_out": false,
+      "log": "revision-mathlib.log",
+      "log_sha256": "d26684ea790064f49bcb150415b3a062ec30b5e646b207927aa3fc5fcbb43fbe",
+      "output_sha256": {}
+    },
+    {
+      "label": "clean-mathlib",
+      "command": [
+        "git",
+        "-C",
+        ".lake/packages/mathlib",
+        "status",
+        "--porcelain",
+        "--untracked-files=all"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:47:41.806559+00:00",
+      "completed_utc": "2026-10-12T03:47:42.071117+00:00",
+      "elapsed_seconds": 0.265,
+      "timed_out": false,
+      "log": "clean-mathlib.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {}
+    },
+    {
+      "label": "revision-plausible",
+      "command": [
+        "git",
+        "-C",
+        ".lake/packages/plausible",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:47:42.071562+00:00",
+      "completed_utc": "2026-10-12T03:47:42.075135+00:00",
+      "elapsed_seconds": 0.004,
+      "timed_out": false,
+      "log": "revision-plausible.log",
+      "log_sha256": "8e19735519205e6e1b0a59824699f406af5b5ce84a32d2a6c583717ce045b900",
+      "output_sha256": {}
+    },
+    {
+      "label": "clean-plausible",
+      "command": [
+        "git",
+        "-C",
+        ".lake/packages/plausible",
+        "status",
+        "--porcelain",
+        "--untracked-files=all"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:47:42.075634+00:00",
+      "completed_utc": "2026-10-12T03:47:42.083416+00:00",
+      "elapsed_seconds": 0.008,
+      "timed_out": false,
+      "log": "clean-plausible.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {}
+    },
+    {
+      "label": "revision-LeanSearchClient",
+      "command": [
+        "git",
+        "-C",
+        ".lake/packages/LeanSearchClient",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:47:42.083862+00:00",
+      "completed_utc": "2026-10-12T03:47:42.087600+00:00",
+      "elapsed_seconds": 0.004,
+      "timed_out": false,
+      "log": "revision-LeanSearchClient.log",
+      "log_sha256": "969f2fabfb7ffe3973dce9836aa523b36b30aba71950f358c0148f7daf1909cd",
+      "output_sha256": {}
+    },
+    {
+      "label": "clean-LeanSearchClient",
+      "command": [
+        "git",
+        "-C",
+        ".lake/packages/LeanSearchClient",
+        "status",
+        "--porcelain",
+        "--untracked-files=all"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:47:42.088022+00:00",
+      "completed_utc": "2026-10-12T03:47:42.095790+00:00",
+      "elapsed_seconds": 0.008,
+      "timed_out": false,
+      "log": "clean-LeanSearchClient.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {}
+    },
+    {
+      "label": "revision-importGraph",
+      "command": [
+        "git",
+        "-C",
+        ".lake/packages/importGraph",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:47:42.096329+00:00",
+      "completed_utc": "2026-10-12T03:47:42.099986+00:00",
+      "elapsed_seconds": 0.004,
+      "timed_out": false,
+      "log": "revision-importGraph.log",
+      "log_sha256": "b7befbf415605485d009aa7b002b346adb7ee3ce028e97b697fe5f259d320274",
+      "output_sha256": {}
+    },
+    {
+      "label": "clean-importGraph",
+      "command": [
+        "git",
+        "-C",
+        ".lake/packages/importGraph",
+        "status",
+        "--porcelain",
+        "--untracked-files=all"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:47:42.100410+00:00",
+      "completed_utc": "2026-10-12T03:47:42.108332+00:00",
+      "elapsed_seconds": 0.008,
+      "timed_out": false,
+      "log": "clean-importGraph.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {}
+    },
+    {
+      "label": "revision-proofwidgets",
+      "command": [
+        "git",
+        "-C",
+        ".lake/packages/proofwidgets",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:47:42.108896+00:00",
+      "completed_utc": "2026-10-12T03:47:42.112623+00:00",
+      "elapsed_seconds": 0.004,
+      "timed_out": false,
+      "log": "revision-proofwidgets.log",
+      "log_sha256": "5c6fde3e5ec3bc7c00fcedc25e51a7d1d68b2dd0ba1057f4cd3a742f780cfc1d",
+      "output_sha256": {}
+    },
+    {
+      "label": "clean-proofwidgets",
+      "command": [
+        "git",
+        "-C",
+        ".lake/packages/proofwidgets",
+        "status",
+        "--porcelain",
+        "--untracked-files=all"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:47:42.113343+00:00",
+      "completed_utc": "2026-10-12T03:47:42.145160+00:00",
+      "elapsed_seconds": 0.032,
+      "timed_out": false,
+      "log": "clean-proofwidgets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {}
+    },
+    {
+      "label": "revision-aesop",
+      "command": [
+        "git",
+        "-C",
+        ".lake/packages/aesop",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:47:42.145816+00:00",
+      "completed_utc": "2026-10-12T03:47:42.149471+00:00",
+      "elapsed_seconds": 0.004,
+      "timed_out": false,
+      "log": "revision-aesop.log",
+      "log_sha256": "e2f238dae0ad15ad802261fd5664fbb7264ca23028ec463653ee359dedad69b1",
+      "output_sha256": {}
+    },
+    {
+      "label": "clean-aesop",
+      "command": [
+        "git",
+        "-C",
+        ".lake/packages/aesop",
+        "status",
+        "--porcelain",
+        "--untracked-files=all"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:47:42.150154+00:00",
+      "completed_utc": "2026-10-12T03:47:42.157857+00:00",
+      "elapsed_seconds": 0.008,
+      "timed_out": false,
+      "log": "clean-aesop.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {}
+    },
+    {
+      "label": "revision-Qq",
+      "command": [
+        "git",
+        "-C",
+        ".lake/packages/Qq",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:47:42.158366+00:00",
+      "completed_utc": "2026-10-12T03:47:42.162007+00:00",
+      "elapsed_seconds": 0.004,
+      "timed_out": false,
+      "log": "revision-Qq.log",
+      "log_sha256": "6ea0e5d827cd28719f0f8303c77c64ffd115d117fb873c61dcc064c789b49021",
+      "output_sha256": {}
+    },
+    {
+      "label": "clean-Qq",
+      "command": [
+        "git",
+        "-C",
+        ".lake/packages/Qq",
+        "status",
+        "--porcelain",
+        "--untracked-files=all"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:47:42.162521+00:00",
+      "completed_utc": "2026-10-12T03:47:42.166191+00:00",
+      "elapsed_seconds": 0.004,
+      "timed_out": false,
+      "log": "clean-Qq.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {}
+    },
+    {
+      "label": "revision-batteries",
+      "command": [
+        "git",
+        "-C",
+        ".lake/packages/batteries",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:47:42.166657+00:00",
+      "completed_utc": "2026-10-12T03:47:42.170338+00:00",
+      "elapsed_seconds": 0.004,
+      "timed_out": false,
+      "log": "revision-batteries.log",
+      "log_sha256": "a10c5cc1562c7e05002879cbb387405d1e84dfb2b052e4a9da3d7b0915278e17",
+      "output_sha256": {}
+    },
+    {
+      "label": "clean-batteries",
+      "command": [
+        "git",
+        "-C",
+        ".lake/packages/batteries",
+        "status",
+        "--porcelain",
+        "--untracked-files=all"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:47:42.170793+00:00",
+      "completed_utc": "2026-10-12T03:47:42.186645+00:00",
+      "elapsed_seconds": 0.016,
+      "timed_out": false,
+      "log": "clean-batteries.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {}
+    },
+    {
+      "label": "revision-Cli",
+      "command": [
+        "git",
+        "-C",
+        ".lake/packages/Cli",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:47:42.187179+00:00",
+      "completed_utc": "2026-10-12T03:47:42.190784+00:00",
+      "elapsed_seconds": 0.004,
+      "timed_out": false,
+      "log": "revision-Cli.log",
+      "log_sha256": "2e20e2a649dd57be51b7d287730d045342813e1fa6e2e7de3e2a6c249e2c51c1",
+      "output_sha256": {}
+    },
+    {
+      "label": "clean-Cli",
+      "command": [
+        "git",
+        "-C",
+        ".lake/packages/Cli",
+        "status",
+        "--porcelain",
+        "--untracked-files=all"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:47:42.191249+00:00",
+      "completed_utc": "2026-10-12T03:47:42.194889+00:00",
+      "elapsed_seconds": 0.004,
+      "timed_out": false,
+      "log": "clean-Cli.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {}
+    },
+    {
+      "label": "bundle-freshness",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "bundle_rp3.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:47:42.195554+00:00",
+      "completed_utc": "2026-10-12T03:47:42.259377+00:00",
+      "elapsed_seconds": 0.064,
+      "timed_out": false,
+      "log": "bundle-freshness.log",
+      "log_sha256": "bceab3132b54745fb6000e132ba2792a356aaecabec2efbbef9a585addbcf689",
+      "output_sha256": {}
+    },
+    {
+      "label": "module-RP3.MathlibImports",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/MathlibImports.olean",
+        "RP3/MathlibImports.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:47:42.267191+00:00",
+      "completed_utc": "2026-10-12T03:47:44.689434+00:00",
+      "elapsed_seconds": 2.422,
+      "timed_out": false,
+      "log": "module-RP3.MathlibImports.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/MathlibImports.olean": "23be2b6f2de5609a89f52d635b0e8f1b483673bce62ea8c8894b11de6035efd2"
+      }
+    },
+    {
+      "label": "module-RP3.FourierAll",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/FourierAll.olean",
+        "RP3/FourierAll.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:47:44.690644+00:00",
+      "completed_utc": "2026-10-12T03:48:17.482817+00:00",
+      "elapsed_seconds": 32.792,
+      "timed_out": false,
+      "log": "module-RP3.FourierAll.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/FourierAll.olean": "18ffc6dbc50b9c334a1e1102fcfa26e758d9472864bb49dc51004a6c313383ae"
+      }
+    },
+    {
+      "label": "module-RP3.ThinProfiles",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/ThinProfiles.olean",
+        "RP3/ThinProfiles.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:48:17.490430+00:00",
+      "completed_utc": "2026-10-12T03:48:22.566456+00:00",
+      "elapsed_seconds": 5.076,
+      "timed_out": false,
+      "log": "module-RP3.ThinProfiles.log",
+      "log_sha256": "833305556b19125c5941f01233d34b80b36f3a0e0173d1aa2d07d40f46ca7ef4",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/ThinProfiles.olean": "3e636a33ba024f64bf34f91365e5a46478d1cb1c33ae8b05f8d17fd29fffb383"
+      }
+    },
+    {
+      "label": "module-RP3.Averaging",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/Averaging.olean",
+        "RP3/Averaging.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:48:22.568619+00:00",
+      "completed_utc": "2026-10-12T03:48:26.440862+00:00",
+      "elapsed_seconds": 3.872,
+      "timed_out": false,
+      "log": "module-RP3.Averaging.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/Averaging.olean": "ade39c1b70241f2f5c9ff021d83e9f5194deb116a94d9740843b4b59f0bec405"
+      }
+    },
+    {
+      "label": "module-RP3.FiniteAveraging",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/FiniteAveraging.olean",
+        "RP3/FiniteAveraging.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:48:26.442646+00:00",
+      "completed_utc": "2026-10-12T03:48:29.663754+00:00",
+      "elapsed_seconds": 3.221,
+      "timed_out": false,
+      "log": "module-RP3.FiniteAveraging.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/FiniteAveraging.olean": "681e324f1b5bece76017c576d037e038d3eaf893d1dc05e00f7756ebcf746c67"
+      }
+    },
+    {
+      "label": "module-RP3.Model",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/Model.olean",
+        "RP3/Model.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:48:29.665273+00:00",
+      "completed_utc": "2026-10-12T03:48:37.310748+00:00",
+      "elapsed_seconds": 7.645,
+      "timed_out": false,
+      "log": "module-RP3.Model.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/Model.olean": "ba6d2c4a55490b14e911bd429d4c157d6d0679821c0db5bcecb42c6257afd3e9"
+      }
+    },
+    {
+      "label": "module-RP3.RotationGeometryBase",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/RotationGeometryBase.olean",
+        "RP3/RotationGeometryBase.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:48:37.313695+00:00",
+      "completed_utc": "2026-10-12T03:48:52.022276+00:00",
+      "elapsed_seconds": 14.709,
+      "timed_out": false,
+      "log": "module-RP3.RotationGeometryBase.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/RotationGeometryBase.olean": "5da0d05835372fee0988c630af4dcc6cebb944203eb7d444f4d18903e7628a27"
+      }
+    },
+    {
+      "label": "module-RP3.QuaternionAlgebra",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/QuaternionAlgebra.olean",
+        "RP3/QuaternionAlgebra.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:48:52.026450+00:00",
+      "completed_utc": "2026-10-12T03:48:59.960423+00:00",
+      "elapsed_seconds": 7.934,
+      "timed_out": false,
+      "log": "module-RP3.QuaternionAlgebra.log",
+      "log_sha256": "3e7b42b13a590336c99fcd7dde7753ac5f2ec3030ca64b4c1b9523bf33f4a178",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/QuaternionAlgebra.olean": "9bafb846ae964395d14872ebfca455f3c3bb36d2738c87d65ff60ad5017d16fd"
+      }
+    },
+    {
+      "label": "module-RP3.RotationGeometry",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/RotationGeometry.olean",
+        "RP3/RotationGeometry.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:48:59.963984+00:00",
+      "completed_utc": "2026-10-12T03:49:29.152935+00:00",
+      "elapsed_seconds": 29.189,
+      "timed_out": false,
+      "log": "module-RP3.RotationGeometry.log",
+      "log_sha256": "28f02ae836cf217d729ab5a7c107ec0fef348802ff65233e5af0914f0023dbf8",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/RotationGeometry.olean": "137110dbbfa5cd97cddde0f677919fb6fbf3e9d9428b718cf8c2242a7051b3f7"
+      }
+    },
+    {
+      "label": "module-RP3.PeriodicODE",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/PeriodicODE.olean",
+        "RP3/PeriodicODE.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:49:29.160845+00:00",
+      "completed_utc": "2026-10-12T03:49:33.133981+00:00",
+      "elapsed_seconds": 3.973,
+      "timed_out": false,
+      "log": "module-RP3.PeriodicODE.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/PeriodicODE.olean": "be91760bc50d1549601615df1f2911ff3f2c658a4b457ca1c6c039930de213c8"
+      }
+    },
+    {
+      "label": "module-RP3.PinnedKernel",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/PinnedKernel.olean",
+        "RP3/PinnedKernel.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:49:33.135523+00:00",
+      "completed_utc": "2026-10-12T03:49:36.255942+00:00",
+      "elapsed_seconds": 3.12,
+      "timed_out": false,
+      "log": "module-RP3.PinnedKernel.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/PinnedKernel.olean": "cabcf03ede033e57d792a9eb5aa9314d540cf801287c2b7f846c2e216074cc64"
+      }
+    },
+    {
+      "label": "module-RP3.NestedCuts",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/NestedCuts.olean",
+        "RP3/NestedCuts.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:49:36.257178+00:00",
+      "completed_utc": "2026-10-12T03:49:39.329378+00:00",
+      "elapsed_seconds": 3.072,
+      "timed_out": false,
+      "log": "module-RP3.NestedCuts.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/NestedCuts.olean": "72649db984695078fdd721cd6828a99842bbc4c5e5fcad300c2b3ab5b25b83ad"
+      }
+    },
+    {
+      "label": "module-RP3.ModelAssembly",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/ModelAssembly.olean",
+        "RP3/ModelAssembly.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:49:39.330703+00:00",
+      "completed_utc": "2026-10-12T03:49:45.210240+00:00",
+      "elapsed_seconds": 5.879,
+      "timed_out": false,
+      "log": "module-RP3.ModelAssembly.log",
+      "log_sha256": "ef9d1f24714eda077dfa5f4253110e5a28fd91235d56f56ba9806d08d62a4d0b",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/ModelAssembly.olean": "859fea089a93631c0a98fe7de52e01847d7744776c34d1a22c0fa6fb6d9800f4"
+      }
+    },
+    {
+      "label": "module-RP3.QuaternionAction",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/QuaternionAction.olean",
+        "RP3/QuaternionAction.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:49:45.212475+00:00",
+      "completed_utc": "2026-10-12T03:50:30.443631+00:00",
+      "elapsed_seconds": 45.231,
+      "timed_out": false,
+      "log": "module-RP3.QuaternionAction.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/QuaternionAction.olean": "b639d33d31d83325034ed9675c6ed4c921c3b6e86080fa55bb8f5fbf4535714b"
+      }
+    },
+    {
+      "label": "module-RP3.LatticeAnnuli",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/LatticeAnnuli.olean",
+        "RP3/LatticeAnnuli.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:50:30.457187+00:00",
+      "completed_utc": "2026-10-12T03:50:35.034387+00:00",
+      "elapsed_seconds": 4.577,
+      "timed_out": false,
+      "log": "module-RP3.LatticeAnnuli.log",
+      "log_sha256": "ab244634905154a46491660525d7fd8818b55c90a6fd72d39e32d666db29e095",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/LatticeAnnuli.olean": "ff2af6f072d5f5b7859b495fa7c5084ab7b0b0041a462c072fc526568f851231"
+      }
+    },
+    {
+      "label": "module-RP3.Rates",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/Rates.olean",
+        "RP3/Rates.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:50:35.036251+00:00",
+      "completed_utc": "2026-10-12T03:50:38.409234+00:00",
+      "elapsed_seconds": 3.373,
+      "timed_out": false,
+      "log": "module-RP3.Rates.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/Rates.olean": "f3053143ffc69b14b72b3b43169f384ac7d20d48b903c089c6c9de36ec2ee916"
+      }
+    },
+    {
+      "label": "module-RP3.Main",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/Main.olean",
+        "RP3/Main.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:50:38.411048+00:00",
+      "completed_utc": "2026-10-12T03:50:41.386749+00:00",
+      "elapsed_seconds": 2.976,
+      "timed_out": false,
+      "log": "module-RP3.Main.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/Main.olean": "7c771506fb78e64e44dc81de0810fc39c94ba3dbb8ea0d631117323556348c34"
+      }
+    },
+    {
+      "label": "module-RP3.ConcreteAnnuli",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/ConcreteAnnuli.olean",
+        "RP3/ConcreteAnnuli.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:50:41.388360+00:00",
+      "completed_utc": "2026-10-12T03:50:44.509594+00:00",
+      "elapsed_seconds": 3.121,
+      "timed_out": false,
+      "log": "module-RP3.ConcreteAnnuli.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/ConcreteAnnuli.olean": "be4471bdcbe0a9d6fb62a96000f4a65cebeafd2698cff9ce0542e249ed7cc830"
+      }
+    },
+    {
+      "label": "module-RP3.ThinAnnuli",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/ThinAnnuli.olean",
+        "RP3/ThinAnnuli.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:50:44.511148+00:00",
+      "completed_utc": "2026-10-12T03:50:48.237274+00:00",
+      "elapsed_seconds": 3.726,
+      "timed_out": false,
+      "log": "module-RP3.ThinAnnuli.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/ThinAnnuli.olean": "8655eb0723aa17f2e6c6682a348d25011cda4144b2e60a799e465f94c4b4f401"
+      }
+    },
+    {
+      "label": "module-RP3.ModelRestriction",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/ModelRestriction.olean",
+        "RP3/ModelRestriction.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:50:48.238760+00:00",
+      "completed_utc": "2026-10-12T03:50:51.361278+00:00",
+      "elapsed_seconds": 3.123,
+      "timed_out": false,
+      "log": "module-RP3.ModelRestriction.log",
+      "log_sha256": "7a8f5622c4eaab7de89c0ac26073febc131c1b4d6a22375b4e3fbadffec67124",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/ModelRestriction.olean": "849040dfd8a0bea412e47b5a2a0c6c882c90a740fc5a2379a87e80f7b52116ad"
+      }
+    },
+    {
+      "label": "module-RP3.LatticeModelRestriction",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/LatticeModelRestriction.olean",
+        "RP3/LatticeModelRestriction.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:50:51.362709+00:00",
+      "completed_utc": "2026-10-12T03:50:54.384121+00:00",
+      "elapsed_seconds": 3.021,
+      "timed_out": false,
+      "log": "module-RP3.LatticeModelRestriction.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/LatticeModelRestriction.olean": "92d07b85b5a0dcbcba03a519a769b5d4edc9054d2fb73c3e268724fe653b4034"
+      }
+    },
+    {
+      "label": "module-RP3.Calculus",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/Calculus.olean",
+        "RP3/Calculus.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:50:54.385753+00:00",
+      "completed_utc": "2026-10-12T03:50:57.557319+00:00",
+      "elapsed_seconds": 3.172,
+      "timed_out": false,
+      "log": "module-RP3.Calculus.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/Calculus.olean": "7b059c9f9d57c90de8f71e66544d1768a52b18f3fc6b3fd254a57b3b762f3c12"
+      }
+    },
+    {
+      "label": "module-RP3.QuadraticGibbs",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/QuadraticGibbs.olean",
+        "RP3/QuadraticGibbs.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:50:57.559186+00:00",
+      "completed_utc": "2026-10-12T03:51:02.035688+00:00",
+      "elapsed_seconds": 4.477,
+      "timed_out": false,
+      "log": "module-RP3.QuadraticGibbs.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/QuadraticGibbs.olean": "8b9824acd0cd1ada5247a3e684c1826df819c27c8b71e41419aafaf504912114"
+      }
+    },
+    {
+      "label": "module-RP3.ProductJets",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/ProductJets.olean",
+        "RP3/ProductJets.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:51:02.037039+00:00",
+      "completed_utc": "2026-10-12T03:51:04.906914+00:00",
+      "elapsed_seconds": 2.87,
+      "timed_out": false,
+      "log": "module-RP3.ProductJets.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/ProductJets.olean": "87484709cc71b2a2ccb7eb5157d570b2352e4f18bc593ae0bac678b7691aea72"
+      }
+    },
+    {
+      "label": "module-RP3.QuadraticDerivatives",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/QuadraticDerivatives.olean",
+        "RP3/QuadraticDerivatives.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:51:04.908928+00:00",
+      "completed_utc": "2026-10-12T03:51:11.840020+00:00",
+      "elapsed_seconds": 6.931,
+      "timed_out": false,
+      "log": "module-RP3.QuadraticDerivatives.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/QuadraticDerivatives.olean": "8153a0394aaee8ec14453ca1ec608030264634c7af90d875e11698b83f911e1c"
+      }
+    },
+    {
+      "label": "module-RP3.QuadraticWard",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/QuadraticWard.olean",
+        "RP3/QuadraticWard.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:51:11.841696+00:00",
+      "completed_utc": "2026-10-12T03:51:15.866648+00:00",
+      "elapsed_seconds": 4.025,
+      "timed_out": false,
+      "log": "module-RP3.QuadraticWard.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/QuadraticWard.olean": "17197e5b8f3d14698ceaec46375edcc7a2e989750a8bf716c86c5b55b86b9552"
+      }
+    },
+    {
+      "label": "module-RP3.ModelConnection",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/ModelConnection.olean",
+        "RP3/ModelConnection.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:51:15.868019+00:00",
+      "completed_utc": "2026-10-12T03:51:18.591040+00:00",
+      "elapsed_seconds": 2.723,
+      "timed_out": false,
+      "log": "module-RP3.ModelConnection.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/ModelConnection.olean": "bc77945533586879261b7a9a71f36d76d050d823605cfc99133c08769922db7b"
+      }
+    },
+    {
+      "label": "module-RP3.QuadraticPlane",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/QuadraticPlane.olean",
+        "RP3/QuadraticPlane.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:51:18.593956+00:00",
+      "completed_utc": "2026-10-12T03:51:28.634198+00:00",
+      "elapsed_seconds": 10.04,
+      "timed_out": false,
+      "log": "module-RP3.QuadraticPlane.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/QuadraticPlane.olean": "4f866ee8d2dbfc950c5855a4ea23d0e69f9d502769797c4d1c8c1d9362b260f1"
+      }
+    },
+    {
+      "label": "module-RP3.QuadraticBounds",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/QuadraticBounds.olean",
+        "RP3/QuadraticBounds.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:51:28.636133+00:00",
+      "completed_utc": "2026-10-12T03:51:32.559342+00:00",
+      "elapsed_seconds": 3.923,
+      "timed_out": false,
+      "log": "module-RP3.QuadraticBounds.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/QuadraticBounds.olean": "9cec0645ff4fd9760bd65ccf24163ceae2affe82e797b5555a6a19e2ea7647db"
+      }
+    },
+    {
+      "label": "module-RP3.QuadraticPlaneResponse",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/QuadraticPlaneResponse.olean",
+        "RP3/QuadraticPlaneResponse.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:51:32.560896+00:00",
+      "completed_utc": "2026-10-12T03:51:36.434934+00:00",
+      "elapsed_seconds": 3.874,
+      "timed_out": false,
+      "log": "module-RP3.QuadraticPlaneResponse.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/QuadraticPlaneResponse.olean": "3dfd21908a8d9a88d6c8b5a76bcf8b35fbacbf0561de96a27fbf9f299861f7fe"
+      }
+    },
+    {
+      "label": "module-RP3.QuadraticAverages",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/QuadraticAverages.olean",
+        "RP3/QuadraticAverages.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:51:36.436539+00:00",
+      "completed_utc": "2026-10-12T03:51:40.411531+00:00",
+      "elapsed_seconds": 3.975,
+      "timed_out": false,
+      "log": "module-RP3.QuadraticAverages.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/QuadraticAverages.olean": "a60138545a5926131e3da5b1735766a84a958bef9f54bb08f50faffe0be88378"
+      }
+    },
+    {
+      "label": "module-RP3.ComplexCurrents",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/ComplexCurrents.olean",
+        "RP3/ComplexCurrents.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:51:40.413314+00:00",
+      "completed_utc": "2026-10-12T03:51:45.638964+00:00",
+      "elapsed_seconds": 5.226,
+      "timed_out": false,
+      "log": "module-RP3.ComplexCurrents.log",
+      "log_sha256": "6124a59d4e6a181954ca02111b4ab51b106d231db49337d0ff94eee7a5148e46",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/ComplexCurrents.olean": "d7910d244acfe053e844aa93f92e34c006780f9c5fc97ece8d38b1a24d06c56c"
+      }
+    },
+    {
+      "label": "module-RP3.MixedAlgebra",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/MixedAlgebra.olean",
+        "RP3/MixedAlgebra.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:51:45.640440+00:00",
+      "completed_utc": "2026-10-12T03:51:52.068484+00:00",
+      "elapsed_seconds": 6.428,
+      "timed_out": false,
+      "log": "module-RP3.MixedAlgebra.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/MixedAlgebra.olean": "bf4b26469bde30f92c4cef5b4face975540854f80e62b6f3fc7a7154c68958e7"
+      }
+    },
+    {
+      "label": "module-RP3.QuadraticSecondResponse",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/QuadraticSecondResponse.olean",
+        "RP3/QuadraticSecondResponse.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:51:52.072190+00:00",
+      "completed_utc": "2026-10-12T03:51:56.747462+00:00",
+      "elapsed_seconds": 4.675,
+      "timed_out": false,
+      "log": "module-RP3.QuadraticSecondResponse.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/QuadraticSecondResponse.olean": "d3751cc9ad2a5b2b119607108ed46af1b1c0a21cee11fb138c26e931c83dabab"
+      }
+    },
+    {
+      "label": "module-RP3.QuadraticSecondGauge",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/QuadraticSecondGauge.olean",
+        "RP3/QuadraticSecondGauge.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:51:56.749118+00:00",
+      "completed_utc": "2026-10-12T03:52:00.822845+00:00",
+      "elapsed_seconds": 4.074,
+      "timed_out": false,
+      "log": "module-RP3.QuadraticSecondGauge.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/QuadraticSecondGauge.olean": "bffc65f36652c399142ddc141fd3898402699b7956b5a87087a5c93e99ca1a9a"
+      }
+    },
+    {
+      "label": "module-RP3.QuaternionPaths",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/QuaternionPaths.olean",
+        "RP3/QuaternionPaths.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:52:00.824371+00:00",
+      "completed_utc": "2026-10-12T03:52:30.212702+00:00",
+      "elapsed_seconds": 29.388,
+      "timed_out": false,
+      "log": "module-RP3.QuaternionPaths.log",
+      "log_sha256": "8459713e6d283747fa8d83732a69e80a3d2bb79efe41b1483a3f601ed46c384f",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/QuaternionPaths.olean": "57e8400c7c1b357bc383ba15af74030031d278b2a9f4aebb74e592f891970be6"
+      }
+    },
+    {
+      "label": "module-RP3.QuadraticPotential",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/QuadraticPotential.olean",
+        "RP3/QuadraticPotential.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:52:30.216667+00:00",
+      "completed_utc": "2026-10-12T03:52:34.791320+00:00",
+      "elapsed_seconds": 4.575,
+      "timed_out": false,
+      "log": "module-RP3.QuadraticPotential.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/QuadraticPotential.olean": "53c7f1bd12e876a96aa0e558c41eeda9d2bef963da8db6443c1f9a8852a4e479"
+      }
+    },
+    {
+      "label": "module-RP3.QuadraticSecondBound",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/QuadraticSecondBound.olean",
+        "RP3/QuadraticSecondBound.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:52:34.792769+00:00",
+      "completed_utc": "2026-10-12T03:52:38.469893+00:00",
+      "elapsed_seconds": 3.677,
+      "timed_out": false,
+      "log": "module-RP3.QuadraticSecondBound.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/QuadraticSecondBound.olean": "5f1add4150666ca66444e9b41e1c572fff4718bac3d539296887a481ef7f4366"
+      }
+    },
+    {
+      "label": "module-RP3.Fourier.ModelModes",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/Fourier/ModelModes.olean",
+        "RP3/Fourier/ModelModes.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:52:38.471483+00:00",
+      "completed_utc": "2026-10-12T03:52:41.091951+00:00",
+      "elapsed_seconds": 2.62,
+      "timed_out": false,
+      "log": "module-RP3.Fourier.ModelModes.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/Fourier/ModelModes.olean": "b63f63bee6e40161eb557a9779b3fa0f6ad963ed06f6cb06a3c703696fddd701"
+      }
+    },
+    {
+      "label": "module-RP3.Fourier.ResponseTransfer",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/Fourier/ResponseTransfer.olean",
+        "RP3/Fourier/ResponseTransfer.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:52:41.093484+00:00",
+      "completed_utc": "2026-10-12T03:52:47.072229+00:00",
+      "elapsed_seconds": 5.979,
+      "timed_out": false,
+      "log": "module-RP3.Fourier.ResponseTransfer.log",
+      "log_sha256": "50f3ea61ae9affbd78b77884ace7dd7bc8bebb3d0accf4457b8cd850ad5df63f",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/Fourier/ResponseTransfer.olean": "f95bd46280d64d4a235733e803a5dbd0f461f5e7adcb5820d27643fa1643d86e"
+      }
+    },
+    {
+      "label": "module-RP3.QuadraticMixedJets",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/QuadraticMixedJets.olean",
+        "RP3/QuadraticMixedJets.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:52:47.073941+00:00",
+      "completed_utc": "2026-10-12T03:52:54.205322+00:00",
+      "elapsed_seconds": 7.131,
+      "timed_out": false,
+      "log": "module-RP3.QuadraticMixedJets.log",
+      "log_sha256": "b0013bc9635161564174f0d9f8962b358b6ddc7836d64965924d14a87f4da7df",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/QuadraticMixedJets.olean": "38d5f3b3b43abe2af933ddab5aa264bc19099c41569e3c2146941de2e707a426"
+      }
+    },
+    {
+      "label": "module-RP3.QuadraticMixedWard",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/QuadraticMixedWard.olean",
+        "RP3/QuadraticMixedWard.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:52:54.208136+00:00",
+      "completed_utc": "2026-10-12T03:52:57.481754+00:00",
+      "elapsed_seconds": 3.274,
+      "timed_out": false,
+      "log": "module-RP3.QuadraticMixedWard.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/QuadraticMixedWard.olean": "d40d4061ecbbd80632b307aa0a3f6dcba76c269d8f7f6d1be744c7b43ef53d66"
+      }
+    },
+    {
+      "label": "module-RP3.QuadraticComplexWard",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/QuadraticComplexWard.olean",
+        "RP3/QuadraticComplexWard.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:52:57.483670+00:00",
+      "completed_utc": "2026-10-12T03:53:02.559812+00:00",
+      "elapsed_seconds": 5.076,
+      "timed_out": false,
+      "log": "module-RP3.QuadraticComplexWard.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/QuadraticComplexWard.olean": "82932abdf48fdf08ebb28081d6cf4dc4cf40ece28cfd67d00d1bbb09265e06c8"
+      }
+    },
+    {
+      "label": "module-RP3.QuadraticCoefficientBounds",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/QuadraticCoefficientBounds.olean",
+        "RP3/QuadraticCoefficientBounds.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:53:02.561493+00:00",
+      "completed_utc": "2026-10-12T03:53:08.688727+00:00",
+      "elapsed_seconds": 6.127,
+      "timed_out": false,
+      "log": "module-RP3.QuadraticCoefficientBounds.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/QuadraticCoefficientBounds.olean": "ad9a00f92d86bc2854f8359abdc7645190c53f4b57ac404c68eee0942245e644"
+      }
+    },
+    {
+      "label": "module-RP3.QuadraticFamilyKernel",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/QuadraticFamilyKernel.olean",
+        "RP3/QuadraticFamilyKernel.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:53:08.690566+00:00",
+      "completed_utc": "2026-10-12T03:53:18.378733+00:00",
+      "elapsed_seconds": 9.688,
+      "timed_out": false,
+      "log": "module-RP3.QuadraticFamilyKernel.log",
+      "log_sha256": "7abbe199d6450bdbae984efc492b29e5191d477cc798c7e87831e5dc474bfb2b",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/QuadraticFamilyKernel.olean": "87936e291f361eaa5da394a0a4a026df9be93052b0050bf72bd2db02beb6fdca"
+      }
+    },
+    {
+      "label": "module-RP3.QuadraticFamilyEstimates",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/QuadraticFamilyEstimates.olean",
+        "RP3/QuadraticFamilyEstimates.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:53:18.381054+00:00",
+      "completed_utc": "2026-10-12T03:53:21.152039+00:00",
+      "elapsed_seconds": 2.771,
+      "timed_out": false,
+      "log": "module-RP3.QuadraticFamilyEstimates.log",
+      "log_sha256": "f42353f06cc045853c46a6d8dd2961531abedc2b05810c51cdab11d6946e5d2e",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/QuadraticFamilyEstimates.olean": "ee9593971a011d1ba5228085697194c6058f5691a0a48ba7ab4156ca89451ea2"
+      }
+    },
+    {
+      "label": "module-RP3.QuadraticFamilyLower",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/QuadraticFamilyLower.olean",
+        "RP3/QuadraticFamilyLower.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:53:21.153763+00:00",
+      "completed_utc": "2026-10-12T03:53:24.424236+00:00",
+      "elapsed_seconds": 3.27,
+      "timed_out": false,
+      "log": "module-RP3.QuadraticFamilyLower.log",
+      "log_sha256": "6cc53b002252891f99bcfdd571f68357660ab18722e4e423b36c292d75dca5b7",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/QuadraticFamilyLower.olean": "64c1df58185ba96bcc2ec9c5b7939549b20ecb6847ac228f66d8a11ff90e0530"
+      }
+    },
+    {
+      "label": "module-RP3.QuadraticFamily",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/QuadraticFamily.olean",
+        "RP3/QuadraticFamily.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:53:24.426313+00:00",
+      "completed_utc": "2026-10-12T03:53:27.998009+00:00",
+      "elapsed_seconds": 3.572,
+      "timed_out": false,
+      "log": "module-RP3.QuadraticFamily.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/QuadraticFamily.olean": "3edca94ebbfae496b5ded0817dd42ef746452c95d6a6c65669c37ba2fb5aa76d"
+      }
+    },
+    {
+      "label": "module-RP3.Fourier.AnnulusResponse",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/Fourier/AnnulusResponse.olean",
+        "RP3/Fourier/AnnulusResponse.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:53:28.000215+00:00",
+      "completed_utc": "2026-10-12T03:53:31.774209+00:00",
+      "elapsed_seconds": 3.774,
+      "timed_out": false,
+      "log": "module-RP3.Fourier.AnnulusResponse.log",
+      "log_sha256": "5105292edafaed2fb800de95ffdf429bdbf0bd00ea33d88ab45bf6febbcda269",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/Fourier/AnnulusResponse.olean": "9646b141a20a38797c3d9f6ca3321c4dd438e0f26b871c6dac1de84be5e20235"
+      }
+    },
+    {
+      "label": "module-RP3.AnnularEstimate",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/AnnularEstimate.olean",
+        "RP3/AnnularEstimate.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:53:31.775889+00:00",
+      "completed_utc": "2026-10-12T03:53:34.445884+00:00",
+      "elapsed_seconds": 2.67,
+      "timed_out": false,
+      "log": "module-RP3.AnnularEstimate.log",
+      "log_sha256": "0436833f0882b6a3137a3d1be16905573d79750d33dc62d8b4fd43ad1cfe05c1",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/AnnularEstimate.olean": "fac6ce50148b9d31c673e8c977530e4ccc6bbf0a6d5e6ed997959d8f3e896366"
+      }
+    },
+    {
+      "label": "module-RP3.QuaternionComparison",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/QuaternionComparison.olean",
+        "RP3/QuaternionComparison.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:53:34.447585+00:00",
+      "completed_utc": "2026-10-12T03:53:37.369672+00:00",
+      "elapsed_seconds": 2.922,
+      "timed_out": false,
+      "log": "module-RP3.QuaternionComparison.log",
+      "log_sha256": "e441fdc54766690dc3f9c66c5367bf2536376b3f1b522cd16bbfef3818286c73",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/QuaternionComparison.olean": "a528398a370aabae11388f290f3a9c1d0f62e3602b27ca35c924b46a17a1f268"
+      }
+    },
+    {
+      "label": "module-RP3.SquareRates",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/SquareRates.olean",
+        "RP3/SquareRates.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:53:37.371681+00:00",
+      "completed_utc": "2026-10-12T03:53:40.542673+00:00",
+      "elapsed_seconds": 3.171,
+      "timed_out": false,
+      "log": "module-RP3.SquareRates.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/SquareRates.olean": "ee9cf60f77c0bbcb684f4eaa1391b88440e606d8e515463d5c3a071437f4b050"
+      }
+    },
+    {
+      "label": "module-RP3.KernelEstimate",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/KernelEstimate.olean",
+        "RP3/KernelEstimate.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:53:40.544547+00:00",
+      "completed_utc": "2026-10-12T03:53:43.969443+00:00",
+      "elapsed_seconds": 3.425,
+      "timed_out": false,
+      "log": "module-RP3.KernelEstimate.log",
+      "log_sha256": "137a0c4f2ff6e8701066aa622be7819d0076c45944cd9c664b23dd39d6bd24e9",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/KernelEstimate.olean": "e667b17485778e102581d1b69586146a1aa605449df55a5f89e8a88458eaf391"
+      }
+    },
+    {
+      "label": "module-RP3.ThinKernel",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/ThinKernel.olean",
+        "RP3/ThinKernel.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:53:43.971397+00:00",
+      "completed_utc": "2026-10-12T03:53:47.293933+00:00",
+      "elapsed_seconds": 3.323,
+      "timed_out": false,
+      "log": "module-RP3.ThinKernel.log",
+      "log_sha256": "51ad99c11207af3e0994e11ef5376fdd7eb9587578a470419aa3ae1b50ac8f96",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/ThinKernel.olean": "101f43e108fd69728a8bb070e0e954d84f74fe2796406508eca398fe8100aec4"
+      }
+    },
+    {
+      "label": "module-RP3.ThinProfileLattice",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/ThinProfileLattice.olean",
+        "RP3/ThinProfileLattice.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:53:47.295802+00:00",
+      "completed_utc": "2026-10-12T03:53:51.668715+00:00",
+      "elapsed_seconds": 4.373,
+      "timed_out": false,
+      "log": "module-RP3.ThinProfileLattice.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/ThinProfileLattice.olean": "20fdb5fa542861d6025123d49bdab3d0df61ebaea5ca366a4062a549bc19dc4c"
+      }
+    },
+    {
+      "label": "module-RP3.ThinFourier",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/ThinFourier.olean",
+        "RP3/ThinFourier.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:53:51.670662+00:00",
+      "completed_utc": "2026-10-12T03:54:02.857665+00:00",
+      "elapsed_seconds": 11.187,
+      "timed_out": false,
+      "log": "module-RP3.ThinFourier.log",
+      "log_sha256": "09ae23d4b4700345f540451a344ede84cf4fa44489d614aeaf78c5d9c616897c",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/ThinFourier.olean": "a2b6295f8d5f3bd25b54f589aa5030af52f85e3e01b3a472e98c19cbf1cf56c5"
+      }
+    },
+    {
+      "label": "module-RP3.ThinEdgeResponse",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/ThinEdgeResponse.olean",
+        "RP3/ThinEdgeResponse.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:54:02.860667+00:00",
+      "completed_utc": "2026-10-12T03:54:06.132048+00:00",
+      "elapsed_seconds": 3.271,
+      "timed_out": false,
+      "log": "module-RP3.ThinEdgeResponse.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/ThinEdgeResponse.olean": "36df6987b5a12f4ac7ccb5b773c165842a6d20e3f099f5aa1510dddcc6588144"
+      }
+    },
+    {
+      "label": "module-RP3.ThinCosts",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/ThinCosts.olean",
+        "RP3/ThinCosts.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:54:06.133703+00:00",
+      "completed_utc": "2026-10-12T03:54:09.504338+00:00",
+      "elapsed_seconds": 3.371,
+      "timed_out": false,
+      "log": "module-RP3.ThinCosts.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/ThinCosts.olean": "91e76b22074280c5565d43e75da68da99c69c3e60dfebd7a408013819554b64c"
+      }
+    },
+    {
+      "label": "module-RP3.ThinSupport",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/ThinSupport.olean",
+        "RP3/ThinSupport.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:54:09.506462+00:00",
+      "completed_utc": "2026-10-12T03:54:13.027335+00:00",
+      "elapsed_seconds": 3.521,
+      "timed_out": false,
+      "log": "module-RP3.ThinSupport.log",
+      "log_sha256": "18f647e7ad2a99e9cb5b0f8fd540623307f607836b1744943518baf66c3fd701",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/ThinSupport.olean": "364995e923d0243e403ffc5cf53a82ca5fffc47b982e6843c1ad20da3c1ba63a"
+      }
+    },
+    {
+      "label": "module-RP3.ThinResponse",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/ThinResponse.olean",
+        "RP3/ThinResponse.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:54:13.029297+00:00",
+      "completed_utc": "2026-10-12T03:54:15.956112+00:00",
+      "elapsed_seconds": 2.927,
+      "timed_out": false,
+      "log": "module-RP3.ThinResponse.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/ThinResponse.olean": "658a7cd432ff6732157c66de1adec317252daebb42e439a0d392072f2215fff6"
+      }
+    },
+    {
+      "label": "module-RP3.ThinDyadicParameters",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/ThinDyadicParameters.olean",
+        "RP3/ThinDyadicParameters.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:54:15.958353+00:00",
+      "completed_utc": "2026-10-12T03:54:19.330175+00:00",
+      "elapsed_seconds": 3.372,
+      "timed_out": false,
+      "log": "module-RP3.ThinDyadicParameters.log",
+      "log_sha256": "961a153b82c048a98a2acb3f6c420fde4bd18ef7a7034ae50bb048190bf01155",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/ThinDyadicParameters.olean": "3522fdf4e206ee1201078bf79e3efa2c6b81db4ae014c31d5ca7e65715a9898b"
+      }
+    },
+    {
+      "label": "module-RP3.DenseRates",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/DenseRates.olean",
+        "RP3/DenseRates.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:54:19.333128+00:00",
+      "completed_utc": "2026-10-12T03:54:22.856874+00:00",
+      "elapsed_seconds": 3.524,
+      "timed_out": false,
+      "log": "module-RP3.DenseRates.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/DenseRates.olean": "0df4c8153f31ea31996011e5e7537310920ae7b103f7ed35cbbf094f5f3d8175"
+      }
+    },
+    {
+      "label": "module-RP3.LogSquareRates",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/LogSquareRates.olean",
+        "RP3/LogSquareRates.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:54:22.858693+00:00",
+      "completed_utc": "2026-10-12T03:54:26.935301+00:00",
+      "elapsed_seconds": 4.077,
+      "timed_out": false,
+      "log": "module-RP3.LogSquareRates.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/LogSquareRates.olean": "0c2ccf3d85133f2f2c04ea7838763d75e28637767e725dba31b5f472ba2a7bc1"
+      }
+    },
+    {
+      "label": "module-RP3.ThinScaleChoice",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/ThinScaleChoice.olean",
+        "RP3/ThinScaleChoice.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:54:26.937300+00:00",
+      "completed_utc": "2026-10-12T03:54:31.109293+00:00",
+      "elapsed_seconds": 4.172,
+      "timed_out": false,
+      "log": "module-RP3.ThinScaleChoice.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/ThinScaleChoice.olean": "c2b298c28ae7d521b9bccfa367970f1a411c26dc6a76d8824242007dc972dac2"
+      }
+    },
+    {
+      "label": "module-RP3.LogSquarePacking",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/LogSquarePacking.olean",
+        "RP3/LogSquarePacking.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:54:31.111215+00:00",
+      "completed_utc": "2026-10-12T03:54:34.982724+00:00",
+      "elapsed_seconds": 3.872,
+      "timed_out": false,
+      "log": "module-RP3.LogSquarePacking.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/LogSquarePacking.olean": "13af0310132a9c1aab3e4b46ceb8616be53f224339b554feaf153911c2a5c5e3"
+      }
+    },
+    {
+      "label": "module-RP3.ThinKernelEstimate",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/ThinKernelEstimate.olean",
+        "RP3/ThinKernelEstimate.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:54:34.984890+00:00",
+      "completed_utc": "2026-10-12T03:54:38.407338+00:00",
+      "elapsed_seconds": 3.422,
+      "timed_out": false,
+      "log": "module-RP3.ThinKernelEstimate.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/ThinKernelEstimate.olean": "79bb13f3d9c213913af9dd09d694946b3946d49c360fcce574a4c2f64b501977"
+      }
+    },
+    {
+      "label": "module-RP3.UniformDecay",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/UniformDecay.olean",
+        "RP3/UniformDecay.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:54:38.409244+00:00",
+      "completed_utc": "2026-10-12T03:54:41.380159+00:00",
+      "elapsed_seconds": 2.971,
+      "timed_out": false,
+      "log": "module-RP3.UniformDecay.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/UniformDecay.olean": "3fc8cd7dbe225fc85ed67a600190b8bfd650b63f301147376dd11e8e9ea73732"
+      }
+    },
+    {
+      "label": "module-RP3.LogarithmicRate",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/LogarithmicRate.olean",
+        "RP3/LogarithmicRate.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:54:41.381926+00:00",
+      "completed_utc": "2026-10-12T03:54:49.462655+00:00",
+      "elapsed_seconds": 8.081,
+      "timed_out": false,
+      "log": "module-RP3.LogarithmicRate.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/LogarithmicRate.olean": "e43603dd6da8df586929df1fa557302993e452a382f81f5cf22d74cfe6a3fbbb"
+      }
+    },
+    {
+      "label": "module-RP3.Full",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/Full.olean",
+        "RP3/Full.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:54:49.465174+00:00",
+      "completed_utc": "2026-10-12T03:54:52.083994+00:00",
+      "elapsed_seconds": 2.619,
+      "timed_out": false,
+      "log": "module-RP3.Full.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/Full.olean": "6dc59b4eae30e56a4f49311f0d2f5af96a17e259cfbb929ab8a58c393f9cd12f"
+      }
+    },
+    {
+      "label": "module-RP3.GibbsProbability",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/GibbsProbability.olean",
+        "RP3/GibbsProbability.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:54:52.088072+00:00",
+      "completed_utc": "2026-10-12T03:54:55.861917+00:00",
+      "elapsed_seconds": 3.774,
+      "timed_out": false,
+      "log": "module-RP3.GibbsProbability.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/GibbsProbability.olean": "91c05d61f2060472c553a43db66736bbc436485f0b1250b4970751364b6908bb"
+      }
+    },
+    {
+      "label": "module-RP3.WeightedSummability",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/WeightedSummability.olean",
+        "RP3/WeightedSummability.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:54:55.864077+00:00",
+      "completed_utc": "2026-10-12T03:54:58.834780+00:00",
+      "elapsed_seconds": 2.971,
+      "timed_out": false,
+      "log": "module-RP3.WeightedSummability.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/WeightedSummability.olean": "1a3bd07475e8560aec028d9e9d184357cb41e35b2ed65f509edcca567aba7fae"
+      }
+    },
+    {
+      "label": "module-RP3.LimitCorollary",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/LimitCorollary.olean",
+        "RP3/LimitCorollary.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:54:58.836566+00:00",
+      "completed_utc": "2026-10-12T03:55:01.657355+00:00",
+      "elapsed_seconds": 2.821,
+      "timed_out": false,
+      "log": "module-RP3.LimitCorollary.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/LimitCorollary.olean": "81a8cb1ecec3ec144df0297c5cbbe0b4dbe5ac9f1b2a7ddce82b425d83b41372"
+      }
+    },
+    {
+      "label": "module-RP3.LogSquareLimits",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/LogSquareLimits.olean",
+        "RP3/LogSquareLimits.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:55:01.659005+00:00",
+      "completed_utc": "2026-10-12T03:55:04.328294+00:00",
+      "elapsed_seconds": 2.669,
+      "timed_out": false,
+      "log": "module-RP3.LogSquareLimits.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/LogSquareLimits.olean": "f5d84af1f3efa1332de87840d35fbfe9d09c33f313ab31afaf1047f015c8b6ee"
+      }
+    },
+    {
+      "label": "module-RP3.ModelWitnesses",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/ModelWitnesses.olean",
+        "RP3/ModelWitnesses.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:55:04.330509+00:00",
+      "completed_utc": "2026-10-12T03:55:14.214840+00:00",
+      "elapsed_seconds": 9.884,
+      "timed_out": false,
+      "log": "module-RP3.ModelWitnesses.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/ModelWitnesses.olean": "af53a142a5a01ed16a7f89bc9fa941ba16916ed69286ac8d7eb8f5a32dcba7b2"
+      }
+    },
+    {
+      "label": "module-RP3.LocalLimitExistence",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/LocalLimitExistence.olean",
+        "RP3/LocalLimitExistence.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:55:14.221696+00:00",
+      "completed_utc": "2026-10-12T03:55:17.292291+00:00",
+      "elapsed_seconds": 3.07,
+      "timed_out": false,
+      "log": "module-RP3.LocalLimitExistence.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/LocalLimitExistence.olean": "6757231ee38bca3bd38b1dacd997aaf448146a3eeb3d80ee9c294050766c6ed4"
+      }
+    },
+    {
+      "label": "module-RP3.SO3",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/SO3.olean",
+        "RP3/SO3.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:55:17.294196+00:00",
+      "completed_utc": "2026-10-12T03:55:23.773334+00:00",
+      "elapsed_seconds": 6.479,
+      "timed_out": false,
+      "log": "module-RP3.SO3.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/SO3.olean": "4006aca18d0d0c2428baef0d0bead7a7d3e7691269aa5ce4875368aae245f5de"
+      }
+    },
+    {
+      "label": "module-RP3.HighTemperature",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/HighTemperature.olean",
+        "RP3/HighTemperature.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:55:23.777933+00:00",
+      "completed_utc": "2026-10-12T03:55:27.801132+00:00",
+      "elapsed_seconds": 4.023,
+      "timed_out": false,
+      "log": "module-RP3.HighTemperature.log",
+      "log_sha256": "0e05a89e1f7f00d9629ee27efac9fb839a3f658f8a67aa4751cbae6c5d97b256",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/HighTemperature.olean": "6fd9645a290d5faeb0ed001fd8ba97b154a370089977d99ba429b87d018f3671"
+      }
+    },
+    {
+      "label": "module-RP3.ActiveEdgeBounds",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/ActiveEdgeBounds.olean",
+        "RP3/ActiveEdgeBounds.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:55:27.803106+00:00",
+      "completed_utc": "2026-10-12T03:55:31.224426+00:00",
+      "elapsed_seconds": 3.421,
+      "timed_out": false,
+      "log": "module-RP3.ActiveEdgeBounds.log",
+      "log_sha256": "4ac53fb1b2ab211fb59d7e5734026947d4d423b19c6f9867e88d21694b671f15",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/ActiveEdgeBounds.olean": "bcd92f1ecf77ab71d724aee5aa71855458039ae0dfb3154196e97695d2e13abc"
+      }
+    },
+    {
+      "label": "module-RP3.ActivePaths",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/ActivePaths.olean",
+        "RP3/ActivePaths.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:55:31.226577+00:00",
+      "completed_utc": "2026-10-12T03:55:34.647430+00:00",
+      "elapsed_seconds": 3.421,
+      "timed_out": false,
+      "log": "module-RP3.ActivePaths.log",
+      "log_sha256": "f2f560b2d3af96087d47dedb8c652d4b5787568607506f10a8b96824771c2481",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/ActivePaths.olean": "042355d337721e81a74ad4c00b7e314c1b12f1b00d834e5f2552381444f8e109"
+      }
+    },
+    {
+      "label": "module-RP3.HighTemperatureDecay",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/HighTemperatureDecay.olean",
+        "RP3/HighTemperatureDecay.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:55:34.649540+00:00",
+      "completed_utc": "2026-10-12T03:55:37.571111+00:00",
+      "elapsed_seconds": 2.922,
+      "timed_out": false,
+      "log": "module-RP3.HighTemperatureDecay.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/HighTemperatureDecay.olean": "2e742ec3f16d24944612504a3fec7d245a61f0d8379286857c7acdc57973aeec"
+      }
+    },
+    {
+      "label": "module-RP3.NonbacktrackingPaths",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/NonbacktrackingPaths.olean",
+        "RP3/NonbacktrackingPaths.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:55:37.573413+00:00",
+      "completed_utc": "2026-10-12T03:55:40.944094+00:00",
+      "elapsed_seconds": 3.371,
+      "timed_out": false,
+      "log": "module-RP3.NonbacktrackingPaths.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/NonbacktrackingPaths.olean": "9164cb4c7291053ffd9795ef2c12edbf22439415117b1db19c8aa81febe871a1"
+      }
+    },
+    {
+      "label": "module-RP3.HighTemperatureExponential",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3/HighTemperatureExponential.olean",
+        "RP3/HighTemperatureExponential.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:55:40.946990+00:00",
+      "completed_utc": "2026-10-12T03:55:43.816831+00:00",
+      "elapsed_seconds": 2.87,
+      "timed_out": false,
+      "log": "module-RP3.HighTemperatureExponential.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3/HighTemperatureExponential.olean": "3cee41d00e05e4be369c47a7933659f895952ca20c957c3a52fc686b266338e2"
+      }
+    },
+    {
+      "label": "module-RP3",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/build/lib/lean/RP3.olean",
+        "RP3.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:55:43.818850+00:00",
+      "completed_utc": "2026-10-12T03:55:46.388421+00:00",
+      "elapsed_seconds": 2.57,
+      "timed_out": false,
+      "log": "module-RP3.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {
+        ".lake/build/lib/lean/RP3.olean": "1a3155c0378d3d07f0aabe31d0edc418ddab92237b9b25dc0301cb674f4ee5ce"
+      }
+    },
+    {
+      "label": "semantic-witnesses",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "RP3SemanticWitnesses.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:55:46.390174+00:00",
+      "completed_utc": "2026-10-12T03:55:49.761942+00:00",
+      "elapsed_seconds": 3.372,
+      "timed_out": false,
+      "log": "semantic-witnesses.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_sha256": {}
+    },
+    {
+      "label": "readable-axioms",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "RP3AxiomAudit.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:55:49.764307+00:00",
+      "completed_utc": "2026-10-12T03:55:52.255247+00:00",
+      "elapsed_seconds": 2.491,
+      "timed_out": false,
+      "log": "readable-axioms.log",
+      "log_sha256": "8e36d480a3d92f13d70a8432a56b43fe92fbeeec788c17008638f45449963256",
+      "output_sha256": {}
+    },
+    {
+      "label": "semantic-inventory",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "--run",
+        "verification/RP3SemanticEnvironment.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:55:52.257400+00:00",
+      "completed_utc": "2026-10-12T03:56:10.073513+00:00",
+      "elapsed_seconds": 17.816,
+      "timed_out": false,
+      "log": "semantic-inventory.log",
+      "log_sha256": "cd7de60f65c4b429c323eb9c5294ec41b5da40193f96db5a72bbda386b4339c8",
+      "output_sha256": {}
+    },
+    {
+      "label": "semantic-baseline-initialization",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "scripts/check_rp3_semantics.py",
+        "/workspace/scratch/53fc9415f670/rp3-review/source/rp3-lean/verification/rp3-review/semantic-inventory.log",
+        "--write-baseline"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:56:10.114275+00:00",
+      "completed_utc": "2026-10-12T03:56:10.279048+00:00",
+      "elapsed_seconds": 0.165,
+      "timed_out": false,
+      "log": "semantic-baseline-initialization.log",
+      "log_sha256": "8cbe66011ab075ba559d96ad95001756dc5d5331b299b1637b8bd8e9e1aedb09",
+      "output_sha256": {}
+    },
+    {
+      "label": "semantic-gate",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "scripts/check_rp3_semantics.py",
+        "/workspace/scratch/53fc9415f670/rp3-review/source/rp3-lean/verification/rp3-review/semantic-inventory.log"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:56:10.281403+00:00",
+      "completed_utc": "2026-10-12T03:56:10.445747+00:00",
+      "elapsed_seconds": 0.164,
+      "timed_out": false,
+      "log": "semantic-gate.log",
+      "log_sha256": "6809669911f439e89da181c3e2bf3da5cfb1a067edae3d27d6effb3433e304e4",
+      "output_sha256": {}
+    },
+    {
+      "label": "public-dependencies",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "--run",
+        "verification/RP3AuditEnvironment.lean",
+        "--replay"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:56:10.447467+00:00",
+      "completed_utc": "2026-10-12T03:58:08.070729+00:00",
+      "elapsed_seconds": 117.623,
+      "timed_out": false,
+      "log": "public-dependencies.log",
+      "log_sha256": "d96ed007f4c808065f3c7c9e35771d6334f6062456297433ec5f90ff8a103080",
+      "output_sha256": {}
+    },
+    {
+      "label": "standalone-source",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "-j1",
+        "-o",
+        ".lake/verification/standalone/RP3-Formalization.olean",
+        "RP3-Formalization.lean"
+      ],
+      "exit_code": 0,
+      "started_utc": "2026-10-12T03:58:08.072918+00:00",
+      "completed_utc": "2026-10-12T04:02:56.882793+00:00",
+      "elapsed_seconds": 288.81,
+      "timed_out": false,
+      "log": "standalone-source.log",
+      "log_sha256": "ee346f6b35d3610f4a675ed3a07182010194d6219e0bd25ca79a3906ab13ae85",
+      "output_sha256": {
+        ".lake/verification/standalone/RP3-Formalization.olean": "86b86d0b4e02e049564aaaa28991a8b7debf1808ee5082cc6d62234b205e9d74"
+      }
+    }
+  ],
+  "result": "passed",
+  "module_count": 83,
+  "semantic_baseline_initialized_for_review": true,
+  "final_source_sha256": {
+    "AxiomAudit.lean": "d07ef4b13c3f645db57778ba41e8ca60e2809bae8d0b4701c8f98d9bc88c9053",
+    "ProbeGeo.lean": "5657d88853dec68ec221f00ab7b473a0206913ebd01baa92ae023dbd73fad50f",
+    "RP2/ActiveEdgeBounds.lean": "31c8103dea15eca593e871035d9276718e075319441ef15c6abf9096b96bf3d6",
+    "RP2/ActivePaths.lean": "5df74b317f1af6539e26c7cbe607baf6b8ef2dccdee6a813aaf4bcece9912b1a",
+    "RP2/AnnularEstimate.lean": "9b4606b0ad5b94f4b2938f32236a8285e4fcb8955523eb5f198413ecdb3b2dba",
+    "RP2/Averaging.lean": "896b80e078cf9a1e47a9b7663bd3e2f397a0fc648baa78c8dc2e2568a9b2b995",
+    "RP2/AveragingInterface.lean": "a1de490810b0321320f9f4da9f7b7c3a7a13420b396200890e4da145c1896506",
+    "RP2/Calculus.lean": "e1f02ceedcd0bf28d38be5f02e7b6b2cc3afbf978f2aa3e366d190d13c273c0a",
+    "RP2/ComplexCurrents.lean": "bcaceb0bf22a4ccd4b45b844d33f91d0e3427c124a11bf8a1c2c79bef37062c2",
+    "RP2/ConcreteAnnuli.lean": "ea6f19f34a0c9598c8655d594214a80813b7ac1945bab6ec2ebe9604759ac786",
+    "RP2/Criticality.lean": "248d32e31462ae4c6a058f5ae4e251eb459f9faa8ef917d3ac197b4fc038b93f",
+    "RP2/DenseLimits.lean": "685db5e3bdfa4034fe6b0be541e4e088bf34ef91fc73dbf6e09d0e5ea068fa0a",
+    "RP2/DenseLogarithmicRate.lean": "92a9f8b73bcf71a47a8ef7072352ff5cdd9971ea48de23c4e791026b578a916d",
+    "RP2/DenseRates.lean": "f0060086cd0e9bc5ed400f161526867316be2660d78e159f22c24c9c311adcdd",
+    "RP2/FiniteAveraging.lean": "940fc322737870f963cc626725ec7b4946c307c4b106dda0b316b5b69a7acf6e",
+    "RP2/Fourier/AnnulusResponse.lean": "e2f2d38460ef8ce6c2a3df6b9d45196ca53e47d2610bdb94dc6ecf7d85093562",
+    "RP2/Fourier/ModelModes.lean": "e95f6729688af7fe70a5267815aeaacffc01dfed0abef3193904b2be48cdb43f",
+    "RP2/Fourier/ResponseTransfer.lean": "447c96e731aa0a67f8f7c5e2f945b21c3d9a36d405a09c1179ccaf753621b457",
+    "RP2/FourierAll.lean": "f6057642c043d2ef58803a3373b4247a55993d5d0b6c35eb2d774bd7c221027e",
+    "RP2/Full.lean": "0dbee0ba5426674c2910fea95ded0060e3e62bae8b1bf9024baec3040d2c5867",
+    "RP2/GibbsProbability.lean": "092ebcfde98db306a75be31b1ed17d417d216522dfe40323b99bfc3822a4d099",
+    "RP2/HighTemperature.lean": "95ab18d482de613db6395a5302e19e15d65eda8fa00bc94aeee260b803b382a8",
+    "RP2/HighTemperatureDecay.lean": "1d8ca549f7c58c7423c88d4a1a3320a56b6b4e9f9959fda733ec2ad1735e80bc",
+    "RP2/HighTemperatureExponential.lean": "4df9eb5172eb6d0f52a6a94fe19dfccd2b6c0f917bb9e8270947aefa395340fa",
+    "RP2/KernelEstimate.lean": "3c3d309896607962c297e122281affd67362dd66e1da97ec5f6772e89aabb511",
+    "RP2/LatticeAnnuli.lean": "051917ecd029835a557ccfd79f28b393ed9811e92d53d3d462433f9fdea324bd",
+    "RP2/LatticeModelRestriction.lean": "414688fa8eab099126cc1254d4fe9061373ae25afc477a90dcf4edb1fcad6594",
+    "RP2/LimitCorollary.lean": "8b2e2a402a5f152ccd1357e86890d8854de6f3ec275c592b48b34df444ed575a",
+    "RP2/LogSquareLimits.lean": "9101f5accea7ff391427c8da3ae4fcea7e7f160c82bd3d528df20deeb895418f",
+    "RP2/LogSquarePacking.lean": "69123da47ff651de9ba4701ab70b0b1f32b38ba48d89d5df9d7fc19e2158574a",
+    "RP2/LogSquareRates.lean": "0aeadd6d5a4e57bcf1d3c421b3e4ae7bbe561d56829bb17dfefc04195577cb6a",
+    "RP2/LogarithmicRate.lean": "f5dbb603c5a353a87faf182350d80501606713aebf96d0065da0fc54cf55f3ce",
+    "RP2/Main.lean": "974e99e53473bece94edc40ef98da312b51dbc7cfa310d78cd9e0f515f8f1d94",
+    "RP2/MixedAlgebra.lean": "a8ca4128b73c6ab9da7f331ab8833b38efbb3de911645b44adae21775dbe34f8",
+    "RP2/Model.lean": "1c1f53e667f828d8feba95e53894cc06714482f2303767e7db768cb3d50b61b3",
+    "RP2/ModelAssembly.lean": "d665050e4dbe079d06d0c1b3c07045f4ef7147cce24d8686207cd072bdb123fc",
+    "RP2/ModelConnection.lean": "c449aa456e08c5dc1f647ed20cff239744155c0dd1d5fa0cd7de853495e5f0e8",
+    "RP2/ModelRestriction.lean": "ce2b65037eb915b6a4c2ce1c532de612cc0e0d15130c56c953063ad3d31d25dd",
+    "RP2/NestedCuts.lean": "5880c0b408d5439c893c4b56c424c99b8379da6c765a01d61d2d0ced05d2b3c8",
+    "RP2/NonbacktrackingPaths.lean": "5b9f8a7957b2d69f6bde20a879738a433b917822413d532490f1fa575cdce96f",
+    "RP2/PaperInterface.lean": "35b209b93bad853ab3efe82f7afc996a2c89f1fdf53efb51da4b5b410819781a",
+    "RP2/PaperResponse.lean": "ca47869b34b5875a90bd97c251597166f7b932710f03bfe2e1091a6a80e90806",
+    "RP2/PeriodicODE.lean": "11bcadd31ddc91153d0f9edbed1c4ecc288fa476fa75bb59126686fdd27e5a98",
+    "RP2/PinnedKernel.lean": "aceba24f6244f14a8ff73fc444d2325b3e5610e23273703d9abd7e52c5cc5503",
+    "RP2/ProductJets.lean": "670b3e9920e21594a4ba800c8382b78a4bf873bf9a304ab02121add0ed3d8cfe",
+    "RP2/QuadraticAverages.lean": "7e64fccf7369142c10ccf5b6a8eb05e9715f1cea30c3774f54177827e1281dcc",
+    "RP2/QuadraticBounds.lean": "5f0b358d22504f77dde384635c11481820eb2d777de07dc0cc0b6fe263c4f6ee",
+    "RP2/QuadraticCoefficientBounds.lean": "7339f608b839a9a941819f810a7c91429873f756c7f73c385b84b0a961fef9f3",
+    "RP2/QuadraticComplexWard.lean": "c61e8f131c7397dcb4116d6a085cf0038c3cb8144ef5931fd383b9442583b072",
+    "RP2/QuadraticDerivatives.lean": "f7deab25a151cc38edf5c702b3472250b2dd6fa07e46b5ab8539509b477221dc",
+    "RP2/QuadraticFamily.lean": "b9fdcd55c8c891f3b80cd49a99e895cba462f378a0902406517bce0908da4ecb",
+    "RP2/QuadraticFamilyEstimates.lean": "25e81ddd7d1f8e9152e99aefc4da77daa6c59c090f88a3eebd2d62ccd3b7a407",
+    "RP2/QuadraticFamilyKernel.lean": "48e86a36b28f65a03b8d71758aeecf96f8649ad03db874197b21d8513163bf29",
+    "RP2/QuadraticFamilyLower.lean": "d2cf5baee42fca831210fd8a5c3752d456eb8fb14d54a9579a26985f597986d0",
+    "RP2/QuadraticGibbs.lean": "4001113068ed4eeb19f00326dbb0e815b7bc759aed52a6fe1bdc10c8f3fbc46a",
+    "RP2/QuadraticMixedJets.lean": "38d416df90ee3969daab3fc4051492bd59f4b4cb04d2bb3f89ba80d602462e3a",
+    "RP2/QuadraticMixedWard.lean": "7628d6c0da3c82cbf2b9ef53e5f6f1716ab63723a68f09b43a952b209f23912b",
+    "RP2/QuadraticPlane.lean": "f8c0b68aeaf29e607f748dccaa4e0a6d464806d6790a0bffc5f40e2a46c8f841",
+    "RP2/QuadraticPlaneResponse.lean": "faf5eb03adb7737f23d7172efeb2d59c841f5971f9065c9599fbc3c3b1d825af",
+    "RP2/QuadraticPotential.lean": "f307971c36fe06357ba8df432eca7cd749a3553a233b7050b91be7d5b334b95e",
+    "RP2/QuadraticSecondBound.lean": "8c01d4c21ccb9b9edd3920fa02b62ba13b616de19b381c3063be570f1b9ea549",
+    "RP2/QuadraticSecondGauge.lean": "2ec4d5b85ba05e51f6234cbb01c2afd94f04d6f6ba027661649eb5e38018bccc",
+    "RP2/QuadraticSecondResponse.lean": "172f0af6be80ce2507eeffbb0431a68a53ac9294ef706f56ea6866fcbc180586",
+    "RP2/QuadraticWard.lean": "448317bd21a25b80aafef86e776787c79d01ba388df5e3ae35c9b305ad7a8c20",
+    "RP2/Rates.lean": "65ceb9fd9cf2701ac2603864a0d96c8416f10db48c29210ba079cdd959582058",
+    "RP2/RotationGeometry.lean": "65ccc80cb4e141bc7ac3486ec7144ad90517b1e990d86c47a490cf7e302b755d",
+    "RP2/SquareRates.lean": "bd3036b741d5a39678696959320c4ab15ff6dec30a2c524d6315cc73cc075244",
+    "RP2/StructureFactor.lean": "5726112d65ea9e1f78829b465559c35f232c1ebdd27f20da38c51f72e44f5191",
+    "RP2/TetrahedralAction.lean": "a7f77461226bde32721743d0b11e55ae622a3ff8374f174e8fc629fd277c8e23",
+    "RP2/TetrahedralComparison.lean": "3ffa3412d8f6e863c0a91bda0da9d10f7b34b15fdfa669b0a303d0226c582c6a",
+    "RP2/TetrahedralPaths.lean": "619080f4eed525642ed037bebd866890062f0b1ca3a8f4d16bbf04c8ac5d1785",
+    "RP2/TetrahedralTensor.lean": "41a45daad61e168e961223ade118db0e2c4c224003637abcf8bd2c86cc16918b",
+    "RP2/ThinAnnuli.lean": "173e5d280711b942b8badc8d74bbb5d9a8e988fa31b9816eb5a244d711ff75f5",
+    "RP2/ThinCosts.lean": "0f56400740551939e711ceede1d1fab2c9f4549108d4b2bfc029e78a9188d794",
+    "RP2/ThinDyadicParameters.lean": "b1244ed33fc93628082b275f5f0682b537c26dce9035dc2bd3b86af5bbf6a43d",
+    "RP2/ThinEdgeResponse.lean": "e6824a9ec29cc4fe6f4492803dd021327c978d859095299dc406985fbf5c477b",
+    "RP2/ThinFourier.lean": "5efc5d0f3abda98502b9295e17a72c24373dad3e58105796598f6660733215ec",
+    "RP2/ThinKernel.lean": "47faaef160a87ea08b0e13388479d6a95de8bd6decffed31a60691dcfde3865f",
+    "RP2/ThinKernelEstimate.lean": "4fa8642fb096a70e8c6f84e553ad5cbe55bb1913c48e019a9292fcf5b4aa71ad",
+    "RP2/ThinProfileLattice.lean": "2e2676a58187e9de17157e5b0d37c1ff73cfbf2f0447a6f0a3434368fe4095b6",
+    "RP2/ThinProfiles.lean": "11021f2c9a9bb671514812db4332fda09eb719333b77a85f88b98217dfca8411",
+    "RP2/ThinResponse.lean": "c8ecde66d04ee2c22115c51a36dbf777f6d4a0b74b1441bc3a1799459f328bac",
+    "RP2/ThinScaleChoice.lean": "ca65a7413135d75b297f60bd707792909e4d254852ea6d1efd8358482c6d850e",
+    "RP2/ThinSupport.lean": "28633ee0f97e568bac5704713238d84ab038b9e7540fcb54de7c53fca827b078",
+    "RP2/TwoEndpointRates.lean": "49a6fa38c796d96df1d889cb839f8a07875c6c2e99a3d1e2684d01606989c24d",
+    "RP2/UniformDecay.lean": "28582f3b4a477a436c97506141abd3a42e646ce340461afcd915fe34c79fc5f1",
+    "RP2/WeightedSummability.lean": "c31be33062008bfa4c19b81595774490fef000124a76f5d2bbea479213d87d2f",
+    "RP2-Formalization.lean": "843e4759583ab05a60e0b5d25cd36fe7a3df432f0411447bdb44a15ebc26b5ad",
+    "RP2.lean": "fec5114df4d315e5bcca716e0e5cb540dcee82d6ee61c576dae4cd9a9c84368f",
+    "RP3/ActiveEdgeBounds.lean": "4bfcce3674405b2a9ed991daae723c23e52196bc7be523f6e74ea530446b088b",
+    "RP3/ActivePaths.lean": "9878947e173123b175a911a6f0747712cca979085c12ba9ab132a3150873e334",
+    "RP3/AnnularEstimate.lean": "479c6d7ac573ff6596fa6ef07e766aa53d79feb20b39f89868deeec06cb29f18",
+    "RP3/Averaging.lean": "dcbd3a976a73c3cc1b2c22a6957427777819bf0dd7fb4b0d6083cfdcac269332",
+    "RP3/Calculus.lean": "9115979bac32d2ca59fe604e37d2fb6aa5c2a42acf23b0128952683f1df23ea2",
+    "RP3/ComplexCurrents.lean": "3294afcccec093e846ae277fe07dfb20b0c5ab42ca37bd020b741f7f27ef1504",
+    "RP3/ConcreteAnnuli.lean": "407e176a656c817270418f2b598841c08277f36872c96576bf28ef48ca3ceb80",
+    "RP3/DenseRates.lean": "e84836e75f8c43f8bb29c4743d5885464c3961d78fc33c0972c2e1c3ae225d05",
+    "RP3/FiniteAveraging.lean": "c9a74faf96c66deddc8d189b3ec3c3a3477cdd28af3b0f9f65779485dd440ba2",
+    "RP3/Fourier/AnnulusResponse.lean": "07587e80cbb7524ffd3042431ac85ed23df6f431f2e1cc2527aa381e3913f3d7",
+    "RP3/Fourier/ModelModes.lean": "2279bc251e757f9da87438ed2b651289e9fd54d066d594911c048b414aa77ac5",
+    "RP3/Fourier/ResponseTransfer.lean": "bd67f7c5defe2b3fad7fa499d6fc7c170e682b397530a3401195f4abcd905ac6",
+    "RP3/FourierAll.lean": "cf9d50654befd459c121e049605ad2820664e7abae28d777ee6f399f6a7d6a69",
+    "RP3/Full.lean": "8dc450114b57856e51953f8857fff3c5e414bf15e84d5c68d95a483446f0938e",
+    "RP3/GibbsProbability.lean": "4fd61ed20d5fc523baefce163e563fbca94e1ada09f81216b0fe95fb9b42d3f7",
+    "RP3/HighTemperature.lean": "8bccb1c79015b65a29e462b233704135c889ee67c431dde9deee082ae12fc41b",
+    "RP3/HighTemperatureDecay.lean": "8453179714095bca30413ed77e016f299a8ea2cdc17041996331d405655d937a",
+    "RP3/HighTemperatureExponential.lean": "c962f1b6c7406bbf4e8eed976a2fa70f27dbd7e4a38f914ad40be414d550bf78",
+    "RP3/KernelEstimate.lean": "c3f9202b1e23518196d34708a1b733ed44321560b4d2f40a7cd513c5155dcb43",
+    "RP3/LatticeAnnuli.lean": "2b20f341522a31ce79184f9334d8c2e8bd3cb79b0c8ac0ec1c8eba1901351a15",
+    "RP3/LatticeModelRestriction.lean": "a187c32fc43ae33c2c5d8c443e966a6544738c28d91f5fe95c7a126a386844d8",
+    "RP3/LimitCorollary.lean": "255732cbb5d462fd51ff968791d2c6e9285372f4318377badd1c1ffefc8ad9aa",
+    "RP3/LocalLimitExistence.lean": "94b3296cf9b34adb0e18d65b7e5d5ebb652b4f0dbda951ba635a6eef0e3f305a",
+    "RP3/LogSquareLimits.lean": "f6fdebbf06d5f1af50cfaabe7a1829c169cd986d645c5e69ed73a3ccfa0eab27",
+    "RP3/LogSquarePacking.lean": "41e32c46643e6bdadaa65557926e7dae5aca8c5d6bf0849ecbed0bc2464955aa",
+    "RP3/LogSquareRates.lean": "0ec4f3d3d13ff4d24fd9a590b8151c44dd90ebcc10b5779884f9388f6d7faac6",
+    "RP3/LogarithmicRate.lean": "a5048fb1ca81939b5021f3f84bfa9691a53f92aef095eb4f9825a4c17619709c",
+    "RP3/Main.lean": "b6c5b4cdd3fb3475317fe8f458573510c706c16b2e70e3bbab4d54354bfea05f",
+    "RP3/MathlibImports.lean": "e507730385eff366378710d3b552f5a8925ebbd326abc2fa7a1e2edddbc207a0",
+    "RP3/MixedAlgebra.lean": "75db848abab6ed3f44affca47481271ce6439712ca32fec36d230dd25ccffee4",
+    "RP3/Model.lean": "e66a568f5bc04ac6d08b3b260ba588465f875fc9aea69fe2bca7e2fc876111f5",
+    "RP3/ModelAssembly.lean": "7ca9137338837851d159c562162cf6bfc359fe1a0d08eb13b0a17adaeb0d56a7",
+    "RP3/ModelConnection.lean": "e6bb2425c1914d20cc8cd6ba5059c566ef94102db7f0a0b53e6fecbb73dc3c42",
+    "RP3/ModelRestriction.lean": "7d2b7781db3be274c87877a8bc4396ebf97458e46d2f720d681d45ceca7c1ea4",
+    "RP3/ModelWitnesses.lean": "c0ad966018862f95200151cf3a793a5f86227d6c83fe283daa0e804f15ef1bf0",
+    "RP3/NestedCuts.lean": "bdb788e85410c661563162397ebd0af1f762e0cbac4b4988dcc066bb667539d6",
+    "RP3/NonbacktrackingPaths.lean": "231ab2f77473a9d2595487551997f50eaf6c060d9d5189eece1dc3f901fea2b8",
+    "RP3/PeriodicODE.lean": "660df86c3e368cac61b0561671902a736e394f2411a0648161a5ef759a2f40ac",
+    "RP3/PinnedKernel.lean": "bb5d9172ce83a7dfebdc0beb8bd270f5725230e2a27d1f6fa8df6ebd350d5d5a",
+    "RP3/ProductJets.lean": "9cf4178beb57a4a270da23dc94a960e7e6188237fec269628f0d2e542cdccb78",
+    "RP3/QuadraticAverages.lean": "61b6ccf4ac464d94292cffb4bdf40f8095e405801f478b5979021b83b395135e",
+    "RP3/QuadraticBounds.lean": "956917c74e566daffd3bc5d2b1b044a53cb1a63074f0138cff14f821d9c5080b",
+    "RP3/QuadraticCoefficientBounds.lean": "a58eea940cd1526d763584688d028d51e1048edda59609fecb4340f496844e56",
+    "RP3/QuadraticComplexWard.lean": "862d071d6493eaa11e4f508ae828dfb1c74e0aef59c208bc5b33f6102ce6a750",
+    "RP3/QuadraticDerivatives.lean": "180f9c1f59a34befa0ac2bc36dbea03a3e37b12223d293d00e8dfd3c0d42defd",
+    "RP3/QuadraticFamily.lean": "628361f877af4cef84e2dc23b4bc9d2d5bd935e726b25bc0a1710df5a9b5fbb7",
+    "RP3/QuadraticFamilyEstimates.lean": "3bddb7f0b857a16cbe37d313306bc08df885b831633de0c46612183a0f66cbfa",
+    "RP3/QuadraticFamilyKernel.lean": "2c0229d6e84a19b3c12c83178a1c7482b42cbbf06dc59ffc10d89e7646f98ccf",
+    "RP3/QuadraticFamilyLower.lean": "e997c56eb92de97006a474448140db6564a78787f9a0a028b9fa7da01d256df6",
+    "RP3/QuadraticGibbs.lean": "4c031f2199b15db918afef2dea78074af8cdde753e387157e50da1a4a7b2ad56",
+    "RP3/QuadraticMixedJets.lean": "997f0f1af5e2318481baaa733b5e924dfa127666ddc4855ccd7b4608959d30a4",
+    "RP3/QuadraticMixedWard.lean": "a2ee0c27851b4a2bd2001d178a5ff4d91fdbe68c761eecabc6e4da24bd42a55a",
+    "RP3/QuadraticPlane.lean": "dacec3f592514803d2c54fd80a854ad4f7b045a3d42446e3be5b8ac451c979cb",
+    "RP3/QuadraticPlaneResponse.lean": "88d7037f03de6e4852f0633e645b78a93914cdc87bcb37f4278cf09a5b801cda",
+    "RP3/QuadraticPotential.lean": "f37162ecba5c642926fdd0cc9ab30538067dbd1d2da05a78ee683a4bec3ba8d3",
+    "RP3/QuadraticSecondBound.lean": "006783c4ad6101a66f616e05cc1e98171dc828e1c96544faef082c9629a596e4",
+    "RP3/QuadraticSecondGauge.lean": "be91d17cfd46f24c0f53051cc2557d48a790e68eb204055473d82913b4410e2c",
+    "RP3/QuadraticSecondResponse.lean": "39040a91e45bda37cd4d305670441f3a0ce49069a14712120aaa4422a355635b",
+    "RP3/QuadraticWard.lean": "53b16bef71b37aeecef270e19260fd909b15463e453f50463950a91ddc189ec3",
+    "RP3/QuaternionAction.lean": "1ec5538d0bdc18b4c4417dd969c72bf5ba24696a70c25a3f07cfa1c71d951958",
+    "RP3/QuaternionAlgebra.lean": "ebb2acb0f7acb02f5666714d7f6a2d239a9ff2fbfc01d2bbfc10f9a7fc33ca81",
+    "RP3/QuaternionComparison.lean": "4805e71a92432863003e146bcb4b3a06417e29a8aa9c509802abc16385188796",
+    "RP3/QuaternionPaths.lean": "493fb2eba6743dcb056c54093cd3d9d6a8d7b820e012e9c61ea1b44da8424e09",
+    "RP3/Rates.lean": "c9d07e86a7ae468acb6b55684144c5317da8953a0d6d4815c7d2cf5835a70c44",
+    "RP3/RotationGeometry.lean": "de334c85147f7573581d105665f8270ad8d14a59aed3535663a294c57903927c",
+    "RP3/RotationGeometryBase.lean": "39726a740931dd3bba468655faa55880d95dd414e03fd7b336bae1a20c305c84",
+    "RP3/SO3.lean": "bbfa31ccc121c39c9bcf7e102bb9d79d3437ac96db4a78011d36432884d761bc",
+    "RP3/SquareRates.lean": "34e68c30cae76b9a9e223d7c686e8fc2c255e1deec54360166534e23299a36a7",
+    "RP3/ThinAnnuli.lean": "398b3897c99f0a79e2d6f2488151d6f4f8076bc994f9f1c9042b2d65057a6f27",
+    "RP3/ThinCosts.lean": "9b04ad7abf1d3592614e5be2670b04819c3032e3d45abf1c6d1d72bf27ff5b95",
+    "RP3/ThinDyadicParameters.lean": "61c6fb37f754c620b7b9fa4bcd2ea7ae8ae03019c6edecd5a873c894c9e48c6e",
+    "RP3/ThinEdgeResponse.lean": "d06094139d7ed2b0a8e871fccf3ea319ec578e05a7e2edac9d2119b16cae441d",
+    "RP3/ThinFourier.lean": "e9b5b88f9d0558f2dd4f990b3ea2d72760fe0a18301e8cc60d670ddfa88d739c",
+    "RP3/ThinKernel.lean": "7ea4d9d59078fbf52c4a6bfd6cc148c18b37afa534ddac506e3f5288bff11c3c",
+    "RP3/ThinKernelEstimate.lean": "1afc30b62d8cca539e35972637b3346605bdce9e49089b1a8bbdd83fbba2386d",
+    "RP3/ThinProfileLattice.lean": "263dee4a801a1c591852c841b12c109ead6aeb5e8e5c0d6cfabeb15d0405c4ff",
+    "RP3/ThinProfiles.lean": "1d77164292004c43452e3502f332469ca1263744145aebd96752ee102309466b",
+    "RP3/ThinResponse.lean": "cf4f7dae78a3855b8125df23633652bf86601b19da7c5a7dda306be2f8af4cb7",
+    "RP3/ThinScaleChoice.lean": "1794475b286681b6aec360102ae163980efeb99159785149b08d3a7e34ee3818",
+    "RP3/ThinSupport.lean": "b86f6f699c1f6a7b10d0e35c1e266e689e5cbbf09a279e9d73cdb1407a5a1a9a",
+    "RP3/UniformDecay.lean": "a342202be3a067b1d76b1fc88e4d7abf4d6f3ce4764f7694440eab210340bb30",
+    "RP3/WeightedSummability.lean": "6b9d15e905d90996299a878da79be1055fab58652d77b1d2028915f4b7f10195",
+    "RP3-Formalization.lean": "f0b6d06374f5565842bdf30620a715f1e854dbe992c5eeb5f850bdac034f43d9",
+    "RP3.lean": "ec6697fe72627b3b82ddc9d1130e8efd3da0a8cc58878661d5dc477a84eed4c3",
+    "RP3AxiomAudit.lean": "cf59f74a13b669cf23fcdd52508156337862e57d83fd82d9f0818596bedbcc95",
+    "RP3SemanticWitnesses.lean": "e36fa1ca8c58a2a5287349af5e1c1462ab35874f3b93e5f13ff228fd17f329fc",
+    "SemanticWitnesses.lean": "1bb6a9ca5c9636bb5bedaf380d9d4aad0a45cf0fd101b4629a372d99fb4c8514",
+    "bundle_rp3.py": "2b7754fccdffdb91ddc6fef155e55f0bb7419c763ea74bf9aad43ad6f76d4886",
+    "lake-manifest.json": "e9cbc5c9bcd4f1d8f69c0a853989becf1b0dc798d74b2ea34b0feab92dfc5f05",
+    "lakefile.toml": "f568627f0abddf1417748c7f24927158155d4736bde00763ecbfa948f9011ac0",
+    "lean-toolchain": "d5edba4e4b8faad9c1baeadb265716d20d03be4d1a2647dc5e35b0c0325bea7b",
+    "scripts/check_rp3_semantics.py": "149eb1f307f03d58d960c7160d98fc1293f0d073465e8908243258038e683662",
+    "scripts/verify_rp3.py": "526c9395d1d3603fe88646669abefa471688db78b8e24346688fcf9fc60816b1",
+    "verification/RP3AuditEnvironment.lean": "6020f6ce91796b0f09250e7c4eb9a35a0302fcaf91952338d7375b433437d8b4",
+    "verification/RP3SemanticEnvironment.lean": "fafa8dd4263894592c76c165a5db038699c550b1f8c357258f0411bc72c13d3d",
+    "verification/dependency-pins.json": "14d8b2130b3d62ed0076a81ff0e13523eb730fbb570d7e04ac7b22c3d40cd716",
+    "verification/rp3-public-theorems.txt": "1117575a0fd28408e018f9adcdfd56a1e5401ea49af8120b234837e26e70dad8",
+    "verification/rp3-semantic-baseline.json": "d9c44ae286958d51db27f712290d0d3c27be7443822917276d8f0a0ddf436799",
+    "verification/rp3-semantic-roots.txt": "7c6ed8256555ca8a512ec6a13b23e26dfff91149a74413cbadfad8f10d50fd68"
+  },
+  "completed_utc": "2026-10-12T04:02:57.197502+00:00"
+}

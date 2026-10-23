@@ -1,0 +1,2349 @@
+{
+  "format": 1,
+  "roots": [
+    {
+      "root": {
+        "name": "RP3.log_square_quadrupolar_decay_signed",
+        "kind": "theorem",
+        "level_parameters": [],
+        "type_sha256": "57a6985169ef2e5308d71f8d2775a9afeeb86e22d8e2821e571997b9498f8ac4",
+        "value_sha256": null
+      },
+      "declarations": [
+        {
+          "name": "RP3.Configuration",
+          "kind": "definition",
+          "level_parameters": [
+            "u_3"
+          ],
+          "type_sha256": "04c81bbaa1199e49a5f3d2c7f123e0bf24d7186176555570792e0447b4af64a9",
+          "value_sha256": "53298d2a94ca9db5ff3241e9a85ccaf590a28c53f3ea20c71b6c67892a34cf14"
+        },
+        {
+          "name": "RP3.E4",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "b4611575b2b62eb57ff8b514cf96bf01666158b035ac2fcc89065136260d1e05",
+          "value_sha256": "b4aeef0cb19b436a9cd0182d83bff318dffb0b90039267c66ac8b61a3f3b8bb7"
+        },
+        {
+          "name": "RP3.FiniteAction.pullback._proof_1",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "8f93b1b6fd16a29b9010a7095e6f06aa7833bb5cc348006263e101a28a20a3ea",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.FiniteAction.pullback._proof_2",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "d841e3bd173fa9df9b3462df2b4d1b73162da8998dc59b9ace95aba2abc5e52e",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.Fourier.LatticeGraph",
+          "kind": "inductive",
+          "level_parameters": [],
+          "type_sha256": "b4611575b2b62eb57ff8b514cf96bf01666158b035ac2fcc89065136260d1e05",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.Fourier.LatticeGraph.edges",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "81bd04daee8285eeda07ab6bb40f4384ab5b3753538a921171f3bd01652c0b19",
+          "value_sha256": "164e775fdf2cfac7b6f67a1345cd07136dd5f81dc3333d5303ff3da6fcd050aa"
+        },
+        {
+          "name": "RP3.Fourier.LatticeGraph.mk",
+          "kind": "constructor",
+          "level_parameters": [],
+          "type_sha256": "7fee119d1de1fbcd0f8426a74c17d69a5e030ca2220d435ccef96d694f81574b",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.Fourier.LatticeGraph.vertices",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "723ca0b83a76999114e59ed2341c04a1c1fab536447c478e8356bd11070684c1",
+          "value_sha256": "8162a7e99debcbb3f579de0b758ce086fe0f1f8354938d18227af6eca2cedcc0"
+        },
+        {
+          "name": "RP3.Fourier.PositiveNeighbor",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "7ce8e17502f62849b0ab32436f39bb0ddf1a525d29f01f07f399e41e9cc11ca3",
+          "value_sha256": "89f27109bd92ac78641701fda94cdbb4e42eab60e149c66c08de956b99b99065"
+        },
+        {
+          "name": "RP3.Fourier.Site",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "b4611575b2b62eb57ff8b514cf96bf01666158b035ac2fcc89065136260d1e05",
+          "value_sha256": "f42919fe8dd49adce51f049efb26a073198e9264a813dd364cd79f6aa7deb39a"
+        },
+        {
+          "name": "RP3.Fourier.siteRadius",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "d8581e09ebc5532b4b31ddacaf14b50ca7940acef15fd420a2373dd0aaa42e20",
+          "value_sha256": "b492cbbe5d6fb531d736bf9190c679f4bf940c596aef34b0d649a22ffa28e8c3"
+        },
+        {
+          "name": "RP3.PositiveIntegral",
+          "kind": "inductive",
+          "level_parameters": [
+            "u_3"
+          ],
+          "type_sha256": "0827b50bb75d89534c960f961f93b3b97c291485e16a30493ca9e56052150765",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.PositiveIntegral.linear",
+          "kind": "definition",
+          "level_parameters": [
+            "u_3"
+          ],
+          "type_sha256": "0876d0173f9456c6c7ce5cb8d2acbd898a388405e4e78cd1065b706c6b6ad470",
+          "value_sha256": "dc830252660c56b36c9e1e91b37d06a6b5694c90e8b7505cce8a90a51f9ad769"
+        },
+        {
+          "name": "RP3.PositiveIntegral.mk",
+          "kind": "constructor",
+          "level_parameters": [
+            "u_3"
+          ],
+          "type_sha256": "be0652c2232d33ea23acae4e89db7528109b9f584b19f6db8fab8493c07cd582",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.Spin",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "fe702a63dfdd230d17e5de1724991d093dd15042d2da6c043fb44edb07cc7e3d",
+          "value_sha256": "29b92368634a47111caa2e06366b69e8ad50525d3e05b7e3a9f78b77b206453a"
+        },
+        {
+          "name": "RP3.correlation",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1",
+            "u_2"
+          ],
+          "type_sha256": "5fe4de657763c13a5856d081a3b715adf4be2ad379c99303dc1ccde93ebc2fbc",
+          "value_sha256": "538cc2b440a8142c9ac61953773b8cbe1dedfb197f23bfa8392aec93afbb3f6d"
+        },
+        {
+          "name": "RP3.correlation._proof_1",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "851465986c43ad635ffa464d1fce04d28945b7448c8d7225689781aef9b32447",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.integralOnCompact",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "efeebda7f2225dd65430c852c825d188705293956ba42c1b01c673610e2dfdbe",
+          "value_sha256": "28a62c5a97ff184cf62287142a3ab603ba36f1a12f7dd91d571d82f5dc97a400"
+        },
+        {
+          "name": "RP3.integralOnCompact._proof_1",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "9427991234dd34cfffbc0929fb4f2aefdcf8e2e15facdf917d176ec21c1bcd82",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.integralOnCompact._proof_2",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "54359fc838a5285c632c4ce8493e2449cedec29b563e8d19b1053d7b0e2c05b1",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.integralOnCompact._proof_3",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "e716d21b87d69ae3a1563058007d0f35ffdd2081045065c118052c05358ed33e",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.interaction",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1",
+            "u_2"
+          ],
+          "type_sha256": "4d1167e60d908956edf58185f72b1e06d1abf868dc20ad71e0a9d37eec7c3bf3",
+          "value_sha256": "52023d1ec2ecb772e5ba1c372fe4bfed3cefdda2c48d18b5dfd358872777af4f"
+        },
+        {
+          "name": "RP3.observable",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "473d4818cd8ce01109f07140e238e0bd6bfe941bdb24e3fa27d72e2cefeb14db",
+          "value_sha256": "17b25fd9c2f79c07b051662d5fef07ae7e3efb18ce51bc2b400c7385a2042850"
+        },
+        {
+          "name": "RP3.observable._proof_1",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "e5877952f5f611832508ce1b5aa690002ea1f5486887440602733620d3bd5a9c",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.partition",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1",
+            "u_2"
+          ],
+          "type_sha256": "f0b292971ba41bd1e0e93d092744a345f592124900c868f81daad0efe2daf5ca",
+          "value_sha256": "a48ebe2899e49b6d8da440b4aa9b15380cd1b3b15b4de05440e8a5227a1341c3"
+        },
+        {
+          "name": "RP3.partition._proof_1",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "8f93b1b6fd16a29b9010a7095e6f06aa7833bb5cc348006263e101a28a20a3ea",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.partition._proof_2",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "d841e3bd173fa9df9b3462df2b4d1b73162da8998dc59b9ace95aba2abc5e52e",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.partition._proof_3",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "8bdfd04594400dbd5b2da9a982e8881cc4abcd3c77847f874ddaf8eb3231eba2",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.partition._proof_4",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "fdf6b3a627e33f123708c4146a7479ab46e715618e8bde3c7320646bf8a6af5a",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.partition._proof_5",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "25d5d10a8beb3eff47acd40d1761c37b365d0afa3a74c05d17209cc9101d796d",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.qPair",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "ca2b69d43b5f3db846b873282e28c82f66704ed3cfad3172f99192119e613faa",
+          "value_sha256": "bf5f0fc22c02a5446e4b5bde1dc4128168d5678e7d724ae738fed28c2c6bd00b"
+        },
+        {
+          "name": "RP3.qPair._proof_1",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "6c02067f924b78c114a7ef51dd5a4179869472507eddd0fbb108b9c86bbee807",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.qPair._proof_2",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "7a87f934f2653791953a95de38dd709d9470b197b5020708e0322552ac384179",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.referenceLaw",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "754d95306cccd97f491da8d2d2bc6e432f245b5a955d892cd47680f95ef8cf75",
+          "value_sha256": "db0bdde5bbdbc33d577b7a68da9f355d64a62e65f493b56fb91c13afb8247208"
+        },
+        {
+          "name": "RP3.sphereProbability",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "f08077886d6160aba557fe4e9e869df66d86dc27b15bc1d6690b487f44729b61",
+          "value_sha256": "16fd652dd6a7df563cede729741347e6b2b3cd2511ea6fdec35d9276f1d3e443"
+        },
+        {
+          "name": "RP3.sphereProbability._proof_1",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "60d459108acaa24f1e30ce91ed916fe7715eac8438d75c8ac99bed18ffc0cf26",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.sphereProbability._proof_2",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "f59067a8140352180181d5a90a8550127ca42201a62fb21f452f4a95dcc9450e",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.sphereProbability._proof_3",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "0dfbe76fdefd05ffd2e9296319114f7bcc28e0b2cb93ab4f388ececb3c052c60",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.weight",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1",
+            "u_2"
+          ],
+          "type_sha256": "643a8dbb7aa511e7a653326cefb36057e77046c6cf313f80ca2ff4402a078beb",
+          "value_sha256": "5105de587a6ae03ed517ed1e2ca5a0ffcd0c5d7b968d810b9d67290ceab3a59c"
+        },
+        {
+          "name": "RP3.weight._proof_1",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1",
+            "u_2"
+          ],
+          "type_sha256": "2d9a287c83568c9fe7819bdfa60991c54bf68c88efe3a8393b7e10895b1f7796",
+          "value_sha256": null
+        }
+      ]
+    },
+    {
+      "root": {
+        "name": "RP3.log_square_quadrupolar_decay_local_limit_signed",
+        "kind": "theorem",
+        "level_parameters": [],
+        "type_sha256": "2806c108e954899e4713ea2f5221901239a264d666c04e9e938ec9661146bcea",
+        "value_sha256": null
+      },
+      "declarations": [
+        {
+          "name": "RP3.Configuration",
+          "kind": "definition",
+          "level_parameters": [
+            "u_3"
+          ],
+          "type_sha256": "04c81bbaa1199e49a5f3d2c7f123e0bf24d7186176555570792e0447b4af64a9",
+          "value_sha256": "53298d2a94ca9db5ff3241e9a85ccaf590a28c53f3ea20c71b6c67892a34cf14"
+        },
+        {
+          "name": "RP3.E4",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "b4611575b2b62eb57ff8b514cf96bf01666158b035ac2fcc89065136260d1e05",
+          "value_sha256": "b4aeef0cb19b436a9cd0182d83bff318dffb0b90039267c66ac8b61a3f3b8bb7"
+        },
+        {
+          "name": "RP3.FiniteAction.pullback._proof_1",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "8f93b1b6fd16a29b9010a7095e6f06aa7833bb5cc348006263e101a28a20a3ea",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.FiniteAction.pullback._proof_2",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "d841e3bd173fa9df9b3462df2b4d1b73162da8998dc59b9ace95aba2abc5e52e",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.Fourier.LatticeGraph",
+          "kind": "inductive",
+          "level_parameters": [],
+          "type_sha256": "b4611575b2b62eb57ff8b514cf96bf01666158b035ac2fcc89065136260d1e05",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.Fourier.LatticeGraph.edges",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "81bd04daee8285eeda07ab6bb40f4384ab5b3753538a921171f3bd01652c0b19",
+          "value_sha256": "164e775fdf2cfac7b6f67a1345cd07136dd5f81dc3333d5303ff3da6fcd050aa"
+        },
+        {
+          "name": "RP3.Fourier.LatticeGraph.mk",
+          "kind": "constructor",
+          "level_parameters": [],
+          "type_sha256": "7fee119d1de1fbcd0f8426a74c17d69a5e030ca2220d435ccef96d694f81574b",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.Fourier.LatticeGraph.vertices",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "723ca0b83a76999114e59ed2341c04a1c1fab536447c478e8356bd11070684c1",
+          "value_sha256": "8162a7e99debcbb3f579de0b758ce086fe0f1f8354938d18227af6eca2cedcc0"
+        },
+        {
+          "name": "RP3.Fourier.PositiveNeighbor",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "7ce8e17502f62849b0ab32436f39bb0ddf1a525d29f01f07f399e41e9cc11ca3",
+          "value_sha256": "89f27109bd92ac78641701fda94cdbb4e42eab60e149c66c08de956b99b99065"
+        },
+        {
+          "name": "RP3.Fourier.Site",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "b4611575b2b62eb57ff8b514cf96bf01666158b035ac2fcc89065136260d1e05",
+          "value_sha256": "f42919fe8dd49adce51f049efb26a073198e9264a813dd364cd79f6aa7deb39a"
+        },
+        {
+          "name": "RP3.Fourier.siteRadius",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "d8581e09ebc5532b4b31ddacaf14b50ca7940acef15fd420a2373dd0aaa42e20",
+          "value_sha256": "b492cbbe5d6fb531d736bf9190c679f4bf940c596aef34b0d649a22ffa28e8c3"
+        },
+        {
+          "name": "RP3.HasLocalPairLimit",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "7f18a10eae1794049843b63dda6cacea0a033638ff5e6b62a74703a86fa9bd9f",
+          "value_sha256": "4246e63c90d7e31b3f02febcd24bfe79a5d5e286362b71000272a46cea6d01f2"
+        },
+        {
+          "name": "RP3.HasLocalPairLimit._proof_1",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "c42983547f4c15d74198f5a7e61fb276ee9061881786aa5e84c43457830be5f4",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.InfiniteConfiguration",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "b4611575b2b62eb57ff8b514cf96bf01666158b035ac2fcc89065136260d1e05",
+          "value_sha256": "b196c59075714ab08e83c85157c297b24f882281e81ce7a8ae1a6e0173e56e12"
+        },
+        {
+          "name": "RP3.IsSignedFreeBoundaryLocalLimit",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "8c68d94f3ce66f970b75c232089d546fafbde99bc3bb0c18d686112f44855449",
+          "value_sha256": "1884c918f53652fffdaf59d7e7697539d2d4d34eec32906a6ec1ae630e4717ea"
+        },
+        {
+          "name": "RP3.PositiveIntegral",
+          "kind": "inductive",
+          "level_parameters": [
+            "u_3"
+          ],
+          "type_sha256": "0827b50bb75d89534c960f961f93b3b97c291485e16a30493ca9e56052150765",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.PositiveIntegral.linear",
+          "kind": "definition",
+          "level_parameters": [
+            "u_3"
+          ],
+          "type_sha256": "0876d0173f9456c6c7ce5cb8d2acbd898a388405e4e78cd1065b706c6b6ad470",
+          "value_sha256": "dc830252660c56b36c9e1e91b37d06a6b5694c90e8b7505cce8a90a51f9ad769"
+        },
+        {
+          "name": "RP3.PositiveIntegral.mk",
+          "kind": "constructor",
+          "level_parameters": [
+            "u_3"
+          ],
+          "type_sha256": "be0652c2232d33ea23acae4e89db7528109b9f584b19f6db8fab8493c07cd582",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.Spin",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "fe702a63dfdd230d17e5de1724991d093dd15042d2da6c043fb44edb07cc7e3d",
+          "value_sha256": "29b92368634a47111caa2e06366b69e8ad50525d3e05b7e3a9f78b77b206453a"
+        },
+        {
+          "name": "RP3.freeGibbsDensity",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1",
+            "u_2"
+          ],
+          "type_sha256": "e6c860b4a0120ebda32cd593be993244d057d0d2c263266729ae28584cafea7d",
+          "value_sha256": "21b798c4a7801b0dc682824d4b4733e1d32f9d63d05b1c49b9dcf70999e220c7"
+        },
+        {
+          "name": "RP3.freeGibbsMeasure",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1",
+            "u_2"
+          ],
+          "type_sha256": "24f600a30fb71d2d91efc57e356e2c6f13aaf67bcf15e284ab2803efed617b0d",
+          "value_sha256": "7ab2a154981ee1e0eaa0829b96663e03973c580e59c285750ae046c3559c8613"
+        },
+        {
+          "name": "RP3.freeGibbsProbability",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1",
+            "u_2"
+          ],
+          "type_sha256": "8f336c62d9149cccff999c607840b14506c6c900a3bbb0df2c306fe53577ae5d",
+          "value_sha256": "84d0052cc6c9bc5a19c1d1f030db8a9e15e8149a4f1c2c184063d8d93e3439fa"
+        },
+        {
+          "name": "RP3.freeGibbsProbability._proof_1",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1",
+            "u_2"
+          ],
+          "type_sha256": "e19d2b89ca571aeb91c3cc38c230fa4eecdba22deb543f7b188587bbc7154198",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.infiniteCorrelation",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "abff05517c2fe01019ef6db881a6c54c50f6805f59f8b33063ddbed63bd96fa9",
+          "value_sha256": "a4e1fc0a8727f9d6454ab5d700e3b41ab6775a2dbc8b9ed1a7322d251cbb13b8"
+        },
+        {
+          "name": "RP3.infinitePairMarginal",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "74e64777a91edcd68bcedd9594dcac61c73147a709b62bc595969c080e86ab57",
+          "value_sha256": "0596f51ea900da83ce71b5672a774c8224ea8220e2ca77d03afa92c164e19aea"
+        },
+        {
+          "name": "RP3.integralOnCompact",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "efeebda7f2225dd65430c852c825d188705293956ba42c1b01c673610e2dfdbe",
+          "value_sha256": "28a62c5a97ff184cf62287142a3ab603ba36f1a12f7dd91d571d82f5dc97a400"
+        },
+        {
+          "name": "RP3.integralOnCompact._proof_1",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "9427991234dd34cfffbc0929fb4f2aefdcf8e2e15facdf917d176ec21c1bcd82",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.integralOnCompact._proof_2",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "54359fc838a5285c632c4ce8493e2449cedec29b563e8d19b1053d7b0e2c05b1",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.integralOnCompact._proof_3",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "e716d21b87d69ae3a1563058007d0f35ffdd2081045065c118052c05358ed33e",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.interaction",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1",
+            "u_2"
+          ],
+          "type_sha256": "4d1167e60d908956edf58185f72b1e06d1abf868dc20ad71e0a9d37eec7c3bf3",
+          "value_sha256": "52023d1ec2ecb772e5ba1c372fe4bfed3cefdda2c48d18b5dfd358872777af4f"
+        },
+        {
+          "name": "RP3.partition",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1",
+            "u_2"
+          ],
+          "type_sha256": "f0b292971ba41bd1e0e93d092744a345f592124900c868f81daad0efe2daf5ca",
+          "value_sha256": "a48ebe2899e49b6d8da440b4aa9b15380cd1b3b15b4de05440e8a5227a1341c3"
+        },
+        {
+          "name": "RP3.partition._proof_1",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "8f93b1b6fd16a29b9010a7095e6f06aa7833bb5cc348006263e101a28a20a3ea",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.partition._proof_2",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "d841e3bd173fa9df9b3462df2b4d1b73162da8998dc59b9ace95aba2abc5e52e",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.partition._proof_3",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "8bdfd04594400dbd5b2da9a982e8881cc4abcd3c77847f874ddaf8eb3231eba2",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.partition._proof_4",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "fdf6b3a627e33f123708c4146a7479ab46e715618e8bde3c7320646bf8a6af5a",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.partition._proof_5",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "25d5d10a8beb3eff47acd40d1761c37b365d0afa3a74c05d17209cc9101d796d",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.qPair",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "ca2b69d43b5f3db846b873282e28c82f66704ed3cfad3172f99192119e613faa",
+          "value_sha256": "bf5f0fc22c02a5446e4b5bde1dc4128168d5678e7d724ae738fed28c2c6bd00b"
+        },
+        {
+          "name": "RP3.qPair._proof_1",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "6c02067f924b78c114a7ef51dd5a4179869472507eddd0fbb108b9c86bbee807",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.qPair._proof_2",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "7a87f934f2653791953a95de38dd709d9470b197b5020708e0322552ac384179",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.referenceLaw",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "754d95306cccd97f491da8d2d2bc6e432f245b5a955d892cd47680f95ef8cf75",
+          "value_sha256": "db0bdde5bbdbc33d577b7a68da9f355d64a62e65f493b56fb91c13afb8247208"
+        },
+        {
+          "name": "RP3.sphereProbability",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "f08077886d6160aba557fe4e9e869df66d86dc27b15bc1d6690b487f44729b61",
+          "value_sha256": "16fd652dd6a7df563cede729741347e6b2b3cd2511ea6fdec35d9276f1d3e443"
+        },
+        {
+          "name": "RP3.sphereProbability._proof_1",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "60d459108acaa24f1e30ce91ed916fe7715eac8438d75c8ac99bed18ffc0cf26",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.sphereProbability._proof_2",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "f59067a8140352180181d5a90a8550127ca42201a62fb21f452f4a95dcc9450e",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.sphereProbability._proof_3",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "0dfbe76fdefd05ffd2e9296319114f7bcc28e0b2cb93ab4f388ececb3c052c60",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.twoSpinMarginal",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1",
+            "u_2"
+          ],
+          "type_sha256": "8a6eef2ddbabf5a2a7606d508f998018904f1aaa5ec68111f6f324328720f863",
+          "value_sha256": "4f8e4094bba5486c14922ea8aab45208405e137a3a56e309c90de11eb0cde0f1"
+        },
+        {
+          "name": "RP3.weight",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1",
+            "u_2"
+          ],
+          "type_sha256": "643a8dbb7aa511e7a653326cefb36057e77046c6cf313f80ca2ff4402a078beb",
+          "value_sha256": "5105de587a6ae03ed517ed1e2ca5a0ffcd0c5d7b968d810b9d67290ceab3a59c"
+        },
+        {
+          "name": "RP3.weight._proof_1",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1",
+            "u_2"
+          ],
+          "type_sha256": "2d9a287c83568c9fe7819bdfa60991c54bf68c88efe3a8393b7e10895b1f7796",
+          "value_sha256": null
+        }
+      ]
+    },
+    {
+      "root": {
+        "name": "RP3.ModelWitnesses.exists_distinct_sites_positive_correlation",
+        "kind": "theorem",
+        "level_parameters": [],
+        "type_sha256": "f67d21f07a1fd5d01cb86bb1b5d0bf47688d5f7341993981afff38ebb8734acc",
+        "value_sha256": null
+      },
+      "declarations": [
+        {
+          "name": "RP3.Configuration",
+          "kind": "definition",
+          "level_parameters": [
+            "u_3"
+          ],
+          "type_sha256": "04c81bbaa1199e49a5f3d2c7f123e0bf24d7186176555570792e0447b4af64a9",
+          "value_sha256": "53298d2a94ca9db5ff3241e9a85ccaf590a28c53f3ea20c71b6c67892a34cf14"
+        },
+        {
+          "name": "RP3.E4",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "b4611575b2b62eb57ff8b514cf96bf01666158b035ac2fcc89065136260d1e05",
+          "value_sha256": "b4aeef0cb19b436a9cd0182d83bff318dffb0b90039267c66ac8b61a3f3b8bb7"
+        },
+        {
+          "name": "RP3.FiniteAction.pullback._proof_1",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "8f93b1b6fd16a29b9010a7095e6f06aa7833bb5cc348006263e101a28a20a3ea",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.FiniteAction.pullback._proof_2",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "d841e3bd173fa9df9b3462df2b4d1b73162da8998dc59b9ace95aba2abc5e52e",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.Fourier.LatticeGraph",
+          "kind": "inductive",
+          "level_parameters": [],
+          "type_sha256": "b4611575b2b62eb57ff8b514cf96bf01666158b035ac2fcc89065136260d1e05",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.Fourier.LatticeGraph.edges",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "81bd04daee8285eeda07ab6bb40f4384ab5b3753538a921171f3bd01652c0b19",
+          "value_sha256": "164e775fdf2cfac7b6f67a1345cd07136dd5f81dc3333d5303ff3da6fcd050aa"
+        },
+        {
+          "name": "RP3.Fourier.LatticeGraph.mk",
+          "kind": "constructor",
+          "level_parameters": [],
+          "type_sha256": "7fee119d1de1fbcd0f8426a74c17d69a5e030ca2220d435ccef96d694f81574b",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.Fourier.LatticeGraph.vertices",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "723ca0b83a76999114e59ed2341c04a1c1fab536447c478e8356bd11070684c1",
+          "value_sha256": "8162a7e99debcbb3f579de0b758ce086fe0f1f8354938d18227af6eca2cedcc0"
+        },
+        {
+          "name": "RP3.Fourier.PositiveNeighbor",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "7ce8e17502f62849b0ab32436f39bb0ddf1a525d29f01f07f399e41e9cc11ca3",
+          "value_sha256": "89f27109bd92ac78641701fda94cdbb4e42eab60e149c66c08de956b99b99065"
+        },
+        {
+          "name": "RP3.Fourier.Site",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "b4611575b2b62eb57ff8b514cf96bf01666158b035ac2fcc89065136260d1e05",
+          "value_sha256": "f42919fe8dd49adce51f049efb26a073198e9264a813dd364cd79f6aa7deb39a"
+        },
+        {
+          "name": "RP3.PositiveIntegral",
+          "kind": "inductive",
+          "level_parameters": [
+            "u_3"
+          ],
+          "type_sha256": "0827b50bb75d89534c960f961f93b3b97c291485e16a30493ca9e56052150765",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.PositiveIntegral.linear",
+          "kind": "definition",
+          "level_parameters": [
+            "u_3"
+          ],
+          "type_sha256": "0876d0173f9456c6c7ce5cb8d2acbd898a388405e4e78cd1065b706c6b6ad470",
+          "value_sha256": "dc830252660c56b36c9e1e91b37d06a6b5694c90e8b7505cce8a90a51f9ad769"
+        },
+        {
+          "name": "RP3.PositiveIntegral.mk",
+          "kind": "constructor",
+          "level_parameters": [
+            "u_3"
+          ],
+          "type_sha256": "be0652c2232d33ea23acae4e89db7528109b9f584b19f6db8fab8493c07cd582",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.Spin",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "fe702a63dfdd230d17e5de1724991d093dd15042d2da6c043fb44edb07cc7e3d",
+          "value_sha256": "29b92368634a47111caa2e06366b69e8ad50525d3e05b7e3a9f78b77b206453a"
+        },
+        {
+          "name": "RP3.correlation",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1",
+            "u_2"
+          ],
+          "type_sha256": "5fe4de657763c13a5856d081a3b715adf4be2ad379c99303dc1ccde93ebc2fbc",
+          "value_sha256": "538cc2b440a8142c9ac61953773b8cbe1dedfb197f23bfa8392aec93afbb3f6d"
+        },
+        {
+          "name": "RP3.correlation._proof_1",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "851465986c43ad635ffa464d1fce04d28945b7448c8d7225689781aef9b32447",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.integralOnCompact",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "efeebda7f2225dd65430c852c825d188705293956ba42c1b01c673610e2dfdbe",
+          "value_sha256": "28a62c5a97ff184cf62287142a3ab603ba36f1a12f7dd91d571d82f5dc97a400"
+        },
+        {
+          "name": "RP3.integralOnCompact._proof_1",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "9427991234dd34cfffbc0929fb4f2aefdcf8e2e15facdf917d176ec21c1bcd82",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.integralOnCompact._proof_2",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "54359fc838a5285c632c4ce8493e2449cedec29b563e8d19b1053d7b0e2c05b1",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.integralOnCompact._proof_3",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "e716d21b87d69ae3a1563058007d0f35ffdd2081045065c118052c05358ed33e",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.interaction",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1",
+            "u_2"
+          ],
+          "type_sha256": "4d1167e60d908956edf58185f72b1e06d1abf868dc20ad71e0a9d37eec7c3bf3",
+          "value_sha256": "52023d1ec2ecb772e5ba1c372fe4bfed3cefdda2c48d18b5dfd358872777af4f"
+        },
+        {
+          "name": "RP3.observable",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "473d4818cd8ce01109f07140e238e0bd6bfe941bdb24e3fa27d72e2cefeb14db",
+          "value_sha256": "17b25fd9c2f79c07b051662d5fef07ae7e3efb18ce51bc2b400c7385a2042850"
+        },
+        {
+          "name": "RP3.observable._proof_1",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "e5877952f5f611832508ce1b5aa690002ea1f5486887440602733620d3bd5a9c",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.partition",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1",
+            "u_2"
+          ],
+          "type_sha256": "f0b292971ba41bd1e0e93d092744a345f592124900c868f81daad0efe2daf5ca",
+          "value_sha256": "a48ebe2899e49b6d8da440b4aa9b15380cd1b3b15b4de05440e8a5227a1341c3"
+        },
+        {
+          "name": "RP3.partition._proof_1",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "8f93b1b6fd16a29b9010a7095e6f06aa7833bb5cc348006263e101a28a20a3ea",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.partition._proof_2",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "d841e3bd173fa9df9b3462df2b4d1b73162da8998dc59b9ace95aba2abc5e52e",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.partition._proof_3",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "8bdfd04594400dbd5b2da9a982e8881cc4abcd3c77847f874ddaf8eb3231eba2",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.partition._proof_4",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "fdf6b3a627e33f123708c4146a7479ab46e715618e8bde3c7320646bf8a6af5a",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.partition._proof_5",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "25d5d10a8beb3eff47acd40d1761c37b365d0afa3a74c05d17209cc9101d796d",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.qPair",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "ca2b69d43b5f3db846b873282e28c82f66704ed3cfad3172f99192119e613faa",
+          "value_sha256": "bf5f0fc22c02a5446e4b5bde1dc4128168d5678e7d724ae738fed28c2c6bd00b"
+        },
+        {
+          "name": "RP3.qPair._proof_1",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "6c02067f924b78c114a7ef51dd5a4179869472507eddd0fbb108b9c86bbee807",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.qPair._proof_2",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "7a87f934f2653791953a95de38dd709d9470b197b5020708e0322552ac384179",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.referenceLaw",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "754d95306cccd97f491da8d2d2bc6e432f245b5a955d892cd47680f95ef8cf75",
+          "value_sha256": "db0bdde5bbdbc33d577b7a68da9f355d64a62e65f493b56fb91c13afb8247208"
+        },
+        {
+          "name": "RP3.sphereProbability",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "f08077886d6160aba557fe4e9e869df66d86dc27b15bc1d6690b487f44729b61",
+          "value_sha256": "16fd652dd6a7df563cede729741347e6b2b3cd2511ea6fdec35d9276f1d3e443"
+        },
+        {
+          "name": "RP3.sphereProbability._proof_1",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "60d459108acaa24f1e30ce91ed916fe7715eac8438d75c8ac99bed18ffc0cf26",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.sphereProbability._proof_2",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "f59067a8140352180181d5a90a8550127ca42201a62fb21f452f4a95dcc9450e",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.sphereProbability._proof_3",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "0dfbe76fdefd05ffd2e9296319114f7bcc28e0b2cb93ab4f388ececb3c052c60",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.weight",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1",
+            "u_2"
+          ],
+          "type_sha256": "643a8dbb7aa511e7a653326cefb36057e77046c6cf313f80ca2ff4402a078beb",
+          "value_sha256": "5105de587a6ae03ed517ed1e2ca5a0ffcd0c5d7b968d810b9d67290ceab3a59c"
+        },
+        {
+          "name": "RP3.weight._proof_1",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1",
+            "u_2"
+          ],
+          "type_sha256": "2d9a287c83568c9fe7819bdfa60991c54bf68c88efe3a8393b7e10895b1f7796",
+          "value_sha256": null
+        }
+      ]
+    },
+    {
+      "root": {
+        "name": "RP3.exists_signed_free_boundary_local_limit",
+        "kind": "theorem",
+        "level_parameters": [],
+        "type_sha256": "cbf620d439ec7918dc54423f024859573f468f3978fe6a598369fb97ff1438c4",
+        "value_sha256": null
+      },
+      "declarations": [
+        {
+          "name": "RP3.Configuration",
+          "kind": "definition",
+          "level_parameters": [
+            "u_3"
+          ],
+          "type_sha256": "04c81bbaa1199e49a5f3d2c7f123e0bf24d7186176555570792e0447b4af64a9",
+          "value_sha256": "53298d2a94ca9db5ff3241e9a85ccaf590a28c53f3ea20c71b6c67892a34cf14"
+        },
+        {
+          "name": "RP3.E4",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "b4611575b2b62eb57ff8b514cf96bf01666158b035ac2fcc89065136260d1e05",
+          "value_sha256": "b4aeef0cb19b436a9cd0182d83bff318dffb0b90039267c66ac8b61a3f3b8bb7"
+        },
+        {
+          "name": "RP3.FiniteAction.pullback._proof_1",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "8f93b1b6fd16a29b9010a7095e6f06aa7833bb5cc348006263e101a28a20a3ea",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.FiniteAction.pullback._proof_2",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "d841e3bd173fa9df9b3462df2b4d1b73162da8998dc59b9ace95aba2abc5e52e",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.Fourier.LatticeGraph",
+          "kind": "inductive",
+          "level_parameters": [],
+          "type_sha256": "b4611575b2b62eb57ff8b514cf96bf01666158b035ac2fcc89065136260d1e05",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.Fourier.LatticeGraph.edges",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "81bd04daee8285eeda07ab6bb40f4384ab5b3753538a921171f3bd01652c0b19",
+          "value_sha256": "164e775fdf2cfac7b6f67a1345cd07136dd5f81dc3333d5303ff3da6fcd050aa"
+        },
+        {
+          "name": "RP3.Fourier.LatticeGraph.mk",
+          "kind": "constructor",
+          "level_parameters": [],
+          "type_sha256": "7fee119d1de1fbcd0f8426a74c17d69a5e030ca2220d435ccef96d694f81574b",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.Fourier.LatticeGraph.vertices",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "723ca0b83a76999114e59ed2341c04a1c1fab536447c478e8356bd11070684c1",
+          "value_sha256": "8162a7e99debcbb3f579de0b758ce086fe0f1f8354938d18227af6eca2cedcc0"
+        },
+        {
+          "name": "RP3.Fourier.PositiveNeighbor",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "7ce8e17502f62849b0ab32436f39bb0ddf1a525d29f01f07f399e41e9cc11ca3",
+          "value_sha256": "89f27109bd92ac78641701fda94cdbb4e42eab60e149c66c08de956b99b99065"
+        },
+        {
+          "name": "RP3.Fourier.Site",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "b4611575b2b62eb57ff8b514cf96bf01666158b035ac2fcc89065136260d1e05",
+          "value_sha256": "f42919fe8dd49adce51f049efb26a073198e9264a813dd364cd79f6aa7deb39a"
+        },
+        {
+          "name": "RP3.HasLocalPairLimit",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "7f18a10eae1794049843b63dda6cacea0a033638ff5e6b62a74703a86fa9bd9f",
+          "value_sha256": "4246e63c90d7e31b3f02febcd24bfe79a5d5e286362b71000272a46cea6d01f2"
+        },
+        {
+          "name": "RP3.HasLocalPairLimit._proof_1",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "c42983547f4c15d74198f5a7e61fb276ee9061881786aa5e84c43457830be5f4",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.InfiniteConfiguration",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "b4611575b2b62eb57ff8b514cf96bf01666158b035ac2fcc89065136260d1e05",
+          "value_sha256": "b196c59075714ab08e83c85157c297b24f882281e81ce7a8ae1a6e0173e56e12"
+        },
+        {
+          "name": "RP3.IsSignedFreeBoundaryLocalLimit",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "8c68d94f3ce66f970b75c232089d546fafbde99bc3bb0c18d686112f44855449",
+          "value_sha256": "1884c918f53652fffdaf59d7e7697539d2d4d34eec32906a6ec1ae630e4717ea"
+        },
+        {
+          "name": "RP3.PositiveIntegral",
+          "kind": "inductive",
+          "level_parameters": [
+            "u_3"
+          ],
+          "type_sha256": "0827b50bb75d89534c960f961f93b3b97c291485e16a30493ca9e56052150765",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.PositiveIntegral.linear",
+          "kind": "definition",
+          "level_parameters": [
+            "u_3"
+          ],
+          "type_sha256": "0876d0173f9456c6c7ce5cb8d2acbd898a388405e4e78cd1065b706c6b6ad470",
+          "value_sha256": "dc830252660c56b36c9e1e91b37d06a6b5694c90e8b7505cce8a90a51f9ad769"
+        },
+        {
+          "name": "RP3.PositiveIntegral.mk",
+          "kind": "constructor",
+          "level_parameters": [
+            "u_3"
+          ],
+          "type_sha256": "be0652c2232d33ea23acae4e89db7528109b9f584b19f6db8fab8493c07cd582",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.Spin",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "fe702a63dfdd230d17e5de1724991d093dd15042d2da6c043fb44edb07cc7e3d",
+          "value_sha256": "29b92368634a47111caa2e06366b69e8ad50525d3e05b7e3a9f78b77b206453a"
+        },
+        {
+          "name": "RP3.freeGibbsDensity",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1",
+            "u_2"
+          ],
+          "type_sha256": "e6c860b4a0120ebda32cd593be993244d057d0d2c263266729ae28584cafea7d",
+          "value_sha256": "21b798c4a7801b0dc682824d4b4733e1d32f9d63d05b1c49b9dcf70999e220c7"
+        },
+        {
+          "name": "RP3.freeGibbsMeasure",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1",
+            "u_2"
+          ],
+          "type_sha256": "24f600a30fb71d2d91efc57e356e2c6f13aaf67bcf15e284ab2803efed617b0d",
+          "value_sha256": "7ab2a154981ee1e0eaa0829b96663e03973c580e59c285750ae046c3559c8613"
+        },
+        {
+          "name": "RP3.freeGibbsProbability",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1",
+            "u_2"
+          ],
+          "type_sha256": "8f336c62d9149cccff999c607840b14506c6c900a3bbb0df2c306fe53577ae5d",
+          "value_sha256": "84d0052cc6c9bc5a19c1d1f030db8a9e15e8149a4f1c2c184063d8d93e3439fa"
+        },
+        {
+          "name": "RP3.freeGibbsProbability._proof_1",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1",
+            "u_2"
+          ],
+          "type_sha256": "e19d2b89ca571aeb91c3cc38c230fa4eecdba22deb543f7b188587bbc7154198",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.infinitePairMarginal",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "74e64777a91edcd68bcedd9594dcac61c73147a709b62bc595969c080e86ab57",
+          "value_sha256": "0596f51ea900da83ce71b5672a774c8224ea8220e2ca77d03afa92c164e19aea"
+        },
+        {
+          "name": "RP3.integralOnCompact",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "efeebda7f2225dd65430c852c825d188705293956ba42c1b01c673610e2dfdbe",
+          "value_sha256": "28a62c5a97ff184cf62287142a3ab603ba36f1a12f7dd91d571d82f5dc97a400"
+        },
+        {
+          "name": "RP3.integralOnCompact._proof_1",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "9427991234dd34cfffbc0929fb4f2aefdcf8e2e15facdf917d176ec21c1bcd82",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.integralOnCompact._proof_2",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "54359fc838a5285c632c4ce8493e2449cedec29b563e8d19b1053d7b0e2c05b1",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.integralOnCompact._proof_3",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "e716d21b87d69ae3a1563058007d0f35ffdd2081045065c118052c05358ed33e",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.interaction",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1",
+            "u_2"
+          ],
+          "type_sha256": "4d1167e60d908956edf58185f72b1e06d1abf868dc20ad71e0a9d37eec7c3bf3",
+          "value_sha256": "52023d1ec2ecb772e5ba1c372fe4bfed3cefdda2c48d18b5dfd358872777af4f"
+        },
+        {
+          "name": "RP3.partition",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1",
+            "u_2"
+          ],
+          "type_sha256": "f0b292971ba41bd1e0e93d092744a345f592124900c868f81daad0efe2daf5ca",
+          "value_sha256": "a48ebe2899e49b6d8da440b4aa9b15380cd1b3b15b4de05440e8a5227a1341c3"
+        },
+        {
+          "name": "RP3.partition._proof_1",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "8f93b1b6fd16a29b9010a7095e6f06aa7833bb5cc348006263e101a28a20a3ea",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.partition._proof_2",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "d841e3bd173fa9df9b3462df2b4d1b73162da8998dc59b9ace95aba2abc5e52e",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.partition._proof_3",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "8bdfd04594400dbd5b2da9a982e8881cc4abcd3c77847f874ddaf8eb3231eba2",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.partition._proof_4",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "fdf6b3a627e33f123708c4146a7479ab46e715618e8bde3c7320646bf8a6af5a",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.partition._proof_5",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "25d5d10a8beb3eff47acd40d1761c37b365d0afa3a74c05d17209cc9101d796d",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.qPair._proof_1",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "6c02067f924b78c114a7ef51dd5a4179869472507eddd0fbb108b9c86bbee807",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.referenceLaw",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "754d95306cccd97f491da8d2d2bc6e432f245b5a955d892cd47680f95ef8cf75",
+          "value_sha256": "db0bdde5bbdbc33d577b7a68da9f355d64a62e65f493b56fb91c13afb8247208"
+        },
+        {
+          "name": "RP3.sphereProbability",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "f08077886d6160aba557fe4e9e869df66d86dc27b15bc1d6690b487f44729b61",
+          "value_sha256": "16fd652dd6a7df563cede729741347e6b2b3cd2511ea6fdec35d9276f1d3e443"
+        },
+        {
+          "name": "RP3.sphereProbability._proof_1",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "60d459108acaa24f1e30ce91ed916fe7715eac8438d75c8ac99bed18ffc0cf26",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.sphereProbability._proof_2",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "f59067a8140352180181d5a90a8550127ca42201a62fb21f452f4a95dcc9450e",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.sphereProbability._proof_3",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "0dfbe76fdefd05ffd2e9296319114f7bcc28e0b2cb93ab4f388ececb3c052c60",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.twoSpinMarginal",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1",
+            "u_2"
+          ],
+          "type_sha256": "8a6eef2ddbabf5a2a7606d508f998018904f1aaa5ec68111f6f324328720f863",
+          "value_sha256": "4f8e4094bba5486c14922ea8aab45208405e137a3a56e309c90de11eb0cde0f1"
+        },
+        {
+          "name": "RP3.weight",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1",
+            "u_2"
+          ],
+          "type_sha256": "643a8dbb7aa511e7a653326cefb36057e77046c6cf313f80ca2ff4402a078beb",
+          "value_sha256": "5105de587a6ae03ed517ed1e2ca5a0ffcd0c5d7b968d810b9d67290ceab3a59c"
+        },
+        {
+          "name": "RP3.weight._proof_1",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1",
+            "u_2"
+          ],
+          "type_sha256": "2d9a287c83568c9fe7819bdfa60991c54bf68c88efe3a8393b7e10895b1f7796",
+          "value_sha256": null
+        }
+      ]
+    },
+    {
+      "root": {
+        "name": "RP3.SO3.so3_log_square_decay_signed",
+        "kind": "theorem",
+        "level_parameters": [],
+        "type_sha256": "f16c75e3038542788d2e963d916dc0565626d7acb91af24bb2d47117da39677b",
+        "value_sha256": null
+      },
+      "declarations": [
+        {
+          "name": "RP3.Configuration",
+          "kind": "definition",
+          "level_parameters": [
+            "u_3"
+          ],
+          "type_sha256": "04c81bbaa1199e49a5f3d2c7f123e0bf24d7186176555570792e0447b4af64a9",
+          "value_sha256": "53298d2a94ca9db5ff3241e9a85ccaf590a28c53f3ea20c71b6c67892a34cf14"
+        },
+        {
+          "name": "RP3.E4",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "b4611575b2b62eb57ff8b514cf96bf01666158b035ac2fcc89065136260d1e05",
+          "value_sha256": "b4aeef0cb19b436a9cd0182d83bff318dffb0b90039267c66ac8b61a3f3b8bb7"
+        },
+        {
+          "name": "RP3.Fourier.LatticeGraph",
+          "kind": "inductive",
+          "level_parameters": [],
+          "type_sha256": "b4611575b2b62eb57ff8b514cf96bf01666158b035ac2fcc89065136260d1e05",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.Fourier.LatticeGraph.edges",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "81bd04daee8285eeda07ab6bb40f4384ab5b3753538a921171f3bd01652c0b19",
+          "value_sha256": "164e775fdf2cfac7b6f67a1345cd07136dd5f81dc3333d5303ff3da6fcd050aa"
+        },
+        {
+          "name": "RP3.Fourier.LatticeGraph.mk",
+          "kind": "constructor",
+          "level_parameters": [],
+          "type_sha256": "7fee119d1de1fbcd0f8426a74c17d69a5e030ca2220d435ccef96d694f81574b",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.Fourier.LatticeGraph.vertices",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "723ca0b83a76999114e59ed2341c04a1c1fab536447c478e8356bd11070684c1",
+          "value_sha256": "8162a7e99debcbb3f579de0b758ce086fe0f1f8354938d18227af6eca2cedcc0"
+        },
+        {
+          "name": "RP3.Fourier.PositiveNeighbor",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "7ce8e17502f62849b0ab32436f39bb0ddf1a525d29f01f07f399e41e9cc11ca3",
+          "value_sha256": "89f27109bd92ac78641701fda94cdbb4e42eab60e149c66c08de956b99b99065"
+        },
+        {
+          "name": "RP3.Fourier.Site",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "b4611575b2b62eb57ff8b514cf96bf01666158b035ac2fcc89065136260d1e05",
+          "value_sha256": "f42919fe8dd49adce51f049efb26a073198e9264a813dd364cd79f6aa7deb39a"
+        },
+        {
+          "name": "RP3.Fourier.siteRadius",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "d8581e09ebc5532b4b31ddacaf14b50ca7940acef15fd420a2373dd0aaa42e20",
+          "value_sha256": "b492cbbe5d6fb531d736bf9190c679f4bf940c596aef34b0d649a22ffa28e8c3"
+        },
+        {
+          "name": "RP3.SO3.rotMat",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "932e8057b085f0f933bd62577acc7be5215097810c8b3a40703ef2a0c688a4e8",
+          "value_sha256": "3dfbef59eb1ac8e2fe58c0c2a1b4f76ea375dd384db1b51152d308432ae86e10"
+        },
+        {
+          "name": "RP3.SO3.rotMat._proof_1",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "a35011963edbbab6afa191b42682af4422c85357caa634d3fa25a520e9e5305a",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.SO3.rotMat._proof_2",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "6c02067f924b78c114a7ef51dd5a4179869472507eddd0fbb108b9c86bbee807",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.SO3.rotOf",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "0942ca04629a510de371e18dda88970c82d6a7912b380c5fe9127930bab264e1",
+          "value_sha256": "f5c726c42dc673f0022aad5807457eef12d722e70c252d4911a1abde6251b26e"
+        },
+        {
+          "name": "RP3.Spin",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "fe702a63dfdd230d17e5de1724991d093dd15042d2da6c043fb44edb07cc7e3d",
+          "value_sha256": "29b92368634a47111caa2e06366b69e8ad50525d3e05b7e3a9f78b77b206453a"
+        },
+        {
+          "name": "RP3.referenceLaw",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "754d95306cccd97f491da8d2d2bc6e432f245b5a955d892cd47680f95ef8cf75",
+          "value_sha256": "db0bdde5bbdbc33d577b7a68da9f355d64a62e65f493b56fb91c13afb8247208"
+        },
+        {
+          "name": "RP3.sphereProbability",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "f08077886d6160aba557fe4e9e869df66d86dc27b15bc1d6690b487f44729b61",
+          "value_sha256": "16fd652dd6a7df563cede729741347e6b2b3cd2511ea6fdec35d9276f1d3e443"
+        },
+        {
+          "name": "RP3.sphereProbability._proof_1",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "60d459108acaa24f1e30ce91ed916fe7715eac8438d75c8ac99bed18ffc0cf26",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.sphereProbability._proof_2",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "f59067a8140352180181d5a90a8550127ca42201a62fb21f452f4a95dcc9450e",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.sphereProbability._proof_3",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "0dfbe76fdefd05ffd2e9296319114f7bcc28e0b2cb93ab4f388ececb3c052c60",
+          "value_sha256": null
+        }
+      ]
+    },
+    {
+      "root": {
+        "name": "RP3.elementary_exponential_quadrupolar_decay_signed",
+        "kind": "theorem",
+        "level_parameters": [],
+        "type_sha256": "3a4c06368ce09ed796743967c63d40f26cd0f31dd11dc88ecfb0c6fd502da851",
+        "value_sha256": null
+      },
+      "declarations": [
+        {
+          "name": "RP3.Configuration",
+          "kind": "definition",
+          "level_parameters": [
+            "u_3"
+          ],
+          "type_sha256": "04c81bbaa1199e49a5f3d2c7f123e0bf24d7186176555570792e0447b4af64a9",
+          "value_sha256": "53298d2a94ca9db5ff3241e9a85ccaf590a28c53f3ea20c71b6c67892a34cf14"
+        },
+        {
+          "name": "RP3.E4",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "b4611575b2b62eb57ff8b514cf96bf01666158b035ac2fcc89065136260d1e05",
+          "value_sha256": "b4aeef0cb19b436a9cd0182d83bff318dffb0b90039267c66ac8b61a3f3b8bb7"
+        },
+        {
+          "name": "RP3.FiniteAction.pullback._proof_1",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "8f93b1b6fd16a29b9010a7095e6f06aa7833bb5cc348006263e101a28a20a3ea",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.FiniteAction.pullback._proof_2",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "d841e3bd173fa9df9b3462df2b4d1b73162da8998dc59b9ace95aba2abc5e52e",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.Fourier.LatticeGraph",
+          "kind": "inductive",
+          "level_parameters": [],
+          "type_sha256": "b4611575b2b62eb57ff8b514cf96bf01666158b035ac2fcc89065136260d1e05",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.Fourier.LatticeGraph.edges",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "81bd04daee8285eeda07ab6bb40f4384ab5b3753538a921171f3bd01652c0b19",
+          "value_sha256": "164e775fdf2cfac7b6f67a1345cd07136dd5f81dc3333d5303ff3da6fcd050aa"
+        },
+        {
+          "name": "RP3.Fourier.LatticeGraph.mk",
+          "kind": "constructor",
+          "level_parameters": [],
+          "type_sha256": "7fee119d1de1fbcd0f8426a74c17d69a5e030ca2220d435ccef96d694f81574b",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.Fourier.LatticeGraph.vertices",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "723ca0b83a76999114e59ed2341c04a1c1fab536447c478e8356bd11070684c1",
+          "value_sha256": "8162a7e99debcbb3f579de0b758ce086fe0f1f8354938d18227af6eca2cedcc0"
+        },
+        {
+          "name": "RP3.Fourier.PositiveNeighbor",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "7ce8e17502f62849b0ab32436f39bb0ddf1a525d29f01f07f399e41e9cc11ca3",
+          "value_sha256": "89f27109bd92ac78641701fda94cdbb4e42eab60e149c66c08de956b99b99065"
+        },
+        {
+          "name": "RP3.Fourier.Site",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "b4611575b2b62eb57ff8b514cf96bf01666158b035ac2fcc89065136260d1e05",
+          "value_sha256": "f42919fe8dd49adce51f049efb26a073198e9264a813dd364cd79f6aa7deb39a"
+        },
+        {
+          "name": "RP3.Fourier.siteRadius",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "d8581e09ebc5532b4b31ddacaf14b50ca7940acef15fd420a2373dd0aaa42e20",
+          "value_sha256": "b492cbbe5d6fb531d736bf9190c679f4bf940c596aef34b0d649a22ffa28e8c3"
+        },
+        {
+          "name": "RP3.HighTemperature.elementaryDecayBase",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "92573a66fe6799b11811219690a38de4d745109b631d906d61b4a88549accf5a",
+          "value_sha256": "d8737d1fb736ce8d509bc4c4a796a138edd77c2afa580c067ce90daca7a9c308"
+        },
+        {
+          "name": "RP3.HighTemperature.elementaryDecayBase._proof_1",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "6c02067f924b78c114a7ef51dd5a4179869472507eddd0fbb108b9c86bbee807",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.HighTemperature.elementaryDecayBase._proof_2",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "c559d5005f7375aca0acc76ff1684a6b702c935f2346e1f58b4e4c68531f2934",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.HighTemperature.elementaryMass",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "92573a66fe6799b11811219690a38de4d745109b631d906d61b4a88549accf5a",
+          "value_sha256": "30cb79af2bb5374667f82a15d133ab7a37eeae33f69c0349b933b59e66f03681"
+        },
+        {
+          "name": "RP3.PositiveIntegral",
+          "kind": "inductive",
+          "level_parameters": [
+            "u_3"
+          ],
+          "type_sha256": "0827b50bb75d89534c960f961f93b3b97c291485e16a30493ca9e56052150765",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.PositiveIntegral.linear",
+          "kind": "definition",
+          "level_parameters": [
+            "u_3"
+          ],
+          "type_sha256": "0876d0173f9456c6c7ce5cb8d2acbd898a388405e4e78cd1065b706c6b6ad470",
+          "value_sha256": "dc830252660c56b36c9e1e91b37d06a6b5694c90e8b7505cce8a90a51f9ad769"
+        },
+        {
+          "name": "RP3.PositiveIntegral.mk",
+          "kind": "constructor",
+          "level_parameters": [
+            "u_3"
+          ],
+          "type_sha256": "be0652c2232d33ea23acae4e89db7528109b9f584b19f6db8fab8493c07cd582",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.Spin",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "fe702a63dfdd230d17e5de1724991d093dd15042d2da6c043fb44edb07cc7e3d",
+          "value_sha256": "29b92368634a47111caa2e06366b69e8ad50525d3e05b7e3a9f78b77b206453a"
+        },
+        {
+          "name": "RP3.correlation",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1",
+            "u_2"
+          ],
+          "type_sha256": "5fe4de657763c13a5856d081a3b715adf4be2ad379c99303dc1ccde93ebc2fbc",
+          "value_sha256": "538cc2b440a8142c9ac61953773b8cbe1dedfb197f23bfa8392aec93afbb3f6d"
+        },
+        {
+          "name": "RP3.correlation._proof_1",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "851465986c43ad635ffa464d1fce04d28945b7448c8d7225689781aef9b32447",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.integralOnCompact",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "efeebda7f2225dd65430c852c825d188705293956ba42c1b01c673610e2dfdbe",
+          "value_sha256": "28a62c5a97ff184cf62287142a3ab603ba36f1a12f7dd91d571d82f5dc97a400"
+        },
+        {
+          "name": "RP3.integralOnCompact._proof_1",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "9427991234dd34cfffbc0929fb4f2aefdcf8e2e15facdf917d176ec21c1bcd82",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.integralOnCompact._proof_2",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "54359fc838a5285c632c4ce8493e2449cedec29b563e8d19b1053d7b0e2c05b1",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.integralOnCompact._proof_3",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "e716d21b87d69ae3a1563058007d0f35ffdd2081045065c118052c05358ed33e",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.interaction",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1",
+            "u_2"
+          ],
+          "type_sha256": "4d1167e60d908956edf58185f72b1e06d1abf868dc20ad71e0a9d37eec7c3bf3",
+          "value_sha256": "52023d1ec2ecb772e5ba1c372fe4bfed3cefdda2c48d18b5dfd358872777af4f"
+        },
+        {
+          "name": "RP3.observable",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "473d4818cd8ce01109f07140e238e0bd6bfe941bdb24e3fa27d72e2cefeb14db",
+          "value_sha256": "17b25fd9c2f79c07b051662d5fef07ae7e3efb18ce51bc2b400c7385a2042850"
+        },
+        {
+          "name": "RP3.observable._proof_1",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "e5877952f5f611832508ce1b5aa690002ea1f5486887440602733620d3bd5a9c",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.partition",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1",
+            "u_2"
+          ],
+          "type_sha256": "f0b292971ba41bd1e0e93d092744a345f592124900c868f81daad0efe2daf5ca",
+          "value_sha256": "a48ebe2899e49b6d8da440b4aa9b15380cd1b3b15b4de05440e8a5227a1341c3"
+        },
+        {
+          "name": "RP3.partition._proof_1",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "8f93b1b6fd16a29b9010a7095e6f06aa7833bb5cc348006263e101a28a20a3ea",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.partition._proof_2",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "d841e3bd173fa9df9b3462df2b4d1b73162da8998dc59b9ace95aba2abc5e52e",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.partition._proof_3",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "8bdfd04594400dbd5b2da9a982e8881cc4abcd3c77847f874ddaf8eb3231eba2",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.partition._proof_4",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "fdf6b3a627e33f123708c4146a7479ab46e715618e8bde3c7320646bf8a6af5a",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.partition._proof_5",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "25d5d10a8beb3eff47acd40d1761c37b365d0afa3a74c05d17209cc9101d796d",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.qPair",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "ca2b69d43b5f3db846b873282e28c82f66704ed3cfad3172f99192119e613faa",
+          "value_sha256": "bf5f0fc22c02a5446e4b5bde1dc4128168d5678e7d724ae738fed28c2c6bd00b"
+        },
+        {
+          "name": "RP3.qPair._proof_1",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "6c02067f924b78c114a7ef51dd5a4179869472507eddd0fbb108b9c86bbee807",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.qPair._proof_2",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "7a87f934f2653791953a95de38dd709d9470b197b5020708e0322552ac384179",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.referenceLaw",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "754d95306cccd97f491da8d2d2bc6e432f245b5a955d892cd47680f95ef8cf75",
+          "value_sha256": "db0bdde5bbdbc33d577b7a68da9f355d64a62e65f493b56fb91c13afb8247208"
+        },
+        {
+          "name": "RP3.sphereProbability",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "f08077886d6160aba557fe4e9e869df66d86dc27b15bc1d6690b487f44729b61",
+          "value_sha256": "16fd652dd6a7df563cede729741347e6b2b3cd2511ea6fdec35d9276f1d3e443"
+        },
+        {
+          "name": "RP3.sphereProbability._proof_1",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "60d459108acaa24f1e30ce91ed916fe7715eac8438d75c8ac99bed18ffc0cf26",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.sphereProbability._proof_2",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "f59067a8140352180181d5a90a8550127ca42201a62fb21f452f4a95dcc9450e",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.sphereProbability._proof_3",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "0dfbe76fdefd05ffd2e9296319114f7bcc28e0b2cb93ab4f388ececb3c052c60",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.weight",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1",
+            "u_2"
+          ],
+          "type_sha256": "643a8dbb7aa511e7a653326cefb36057e77046c6cf313f80ca2ff4402a078beb",
+          "value_sha256": "5105de587a6ae03ed517ed1e2ca5a0ffcd0c5d7b968d810b9d67290ceab3a59c"
+        },
+        {
+          "name": "RP3.weight._proof_1",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1",
+            "u_2"
+          ],
+          "type_sha256": "2d9a287c83568c9fe7819bdfa60991c54bf68c88efe3a8393b7e10895b1f7796",
+          "value_sha256": null
+        }
+      ]
+    },
+    {
+      "root": {
+        "name": "RP3.elementary_exponential_quadrupolar_decay_local_limit_signed",
+        "kind": "theorem",
+        "level_parameters": [],
+        "type_sha256": "d01d5e5f49237d04b2068befb2fc134476cd7ae9a75309f23e2193ebddbb6403",
+        "value_sha256": null
+      },
+      "declarations": [
+        {
+          "name": "RP3.Configuration",
+          "kind": "definition",
+          "level_parameters": [
+            "u_3"
+          ],
+          "type_sha256": "04c81bbaa1199e49a5f3d2c7f123e0bf24d7186176555570792e0447b4af64a9",
+          "value_sha256": "53298d2a94ca9db5ff3241e9a85ccaf590a28c53f3ea20c71b6c67892a34cf14"
+        },
+        {
+          "name": "RP3.E4",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "b4611575b2b62eb57ff8b514cf96bf01666158b035ac2fcc89065136260d1e05",
+          "value_sha256": "b4aeef0cb19b436a9cd0182d83bff318dffb0b90039267c66ac8b61a3f3b8bb7"
+        },
+        {
+          "name": "RP3.FiniteAction.pullback._proof_1",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "8f93b1b6fd16a29b9010a7095e6f06aa7833bb5cc348006263e101a28a20a3ea",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.FiniteAction.pullback._proof_2",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "d841e3bd173fa9df9b3462df2b4d1b73162da8998dc59b9ace95aba2abc5e52e",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.Fourier.LatticeGraph",
+          "kind": "inductive",
+          "level_parameters": [],
+          "type_sha256": "b4611575b2b62eb57ff8b514cf96bf01666158b035ac2fcc89065136260d1e05",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.Fourier.LatticeGraph.edges",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "81bd04daee8285eeda07ab6bb40f4384ab5b3753538a921171f3bd01652c0b19",
+          "value_sha256": "164e775fdf2cfac7b6f67a1345cd07136dd5f81dc3333d5303ff3da6fcd050aa"
+        },
+        {
+          "name": "RP3.Fourier.LatticeGraph.mk",
+          "kind": "constructor",
+          "level_parameters": [],
+          "type_sha256": "7fee119d1de1fbcd0f8426a74c17d69a5e030ca2220d435ccef96d694f81574b",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.Fourier.LatticeGraph.vertices",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "723ca0b83a76999114e59ed2341c04a1c1fab536447c478e8356bd11070684c1",
+          "value_sha256": "8162a7e99debcbb3f579de0b758ce086fe0f1f8354938d18227af6eca2cedcc0"
+        },
+        {
+          "name": "RP3.Fourier.PositiveNeighbor",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "7ce8e17502f62849b0ab32436f39bb0ddf1a525d29f01f07f399e41e9cc11ca3",
+          "value_sha256": "89f27109bd92ac78641701fda94cdbb4e42eab60e149c66c08de956b99b99065"
+        },
+        {
+          "name": "RP3.Fourier.Site",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "b4611575b2b62eb57ff8b514cf96bf01666158b035ac2fcc89065136260d1e05",
+          "value_sha256": "f42919fe8dd49adce51f049efb26a073198e9264a813dd364cd79f6aa7deb39a"
+        },
+        {
+          "name": "RP3.Fourier.siteRadius",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "d8581e09ebc5532b4b31ddacaf14b50ca7940acef15fd420a2373dd0aaa42e20",
+          "value_sha256": "b492cbbe5d6fb531d736bf9190c679f4bf940c596aef34b0d649a22ffa28e8c3"
+        },
+        {
+          "name": "RP3.HasLocalPairLimit",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "7f18a10eae1794049843b63dda6cacea0a033638ff5e6b62a74703a86fa9bd9f",
+          "value_sha256": "4246e63c90d7e31b3f02febcd24bfe79a5d5e286362b71000272a46cea6d01f2"
+        },
+        {
+          "name": "RP3.HasLocalPairLimit._proof_1",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "c42983547f4c15d74198f5a7e61fb276ee9061881786aa5e84c43457830be5f4",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.HighTemperature.elementaryDecayBase",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "92573a66fe6799b11811219690a38de4d745109b631d906d61b4a88549accf5a",
+          "value_sha256": "d8737d1fb736ce8d509bc4c4a796a138edd77c2afa580c067ce90daca7a9c308"
+        },
+        {
+          "name": "RP3.HighTemperature.elementaryDecayBase._proof_1",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "6c02067f924b78c114a7ef51dd5a4179869472507eddd0fbb108b9c86bbee807",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.HighTemperature.elementaryDecayBase._proof_2",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "c559d5005f7375aca0acc76ff1684a6b702c935f2346e1f58b4e4c68531f2934",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.HighTemperature.elementaryMass",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "92573a66fe6799b11811219690a38de4d745109b631d906d61b4a88549accf5a",
+          "value_sha256": "30cb79af2bb5374667f82a15d133ab7a37eeae33f69c0349b933b59e66f03681"
+        },
+        {
+          "name": "RP3.InfiniteConfiguration",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "b4611575b2b62eb57ff8b514cf96bf01666158b035ac2fcc89065136260d1e05",
+          "value_sha256": "b196c59075714ab08e83c85157c297b24f882281e81ce7a8ae1a6e0173e56e12"
+        },
+        {
+          "name": "RP3.IsSignedFreeBoundaryLocalLimit",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "8c68d94f3ce66f970b75c232089d546fafbde99bc3bb0c18d686112f44855449",
+          "value_sha256": "1884c918f53652fffdaf59d7e7697539d2d4d34eec32906a6ec1ae630e4717ea"
+        },
+        {
+          "name": "RP3.PositiveIntegral",
+          "kind": "inductive",
+          "level_parameters": [
+            "u_3"
+          ],
+          "type_sha256": "0827b50bb75d89534c960f961f93b3b97c291485e16a30493ca9e56052150765",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.PositiveIntegral.linear",
+          "kind": "definition",
+          "level_parameters": [
+            "u_3"
+          ],
+          "type_sha256": "0876d0173f9456c6c7ce5cb8d2acbd898a388405e4e78cd1065b706c6b6ad470",
+          "value_sha256": "dc830252660c56b36c9e1e91b37d06a6b5694c90e8b7505cce8a90a51f9ad769"
+        },
+        {
+          "name": "RP3.PositiveIntegral.mk",
+          "kind": "constructor",
+          "level_parameters": [
+            "u_3"
+          ],
+          "type_sha256": "be0652c2232d33ea23acae4e89db7528109b9f584b19f6db8fab8493c07cd582",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.Spin",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "fe702a63dfdd230d17e5de1724991d093dd15042d2da6c043fb44edb07cc7e3d",
+          "value_sha256": "29b92368634a47111caa2e06366b69e8ad50525d3e05b7e3a9f78b77b206453a"
+        },
+        {
+          "name": "RP3.freeGibbsDensity",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1",
+            "u_2"
+          ],
+          "type_sha256": "e6c860b4a0120ebda32cd593be993244d057d0d2c263266729ae28584cafea7d",
+          "value_sha256": "21b798c4a7801b0dc682824d4b4733e1d32f9d63d05b1c49b9dcf70999e220c7"
+        },
+        {
+          "name": "RP3.freeGibbsMeasure",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1",
+            "u_2"
+          ],
+          "type_sha256": "24f600a30fb71d2d91efc57e356e2c6f13aaf67bcf15e284ab2803efed617b0d",
+          "value_sha256": "7ab2a154981ee1e0eaa0829b96663e03973c580e59c285750ae046c3559c8613"
+        },
+        {
+          "name": "RP3.freeGibbsProbability",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1",
+            "u_2"
+          ],
+          "type_sha256": "8f336c62d9149cccff999c607840b14506c6c900a3bbb0df2c306fe53577ae5d",
+          "value_sha256": "84d0052cc6c9bc5a19c1d1f030db8a9e15e8149a4f1c2c184063d8d93e3439fa"
+        },
+        {
+          "name": "RP3.freeGibbsProbability._proof_1",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1",
+            "u_2"
+          ],
+          "type_sha256": "e19d2b89ca571aeb91c3cc38c230fa4eecdba22deb543f7b188587bbc7154198",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.infiniteCorrelation",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "abff05517c2fe01019ef6db881a6c54c50f6805f59f8b33063ddbed63bd96fa9",
+          "value_sha256": "a4e1fc0a8727f9d6454ab5d700e3b41ab6775a2dbc8b9ed1a7322d251cbb13b8"
+        },
+        {
+          "name": "RP3.infinitePairMarginal",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "74e64777a91edcd68bcedd9594dcac61c73147a709b62bc595969c080e86ab57",
+          "value_sha256": "0596f51ea900da83ce71b5672a774c8224ea8220e2ca77d03afa92c164e19aea"
+        },
+        {
+          "name": "RP3.integralOnCompact",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "efeebda7f2225dd65430c852c825d188705293956ba42c1b01c673610e2dfdbe",
+          "value_sha256": "28a62c5a97ff184cf62287142a3ab603ba36f1a12f7dd91d571d82f5dc97a400"
+        },
+        {
+          "name": "RP3.integralOnCompact._proof_1",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "9427991234dd34cfffbc0929fb4f2aefdcf8e2e15facdf917d176ec21c1bcd82",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.integralOnCompact._proof_2",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "54359fc838a5285c632c4ce8493e2449cedec29b563e8d19b1053d7b0e2c05b1",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.integralOnCompact._proof_3",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "e716d21b87d69ae3a1563058007d0f35ffdd2081045065c118052c05358ed33e",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.interaction",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1",
+            "u_2"
+          ],
+          "type_sha256": "4d1167e60d908956edf58185f72b1e06d1abf868dc20ad71e0a9d37eec7c3bf3",
+          "value_sha256": "52023d1ec2ecb772e5ba1c372fe4bfed3cefdda2c48d18b5dfd358872777af4f"
+        },
+        {
+          "name": "RP3.partition",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1",
+            "u_2"
+          ],
+          "type_sha256": "f0b292971ba41bd1e0e93d092744a345f592124900c868f81daad0efe2daf5ca",
+          "value_sha256": "a48ebe2899e49b6d8da440b4aa9b15380cd1b3b15b4de05440e8a5227a1341c3"
+        },
+        {
+          "name": "RP3.partition._proof_1",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "8f93b1b6fd16a29b9010a7095e6f06aa7833bb5cc348006263e101a28a20a3ea",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.partition._proof_2",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "d841e3bd173fa9df9b3462df2b4d1b73162da8998dc59b9ace95aba2abc5e52e",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.partition._proof_3",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "8bdfd04594400dbd5b2da9a982e8881cc4abcd3c77847f874ddaf8eb3231eba2",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.partition._proof_4",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "fdf6b3a627e33f123708c4146a7479ab46e715618e8bde3c7320646bf8a6af5a",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.partition._proof_5",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "25d5d10a8beb3eff47acd40d1761c37b365d0afa3a74c05d17209cc9101d796d",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.qPair",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "ca2b69d43b5f3db846b873282e28c82f66704ed3cfad3172f99192119e613faa",
+          "value_sha256": "bf5f0fc22c02a5446e4b5bde1dc4128168d5678e7d724ae738fed28c2c6bd00b"
+        },
+        {
+          "name": "RP3.qPair._proof_1",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "6c02067f924b78c114a7ef51dd5a4179869472507eddd0fbb108b9c86bbee807",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.qPair._proof_2",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "7a87f934f2653791953a95de38dd709d9470b197b5020708e0322552ac384179",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.referenceLaw",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1"
+          ],
+          "type_sha256": "754d95306cccd97f491da8d2d2bc6e432f245b5a955d892cd47680f95ef8cf75",
+          "value_sha256": "db0bdde5bbdbc33d577b7a68da9f355d64a62e65f493b56fb91c13afb8247208"
+        },
+        {
+          "name": "RP3.sphereProbability",
+          "kind": "definition",
+          "level_parameters": [],
+          "type_sha256": "f08077886d6160aba557fe4e9e869df66d86dc27b15bc1d6690b487f44729b61",
+          "value_sha256": "16fd652dd6a7df563cede729741347e6b2b3cd2511ea6fdec35d9276f1d3e443"
+        },
+        {
+          "name": "RP3.sphereProbability._proof_1",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "60d459108acaa24f1e30ce91ed916fe7715eac8438d75c8ac99bed18ffc0cf26",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.sphereProbability._proof_2",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "f59067a8140352180181d5a90a8550127ca42201a62fb21f452f4a95dcc9450e",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.sphereProbability._proof_3",
+          "kind": "theorem",
+          "level_parameters": [],
+          "type_sha256": "0dfbe76fdefd05ffd2e9296319114f7bcc28e0b2cb93ab4f388ececb3c052c60",
+          "value_sha256": null
+        },
+        {
+          "name": "RP3.twoSpinMarginal",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1",
+            "u_2"
+          ],
+          "type_sha256": "8a6eef2ddbabf5a2a7606d508f998018904f1aaa5ec68111f6f324328720f863",
+          "value_sha256": "4f8e4094bba5486c14922ea8aab45208405e137a3a56e309c90de11eb0cde0f1"
+        },
+        {
+          "name": "RP3.weight",
+          "kind": "definition",
+          "level_parameters": [
+            "u_1",
+            "u_2"
+          ],
+          "type_sha256": "643a8dbb7aa511e7a653326cefb36057e77046c6cf313f80ca2ff4402a078beb",
+          "value_sha256": "5105de587a6ae03ed517ed1e2ca5a0ffcd0c5d7b968d810b9d67290ceab3a59c"
+        },
+        {
+          "name": "RP3.weight._proof_1",
+          "kind": "theorem",
+          "level_parameters": [
+            "u_1",
+            "u_2"
+          ],
+          "type_sha256": "2d9a287c83568c9fe7819bdfa60991c54bf68c88efe3a8393b7e10895b1f7796",
+          "value_sha256": null
+        }
+      ]
+    }
+  ]
+}

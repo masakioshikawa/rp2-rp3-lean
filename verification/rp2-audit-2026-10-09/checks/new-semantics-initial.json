@@ -1,0 +1,15 @@
+{
+  "command": [
+    "lake",
+    "env",
+    "lean",
+    "-j1",
+    "--root=/workspace/scratch/53fc9415f670/rp2-stronger-audit/checks",
+    "/workspace/scratch/53fc9415f670/rp2-stronger-audit/checks/NewSemanticWitnesses.lean"
+  ],
+  "exit_code": 1,
+  "elapsed_seconds": 8.589,
+  "completed_utc": "2026-10-09T02:22:41.881654+00:00",
+  "source_sha256": "f2537741f52d5b0edd01d1f27b7591780f901a8e690af3fc295f69423dcb31c2",
+  "log_sha256": "93db09878ee9e838957c138dc3ddb999983beb5bb898bd4898199a6d76f4104d"
+}

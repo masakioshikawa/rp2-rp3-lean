@@ -1,0 +1,22 @@
+import RP3
+
+#print axioms RP3.log_square_quadrupolar_decay_signed
+#print axioms RP3.log_square_quadrupolar_decay
+#print axioms RP3.log_square_quadrupolar_decay_local_limit_signed
+#print axioms RP3.log_square_quadrupolar_decay_local_limit
+#print axioms RP3.superpolynomial_quadrupolar_decay_signed
+#print axioms RP3.factorial_quadrupolar_decay_signed
+#print axioms RP3.trace_Q_mul
+#print axioms RP3.quaternionAction_sum_qPair_zero
+#print axioms RP3.interaction_signChange
+#print axioms RP3.ModelWitnesses.exists_distinct_sites_positive_correlation
+#print axioms RP3.exists_signed_local_limit_of_sequence
+#print axioms RP3.exists_signed_free_boundary_local_limit
+#print axioms RP3.local_limit_endpoint_nonvacuous
+#print axioms RP3.SO3.rotOf_mem_SO3
+#print axioms RP3.SO3.qPair_eq_trace
+#print axioms RP3.SO3.so3_log_square_decay_signed
+#print axioms RP3.SO3.haarInvariance_of_surjective
+#print axioms RP3.elementary_exponential_quadrupolar_decay_signed
+#print axioms RP3.elementary_exponential_quadrupolar_decay_local_limit_signed
+#print axioms RP3.exists_free_boundary_local_limit

@@ -1,0 +1,14 @@
+{
+  "command": [
+    "lake",
+    "env",
+    "lean",
+    "-j1",
+    "-o",
+    ".lake/build/lib/lean/RP3/MathlibImports.olean",
+    "RP3/MathlibImports.lean"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 8.476,
+  "maximum_resident_kib": 3700784
+}

@@ -1,0 +1,5 @@
+.lake/
+__pycache__/
+*.pyc
+verification/latest/
+verification/rp3-latest/

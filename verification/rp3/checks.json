@@ -1,0 +1,61 @@
+[
+  {
+    "label": "semantic-witnesses",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "RP3SemanticWitnesses.lean"
+    ],
+    "exit_code": 0,
+    "started_utc": "2026-10-12T01:01:02.558059+00:00",
+    "elapsed_seconds": 5.479,
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "label": "readable-axioms",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "RP3AxiomAudit.lean"
+    ],
+    "exit_code": 0,
+    "started_utc": "2026-10-12T01:01:08.037927+00:00",
+    "elapsed_seconds": 4.622,
+    "log_sha256": "fb28c25c49ffb7b8c0e9b21f729d2f2071c14e286a2d75f816fe3cbfeff56c5b"
+  },
+  {
+    "label": "public-dependencies",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "--run",
+      "verification/RP3AuditEnvironment.lean"
+    ],
+    "exit_code": 0,
+    "started_utc": "2026-10-12T01:01:12.660356+00:00",
+    "elapsed_seconds": 35.821,
+    "log_sha256": "3710c6cc7d1d477f95a42ea2a50bdada371eaf6ff8467efc6f03fec98f122bcf"
+  },
+  {
+    "label": "standalone-source",
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "-j1",
+      "-o",
+      ".lake/verification/RP3-Formalization.olean",
+      "RP3-Formalization.lean"
+    ],
+    "exit_code": 0,
+    "started_utc": "2026-10-12T01:01:48.481877+00:00",
+    "elapsed_seconds": 346.593,
+    "log_sha256": "4ae17fabedcdd608c9eed4d1e68c7be4622dd6faa380cfabdf753730ddcf5065"
+  }
+]

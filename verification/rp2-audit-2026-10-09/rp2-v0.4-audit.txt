@@ -1,0 +1,69 @@
+RP² v0.4.0: fresh formalization audit
+Completed: 2026-10-09T02:23:51.524269+00:00
+
+VERDICT: PASS
+
+The attached new formalization passed fresh compilation, checks of its mathematical meaning, the public theorem dependency audit, and kernel replay. No mathematical source change was needed or made. The main result is stronger than the previous factorial/log-log envelope. It is not an all-temperature exponential-decay theorem.
+
+1. Results established
+
+For the free-boundary finite Gibbs measure proportional to
+  exp(sum_e b_e (n_x dot n_y)^2) product_x dω(n_x),
+with normalized uniform spherical probability, arbitrary retained nearest-neighbor square-lattice graphs, and |b_e| <= β < infinity, the observable is
+  C_Q(x,y) = <(n_x dot n_y)^2 - 1/3>.
+The exact distance is r = max(|x_1-y_1|, |x_2-y_2|).
+
+At every β >= 0, there are positive constants Cβ and cβ, chosen before the graph, edge couplings, and marked sites, such that
+  |C_Q(x,y)| <= Cβ exp(-cβ [log(2+r)]^2).
+The endpoint is RP2.log_square_quadrupolar_decay_signed. Its statement has no assumed response, kernel-comparison, or decay estimate. It constructs the required thin-annulus comparison from the actual spin model.
+
+For 0 <= β < log(3/2),
+  |C_Q(x,y)| <= (8/9) exp(-mβ r),
+  mβ = -log(max(1/2, 3(1-exp(-β)))) > 0.
+The endpoint is RP2.elementary_exponential_quadrupolar_decay_signed. The underlying finite-distance bound (8/9)[3(1-exp(-β))]^r holds for every β >= 0, although it only decays in this high-temperature regime. The floor in the mass covers β=0, and the proofs also cover coincident sites.
+
+Both theorems have signed free-boundary local-limit versions with the same constants, as well as ferromagnetic specializations. The preceding superpolynomial, moment-summability and smooth-Fourier-series conclusions remain. Adjacent annuli and two-endpoint families also supply stronger factorial bounds; the two-endpoint leading log(r)log(log(r)) coefficient is 2/log(2).
+
+2. Fresh checks performed
+
+- The separately attached standalone file is byte-identical to the archive's generated standalone. The bundle synchronization check passes (85 mathematical modules plus the public entry point; 16,493 standalone lines).
+- All nine dependency Git revisions match the pinned manifest, and their checkouts are clean. Lean reports version 4.34.1; Mathlib is pinned at d13f23b723b8a846827a245b89c10fc7d3f11612.
+- All 86 reachable project modules compiled afresh, in dependency order, with CLI-default asynchronous elaboration and one worker. No project compiled objects were supplied or reused at the start of this audit.
+- The permanent semantic witnesses compiled. They check the actual integral normalization, positive partition function conventions, same-site value 2/3, a nonempty graph and admissible negative couplings.
+- Additional audit witnesses explicitly expand BOTH new finite-volume conclusions as quotients of spherical integrals, and spell out the distance and exponential mass. These witnesses compiled too. They are audit files, not modifications of the supplied library.
+- All 69 mandatory public theorem roots exist. Their raw type-and-body dependency union contains 53,315 declarations. Only propext, Classical.choice and Quot.sound occur as axioms; no unsafe or partial dependency is allowed in that union.
+- The freshly measured dependency count differs from the supplied release's 53,300. The 69 roots are identical; the differing names are generated auxiliary proof, simplifier and matcher declarations. All recorded source hashes agree. The fresh count and its inventory are used here.
+- The entire public dependency union, including the imported mathematical dependencies it uses, replayed successfully from an empty kernel environment.
+- The complete standalone source was freshly compiled; the newly produced standalone object also passed leanchecker replay. These checks did not use the supplier's compiled object.
+- Source hashes were rechecked after the run. The mathematical sources and dependency pins remained unchanged.
+- As supplementary historical evidence, all 98 hashes and five explicitly hashed command logs in the supplied v0.4 summary match their files. The fresh checks above, rather than those supplied logs alone, support this verdict.
+
+3. Focused mathematical and semantic review
+
+The model definitions use unit vectors in R³, normalized spherical product measure, the squared interaction, the genuine normalized Gibbs expectation, and a strictly positive partition denominator. Interaction and observable are invariant under independent changes of spin sign, so this is the claimed RP² model. The retained graph definition represents each lattice bond once.
+
+For the all-temperature improvement, the review traced plateau-rescaled profiles and their discrete cubic error; whole-block frequency truncation and its commutator normalization; the thin-shell support count; the width-independent column-energy bound; the Gram inequality retaining column energy; the actual-model fourth-order response; exact restricted pinned kernels; and integer shell packing. The resulting error is Oβ(1/(δ n)) + Oβ(δ^-6 2^-n). Choosing δ comparable to 1/n allows linearly many half-contractions in the nth dyadic band, hence a quadratic cumulative exponent and the claimed all-distance log-square bound.
+
+For high temperature, subtracting min(b_e,0) from each edge energy gives a nonnegative activity without changing the normalized Gibbs measure. Tetrahedral averaging kills disconnected active-edge contributions. The probability of a prescribed active set S is bounded by (1-exp(-β))^|S|, and at most 4*3^(r-1) simple prefixes of length r start at a vertex. This gives the prefactor 8/9. No independence, FKG inequality, or external random-cluster criticality theorem is assumed.
+
+The local-limit condition is convergence of actual two-spin marginals along a common sequence of free finite-volume models. It is not a predicate that assumes the desired decay. Outside fillings used to embed finite configurations add no interactions.
+
+4. Scope and trust boundary
+
+The log-square estimate is superpolynomial but weaker than every stretched exponential exp(-c r^α), α>0. All-temperature exponential decay is still open in this development. The stated results exclude algebraic quadrupolar tails with fixed logarithmic corrections; they do not by themselves prove absence of every thermodynamic or vortex transition.
+
+The formalization does not prove existence or uniqueness of infinite-volume limits, a DLR characterization, decay for arbitrary interacting pinned boundaries, analyticity of free energy, or correlation bounds for arbitrary bond/vortex observables. The sharper FK thresholds in the historical analytical addendum remain unformalized and are not used in the new endpoints. The SO(3)/RP³ target-space frustrated-magnet problem is a different model.
+
+Both replay routes use Lean's own kernel implementation, not an independently implemented proof checker. The kernel, import/runtime infrastructure, platform, and three standard axioms remain trusted. This is a fresh computational audit with focused source review, not a human referee report or a claim that a remote CI workflow ran.
+
+For this environment only, a small supplied runtime shim maps the executable's own /proc/<pid>/exe readlink to /proc/self/exe. It changes executable-resource discovery, not proof terms or kernel checks. One worker controls memory usage. The existing theorem-local 400,000-heartbeat fix is retained; asynchronous elaboration was not disabled.
+
+5. Exact source identity and reproduction
+
+Standalone SHA-256:
+843e4759583ab05a60e0b5d25cd36fe7a3df432f0411447bdb44a15ebc26b5ad
+
+Run in the unmodified v0.4.0 project with the pinned toolchain:
+  python3 scripts/verify.py --fetch-cache --standalone --replay --replay-standalone --inventory
+
+The verification bundle contains the original source archive, fresh logs and hashes, the additional literal-integral witnesses, source-review notes and the relevant checker source. The manuscript was revised to make log-square decay the main theorem, add the high-temperature theorem and proof, explain the thin-annulus improvement, retain the factorial refinements, and update the verification appendix. The historical literature discussion and 59-reference bibliography were retained.
